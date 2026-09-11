@@ -1,0 +1,31 @@
+{
+  "true_text": "966",
+  "source_test_indices": [
+    4224,
+    3000,
+    457
+  ],
+  "result": {
+    "text": "766",
+    "digits": [
+      {
+        "digit": 7,
+        "confidence": 0.6474848985671997
+      },
+      {
+        "digit": 6,
+        "confidence": 0.9985608458518982
+      },
+      {
+        "digit": 6,
+        "confidence": 0.9794209003448486
+      }
+    ],
+    "model": "cnn"
+  },
+  "crop_files": [
+    "example_crops/digit_0.png",
+    "example_crops/digit_1.png",
+    "example_crops/digit_2.png"
+  ]
+}

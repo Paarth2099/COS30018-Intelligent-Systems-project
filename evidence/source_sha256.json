@@ -1,0 +1,11 @@
+{
+  "hnrs_ml/__init__.py": "17b7c738b3de4d310269f4ca3ac08548ae54bb6cb6ca6a8c29b0cc3e8728915c",
+  "hnrs_ml/data.py": "1ebd6434e2c25a418cda256e689f509d44b4e44bb5d1d63dd1418e56a4465a61",
+  "hnrs_ml/evaluate.py": "9adb15518bea12255306764f208162474f02fdaa1753dccf7feac7328295f0f0",
+  "hnrs_ml/models.py": "aa5be673e941b91b1c2f2d734d62e9db5ae120283f5a7c1930e6b08116706444",
+  "hnrs_ml/predict.py": "6c665528b9e0a43fd3dcd3602128b1d27dbeb53a107bb573dfde27891452937f",
+  "hnrs_ml/train.py": "224d803223fb671fcd00d1420e4d29495137e4763b23c0c77bcabe1caddc1542",
+  "inspect_mnist.py": "b2ca77603feadb2c20da052e13f6cd8219185de07b1fdeed2e4046355c835468",
+  "requirements.txt": "bbf613c3280a6cd72ac6b0de7eb148e2d62cee14ee4dc150bccab8063219d824",
+  "tests/test_contract.py": "92c46bf82db9cb47a183533921def83b0847be7e9d7cee0e8a5f45c12ca75454"
+}

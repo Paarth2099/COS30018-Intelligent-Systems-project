@@ -1,0 +1,455 @@
+{
+  "evaluated_utc": "2026-09-11T06:25:43.001571+00:00",
+  "selected_model": "cnn",
+  "selection_basis": "Validation only; unchanged after seeing test results",
+  "single_digit": [
+    {
+      "count": 10000,
+      "correct": 9660,
+      "accuracy": 0.966,
+      "macro_f1": 0.9657210538360529,
+      "per_class": [
+        {
+          "digit": 0,
+          "support": 980,
+          "precision": 0.966933867735471,
+          "recall": 0.9846938775510204,
+          "f1": 0.9757330637007078
+        },
+        {
+          "digit": 1,
+          "support": 1135,
+          "precision": 0.9840989399293286,
+          "recall": 0.9814977973568282,
+          "f1": 0.9827966475518306
+        },
+        {
+          "digit": 2,
+          "support": 1032,
+          "precision": 0.9715964740450539,
+          "recall": 0.9612403100775194,
+          "f1": 0.9663906478324403
+        },
+        {
+          "digit": 3,
+          "support": 1010,
+          "precision": 0.9652087475149106,
+          "recall": 0.9613861386138614,
+          "f1": 0.9632936507936509
+        },
+        {
+          "digit": 4,
+          "support": 982,
+          "precision": 0.9636363636363636,
+          "recall": 0.9714867617107943,
+          "f1": 0.9675456389452333
+        },
+        {
+          "digit": 5,
+          "support": 892,
+          "precision": 0.9589345172031076,
+          "recall": 0.968609865470852,
+          "f1": 0.9637479085331845
+        },
+        {
+          "digit": 6,
+          "support": 958,
+          "precision": 0.9607843137254902,
+          "recall": 0.9718162839248434,
+          "f1": 0.9662688116242866
+        },
+        {
+          "digit": 7,
+          "support": 1028,
+          "precision": 0.9715686274509804,
+          "recall": 0.9640077821011673,
+          "f1": 0.9677734375
+        },
+        {
+          "digit": 8,
+          "support": 974,
+          "precision": 0.9450661241098678,
+          "recall": 0.9537987679671458,
+          "f1": 0.9494123658661217
+        },
+        {
+          "digit": 9,
+          "support": 1009,
+          "precision": 0.9683673469387755,
+          "recall": 0.9405351833498513,
+          "f1": 0.954248366013072
+        }
+      ],
+      "confusion_matrix": [
+        [
+          965,
+          0,
+          1,
+          1,
+          2,
+          3,
+          4,
+          1,
+          3,
+          0
+        ],
+        [
+          0,
+          1114,
+          3,
+          2,
+          0,
+          1,
+          5,
+          2,
+          8,
+          0
+        ],
+        [
+          8,
+          2,
+          992,
+          5,
+          5,
+          0,
+          3,
+          5,
+          11,
+          1
+        ],
+        [
+          0,
+          0,
+          7,
+          971,
+          1,
+          10,
+          0,
+          8,
+          12,
+          1
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          954,
+          0,
+          8,
+          2,
+          2,
+          14
+        ],
+        [
+          2,
+          1,
+          0,
+          5,
+          2,
+          864,
+          10,
+          0,
+          6,
+          2
+        ],
+        [
+          7,
+          3,
+          1,
+          0,
+          5,
+          7,
+          931,
+          0,
+          4,
+          0
+        ],
+        [
+          2,
+          5,
+          14,
+          4,
+          2,
+          1,
+          0,
+          991,
+          1,
+          8
+        ],
+        [
+          4,
+          2,
+          3,
+          8,
+          4,
+          7,
+          7,
+          5,
+          929,
+          5
+        ],
+        [
+          8,
+          5,
+          0,
+          10,
+          15,
+          8,
+          1,
+          6,
+          7,
+          949
+        ]
+      ],
+      "model": "mlp",
+      "batch_inference_seconds": 0.05862483300734311,
+      "amortised_ms_per_digit": 0.0058624833007343115,
+      "inference_batch_size": 256,
+      "threads": 4,
+      "device": "cpu"
+    },
+    {
+      "count": 10000,
+      "correct": 9853,
+      "accuracy": 0.9853,
+      "macro_f1": 0.9852597344086915,
+      "per_class": [
+        {
+          "digit": 0,
+          "support": 980,
+          "precision": 0.9750499001996008,
+          "recall": 0.996938775510204,
+          "f1": 0.9858728557013118
+        },
+        {
+          "digit": 1,
+          "support": 1135,
+          "precision": 0.9946761313220941,
+          "recall": 0.9876651982378855,
+          "f1": 0.9911582670203359
+        },
+        {
+          "digit": 2,
+          "support": 1032,
+          "precision": 0.9931102362204725,
+          "recall": 0.9777131782945736,
+          "f1": 0.9853515625
+        },
+        {
+          "digit": 3,
+          "support": 1010,
+          "precision": 0.974757281553398,
+          "recall": 0.994059405940594,
+          "f1": 0.984313725490196
+        },
+        {
+          "digit": 4,
+          "support": 982,
+          "precision": 0.9958890030832477,
+          "recall": 0.9867617107942973,
+          "f1": 0.9913043478260869
+        },
+        {
+          "digit": 5,
+          "support": 892,
+          "precision": 0.9898648648648649,
+          "recall": 0.9854260089686099,
+          "f1": 0.9876404494382023
+        },
+        {
+          "digit": 6,
+          "support": 958,
+          "precision": 0.9915700737618546,
+          "recall": 0.9822546972860126,
+          "f1": 0.9868904037755637
+        },
+        {
+          "digit": 7,
+          "support": 1028,
+          "precision": 0.9806389157792836,
+          "recall": 0.9854085603112841,
+          "f1": 0.9830179524502669
+        },
+        {
+          "digit": 8,
+          "support": 974,
+          "precision": 0.9734422880490297,
+          "recall": 0.9784394250513347,
+          "f1": 0.9759344598054276
+        },
+        {
+          "digit": 9,
+          "support": 1009,
+          "precision": 0.9840478564307079,
+          "recall": 0.9781962338949455,
+          "f1": 0.981113320079523
+        }
+      ],
+      "confusion_matrix": [
+        [
+          977,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1121,
+          1,
+          3,
+          0,
+          0,
+          4,
+          2,
+          3,
+          0
+        ],
+        [
+          5,
+          1,
+          1009,
+          5,
+          1,
+          0,
+          0,
+          4,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1004,
+          0,
+          2,
+          0,
+          2,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          969,
+          0,
+          1,
+          0,
+          2,
+          8
+        ],
+        [
+          2,
+          0,
+          0,
+          6,
+          0,
+          879,
+          1,
+          0,
+          2,
+          2
+        ],
+        [
+          7,
+          1,
+          0,
+          1,
+          1,
+          3,
+          941,
+          0,
+          4,
+          0
+        ],
+        [
+          1,
+          1,
+          4,
+          4,
+          0,
+          0,
+          0,
+          1013,
+          2,
+          3
+        ],
+        [
+          5,
+          0,
+          2,
+          2,
+          1,
+          2,
+          1,
+          5,
+          953,
+          3
+        ],
+        [
+          3,
+          3,
+          0,
+          4,
+          1,
+          2,
+          0,
+          6,
+          3,
+          987
+        ]
+      ],
+      "model": "cnn",
+      "batch_inference_seconds": 0.3331310420180671,
+      "amortised_ms_per_digit": 0.033313104201806706,
+      "inference_batch_size": 256,
+      "threads": 4,
+      "device": "cpu"
+    }
+  ],
+  "generated_strings": {
+    "count": 1000,
+    "source_digit_count": 3500,
+    "seed": 2026,
+    "exact_string_accuracy": 0.957,
+    "by_length": [
+      {
+        "length": 2,
+        "count": 250,
+        "exact_accuracy": 0.972
+      },
+      {
+        "length": 3,
+        "count": 250,
+        "exact_accuracy": 0.972
+      },
+      {
+        "length": 4,
+        "count": 250,
+        "exact_accuracy": 0.948
+      },
+      {
+        "length": 5,
+        "count": 250,
+        "exact_accuracy": 0.936
+      }
+    ],
+    "scope": "Classifier and ordered reconstruction with known crop boundaries; NOT end-to-end segmentation, photo or writer-generalisation evaluation"
+  },
+  "limitations": [
+    "One training seed; no repeated-run uncertainty estimate",
+    "No real group photos were supplied for this run",
+    "No integration with preprocessing, segmentation or GUI yet",
+    "Softmax scores are not calibrated probabilities of correctness",
+    "Generated strings reuse the single-digit test set and use known crop boundaries"
+  ]
+}

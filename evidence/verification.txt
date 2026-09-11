@@ -1,0 +1,14 @@
+test_checkpoints_roundtrip (test_contract.ContractTests.test_checkpoints_roundtrip) ... ok
+test_confusion_metrics_known_example (test_contract.ContractTests.test_confusion_metrics_known_example) ... ok
+test_input_validation (test_contract.ContractTests.test_input_validation) ... ok
+test_number_order_leading_zeros_empty_and_batch_boundaries (test_contract.ContractTests.test_number_order_leading_zeros_empty_and_batch_boundaries) ... ok
+test_split_disjoint_complete_repeatable (test_contract.ContractTests.test_split_disjoint_complete_repeatable) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.033s
+
+OK
+
+Saved-checkpoint CLI demo: passed (recorded true label 966, prediction 766).
+Evaluation totals and confusion-matrix counts: passed.
+Prediction scores are not calibrated. No real-photo or team GUI test performed.

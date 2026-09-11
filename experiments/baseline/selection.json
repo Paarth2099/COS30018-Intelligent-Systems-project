@@ -1,0 +1,48 @@
+{
+  "selected_model": "cnn",
+  "selected_before_test_evaluation": true,
+  "models": [
+    {
+      "model": "mlp",
+      "best_epoch": 5,
+      "validation_accuracy": 0.9621666666666666,
+      "validation_loss": 0.1202349157333374,
+      "training_seconds": 0.7483742499607615,
+      "parameters": 109386,
+      "checkpoint_sha256": "fac2a94b412c7cc25c26caae4a45dd39ba0e965191217728e6710c848a622949"
+    },
+    {
+      "model": "cnn",
+      "best_epoch": 5,
+      "validation_accuracy": 0.9841666666666666,
+      "validation_loss": 0.05912308390935262,
+      "training_seconds": 42.650969708978664,
+      "parameters": 105866,
+      "checkpoint_sha256": "4d83b227350a637d008fd7fdc6005216ff74881f56f6dd1191e1a218e58a4049"
+    }
+  ],
+  "config": {
+    "created_utc": "2026-09-11T06:23:13.934988+00:00",
+    "seed": 42,
+    "epochs": 5,
+    "batch_size": 256,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "weight_decay": 0,
+    "loss": "cross_entropy",
+    "augmentation": "none",
+    "normalisation": "uint8 / 255",
+    "device": "cpu",
+    "threads": 4,
+    "train_count": 54000,
+    "validation_count": 6000,
+    "train_indices_sha256": "bc6c2b3f13bcca12954a7668ec0cee8f7f0ae3ff8f2c70b3006fa3a6f23a293b",
+    "validation_indices_sha256": "5c491e486ea2f30f84daa314b89f4d045b338b21bdffded5fa51cf66dc48b27b",
+    "python": "3.12.14",
+    "platform": "macOS-15.6.1-arm64-arm-64bit",
+    "torch": "2.6.0",
+    "torchvision": "0.21.0",
+    "selection_rule": "Highest validation accuracy, then lowest validation loss; earlier epoch retained on exact tie",
+    "test_data_used": false
+  }
+}
