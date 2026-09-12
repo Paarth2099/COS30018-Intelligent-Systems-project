@@ -1,0 +1,10 @@
+{
+  "text": "5",
+  "digits": [
+    {
+      "digit": 5,
+      "confidence": 0.9501451253890991
+    }
+  ],
+  "model": "cnn"
+}

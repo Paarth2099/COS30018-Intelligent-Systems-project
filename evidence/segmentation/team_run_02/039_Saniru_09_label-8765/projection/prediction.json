@@ -1,0 +1,22 @@
+{
+  "text": "8765",
+  "digits": [
+    {
+      "digit": 8,
+      "confidence": 0.9314802289009094
+    },
+    {
+      "digit": 7,
+      "confidence": 0.900181233882904
+    },
+    {
+      "digit": 6,
+      "confidence": 0.9424840807914734
+    },
+    {
+      "digit": 5,
+      "confidence": 0.9844068288803101
+    }
+  ],
+  "model": "cnn"
+}

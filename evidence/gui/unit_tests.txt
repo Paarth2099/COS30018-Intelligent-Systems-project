@@ -1,0 +1,23 @@
+test_checkpoints_roundtrip (test_contract.ContractTests.test_checkpoints_roundtrip) ... ok
+test_confusion_metrics_known_example (test_contract.ContractTests.test_confusion_metrics_known_example) ... ok
+test_input_validation (test_contract.ContractTests.test_input_validation) ... ok
+test_number_order_leading_zeros_empty_and_batch_boundaries (test_contract.ContractTests.test_number_order_leading_zeros_empty_and_batch_boundaries) ... ok
+test_split_disjoint_complete_repeatable (test_contract.ContractTests.test_split_disjoint_complete_repeatable) ... ok
+test_bad_source_is_reported (test_gui_core.GuiCoreTests.test_bad_source_is_reported) ... ok
+test_catalog_excludes_multi_digit_and_supports_nested_folders (test_gui_core.GuiCoreTests.test_catalog_excludes_multi_digit_and_supports_nested_folders) ... ok
+test_export_records_provenance_and_keeps_previous_exports (test_gui_core.GuiCoreTests.test_export_records_provenance_and_keeps_previous_exports) ... ok
+test_generation_leading_zeros_and_no_source_changes (test_gui_core.GuiCoreTests.test_generation_leading_zeros_and_no_source_changes) ... ok
+test_invalid_or_missing_requested_digits (test_gui_core.GuiCoreTests.test_invalid_or_missing_requested_digits) ... ok
+test_diagonal_connectivity_and_separation (test_segmentation.SegmentationTests.test_diagonal_connectivity_and_separation) ... ok
+test_edit_distance_including_leading_zero (test_segmentation.SegmentationTests.test_edit_distance_including_leading_zero) ... ok
+test_empty_input (test_segmentation.SegmentationTests.test_empty_input) ... ok
+test_left_to_right_order_and_model_format (test_segmentation.SegmentationTests.test_left_to_right_order_and_model_format) ... ok
+test_methods_differ_for_disconnected_vertical_parts (test_segmentation.SegmentationTests.test_methods_differ_for_disconnected_vertical_parts) ... ok
+test_noise_removed (test_segmentation.SegmentationTests.test_noise_removed) ... ok
+test_overlapping_component_boxes_do_not_leak_neighbour_ink (test_segmentation.SegmentationTests.test_overlapping_component_boxes_do_not_leak_neighbour_ink) ... ok
+test_touching_digits_are_not_magically_split (test_segmentation.SegmentationTests.test_touching_digits_are_not_magically_split) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.523s
+
+OK

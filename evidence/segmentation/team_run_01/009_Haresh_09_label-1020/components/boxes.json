@@ -1,0 +1,34 @@
+{
+  "coordinate_space": "resized grayscale image",
+  "size": [
+    186,
+    77
+  ],
+  "boxes": [
+    [
+      15,
+      15,
+      23,
+      64
+    ],
+    [
+      33,
+      20,
+      75,
+      63
+    ],
+    [
+      97,
+      23,
+      133,
+      61
+    ],
+    [
+      135,
+      22,
+      176,
+      55
+    ]
+  ],
+  "removed_components": 0
+}

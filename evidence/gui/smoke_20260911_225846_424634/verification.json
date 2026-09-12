@@ -1,0 +1,7 @@
+{
+  "loaded_photo_prediction": "420",
+  "generated_request": "007",
+  "generated_prediction": "007",
+  "mlp_generated_prediction": "002",
+  "checks": "PASS: load, recognition, export, generation, leading-zero request, model switch, stale-result clearing, cancel, invalid request, blank image"
+}

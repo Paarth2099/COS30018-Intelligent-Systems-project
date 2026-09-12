@@ -1,0 +1,78 @@
+{
+  "created_utc": "2026-09-11T13:02:30.573507+00:00",
+  "input": {
+    "route": "generated",
+    "requested_text": "007",
+    "seed": 42,
+    "sources": [
+      {
+        "digit": "0",
+        "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Haresh\\Haresh_01_label-0.png",
+        "sha256": "c7c37d850fb210f7c82ed418efa294ae99dc417bf763e9557fd5eaf7923eba01"
+      },
+      {
+        "digit": "0",
+        "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Haresh\\Haresh_01_label-0.png",
+        "sha256": "c7c37d850fb210f7c82ed418efa294ae99dc417bf763e9557fd5eaf7923eba01"
+      },
+      {
+        "digit": "7",
+        "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Paarth\\Paarth_04_label-7.jpg",
+        "sha256": "95f858d7e816b675e4eaccc8022a6792cb647e4df38dcb8b446dfb910c813005"
+      }
+    ],
+    "warnings": [],
+    "note": "Composed from labelled handwriting crops; requested text was not supplied to the recogniser."
+  },
+  "settings": {
+    "model": "cnn",
+    "method": "components",
+    "representation": "otsu",
+    "checkpoint_sha256": "4d83b227350a637d008fd7fdc6005216ff74881f56f6dd1191e1a218e58a4049"
+  },
+  "prediction": {
+    "text": "007",
+    "digits": [
+      {
+        "digit": 0,
+        "confidence": 0.9822415709495544
+      },
+      {
+        "digit": 0,
+        "confidence": 0.9822415709495544
+      },
+      {
+        "digit": 7,
+        "confidence": 0.6784135699272156
+      }
+    ],
+    "model": "cnn"
+  },
+  "boxes": [
+    [
+      32,
+      32,
+      108,
+      112
+    ],
+    [
+      160,
+      32,
+      236,
+      112
+    ],
+    [
+      292,
+      32,
+      360,
+      112
+    ]
+  ],
+  "coordinate_space": "resized grayscale image",
+  "resized_size": [
+    400,
+    144
+  ],
+  "warnings": [],
+  "score_note": "Per-digit confidence is an uncalibrated model score, not a verified probability."
+}

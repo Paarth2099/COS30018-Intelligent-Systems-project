@@ -1,8 +1,48 @@
 # COS30018 Intelligent Systems project
 
 Haresh's machine-learning component for Option B: handwritten number recognition.
-This branch supplies the digit classifiers and prediction interface; preprocessing,
-segmentation, image acquisition and the team GUI still need integration.
+The saved baseline supplies the digit classifiers and prediction interface.
+The local preprocessing, segmentation and GUI now connect both loaded photos
+and generated number images to this predictor.
+
+## Launch the desktop application
+
+From the inner project directory in Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\python.exe app.py
+```
+
+Use Open a photo to load handwriting, or Generate a number to compose digit
+images from a folder. Select a saved model, segmentation method and preprocessing
+representation, then Recognise. Export result saves a new evidence folder.
+
+- [Saniru's setup, user guide and code explanation](docs/SANIRU_START_HERE.md)
+- [GUI verification record](docs/GUI_VERIFICATION.md)
+
+18 automated tests passed; real-window checks verified both image routes,
+exports, selectors, error handling and leading zeros. These are functionality
+checks rather than final accuracy evaluation. The alphanumeric extension,
+new-image evaluation and final report/video remain separate project work.
+
+## Manula's segmentation component
+
+- [Beginner walkthrough and GUI handover](docs/MANULA_START_HERE.md)
+- [Verified development comparison and limitations](docs/SEGMENTATION_EXPERIMENT.md)
+
+The updated photo collection contains 40 images. The selected connected-component
+method recognises 18/20 multi-digit numbers exactly; projection recognises 17/20.
+Correct digit counts are 20/20 versus 19/20 on that subset. Count agreement is not
+an annotated segmentation accuracy measure. Final evidence is in
+`evidence/segmentation/team_run_02`; all 13 software tests pass.
+
+Run from this directory in Windows PowerShell (choose a new output folder):
+
+```powershell
+.\.venv\Scripts\python.exe recognise_photo.py --input "data/segmentation_photos/Manula/Manula_07_label-420.jpg" --output evidence/segmentation/my_manula_demo_01
+```
+
+This example predicts `420` and saves a preview showing the ordered digit crops.
 
 ## Verified baseline
 

@@ -1,0 +1,14 @@
+{
+  "text": "28",
+  "digits": [
+    {
+      "digit": 2,
+      "confidence": 0.9702699780464172
+    },
+    {
+      "digit": 8,
+      "confidence": 0.9954208731651306
+    }
+  ],
+  "model": "cnn"
+}

@@ -1,0 +1,246 @@
+{
+  "created_utc": "2026-09-11T12:42:33.021014+00:00",
+  "purpose": "Development comparison, not final evaluation",
+  "summary": {
+    "components": {
+      "images": 40,
+      "count_matches": 40,
+      "count_accuracy": 1.0,
+      "exact_matches": 33,
+      "exact_number_accuracy": 0.825,
+      "character_error_rate": 0.10256410256410256,
+      "errors": 0,
+      "mean_segmentation_ms": 72.15672500000001
+    },
+    "projection": {
+      "images": 40,
+      "count_matches": 39,
+      "count_accuracy": 0.975,
+      "exact_matches": 32,
+      "exact_number_accuracy": 0.8,
+      "character_error_rate": 0.1282051282051282,
+      "errors": 0,
+      "mean_segmentation_ms": 73.26547500000001
+    }
+  },
+  "inputs": [
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Haresh\\Haresh_01_label-0.png",
+      "label": "0",
+      "sha256": "c7c37d850fb210f7c82ed418efa294ae99dc417bf763e9557fd5eaf7923eba01"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Haresh\\Haresh_02_label-2.png",
+      "label": "2",
+      "sha256": "c0736284bfcf8efc499dbcc94be1ef8737beb9cae8c6c82c9e75662a0e41dda7"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Haresh\\Haresh_03_label-6.png",
+      "label": "6",
+      "sha256": "fec11cd970996db5c1b6271fb150dfc148c7c402f681dbbec8c894a1b9db78f5"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Haresh\\Haresh_04_label-7.png",
+      "label": "7",
+      "sha256": "cfa744622018da237dab905f60fb67ca9ce97aa9a4e2aed36207398b7cca95a8"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Haresh\\Haresh_05_label-9.png",
+      "label": "9",
+      "sha256": "9799f56632a2e6b2bebf5b8d157799814a26e65c23a4715f7c04946105046865"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Haresh\\Haresh_06_label-14.png",
+      "label": "14",
+      "sha256": "3d22c1cf6289d76a952d30dfaeecd0e1fcad225c7a49c7e38ab1739eecc51027"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Haresh\\Haresh_07_label-109.png",
+      "label": "109",
+      "sha256": "a4770b2c28f197f70402dcf8dc90311c0bc8327e1e2900c0d7a1f1def2cc8150"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Haresh\\Haresh_08_label-1150.png",
+      "label": "1150",
+      "sha256": "adfebf73afe37035aa509e6b00b367924e51deabba200a2a2a587e00abf6f0b9"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Haresh\\Haresh_09_label-1020.png",
+      "label": "1020",
+      "sha256": "891c90a4b0db3a63967330cc18875cb879afaec25f545b669d0bdc5a6a3729d3"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Haresh\\Haresh_10_label-28.png",
+      "label": "28",
+      "sha256": "e0d3948082c77308f6ccee92e60be9a4bf24876bad1fb4f9d3516ad0ef33653e"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Manula\\Manula_01_label-4.jpg",
+      "label": "4",
+      "sha256": "97807784bcc655984710107f9b7df721b28f171668e919f9a509e29c15fab095"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Manula\\Manula_02_label-7.jpg",
+      "label": "7",
+      "sha256": "e665aa6123b9ba41e7fb78879922884ff9024251815de49eef5fb4424f3b3d19"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Manula\\Manula_03_label-1.jpg",
+      "label": "1",
+      "sha256": "8c25074d84751a303883fe53e3c36709f7b6224aab494a8c6d95a08739c64b66"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Manula\\Manula_04_label-8.jpg",
+      "label": "8",
+      "sha256": "3d3d15c306e8732824cf10495dd807f32310b17573b2fcaf9b2865c113286372"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Manula\\Manula_05_label-9.jpg",
+      "label": "9",
+      "sha256": "e2453df9b81dade3e8cd2a37834387c0c815b6451f71c3e2527c25903218e41a"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Manula\\Manula_06_label-81.jpg",
+      "label": "81",
+      "sha256": "c34d8751c41982b5f3923a9e743a1275d1512727080d053a854f7275fc4215da"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Manula\\Manula_07_label-420.jpg",
+      "label": "420",
+      "sha256": "a5d69f860bb4735a360e7be0c76562d24d166c4e902b8fa4ae0f2d9bfc542a7d"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Manula\\Manula_08_label-615.jpg",
+      "label": "615",
+      "sha256": "554af7dc32e0fd576f86a0f78d47603ce566cba38ef4d1efff86c22ef5945765"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Manula\\Manula_09_label-6917.jpg",
+      "label": "6917",
+      "sha256": "4be4951d265fadb3ef099d7642ab6d627b6857627917fc567a95c20bf4d5503d"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Manula\\Manula_10_label-485.jpg",
+      "label": "485",
+      "sha256": "74147c69823618faae1bba742efdd402842b020852903b9958d001800d930934"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Paarth\\Paarth_01_label-0.jpg",
+      "label": "0",
+      "sha256": "72e46128f75392342922069ee440de39f7d8273107b1bca3b57f9dd5b6cd3264"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Paarth\\Paarth_02_label-5.jpg",
+      "label": "5",
+      "sha256": "503222471145e3adac5470a8331562b59453a7afa32f6097e0f846c93e631f6a"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Paarth\\Paarth_03_label-3.jpg",
+      "label": "3",
+      "sha256": "146a65f56ff0c140a880ebeca035c0689c5bb85052c9fcffa1bb22f2c9410477"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Paarth\\Paarth_04_label-7.jpg",
+      "label": "7",
+      "sha256": "95f858d7e816b675e4eaccc8022a6792cb647e4df38dcb8b446dfb910c813005"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Paarth\\Paarth_05_label-9.jpg",
+      "label": "9",
+      "sha256": "91960ec1462fa3b0fdca642df2a172be3fa61601d4d3c48f2671a829da50b90b"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Paarth\\Paarth_06_label-999.jpg",
+      "label": "999",
+      "sha256": "5e4a3997fb10fd17ed1784b77aeb918daf6c9de2ffeb383bc1e351f2ff9f1163"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Paarth\\Paarth_07_label-103.jpg",
+      "label": "103",
+      "sha256": "cd4eb9bb1fe2ba55e6a72453d19cf3ee738f25a9c327bcbaa5cf3669b4b31154"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Paarth\\Paarth_08_label-69.jpg",
+      "label": "69",
+      "sha256": "e174472360d775e1460c7173ef911e294cd70735d42c3e650f31729bca0e47f0"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Paarth\\Paarth_09_label-67.jpg",
+      "label": "67",
+      "sha256": "52f286b2dd840a4a1f130b06eaeb845540ac2bab77a4f2ad83bb4e75a4976903"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Paarth\\Paarth_10_label-26.jpg",
+      "label": "26",
+      "sha256": "4f43b25cded6715a9fd4474a3881d83a163da575072f2f3a574053dd9de70f94"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Saniru\\Saniru_01_label-3.jpeg",
+      "label": "3",
+      "sha256": "f4214cf865118e89cb7c1a0f08b7b41c07144c4766ba81156cf19e4442089dea"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Saniru\\Saniru_02_label-7.jpeg",
+      "label": "7",
+      "sha256": "b273a3701d0c8cdcc42e0d01fa77ce6d02a9b4d0713c8b5c918b076038710eba"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Saniru\\Saniru_03_label-9.jpeg",
+      "label": "9",
+      "sha256": "f8b5b593e9dd5a4c11d220d9ad8c68372a74faa1586a348a35849a40e57344ae"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Saniru\\Saniru_04_label-6.jpeg",
+      "label": "6",
+      "sha256": "76135bcfb680beaf8fca17d97a5b5e28e86055941d13478e195168056e3f19eb"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Saniru\\Saniru_05_label-2.jpeg",
+      "label": "2",
+      "sha256": "e7738b62c93780629686f25fb2aae19132430cc5b54f1c9b5da64d44714fc9d1"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Saniru\\Saniru_06_label-31.jpeg",
+      "label": "31",
+      "sha256": "0f2e948a9c8c595b9bacf1071f78a4f7f93f950a02468942f5feec2bd1ac960e"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Saniru\\Saniru_07_label-1600.jpeg",
+      "label": "1600",
+      "sha256": "aa21c5b5a50c7292058511c734f34238c2cec675661faad565a37a839c7f93af"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Saniru\\Saniru_08_label-240.jpeg",
+      "label": "240",
+      "sha256": "3002997feeaadb8e8c5a7dd9189c05a6585d6e0a86cac3c8c010115410c12610"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Saniru\\Saniru_09_label-8765.jpeg",
+      "label": "8765",
+      "sha256": "94f23d74848846b9e1bd48920f451ea28ae7b791fd0ded81b22a07d339364262"
+    },
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Saniru\\Saniru_10_label-666.jpeg",
+      "label": "666",
+      "sha256": "47859adc833d1e68397861607e0cec38b313ab8c6b77b5079ea736bfb353df5b"
+    }
+  ],
+  "skipped": [],
+  "configuration": {
+    "max_side": 1000,
+    "min_area_fraction": 0.01,
+    "min_height_fraction": 0.1,
+    "shared_mask": "autocontrast plus Otsu; small connected components removed",
+    "representation": "otsu"
+  },
+  "checkpoint": "experiments\\baseline\\cnn.pt",
+  "checkpoint_sha256": "4d83b227350a637d008fd7fdc6005216ff74881f56f6dd1191e1a218e58a4049",
+  "source_sha256": {
+    "segment_digits.py": "62040a481a978208f73dee684bca74ebc2ba06e0ec63506d390ca3c824c9973c",
+    "compare_segmentation.py": "9f00b1ef8755dba4fac76c8b9de53e3e21c667f69491d4a4e0c73c54526ae3af",
+    "preprocess_digits.py": "8d91497c546c914688d09f5abe61e17ae458b6ee355045b7179521a6e8334969"
+  },
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "metric_note": "Count agreement is only a proxy. CER is Levenshtein edits divided by reference characters; may exceed 1. Inspect previews for actual crop quality."
+}

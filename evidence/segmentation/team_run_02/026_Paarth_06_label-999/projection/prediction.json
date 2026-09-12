@@ -1,0 +1,18 @@
+{
+  "text": "494",
+  "digits": [
+    {
+      "digit": 4,
+      "confidence": 0.4863024353981018
+    },
+    {
+      "digit": 9,
+      "confidence": 0.4092889428138733
+    },
+    {
+      "digit": 4,
+      "confidence": 0.6443220376968384
+    }
+  ],
+  "model": "cnn"
+}

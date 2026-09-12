@@ -1,0 +1,36 @@
+{
+  "purpose": "Development comparison; not untouched final-test accuracy",
+  "design": "Common autocontrast and Otsu bounding box; grayscale vs fixed-128 vs Otsu representation; same resizing/padding",
+  "summary": {
+    "grayscale": {
+      "total": 1,
+      "preprocessing_errors": 0,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "fixed": {
+      "total": 1,
+      "preprocessing_errors": 0,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "otsu": {
+      "total": 1,
+      "preprocessing_errors": 0,
+      "correct": 1,
+      "accuracy": 1.0
+    }
+  },
+  "inputs": [
+    {
+      "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\Manula photos\\Manula_01_label-8.jpg",
+      "label": "8",
+      "sha256": "0f86df4c55329a4455a4a3603f2a4440a5b33a5b04c786098113db8e9d0fb798"
+    }
+  ],
+  "skipped_images": [],
+  "checkpoint": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\experiments\\baseline\\cnn.pt",
+  "checkpoint_sha256": "4d83b227350a637d008fd7fdc6005216ff74881f56f6dd1191e1a218e58a4049",
+  "script_sha256": "8d91497c546c914688d09f5abe61e17ae458b6ee355045b7179521a6e8334969",
+  "numpy_version": "2.2.3"
+}

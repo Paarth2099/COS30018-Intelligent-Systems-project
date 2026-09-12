@@ -1,0 +1,45 @@
+{
+  "text": "420",
+  "digits": [
+    {
+      "digit": 4,
+      "confidence": 0.9959612488746643
+    },
+    {
+      "digit": 2,
+      "confidence": 0.9106028079986572
+    },
+    {
+      "digit": 0,
+      "confidence": 0.9961453676223755
+    }
+  ],
+  "model": "cnn",
+  "method": "components",
+  "boxes": [
+    [
+      116,
+      426,
+      235,
+      693
+    ],
+    [
+      272,
+      423,
+      476,
+      641
+    ],
+    [
+      466,
+      402,
+      631,
+      627
+    ]
+  ],
+  "box_coordinate_space": "resized grayscale image",
+  "resized_image_size": [
+    750,
+    1000
+  ],
+  "warnings": []
+}

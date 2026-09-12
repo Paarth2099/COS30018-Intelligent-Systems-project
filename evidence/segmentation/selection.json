@@ -1,0 +1,7 @@
+{
+  "method": "components",
+  "status": "provisional development selection",
+  "evidence_run": "team_run_02",
+  "reason": "40/40 count matches; 18/20 multi-digit exact vs 17/20 projection; projection merges 2 and 0 in 420",
+  "final_test_performed": false
+}

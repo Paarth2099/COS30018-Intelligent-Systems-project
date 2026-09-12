@@ -1,0 +1,59 @@
+{
+  "created_utc": "2026-09-11T12:59:54.135728+00:00",
+  "input": {
+    "route": "file",
+    "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\assignment options\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\COS30018-Intelligent-Systems-project-haresh-ml-baseline\\data\\segmentation_photos\\Manula\\Manula_07_label-420.jpg",
+    "sha256": "a5d69f860bb4735a360e7be0c76562d24d166c4e902b8fa4ae0f2d9bfc542a7d"
+  },
+  "settings": {
+    "model": "cnn",
+    "method": "components",
+    "representation": "otsu",
+    "checkpoint_sha256": "4d83b227350a637d008fd7fdc6005216ff74881f56f6dd1191e1a218e58a4049"
+  },
+  "prediction": {
+    "text": "420",
+    "digits": [
+      {
+        "digit": 4,
+        "confidence": 0.9959612488746643
+      },
+      {
+        "digit": 2,
+        "confidence": 0.9106028079986572
+      },
+      {
+        "digit": 0,
+        "confidence": 0.9961453676223755
+      }
+    ],
+    "model": "cnn"
+  },
+  "boxes": [
+    [
+      116,
+      426,
+      235,
+      693
+    ],
+    [
+      272,
+      423,
+      476,
+      641
+    ],
+    [
+      466,
+      402,
+      631,
+      627
+    ]
+  ],
+  "coordinate_space": "resized grayscale image",
+  "resized_size": [
+    750,
+    1000
+  ],
+  "warnings": [],
+  "score_note": "Per-digit confidence is an uncalibrated model score, not a verified probability."
+}

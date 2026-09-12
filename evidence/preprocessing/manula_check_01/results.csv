@@ -1,0 +1,4 @@
+file,label,method,prediction,correct,error,warning
+C:\Users\paart\OneDrive\Desktop\University\Intelligent system\assignment options\COS30018-Intelligent-Systems-project-haresh-ml-baseline\COS30018-Intelligent-Systems-project-haresh-ml-baseline\data\Manula photos\Manula_01_label-8.jpg,8,grayscale,8,1,,
+C:\Users\paart\OneDrive\Desktop\University\Intelligent system\assignment options\COS30018-Intelligent-Systems-project-haresh-ml-baseline\COS30018-Intelligent-Systems-project-haresh-ml-baseline\data\Manula photos\Manula_01_label-8.jpg,8,fixed,8,1,,
+C:\Users\paart\OneDrive\Desktop\University\Intelligent system\assignment options\COS30018-Intelligent-Systems-project-haresh-ml-baseline\COS30018-Intelligent-Systems-project-haresh-ml-baseline\data\Manula photos\Manula_01_label-8.jpg,8,otsu,8,1,,
