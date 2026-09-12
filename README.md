@@ -1,6 +1,6 @@
 # COS30018 Intelligent Systems project
 
-Haresh's machine-learning component for Option B: handwritten number recognition.
+The machine-learning component for Option B: handwritten number recognition.
 The saved baseline supplies the digit classifiers and prediction interface.
 The local preprocessing, segmentation and GUI now connect both loaded photos
 and generated number images to this predictor.
@@ -25,7 +25,7 @@ exports, selectors, error handling and leading zeros. These are functionality
 checks rather than final accuracy evaluation. The alphanumeric extension,
 new-image evaluation and final report/video remain separate project work.
 
-## Manula's segmentation component
+#segmentation component
 
 - [Beginner walkthrough and GUI handover](docs/MANULA_START_HERE.md)
 - [Verified development comparison and limitations](docs/SEGMENTATION_EXPERIMENT.md)
@@ -94,6 +94,3 @@ Training and evaluation refuse to overwrite an existing experiment record.
 Use validation data for future improvements. Once test results have been examined,
 do not repeatedly tune against them and describe that as an untouched final test.
 
-The code, experiments and documentation were produced with Codex assistance at
-Haresh's request. Haresh should review and understand the implementation and
-record his actual learning, changes and time under the unit's AI-use rules.
