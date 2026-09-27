@@ -20,7 +20,7 @@ def tk_image(image,master):
     buffer=BytesIO();image.save(buffer,format='PNG')
     return tk.PhotoImage(master=master,data=base64.b64encode(buffer.getvalue()),format='png')
 
-
+# Main desktop GUI for image input, recognition controls and result display
 class HNRSApp:
     def __init__(self,root):
         self.root=root; self.image=None; self.origin=None; self.result=None
