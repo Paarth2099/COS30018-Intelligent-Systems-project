@@ -11,7 +11,7 @@ from preprocess_digits import prepare_variants
 
 IMAGE_TYPES = {'.png','.jpg','.jpeg','.bmp','.tif','.tiff'}
 
-
+# Handles GUI image input, number generation and evidence export
 def open_photo(path):
     with Image.open(path) as image:
         return ImageOps.exif_transpose(image).convert('RGB')
