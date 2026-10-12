@@ -1,5 +1,15 @@
 # COS30018 Intelligent Systems project
 
+## Approved alphanumeric extension
+
+Haresh's separate EMNIST ByClass model workflow is in `hnrs_chars/`. See
+[the setup and integration guide](HARESH_EXTENSION.md) and
+[measured results](EMNIST_RESULTS.md). Run `run_characters.ps1 -Action Demo`
+from this checkout after the saved run is available. Character segmentation,
+photo evaluation and GUI integration remain the next team stages.
+
+The existing desktop application below remains the digit-recognition baseline.
+
 The machine-learning component for Option B: handwritten number recognition.
 The saved baseline supplies the digit classifiers and prediction interface.
 The local preprocessing, segmentation and GUI now connect both loaded photos

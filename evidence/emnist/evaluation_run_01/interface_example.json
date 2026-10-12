@@ -1,0 +1,98 @@
+{
+  "true_text": "007Ab12",
+  "test_indices": [
+    2,
+    62,
+    16,
+    195,
+    28,
+    33,
+    10
+  ],
+  "predictions": {
+    "mlp": {
+      "text": "007Ab12",
+      "characters": [
+        {
+          "class_id": 0,
+          "character": "0",
+          "confidence": 0.6828017830848694
+        },
+        {
+          "class_id": 0,
+          "character": "0",
+          "confidence": 0.7028863430023193
+        },
+        {
+          "class_id": 7,
+          "character": "7",
+          "confidence": 0.9995090961456299
+        },
+        {
+          "class_id": 10,
+          "character": "A",
+          "confidence": 0.8275744915008545
+        },
+        {
+          "class_id": 37,
+          "character": "b",
+          "confidence": 0.9935606718063354
+        },
+        {
+          "class_id": 1,
+          "character": "1",
+          "confidence": 0.7867650985717773
+        },
+        {
+          "class_id": 2,
+          "character": "2",
+          "confidence": 0.9729173183441162
+        }
+      ],
+      "model": "mlp",
+      "task": "emnist_byclass_62"
+    },
+    "cnn": {
+      "text": "007Ab12",
+      "characters": [
+        {
+          "class_id": 0,
+          "character": "0",
+          "confidence": 0.6790841221809387
+        },
+        {
+          "class_id": 0,
+          "character": "0",
+          "confidence": 0.6074832081794739
+        },
+        {
+          "class_id": 7,
+          "character": "7",
+          "confidence": 0.999143123626709
+        },
+        {
+          "class_id": 10,
+          "character": "A",
+          "confidence": 0.9778141379356384
+        },
+        {
+          "class_id": 37,
+          "character": "b",
+          "confidence": 0.9915263056755066
+        },
+        {
+          "class_id": 1,
+          "character": "1",
+          "confidence": 0.730952262878418
+        },
+        {
+          "class_id": 2,
+          "character": "2",
+          "confidence": 0.9941400289535522
+        }
+      ],
+      "model": "cnn",
+      "task": "emnist_byclass_62"
+    }
+  }
+}
