@@ -1,0 +1,28 @@
+{
+  "illumination": "local",
+  "remove_specks": true,
+  "normalise_ink": false,
+  "removed_components": 0,
+  "original_size": [
+    432,
+    400
+  ],
+  "working_size": [
+    432,
+    400
+  ],
+  "bbox": [
+    73,
+    75,
+    368,
+    313
+  ],
+  "resized_ink_size": [
+    20,
+    16
+  ],
+  "contrast": 161,
+  "otsu_threshold": 142,
+  "foreground_fraction": 0.07208333333333333,
+  "warnings": []
+}

@@ -1,0 +1,27 @@
+{
+  "original_size": [
+    346,
+    322
+  ],
+  "working_size": [
+    346,
+    322
+  ],
+  "bbox": [
+    0,
+    51,
+    346,
+    322
+  ],
+  "resized_ink_size": [
+    20,
+    16
+  ],
+  "contrast": 143,
+  "otsu_threshold": 210,
+  "foreground_fraction": 0.47473342189351236,
+  "warnings": [
+    "Foreground touches image edge: inspect clipping, shadow or paper boundary",
+    "Large foreground area: background may be mistaken for handwriting"
+  ]
+}

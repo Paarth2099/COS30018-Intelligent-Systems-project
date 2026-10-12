@@ -1,0 +1,27 @@
+{
+  "illumination": "local",
+  "original_size": [
+    4032,
+    3024
+  ],
+  "working_size": [
+    1200,
+    900
+  ],
+  "bbox": [
+    0,
+    0,
+    1200,
+    900
+  ],
+  "resized_ink_size": [
+    20,
+    15
+  ],
+  "contrast": 255,
+  "otsu_threshold": 201,
+  "foreground_fraction": 0.24946296296296297,
+  "warnings": [
+    "Foreground touches image edge: inspect clipping, shadow or paper boundary"
+  ]
+}

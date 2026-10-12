@@ -1,0 +1,230 @@
+{
+  "created_utc": "2026-10-12T09:45:34.480248+00:00",
+  "purpose": "Development method selection; not an untouched test or end-to-end string benchmark",
+  "design": "Common autocontrast/Otsu bounding box and 20px aspect-preserving resize on 28px canvas; three pixel representations",
+  "sample_count": 80,
+  "writers": {
+    "Haresh": 20,
+    "Manula": 20,
+    "Paarth": 20,
+    "Saniru": 20
+  },
+  "labels": {
+    "0": 4,
+    "1": 4,
+    "2": 4,
+    "5": 4,
+    "8": 4,
+    "A": 4,
+    "B": 4,
+    "I": 4,
+    "O": 4,
+    "Z": 4,
+    "a": 4,
+    "b": 4,
+    "g": 4,
+    "i": 4,
+    "j": 4,
+    "l": 4,
+    "o": 4,
+    "q": 4,
+    "t": 4,
+    "z": 4
+  },
+  "duplicate_hash_groups": [],
+  "methods": {
+    "grayscale": {
+      "total": 80,
+      "correct": 24,
+      "accuracy": 0.3,
+      "preprocessing_failures": 0,
+      "warning_images": 14
+    },
+    "fixed": {
+      "total": 80,
+      "correct": 35,
+      "accuracy": 0.4375,
+      "preprocessing_failures": 0,
+      "warning_images": 14
+    },
+    "otsu": {
+      "total": 80,
+      "correct": 42,
+      "accuracy": 0.525,
+      "preprocessing_failures": 0,
+      "warning_images": 14
+    }
+  },
+  "selected_method": "otsu",
+  "selection_rule": "Highest correct count on all development photos; ties prefer otsu, fixed, grayscale",
+  "checkpoint": "experiments/emnist_byclass/run_01/cnn.pt",
+  "checkpoint_sha256": "af68f14712d203a5c63ec5716a174740c2b953e9893c083552d994b80e72a04d",
+  "model": "cnn",
+  "source_sha256": {
+    "photo_experiment.py": "a08b3139b4cf7805c00314928c0c7728b2405a0bcb4516b9128bf8fcf32c62b2",
+    "preprocessing.py": "cddf8751a87cd10c037170151ab55e4484c00b19afa9058829634e16840f3e5b",
+    "predict.py": "1bf3d00b4e4956e47f9a0158bc5a326211e208d6f66a8b093b10337c57990a6a",
+    "preprocess_digits.py": "8d91497c546c914688d09f5abe61e17ae458b6ee355045b7179521a6e8334969"
+  },
+  "python": "3.12.10",
+  "numpy": "2.2.3",
+  "torch": "2.6.0+cpu",
+  "selected_confusions": [
+    {
+      "true": "o",
+      "predicted": "0",
+      "count": 4
+    },
+    {
+      "true": "O",
+      "predicted": "0",
+      "count": 3
+    },
+    {
+      "true": "g",
+      "predicted": "9",
+      "count": 2
+    },
+    {
+      "true": "z",
+      "predicted": "Z",
+      "count": 2
+    },
+    {
+      "true": "q",
+      "predicted": "Y",
+      "count": 1
+    },
+    {
+      "true": "Z",
+      "predicted": "2",
+      "count": 1
+    },
+    {
+      "true": "b",
+      "predicted": "6",
+      "count": 1
+    },
+    {
+      "true": "q",
+      "predicted": "8",
+      "count": 1
+    },
+    {
+      "true": "l",
+      "predicted": "U",
+      "count": 1
+    },
+    {
+      "true": "t",
+      "predicted": "i",
+      "count": 1
+    },
+    {
+      "true": "q",
+      "predicted": "1",
+      "count": 1
+    },
+    {
+      "true": "0",
+      "predicted": "O",
+      "count": 1
+    },
+    {
+      "true": "1",
+      "predicted": "l",
+      "count": 1
+    },
+    {
+      "true": "Z",
+      "predicted": "z",
+      "count": 1
+    },
+    {
+      "true": "B",
+      "predicted": "e",
+      "count": 1
+    },
+    {
+      "true": "0",
+      "predicted": "4",
+      "count": 1
+    },
+    {
+      "true": "2",
+      "predicted": "I",
+      "count": 1
+    },
+    {
+      "true": "5",
+      "predicted": "S",
+      "count": 1
+    },
+    {
+      "true": "8",
+      "predicted": "n",
+      "count": 1
+    },
+    {
+      "true": "1",
+      "predicted": "a",
+      "count": 1
+    },
+    {
+      "true": "A",
+      "predicted": "i",
+      "count": 1
+    },
+    {
+      "true": "I",
+      "predicted": "U",
+      "count": 1
+    },
+    {
+      "true": "O",
+      "predicted": "U",
+      "count": 1
+    },
+    {
+      "true": "Z",
+      "predicted": "U",
+      "count": 1
+    },
+    {
+      "true": "b",
+      "predicted": "w",
+      "count": 1
+    },
+    {
+      "true": "g",
+      "predicted": "U",
+      "count": 1
+    },
+    {
+      "true": "i",
+      "predicted": "U",
+      "count": 1
+    },
+    {
+      "true": "j",
+      "predicted": "a",
+      "count": 1
+    },
+    {
+      "true": "l",
+      "predicted": "a",
+      "count": 1
+    },
+    {
+      "true": "q",
+      "predicted": "9",
+      "count": 1
+    },
+    {
+      "true": "z",
+      "predicted": "a",
+      "count": 1
+    }
+  ],
+  "timing_note": "Preprocessing computes all three shared variants once per photo; inference is warmed single-image CPU time; excludes file loading and evidence export"
+}

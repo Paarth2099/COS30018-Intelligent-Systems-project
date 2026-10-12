@@ -1,0 +1,26 @@
+{
+  "original_size": [
+    386,
+    359
+  ],
+  "working_size": [
+    386,
+    359
+  ],
+  "bbox": [
+    0,
+    80,
+    386,
+    359
+  ],
+  "resized_ink_size": [
+    20,
+    14
+  ],
+  "contrast": 111,
+  "otsu_threshold": 213,
+  "foreground_fraction": 0.4209808477780825,
+  "warnings": [
+    "Foreground touches image edge: inspect clipping, shadow or paper boundary"
+  ]
+}

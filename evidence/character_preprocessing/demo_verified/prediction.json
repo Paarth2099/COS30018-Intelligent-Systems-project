@@ -1,0 +1,46 @@
+{
+  "input": "data/own_characters/development/Paarth/Paarth_02_lower-i.jpg",
+  "input_sha256": "36337b7c8449517f320080edc20707e8956c070655cdb1723ffefc44156d9eff",
+  "method": "otsu",
+  "checkpoint_sha256": "af68f14712d203a5c63ec5716a174740c2b953e9893c083552d994b80e72a04d",
+  "prediction": {
+    "text": "i",
+    "characters": [
+      {
+        "class_id": 44,
+        "character": "i",
+        "confidence": 0.22587093710899353
+      }
+    ],
+    "model": "cnn",
+    "task": "emnist_byclass_62"
+  },
+  "diagnostics": {
+    "illumination": "local",
+    "remove_specks": true,
+    "normalise_ink": true,
+    "removed_components": 0,
+    "original_size": [
+      329,
+      316
+    ],
+    "working_size": [
+      329,
+      316
+    ],
+    "bbox": [
+      151,
+      17,
+      175,
+      261
+    ],
+    "resized_ink_size": [
+      2,
+      20
+    ],
+    "contrast": 183,
+    "otsu_threshold": 171,
+    "foreground_fraction": 0.006021315070601362,
+    "warnings": []
+  }
+}

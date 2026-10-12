@@ -1,0 +1,25 @@
+{
+  "illumination": "local",
+  "original_size": [
+    4032,
+    3024
+  ],
+  "working_size": [
+    1200,
+    900
+  ],
+  "bbox": [
+    214,
+    62,
+    961,
+    827
+  ],
+  "resized_ink_size": [
+    20,
+    20
+  ],
+  "contrast": 254,
+  "otsu_threshold": 135,
+  "foreground_fraction": 0.021199074074074075,
+  "warnings": []
+}

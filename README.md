@@ -5,8 +5,14 @@
 Haresh's separate EMNIST ByClass model workflow is in `hnrs_chars/`. See
 [the setup and integration guide](HARESH_EXTENSION.md) and
 [measured results](EMNIST_RESULTS.md). Run `run_characters.ps1 -Action Demo`
-from this checkout after the saved run is available. Character segmentation,
-photo evaluation and GUI integration remain the next team stages.
+from this checkout after the saved run is available.
+
+Paarth's character-photo preparation and 80-photo development comparison are in
+[the preprocessing handover](PAARTH_EXTENSION.md) and
+[the measured preprocessing report](PAARTH_PREPROCESSING_RESULTS.md).
+Run `run_preprocessing.ps1 -Action Demo` to demonstrate one character photo.
+Character-string segmentation, GUI integration and fresh end-to-end photo
+evaluation remain the next team stages.
 
 The existing desktop application below remains the digit-recognition baseline.
 

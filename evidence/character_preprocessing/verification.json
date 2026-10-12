@@ -1,0 +1,54 @@
+{
+  "verified_utc": "2026-10-12T09:57:20.507940+00:00",
+  "runs": [
+    {
+      "run": 1,
+      "summary_sha256": "12158a299282831b1c21dc103e408ed59e2b34faf7ba08e4e94d692cf872a9e2",
+      "manifest_sha256": "1729725ec5144e0efdbfa451a0bbc5b0a5552816855b0266412ae1be130b79d6",
+      "results_sha256": "6c8c3a54fc3ead6055c184db75b29144810912a994db041fd94d72d1a6cc7191"
+    },
+    {
+      "run": 2,
+      "summary_sha256": "e240c6e44a80f3c06bea89f42b1ef272e71fbf03594d2bbb01bc6bb11206085e",
+      "manifest_sha256": "1729725ec5144e0efdbfa451a0bbc5b0a5552816855b0266412ae1be130b79d6",
+      "results_sha256": "fb3ba867623c8cc784903a88e70867e1aa218785688d3bfe719317c329bb90b5"
+    },
+    {
+      "run": 3,
+      "summary_sha256": "a9f01a3065765a9d93a9e7d58e14cbe1d6c8d21c00a12b0ec023f88a4f7ed887",
+      "manifest_sha256": "1729725ec5144e0efdbfa451a0bbc5b0a5552816855b0266412ae1be130b79d6",
+      "results_sha256": "2e3d4e06c513fc8f317d826d2faa40a9f3909a1b0fa37713aef566fbc72a2115"
+    },
+    {
+      "run": 4,
+      "summary_sha256": "b9387924328e00d2e78097347512e1a6476dcd3cc739bdd5d39e6d197d07fd69",
+      "manifest_sha256": "1729725ec5144e0efdbfa451a0bbc5b0a5552816855b0266412ae1be130b79d6",
+      "results_sha256": "7089e8fcab1263be1ae5057793f658aa679cfa4272d0dccd65c9b5531447dbdc"
+    }
+  ],
+  "all_80_default_api_arrays_match_saved_results": true,
+  "all_80_default_api_predictions_match_saved_results": true,
+  "demo_matches_experiment": true,
+  "software_tests": 33,
+  "baseline_and_model_files_unchanged_from": "4229e8d",
+  "current_source_sha256": {
+    "hnrs_chars/__init__.py": "5ca1aa43ce18d58c8fc93ae8555791170f0d10680f4382ddc25c8b1d04f3fb91",
+    "hnrs_chars/data.py": "c4332b491dd58646ecfa8b3ffa1a3e19ef4fc296637dd7bb726c6f270a9fa783",
+    "hnrs_chars/evaluate.py": "185fce2aadce1f518213e61b94507d666105560a01be2ce92ad40e2f0579f975",
+    "hnrs_chars/models.py": "0e47a3fe006320fd3c5d5a547d541974066c2741dbad44d27d3ca561c561cd30",
+    "hnrs_chars/photo_experiment.py": "107e19bda7fbc21580a781beae33a73642977ebba4dcb85e7608af7670beb915",
+    "hnrs_chars/photo_predict.py": "754bf02a3d12327775a0d703484b2c8c86d50092f68eddc2a1ca985cb976a2a9",
+    "hnrs_chars/photo_report.py": "7739007c4302bec188c7b6770c6f1303579acfec66df89acec856609bc8833e9",
+    "hnrs_chars/photo_verify.py": "a35a415c81a67f68f6190b2d90436f0a1c1dcbdc1cd5e654ec26697c630f90dc",
+    "hnrs_chars/predict.py": "1bf3d00b4e4956e47f9a0158bc5a326211e208d6f66a8b093b10337c57990a6a",
+    "hnrs_chars/prepare.py": "da8eb7cd7d9c3e816c8f78cbb7947acca9f9875cd011b46050003b02a4eeba62",
+    "hnrs_chars/preprocessing.py": "457854eaa6e442075cf6d5a3a4a5ba2bf6f5dcee5e5007be6f393f61286b7ced",
+    "hnrs_chars/report.py": "5d5cb72f38b7ae4974bae6f09d9bf4bb450616c28171e8d717e3f3ab3c04861e",
+    "hnrs_chars/train.py": "678978e587c5c2d54198ae124fcdf7a79ceb67840087671ff2877a37afc2ab67"
+  },
+  "shared_dependencies_sha256": {
+    "preprocess_digits.py": "8d91497c546c914688d09f5abe61e17ae458b6ee355045b7179521a6e8334969",
+    "segment_digits.py": "62040a481a978208f73dee684bca74ebc2ba06e0ec63506d390ca3c824c9973c",
+    "hnrs_ml/predict.py": "6c665528b9e0a43fd3dcd3602128b1d27dbeb53a107bb573dfde27891452937f"
+  }
+}

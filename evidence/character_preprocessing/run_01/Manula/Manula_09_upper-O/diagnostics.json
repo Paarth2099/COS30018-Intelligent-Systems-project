@@ -1,0 +1,24 @@
+{
+  "original_size": [
+    313,
+    318
+  ],
+  "working_size": [
+    313,
+    318
+  ],
+  "bbox": [
+    75,
+    52,
+    234,
+    259
+  ],
+  "resized_ink_size": [
+    15,
+    20
+  ],
+  "contrast": 150,
+  "otsu_threshold": 142,
+  "foreground_fraction": 0.04176462314385034,
+  "warnings": []
+}
