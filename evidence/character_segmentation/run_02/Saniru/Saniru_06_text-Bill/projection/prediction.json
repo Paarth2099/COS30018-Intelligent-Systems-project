@@ -1,0 +1,27 @@
+{
+  "text": "Bill",
+  "characters": [
+    {
+      "class_id": 11,
+      "character": "B",
+      "confidence": 0.9381235837936401
+    },
+    {
+      "class_id": 44,
+      "character": "i",
+      "confidence": 0.5844974517822266
+    },
+    {
+      "class_id": 47,
+      "character": "l",
+      "confidence": 0.5158575177192688
+    },
+    {
+      "class_id": 47,
+      "character": "l",
+      "confidence": 0.46867141127586365
+    }
+  ],
+  "model": "cnn",
+  "task": "emnist_byclass_62"
+}

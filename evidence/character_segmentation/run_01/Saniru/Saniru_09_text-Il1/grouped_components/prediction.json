@@ -1,0 +1,22 @@
+{
+  "text": "IlI",
+  "characters": [
+    {
+      "class_id": 18,
+      "character": "I",
+      "confidence": 0.4964521825313568
+    },
+    {
+      "class_id": 47,
+      "character": "l",
+      "confidence": 0.40328076481819153
+    },
+    {
+      "class_id": 18,
+      "character": "I",
+      "confidence": 0.2573774456977844
+    }
+  ],
+  "model": "cnn",
+  "task": "emnist_byclass_62"
+}

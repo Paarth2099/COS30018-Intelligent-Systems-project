@@ -1,0 +1,62 @@
+{
+  "coordinate_space": "upright resized grayscale image",
+  "size": [
+    385,
+    349
+  ],
+  "boxes": [
+    [
+      19,
+      39,
+      116,
+      319
+    ],
+    [
+      152,
+      137,
+      171,
+      152
+    ],
+    [
+      163,
+      205,
+      177,
+      268
+    ],
+    [
+      241,
+      82,
+      265,
+      291
+    ],
+    [
+      318,
+      99,
+      346,
+      287
+    ]
+  ],
+  "component_groups": [
+    [
+      2
+    ],
+    [
+      5
+    ],
+    [
+      6
+    ],
+    [
+      3
+    ],
+    [
+      4
+    ]
+  ],
+  "removed_components": 1,
+  "warnings": [
+    "Unassigned small component retained; inspect noise or broken character",
+    "Unassigned small component retained; inspect noise or broken character"
+  ],
+  "method": "grouped_components"
+}

@@ -1,0 +1,37 @@
+{
+  "text": "JaeI8g",
+  "characters": [
+    {
+      "class_id": 19,
+      "character": "J",
+      "confidence": 0.7220052480697632
+    },
+    {
+      "class_id": 36,
+      "character": "a",
+      "confidence": 0.14654441177845
+    },
+    {
+      "class_id": 40,
+      "character": "e",
+      "confidence": 0.34438613057136536
+    },
+    {
+      "class_id": 18,
+      "character": "I",
+      "confidence": 0.4985063672065735
+    },
+    {
+      "class_id": 8,
+      "character": "8",
+      "confidence": 0.22093001008033752
+    },
+    {
+      "class_id": 42,
+      "character": "g",
+      "confidence": 0.5160618424415588
+    }
+  ],
+  "model": "cnn",
+  "task": "emnist_byclass_62"
+}

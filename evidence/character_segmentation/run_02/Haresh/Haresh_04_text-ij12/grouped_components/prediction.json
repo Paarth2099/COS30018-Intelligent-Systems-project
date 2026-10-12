@@ -1,0 +1,32 @@
+{
+  "text": "ijn12",
+  "characters": [
+    {
+      "class_id": 44,
+      "character": "i",
+      "confidence": 0.8775638341903687
+    },
+    {
+      "class_id": 45,
+      "character": "j",
+      "confidence": 0.6220797896385193
+    },
+    {
+      "class_id": 49,
+      "character": "n",
+      "confidence": 0.3076230585575104
+    },
+    {
+      "class_id": 1,
+      "character": "1",
+      "confidence": 0.3158819377422333
+    },
+    {
+      "class_id": 2,
+      "character": "2",
+      "confidence": 0.9974472522735596
+    }
+  ],
+  "model": "cnn",
+  "task": "emnist_byclass_62"
+}

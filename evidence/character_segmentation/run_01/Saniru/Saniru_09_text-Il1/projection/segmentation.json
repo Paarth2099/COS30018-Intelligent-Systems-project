@@ -1,0 +1,41 @@
+{
+  "coordinate_space": "upright resized grayscale image",
+  "size": [
+    1200,
+    885
+  ],
+  "boxes": [
+    [
+      78,
+      131,
+      464,
+      797
+    ],
+    [
+      526,
+      243,
+      621,
+      809
+    ],
+    [
+      770,
+      173,
+      1093,
+      772
+    ]
+  ],
+  "component_groups": [
+    [
+      1
+    ],
+    [
+      5
+    ],
+    [
+      2
+    ]
+  ],
+  "removed_components": 2,
+  "warnings": [],
+  "method": "projection"
+}

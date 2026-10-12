@@ -1,0 +1,27 @@
+{
+  "text": "8lll",
+  "characters": [
+    {
+      "class_id": 8,
+      "character": "8",
+      "confidence": 0.48101624846458435
+    },
+    {
+      "class_id": 47,
+      "character": "l",
+      "confidence": 0.5036686062812805
+    },
+    {
+      "class_id": 47,
+      "character": "l",
+      "confidence": 0.5158575177192688
+    },
+    {
+      "class_id": 47,
+      "character": "l",
+      "confidence": 0.46867141127586365
+    }
+  ],
+  "model": "cnn",
+  "task": "emnist_byclass_62"
+}

@@ -1,0 +1,32 @@
+{
+  "text": "R00M7",
+  "characters": [
+    {
+      "class_id": 27,
+      "character": "R",
+      "confidence": 0.9605695605278015
+    },
+    {
+      "class_id": 0,
+      "character": "0",
+      "confidence": 0.5951854586601257
+    },
+    {
+      "class_id": 0,
+      "character": "0",
+      "confidence": 0.6593139171600342
+    },
+    {
+      "class_id": 22,
+      "character": "M",
+      "confidence": 0.5719749331474304
+    },
+    {
+      "class_id": 7,
+      "character": "7",
+      "confidence": 0.7754772305488586
+    }
+  ],
+  "model": "cnn",
+  "task": "emnist_byclass_62"
+}

@@ -1,0 +1,71 @@
+{
+  "purpose": "Development comparison; no independent final test",
+  "methods": {
+    "projection": {
+      "images": 40,
+      "reference_characters": 160,
+      "count_correct": 32,
+      "exact_correct": 7,
+      "exact_accuracy": 0.175,
+      "edit_distance": 65,
+      "character_error_rate": 0.40625,
+      "errors": 0,
+      "mean_segmentation_ms": 255.62967000587378,
+      "mean_preparation_ms": 232.57136499742046,
+      "mean_inference_ms": 1.7273725097766146
+    },
+    "grouped_components": {
+      "images": 40,
+      "reference_characters": 160,
+      "count_correct": 38,
+      "exact_correct": 7,
+      "exact_accuracy": 0.175,
+      "edit_distance": 57,
+      "character_error_rate": 0.35625,
+      "errors": 0,
+      "mean_segmentation_ms": 254.77548750059213,
+      "mean_preparation_ms": 235.89069999288768,
+      "mean_inference_ms": 1.6696124948794022
+    }
+  },
+  "provisional_selected_method": "grouped_components",
+  "selection_rule": "Higher count agreement, then lower CER, then simpler projection; visual review required",
+  "checkpoint": "experiments/emnist_byclass/run_01/cnn.pt",
+  "checkpoint_sha256": "af68f14712d203a5c63ec5716a174740c2b953e9893c083552d994b80e72a04d",
+  "source_sha256": {
+    "hnrs_chars/data.py": "c4332b491dd58646ecfa8b3ffa1a3e19ef4fc296637dd7bb726c6f270a9fa783",
+    "hnrs_chars/evaluate.py": "185fce2aadce1f518213e61b94507d666105560a01be2ce92ad40e2f0579f975",
+    "hnrs_chars/models.py": "0e47a3fe006320fd3c5d5a547d541974066c2741dbad44d27d3ca561c561cd30",
+    "hnrs_chars/photo_experiment.py": "107e19bda7fbc21580a781beae33a73642977ebba4dcb85e7608af7670beb915",
+    "hnrs_chars/photo_predict.py": "754bf02a3d12327775a0d703484b2c8c86d50092f68eddc2a1ca985cb976a2a9",
+    "hnrs_chars/photo_report.py": "7739007c4302bec188c7b6770c6f1303579acfec66df89acec856609bc8833e9",
+    "hnrs_chars/photo_verify.py": "a35a415c81a67f68f6190b2d90436f0a1c1dcbdc1cd5e654ec26697c630f90dc",
+    "hnrs_chars/predict.py": "1bf3d00b4e4956e47f9a0158bc5a326211e208d6f66a8b093b10337c57990a6a",
+    "hnrs_chars/prepare.py": "da8eb7cd7d9c3e816c8f78cbb7947acca9f9875cd011b46050003b02a4eeba62",
+    "hnrs_chars/preprocessing.py": "457854eaa6e442075cf6d5a3a4a5ba2bf6f5dcee5e5007be6f393f61286b7ced",
+    "hnrs_chars/report.py": "5d5cb72f38b7ae4974bae6f09d9bf4bb450616c28171e8d717e3f3ab3c04861e",
+    "hnrs_chars/segmentation.py": "b602034516fbae1b9d2d1fa08aad05d32fa64a45064c27c53888e809ace7c277",
+    "hnrs_chars/string_experiment.py": "27f834c420563f471404e5b6ad8985175885bc07debc3b4d26468f1024f34625",
+    "hnrs_chars/string_predict.py": "c75ce6a04bbffea39bdb65744c262fa8e1a527372dac650701d21c65ccacc5a4",
+    "hnrs_chars/train.py": "678978e587c5c2d54198ae124fcdf7a79ceb67840087671ff2877a37afc2ab67",
+    "hnrs_chars/__init__.py": "5ca1aa43ce18d58c8fc93ae8555791170f0d10680f4382ddc25c8b1d04f3fb91",
+    "segment_digits.py": "62040a481a978208f73dee684bca74ebc2ba06e0ec63506d390ca3c824c9973c",
+    "preprocess_digits.py": "8d91497c546c914688d09f5abe61e17ae458b6ee355045b7179521a6e8334969",
+    "compare_segmentation.py": "9f00b1ef8755dba4fac76c8b9de53e3e21c667f69491d4a4e0c73c54526ae3af",
+    "hnrs_ml/predict.py": "6c665528b9e0a43fd3dcd3602128b1d27dbeb53a107bb573dfde27891452937f"
+  },
+  "git_base": "d6690e5c6672f064d6c9b77b1f6a56e0760a64be",
+  "writers": {
+    "Haresh": 10,
+    "Manula": 10,
+    "Paarth": 10,
+    "Saniru": 10
+  },
+  "duplicate_hash_groups": [],
+  "timing_note": "Single local CPU run, warmed predictor; three stages timed separately; excludes loading and saving",
+  "limits": [
+    "Count agreement does not prove segmentation quality",
+    "No true character bounding-box annotations",
+    "Whole-string accuracy combines segmentation, preparation and classification errors"
+  ]
+}

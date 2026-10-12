@@ -1,0 +1,21 @@
+{
+  "selected_method": "grouped_components",
+  "run": "run_04",
+  "visual_review": {
+    "projection": {
+      "pass": 32,
+      "fail": 8,
+      "uncertain": 0
+    },
+    "grouped_components": {
+      "pass": 38,
+      "fail": 2,
+      "uncertain": 0
+    }
+  },
+  "rule": "More visually acceptable full-image separations; then lower CER; then projection on a full tie",
+  "review_scope": "Codex inspection of annotated originals and ordered crops; not human ground-truth boxes or independent evaluation",
+  "summary_sha256": "917c3c80f72a191d29d7b5f4df42044edef6ee754b38729c730cf4f11321f86b",
+  "review_sha256": "9588ac284f4e809c14e15a8147938c6e840d3ff87ae7322667c1829ff0e440ae",
+  "segmentation_source_sha256": "b602034516fbae1b9d2d1fa08aad05d32fa64a45064c27c53888e809ace7c277"
+}

@@ -1,0 +1,22 @@
+{
+  "text": "ZzD",
+  "characters": [
+    {
+      "class_id": 35,
+      "character": "Z",
+      "confidence": 0.4484288990497589
+    },
+    {
+      "class_id": 61,
+      "character": "z",
+      "confidence": 0.5318317413330078
+    },
+    {
+      "class_id": 13,
+      "character": "D",
+      "confidence": 0.5269208550453186
+    }
+  ],
+  "model": "cnn",
+  "task": "emnist_byclass_62"
+}

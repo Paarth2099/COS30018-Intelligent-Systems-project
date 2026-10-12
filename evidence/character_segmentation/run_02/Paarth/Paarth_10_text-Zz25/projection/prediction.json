@@ -1,0 +1,27 @@
+{
+  "text": "ZZ25",
+  "characters": [
+    {
+      "class_id": 35,
+      "character": "Z",
+      "confidence": 0.492499440908432
+    },
+    {
+      "class_id": 35,
+      "character": "Z",
+      "confidence": 0.4832420349121094
+    },
+    {
+      "class_id": 2,
+      "character": "2",
+      "confidence": 0.6248064637184143
+    },
+    {
+      "class_id": 5,
+      "character": "5",
+      "confidence": 0.6460033059120178
+    }
+  ],
+  "model": "cnn",
+  "task": "emnist_byclass_62"
+}

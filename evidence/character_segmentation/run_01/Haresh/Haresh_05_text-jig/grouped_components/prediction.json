@@ -1,0 +1,32 @@
+{
+  "text": "jeI8g",
+  "characters": [
+    {
+      "class_id": 45,
+      "character": "j",
+      "confidence": 0.8771069645881653
+    },
+    {
+      "class_id": 40,
+      "character": "e",
+      "confidence": 0.34438613057136536
+    },
+    {
+      "class_id": 18,
+      "character": "I",
+      "confidence": 0.4985063672065735
+    },
+    {
+      "class_id": 8,
+      "character": "8",
+      "confidence": 0.22093001008033752
+    },
+    {
+      "class_id": 42,
+      "character": "g",
+      "confidence": 0.5160618424415588
+    }
+  ],
+  "model": "cnn",
+  "task": "emnist_byclass_62"
+}

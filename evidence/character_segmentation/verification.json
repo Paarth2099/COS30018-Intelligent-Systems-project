@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "runs_audited": 4,
+  "input_photos": 40,
+  "method_image_results_checked": 320,
+  "selected_pipeline_photos_replayed": 40,
+  "prepared_arrays_and_boxes_match": true,
+  "predicted_strings_match": true,
+  "demo_verified": true,
+  "unit_tests_passed": 47,
+  "previous_components_unchanged": true,
+  "verification_source_sha256": "ebc2e1c3b9ced0925a9b89ea6d4a58c9756746e21e76b189de9d88e79075499a",
+  "limits": "Evidence consistency and replay checks; visual review remains assistant assessment; no unseen final test"
+}

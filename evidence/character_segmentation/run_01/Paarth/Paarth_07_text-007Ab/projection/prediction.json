@@ -1,0 +1,32 @@
+{
+  "text": "007Ab",
+  "characters": [
+    {
+      "class_id": 0,
+      "character": "0",
+      "confidence": 0.6254677772521973
+    },
+    {
+      "class_id": 0,
+      "character": "0",
+      "confidence": 0.6243107914924622
+    },
+    {
+      "class_id": 7,
+      "character": "7",
+      "confidence": 0.49953290820121765
+    },
+    {
+      "class_id": 10,
+      "character": "A",
+      "confidence": 0.6929302215576172
+    },
+    {
+      "class_id": 37,
+      "character": "b",
+      "confidence": 0.48413386940956116
+    }
+  ],
+  "model": "cnn",
+  "task": "emnist_byclass_62"
+}

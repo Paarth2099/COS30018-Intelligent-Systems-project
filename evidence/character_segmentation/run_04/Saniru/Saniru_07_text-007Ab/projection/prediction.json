@@ -1,0 +1,27 @@
+{
+  "text": "DMAb",
+  "characters": [
+    {
+      "class_id": 13,
+      "character": "D",
+      "confidence": 0.8108561635017395
+    },
+    {
+      "class_id": 22,
+      "character": "M",
+      "confidence": 0.43882644176483154
+    },
+    {
+      "class_id": 10,
+      "character": "A",
+      "confidence": 0.9710618257522583
+    },
+    {
+      "class_id": 37,
+      "character": "b",
+      "confidence": 0.844799816608429
+    }
+  ],
+  "model": "cnn",
+  "task": "emnist_byclass_62"
+}

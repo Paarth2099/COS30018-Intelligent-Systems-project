@@ -1,0 +1,27 @@
+{
+  "text": "Ab12",
+  "characters": [
+    {
+      "class_id": 10,
+      "character": "A",
+      "confidence": 0.9016229510307312
+    },
+    {
+      "class_id": 37,
+      "character": "b",
+      "confidence": 0.8248634338378906
+    },
+    {
+      "class_id": 1,
+      "character": "1",
+      "confidence": 0.3382839262485504
+    },
+    {
+      "class_id": 2,
+      "character": "2",
+      "confidence": 0.8889137506484985
+    }
+  ],
+  "model": "cnn",
+  "task": "emnist_byclass_62"
+}

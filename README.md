@@ -11,8 +11,11 @@ Paarth's character-photo preparation and 80-photo development comparison are in
 [the preprocessing handover](PAARTH_EXTENSION.md) and
 [the measured preprocessing report](PAARTH_PREPROCESSING_RESULTS.md).
 Run `run_preprocessing.ps1 -Action Demo` to demonstrate one character photo.
-Character-string segmentation, GUI integration and fresh end-to-end photo
-evaluation remain the next team stages.
+Manula's character-string segmentation and 40-photo development comparison are in
+[the segmentation handover](MANULA_EXTENSION.md) and
+[the measured segmentation report](MANULA_SEGMENTATION_RESULTS.md).
+Run `run_segmentation.ps1 -Action Demo` to demonstrate a complete string photo.
+Alphanumeric GUI integration and fresh end-to-end photo evaluation remain.
 
 The existing desktop application below remains the digit-recognition baseline.
 

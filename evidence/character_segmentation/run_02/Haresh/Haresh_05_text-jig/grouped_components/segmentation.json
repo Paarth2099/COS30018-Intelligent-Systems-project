@@ -1,0 +1,71 @@
+{
+  "coordinate_space": "upright resized grayscale image",
+  "size": [
+    433,
+    331
+  ],
+  "boxes": [
+    [
+      34,
+      129,
+      116,
+      250
+    ],
+    [
+      77,
+      58,
+      113,
+      93
+    ],
+    [
+      176,
+      44,
+      183,
+      57
+    ],
+    [
+      190,
+      136,
+      209,
+      200
+    ],
+    [
+      191,
+      35,
+      218,
+      71
+    ],
+    [
+      277,
+      103,
+      379,
+      318
+    ]
+  ],
+  "component_groups": [
+    [
+      7
+    ],
+    [
+      3
+    ],
+    [
+      2
+    ],
+    [
+      8
+    ],
+    [
+      1
+    ],
+    [
+      5
+    ]
+  ],
+  "removed_components": 2,
+  "warnings": [
+    "Unassigned small component retained; inspect noise or broken character",
+    "Wide region: touching/overlapping characters may be merged"
+  ],
+  "method": "grouped_components"
+}

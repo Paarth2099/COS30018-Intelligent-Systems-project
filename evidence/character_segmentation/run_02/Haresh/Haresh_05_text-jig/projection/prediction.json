@@ -1,0 +1,27 @@
+{
+  "text": "jeig",
+  "characters": [
+    {
+      "class_id": 45,
+      "character": "j",
+      "confidence": 0.8771069645881653
+    },
+    {
+      "class_id": 40,
+      "character": "e",
+      "confidence": 0.34438613057136536
+    },
+    {
+      "class_id": 44,
+      "character": "i",
+      "confidence": 0.43959853053092957
+    },
+    {
+      "class_id": 42,
+      "character": "g",
+      "confidence": 0.5160618424415588
+    }
+  ],
+  "model": "cnn",
+  "task": "emnist_byclass_62"
+}
