@@ -11,6 +11,86 @@ from preprocess_digits import prepare_variants
 
 IMAGE_TYPES = {'.png','.jpg','.jpeg','.bmp','.tif','.tiff'}
 
+
+def character_catalog(folder):
+    """Index explicit, case-sensitive single-character labels, never strings."""
+    folder=Path(folder)
+    if not folder.is_dir(): raise ValueError('Select a folder containing individual character photos.')
+    catalog={}
+    for path in sorted(folder.rglob('*')):
+        if not path.is_file() or path.suffix.lower() not in IMAGE_TYPES: continue
+        match=re.search(r'(?:^|_)(digit-[0-9]|upper-[A-Z]|lower-[a-z])$',path.stem)
+        if match: character=match[1][-1]
+        elif re.fullmatch(r'[A-Za-z0-9]',path.stem): character=path.stem
+        else: continue
+        catalog.setdefault(character,[]).append(path)
+    return catalog
+
+
+def generate_text(folder,text,seed=42):
+    """Compose handwriting tiles; labels choose sources but never guide prediction."""
+    from hnrs_chars.preprocessing import prepare_character
+    if not re.fullmatch(r'[A-Za-z0-9]{1,12}',text):
+        raise ValueError('Enter 1 to 12 characters: A-Z, a-z or 0-9, without spaces.')
+    catalog=character_catalog(folder)
+    missing=sorted(set(text)-catalog.keys())
+    if missing:
+        raise ValueError('No single-character photo for: '+', '.join(missing)+
+                         '. Case matters. Use Name_01_upper-A.jpg, Name_02_lower-a.jpg or Name_03_digit-0.jpg.')
+    rng=random.Random(seed);sources=[]
+    canvas=Image.new('RGB',(32+len(text)*112+(len(text)-1)*16,144),'white')
+    for i,character in enumerate(text):
+        path=rng.choice(catalog[character])
+        try: array=prepare_character(open_photo(path))
+        except (ValueError,OSError) as exc:
+            raise ValueError(f'Cannot prepare {path.name}: {exc}') from exc
+        tile=Image.fromarray(255-np.rint(array*255).astype('uint8')).resize((112,112),Image.Resampling.NEAREST)
+        canvas.paste(tile,(16+i*128,16))
+        sources.append({'character':character,'file':str(path.resolve()),
+                        'sha256':hashlib.sha256(path.read_bytes()).hexdigest()})
+    return canvas,{'route':'generated','mode':'Alphanumeric','requested_text':text,
+                   'seed':seed,'sources':sources,'warnings':[],
+                   'note':'Composed from labelled single-character photos; source labels are not supplied to recognition. Generated images are not independent handwritten-string evaluation.'}
+
+
+class RecognitionService:
+    """GUI worker service; mode-specific checkpoints and no reference-label input."""
+    def __init__(self,root):
+        self.root=Path(root);self.predictors={}
+
+    def recognise(self,image,settings):
+        import torch
+        torch.set_num_threads(4)
+        settings=dict(settings)
+        mode=settings.get('mode','Numbers');model=settings['model']
+        if mode not in ('Numbers','Alphanumeric') or model not in ('cnn','mlp'):
+            raise ValueError('Unsupported recognition mode or model')
+        if mode=='Alphanumeric':
+            from hnrs_chars.predict import CharacterPredictor
+            from hnrs_chars.segmentation import recognise_text
+            checkpoint=self.root/'experiments/emnist_byclass/run_01'/f'{model}.pt'
+            selection=json.loads((checkpoint.parent/'selection.json').read_text())
+            expected=next(r['checkpoint_sha256'] for r in selection['models'] if r['model']==model)
+            digest=hashlib.sha256(checkpoint.read_bytes()).hexdigest()
+            if digest!=expected: raise ValueError('Character model checkpoint hash mismatch; restore the saved experiment.')
+            settings['representation']='otsu'
+            settings['preparation']='Paarth character preparation: local illumination, Otsu, speck removal, ink normalisation'
+            factory=CharacterPredictor
+        else:
+            from hnrs_ml.predict import DigitPredictor
+            checkpoint=self.root/'experiments/baseline'/f'{model}.pt'
+            digest=hashlib.sha256(checkpoint.read_bytes()).hexdigest();factory=DigitPredictor
+        key=(mode,model,digest)
+        if key not in self.predictors:self.predictors[key]=factory(checkpoint)
+        settings['mode']=mode;settings['checkpoint_sha256']=digest
+        settings['checkpoint']=checkpoint.relative_to(self.root).as_posix()
+        if mode=='Alphanumeric':
+            result=recognise_text(image,self.predictors[key],settings['method'])
+        else:
+            from segment_digits import recognise_number
+            result=recognise_number(image,self.predictors[key],settings['method'],settings['representation'])
+        return result,settings
+
 # Handles GUI image input, number generation and evidence export
 def open_photo(path):
     with Image.open(path) as image:
@@ -67,7 +147,7 @@ def export_result(parent,image,origin,result,settings):
     destination.mkdir(parents=True,exist_ok=False)
     image.save(destination/'input.png')
     seg=result['segmentation']; arrays=result['prepared']
-    annotated_image(seg).save(destination/'detected_digits.png')
+    annotated_image(seg).save(destination/('detected_characters.png' if settings.get('mode')=='Alphanumeric' else 'detected_digits.png'))
     Image.fromarray(seg.mask.astype('uint8')*255).save(destination/'foreground_mask.png')
     np.save(destination/'prepared_crops.npy',arrays)
     for index,(crop,array) in enumerate(zip(seg.crops,arrays)):
@@ -76,6 +156,8 @@ def export_result(parent,image,origin,result,settings):
     record={'created_utc':datetime.now(timezone.utc).isoformat(),'input':origin,'settings':settings,
             'prediction':result['prediction'],'boxes':seg.boxes,'coordinate_space':'resized grayscale image',
             'resized_size':seg.gray.size,'warnings':seg.warnings,
-            'score_note':'Per-digit confidence is an uncalibrated model score, not a verified probability.'}
+            'input_png_sha256':hashlib.sha256((destination/'input.png').read_bytes()).hexdigest(),
+            'component_groups':getattr(seg,'groups',None),
+            'score_note':'Per-character confidence is an uncalibrated model score, not a verified probability.'}
     (destination/'result.json').write_text(json.dumps(record,indent=2),encoding='utf-8')
     return destination

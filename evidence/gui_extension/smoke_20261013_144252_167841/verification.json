@@ -1,0 +1,81 @@
+{
+  "created_utc": "2026-10-13T03:42:52.366873+00:00",
+  "predictions": [
+    {
+      "mode": "Alphanumeric",
+      "model": "cnn",
+      "source": "Photo | Manula_02_text-Room7.jpg",
+      "text": "R00M7",
+      "count": 5
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "cnn",
+      "source": "Photo | Manula_02_text-Room7.jpg",
+      "text": "R00A",
+      "count": 4
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "mlp",
+      "source": "Photo | Manula_02_text-Room7.jpg",
+      "text": "e00n7",
+      "count": 5
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "cnn",
+      "source": "Generated image | Requested: 00Ai",
+      "text": "00Ai",
+      "count": 4
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "cnn",
+      "source": "Photo | blank",
+      "text": "No characters detected",
+      "count": 0
+    },
+    {
+      "mode": "Numbers",
+      "model": "cnn",
+      "source": "Photo | Manula_07_label-420.jpg",
+      "text": "420",
+      "count": 3
+    },
+    {
+      "mode": "Numbers",
+      "model": "cnn",
+      "source": "Generated image | Requested: 007",
+      "text": "007",
+      "count": 3
+    },
+    {
+      "mode": "Numbers",
+      "model": "mlp",
+      "source": "Generated image | Requested: 007",
+      "text": "002",
+      "count": 3
+    }
+  ],
+  "checks": [
+    "Alphanumeric photo matches saved pipeline",
+    "Both character models",
+    "Both character segmentation methods",
+    "Character generation preserves case/zeros",
+    "Source request separate from actual prediction",
+    "Image/mode/model changes clear stale results",
+    "Invalid file and text, missing samples, cancelled dialog, blank image",
+    "Character/number/blank exports",
+    "Numbers photo and generated 007 regression",
+    "Four mode/model caches isolated",
+    "GUI heartbeat during recognition, controls disabled",
+    "Minimum window controls/status within bounds"
+  ],
+  "status": "PASS",
+  "source_sha256": {
+    "app.py": "4dffc1e75181435de068898607109a6f1de50b4196de2a28cabed2b24240915b",
+    "gui_core.py": "a69ad6131e86e740c2fabcde7b564a2acbd5fc0d51733d8f6613e92e366bdf28",
+    "tests/gui_extension_smoke.py": "3eec2358f2a5d290f292743b6ea70ee59cc0ac0a2b2973e4918a529ffc3623fb"
+  }
+}

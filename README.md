@@ -15,9 +15,13 @@ Manula's character-string segmentation and 40-photo development comparison are i
 [the segmentation handover](MANULA_EXTENSION.md) and
 [the measured segmentation report](MANULA_SEGMENTATION_RESULTS.md).
 Run `run_segmentation.ps1 -Action Demo` to demonstrate a complete string photo.
-Alphanumeric GUI integration and fresh end-to-end photo evaluation remain.
+Saniru's GUI now supports Numbers and Alphanumeric modes, both photo-input
+routes, crop previews and evidence export. See [the GUI guide](SANIRU_EXTENSION.md)
+and [local verification](SANIRU_GUI_VERIFICATION.md). Launch with `run_gui.ps1`.
+Recognition error analysis, fresh end-to-end photo evaluation and teammates'
+manual checks of the extension on their computers remain.
 
-The existing desktop application below remains the digit-recognition baseline.
+The desktop application retains the digit-recognition baseline alongside the extension.
 
 The machine-learning component for Option B: handwritten number recognition.
 The saved baseline supplies the digit classifiers and prediction interface.
@@ -29,7 +33,7 @@ and generated number images to this predictor.
 From the inner project directory in Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe app.py
+.\run_gui.ps1
 ```
 
 Use Open a photo to load handwriting, or Generate a number to compose digit
