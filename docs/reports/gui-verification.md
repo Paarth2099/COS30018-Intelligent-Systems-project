@@ -8,7 +8,7 @@ Implemented Numbers/Alphanumeric mode switching, case-sensitive generation from 
 
 **Desktop integration checks passed** with real Tk widgets, real worker threads and saved CNN/MLP checkpoints. Dialog selections were supplied by the test to make local inputs repeatable; this is automated desktop testing, not a teammate's manual acceptance test.
 
-Passing evidence: [verification JSON](evidence/gui_extension/smoke_20261013_144252_167841/verification.json).
+Passing evidence: [verification JSON](../../evidence/gui_extension/smoke_20261013_144252_167841/verification.json).
 
 | Input / configuration | Actual displayed result | Interpretation |
 |---|---|---|
@@ -35,10 +35,10 @@ The eight displayed examples are workflow checks, not an accuracy benchmark. The
 
 Inspected screenshots:
 
-- [Alphanumeric photo](evidence/gui_extension/smoke_20261013_144252_167841/alphanumeric_photo.png)
-- [Generated characters](evidence/gui_extension/smoke_20261013_144252_167841/generated_characters.png)
-- [Minimum window](evidence/gui_extension/smoke_20261013_144252_167841/minimum_window.png)
-- [Number regression](evidence/gui_extension/smoke_20261013_144252_167841/numbers_regression.png)
+- [Alphanumeric photo](../../evidence/gui_extension/smoke_20261013_144252_167841/alphanumeric_photo.png)
+- [Generated characters](../../evidence/gui_extension/smoke_20261013_144252_167841/generated_characters.png)
+- [Minimum window](../../evidence/gui_extension/smoke_20261013_144252_167841/minimum_window.png)
+- [Number regression](../../evidence/gui_extension/smoke_20261013_144252_167841/numbers_regression.png)
 
 The earlier `smoke_20261013_144030_221516` directory is explicitly incomplete: the test encountered a missing original digit dataset, and its screenshot exposed sidebar clipping. The 40 original digit photos were copied from the existing baseline into this checkout's ignored `data/segmentation_photos` directory, the sidebar spacing was corrected, and the desktop suite was repeated successfully. No training or development photos were relabelled during GUI work.
 
@@ -46,6 +46,6 @@ The earlier `smoke_20261013_144030_221516` directory is explicitly incomplete: t
 
 Run `run_gui.ps1 -Verify` with the models and local development photo folders present. The test makes a new evidence directory instead of overwriting earlier results. The verification JSON includes hashes of the tested GUI source and smoke script. The existing digit and character pipelines remain separate; generated-text labels are used to choose source tiles, not fed to recognition.
 
-The new extension has been verified on this laptop only. Teammates must still open it on their machines and exercise loading, generation, recognition, mode switching and export. Display scaling, missing local datasets and environment installation can differ. See [the user guide](SANIRU_EXTENSION.md) for setup.
+Verification covers one local Windows environment. Cross-machine acceptance testing remains outstanding for loading, generation, recognition, mode switching and export. Display scaling, missing local datasets and environment installation can differ. See [the user guide](../guides/gui.md) for setup.
 
-Recognition accuracy, independent final evaluation, final reports and presentation remain team work. Do not treat a successful generated example or automated GUI test as proof of high accuracy on fresh handwriting.
+Recognition error analysis and independent final evaluation remain outstanding. Do not treat a successful generated example or automated GUI test as proof of high accuracy on fresh handwriting.

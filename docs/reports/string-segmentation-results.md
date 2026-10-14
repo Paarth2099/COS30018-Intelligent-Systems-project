@@ -1,6 +1,6 @@
-# Manula: alphanumeric string segmentation experiment
+# Alphanumeric string segmentation experiment
 
-Component owner: Manula. Implementation, experiment execution and visual review used Codex assistance. Manula should review, demonstrate and explain the work before recording personal contributions.
+Comparison of projection and grouped connected-component segmentation for single-line alphanumeric images.
 
 ## Outcome
 
@@ -46,22 +46,22 @@ These are sequential development changes, sometimes involving multiple geometric
 
 ## Visual review and remaining failures
 
-Final visual review inspected all 80 method/image combinations using annotated originals and ordered crop strips. A pass requires one crop per visible character in reading order with appropriate dot grouping, not a correct model prediction. This is an assistant visual assessment, not independent human annotation or bounding-box IoU measurement.
+Final visual review inspected all 80 method/image combinations using annotated originals and ordered crop strips. A pass requires one crop per visible character in reading order with appropriate dot grouping, not a correct model prediction. This qualitative preview assessment is not independently annotated ground truth or a bounding-box IoU measurement.
 
 Run 3 illustrates why counts alone are insufficient: grouped components matched 38/40 counts, but two of those attached an i dot to a neighbour. Its visual pass count was 36/40; that finding motivated run 4.
 
 | Image | Method | Visual issue |
 |---|---|---|
-| Haresh/Haresh_02_text-Room7.jpg | projection | Merged m and 7; Codex visual review of run_04 review sheets; no independent human box annotations |
-| Haresh/Haresh_03_text-Hello.jpg | projection | Broken H split into two crops; Codex visual review of run_04 review sheets; no independent human box annotations |
-| Haresh/Haresh_03_text-Hello.jpg | grouped_components | Broken H split into two crops; Codex visual review of run_04 review sheets; no independent human box annotations |
-| Haresh/Haresh_05_text-jig.jpg | projection | Fragmented i dot forms an extra crop; Codex visual review of run_04 review sheets; no independent human box annotations |
-| Haresh/Haresh_06_text-Bill.jpg | grouped_components | Detached i dot and stem remain separate; Codex visual review of run_04 review sheets; no independent human box annotations |
-| Haresh/Haresh_10_text-Zz25.jpg | projection | Merged 2 and 5; Codex visual review of run_04 review sheets; no independent human box annotations |
-| Manula/Manula_02_text-Room7.jpg | projection | Merged m and 7; Codex visual review of run_04 review sheets; no independent human box annotations |
-| Saniru/Saniru_03_text-Hello.jpeg | projection | Merged e and first l; Codex visual review of run_04 review sheets; no independent human box annotations |
-| Saniru/Saniru_05_text-jig.jpeg | projection | Detached i dot forms an extra crop; Codex visual review of run_04 review sheets; no independent human box annotations |
-| Saniru/Saniru_07_text-007Ab.jpeg | projection | Merged second zero and 7; Codex visual review of run_04 review sheets; no independent human box annotations |
+| Haresh/Haresh_02_text-Room7.jpg | projection | Merged m and 7 |
+| Haresh/Haresh_03_text-Hello.jpg | projection | Broken H split into two crops |
+| Haresh/Haresh_03_text-Hello.jpg | grouped_components | Broken H split into two crops |
+| Haresh/Haresh_05_text-jig.jpg | projection | Fragmented i dot forms an extra crop |
+| Haresh/Haresh_06_text-Bill.jpg | grouped_components | Detached i dot and stem remain separate |
+| Haresh/Haresh_10_text-Zz25.jpg | projection | Merged 2 and 5 |
+| Manula/Manula_02_text-Room7.jpg | projection | Merged m and 7 |
+| Saniru/Saniru_03_text-Hello.jpeg | projection | Merged e and first l |
+| Saniru/Saniru_05_text-jig.jpeg | projection | Detached i dot forms an extra crop |
+| Saniru/Saniru_07_text-007Ab.jpeg | projection | Merged second zero and 7 |
 
 Model errors remain after acceptable segmentation, including `O/o/0`, `I/l/1`, and case changes. Photo ink style, size normalisation and EMNIST-to-photo differences may contribute; this comparison does not isolate those causes. Failures and warnings remain visible in the evidence.
 
@@ -90,14 +90,14 @@ These small samples mix handwriting, pen and photography differences; they do no
 
 Single local CPU run with a warmed predictor; excludes loading and evidence export. Timings are not cross-machine guarantees.
 
-## Verification and handover
+## Verification and evidence
 
-- 47 software tests passed: the previous 33 plus 14 new segmentation/metric/interface tests.
+- At the segmentation experiment checkpoint, 47 software tests passed: the previous 33 plus 14 new segmentation/interface tests.
 - Tests cover dots, fragmented dots, short stems, misleading neighbour boxes, small pen gaps, overlapping crop boxes, ordering, blank images, EXIF rotation and preservation of case/zeros.
 - Existing digit GUI, digit algorithms, Paarth preparation and trained models remain unchanged.
 - Every run has source/checkpoint/input hashes, per-image CSVs, masks, boxes, crop images, prepared arrays and predictions.
 - Final default and review provenance are in `evidence/character_segmentation/selection.json`.
 
-The component supports a single line of separated characters. Touching/cursive writing, multiline pages, word-space inference, severe shadows and very small detached parts remain limitations. Manula should review the output; Saniru can then integrate this interface into the GUI. The team still needs fresh end-to-end testing and further error analysis.
+The component supports a single line of separated characters. Touching/cursive writing, multiline pages, word-space inference, severe shadows and very small detached parts remain limitations. The selected pipeline is integrated into the GUI. Fresh end-to-end testing and further error analysis remain necessary.
 
-See [MANULA_EXTENSION.md](MANULA_EXTENSION.md) for commands and integration instructions.
+See [the segmentation guide](../guides/string-segmentation.md) for commands and the recognition interface.

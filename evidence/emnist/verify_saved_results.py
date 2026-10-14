@@ -48,7 +48,7 @@ audit = {'verified_utc': datetime.now(timezone.utc).isoformat(), 'models': check
                     'CLI output matches evaluated public interface',
                     'Original digit source and checkpoints unchanged from 73e11d0',
                     'Saved software test log records 24 passing tests'],
-         'report_sha256': digest(root / 'EMNIST_RESULTS.md'),
+         'report_sha256': digest(root / 'docs/reports/emnist-results.md'),
          'current_source_sha256': {p.name: digest(p) for p in sorted((root / 'hnrs_chars').glob('*.py'))}}
 (root / 'evidence/emnist/verification.json').write_text(json.dumps(audit, indent=2) + '\n')
 print(json.dumps(audit['models'], indent=2))

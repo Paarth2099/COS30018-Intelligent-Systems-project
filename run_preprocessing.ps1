@@ -11,7 +11,7 @@ if (-not (Test-Path -LiteralPath $photoPython)) {
     $photoPython = Join-Path $originalProject '.venv\Scripts\python.exe'
 }
 if (-not (Test-Path -LiteralPath $photoPython)) {
-    throw 'Create .venv and install requirements.txt. See PAARTH_EXTENSION.md.'
+    throw 'Create .venv and install requirements.txt. See docs/guides/character-preprocessing.md.'
 }
 if (-not $Output) {
     $Output = 'evidence/character_preprocessing/' + $Action.ToLower() + '_' + (Get-Date -Format 'yyyyMMdd_HHmmss_fff')

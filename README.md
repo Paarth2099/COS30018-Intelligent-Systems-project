@@ -1,119 +1,75 @@
-# COS30018 Intelligent Systems project
+# Handwritten Number Recognition System
 
-## Approved alphanumeric extension
+COS30018 Intelligent Systems — Option B. A Python desktop application for handwritten numbers, with an approved extension for single-line alphanumeric handwriting.
 
-Haresh's separate EMNIST ByClass model workflow is in `hnrs_chars/`. See
-[the setup and integration guide](HARESH_EXTENSION.md) and
-[measured results](EMNIST_RESULTS.md). Run `run_characters.ps1 -Action Demo`
-from this checkout after the saved run is available.
+The system combines image preparation, segmentation and MLP/CNN classification. Both modes support loading photographs and generating images from labelled handwriting samples, with ordered crop previews and exportable results.
 
-Paarth's character-photo preparation and 80-photo development comparison are in
-[the preprocessing handover](PAARTH_EXTENSION.md) and
-[the measured preprocessing report](PAARTH_PREPROCESSING_RESULTS.md).
-Run `run_preprocessing.ps1 -Action Demo` to demonstrate one character photo.
-Manula's character-string segmentation and 40-photo development comparison are in
-[the segmentation handover](MANULA_EXTENSION.md) and
-[the measured segmentation report](MANULA_SEGMENTATION_RESULTS.md).
-Run `run_segmentation.ps1 -Action Demo` to demonstrate a complete string photo.
-Saniru's GUI now supports Numbers and Alphanumeric modes, both photo-input
-routes, crop previews and evidence export. See [the GUI guide](SANIRU_EXTENSION.md)
-and [local verification](SANIRU_GUI_VERIFICATION.md). Launch with `run_gui.ps1`.
-Recognition error analysis, fresh end-to-end photo evaluation and teammates'
-manual checks of the extension on their computers remain.
+## Quick start
 
-The desktop application retains the digit-recognition baseline alongside the extension.
-
-The machine-learning component for Option B: handwritten number recognition.
-The saved baseline supplies the digit classifiers and prediction interface.
-The local preprocessing, segmentation and GUI now connect both loaded photos
-and generated number images to this predictor.
-
-## Launch the desktop application
-
-From the inner project directory in Windows PowerShell:
+Use Python 3.12. Run from the repository root in PowerShell:
 
 ```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\run_gui.ps1
 ```
 
-Use Open a photo to load handwriting, or Generate a number to compose digit
-images from a folder. Select a saved model, segmentation method and preprocessing
-representation, then Recognise. Export result saves a new evidence folder.
+With an existing environment, only the last command is needed. See [installation and datasets](docs/guides/installation.md).
 
-- [Saniru's setup, user guide and code explanation](docs/SANIRU_START_HERE.md)
-- [GUI verification record](docs/GUI_VERIFICATION.md)
+## Modes
 
-18 automated tests passed; real-window checks verified both image routes,
-exports, selectors, error handling and leading zeros. These are functionality
-checks rather than final accuracy evaluation. The alphanumeric extension,
-new-image evaluation and final report/video remain separate project work.
+| Mode | Classes | Models | Segmentation |
+|---|---|---|---|
+| Numbers | 0–9 | MNIST MLP and CNN | Connected components or projection |
+| Alphanumeric | 0–9, A–Z, a–z | EMNIST ByClass MLP and CNN | Grouped components or projection |
 
-#segmentation component
+Outputs retain case and leading zeros. Supported photographs contain one line of separate dark characters on pale paper. Joined cursive and multiline documents are outside the supported scope.
 
-- [Beginner walkthrough and GUI handover](docs/MANULA_START_HERE.md)
-- [Verified development comparison and limitations](docs/SEGMENTATION_EXPERIMENT.md)
+## Documentation
 
-The updated photo collection contains 40 images. The selected connected-component
-method recognises 18/20 multi-digit numbers exactly; projection recognises 17/20.
-Correct digit counts are 20/20 versus 19/20 on that subset. Count agreement is not
-an annotated segmentation accuracy measure. Final evidence is in
-`evidence/segmentation/team_run_02`; all 13 software tests pass.
+- [Documentation index](docs/README.md)
+- [Installation](docs/guides/installation.md) and [GUI user guide](docs/guides/gui.md)
+- [System architecture](docs/architecture.md)
+- [Digit-system results](docs/reports/digit-system-results.md)
+- [Character-model results](docs/reports/emnist-results.md)
+- [Character-preprocessing results](docs/reports/character-preprocessing-results.md)
+- [String-segmentation results](docs/reports/string-segmentation-results.md)
+- [GUI verification](docs/reports/gui-verification.md)
 
-Run from this directory in Windows PowerShell (choose a new output folder):
+## Results and scope
+
+| Evaluation | Result | Scope |
+|---|---|---|
+| MNIST test set | MLP 96.60%; CNN 98.53% | 10,000 isolated test digits |
+| Original number photos, selected pipeline | 15/20 single digits; 18/20 exact multi-digit numbers | Development photos |
+| EMNIST ByClass test set | MLP 83.37%; CNN 85.59% | 116,323 isolated test characters |
+| Character photos, selected preparation + CNN | 53/80 correct | Development photos |
+| String photos, grouped components | 38/40 acceptable separations; 7/40 exact strings | Development photos; qualitative crop review |
+
+Classification, segmentation quality and complete-string recognition measure different outcomes. Development photos were inspected during refinement and are not an independent final test. Recognition error analysis and fresh-photo evaluation remain outstanding.
+
+## Repository layout
+
+```text
+docs/          Guides, architecture, experiment reports and data notes
+hnrs_ml/       Digit model training, evaluation and prediction
+hnrs_chars/    Character models, preprocessing, segmentation and experiments
+tests/         Automated tests and desktop workflow checks
+experiments/   Checkpoints, training configurations and source snapshots
+evidence/      Metrics, crops, previews and verification records
+data/          Local datasets and original photos (excluded from Git)
+app.py         Desktop interface
+gui_core.py    Acquisition, recognition dispatch and export
+run_*.ps1      Windows launchers and experiment commands
+```
+
+## Verification
 
 ```powershell
-.\.venv\Scripts\python.exe recognise_photo.py --input "data/segmentation_photos/Manula/Manula_07_label-420.jpg" --output evidence/segmentation/my_manula_demo_01
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
+.\run_gui.ps1 -Verify
 ```
 
-This example predicts `420` and saves a preview showing the ordered digit crops.
+The software suite contains 52 tests. Desktop checks require the models and photo folders described in the installation guide and briefly open the application. Each run creates a new evidence folder. Historical reports identify the test count at their own development stage.
 
-## Verified baseline
-
-| Model | Validation accuracy | MNIST test accuracy |
-|---|---:|---:|
-| MLP | 96.22% | 96.60% |
-| CNN | 98.42% | 98.53% |
-
-The CNN was selected using validation results before test evaluation. These are
-single-seed, five-epoch benchmark results, not real-photo application accuracy.
-The model also reconstructed 957 of 1,000 generated test strings correctly when
-given their known digit crops. This does not evaluate segmentation.
-
-## Start here
-
-- [Beginner walkthrough and setup](docs/START_HERE.md)
-- [Model comparison and limitations](docs/ML_REPORT.md)
-- [Integration instructions for teammates](docs/INTEGRATION.md)
-- [Evidence and individual worklog guidance](docs/CONTRIBUTION_RECORD.md)
-- [Actual experiment settings](experiments/baseline/config.json)
-- [Actual final evaluation](experiments/baseline/evaluation/results.json)
-
-Use Python 3.12. From the repository directory on macOS:
-
-```sh
-python3.12 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-python -m unittest discover -s tests -v
-python -m hnrs_ml.predict --checkpoint experiments/baseline/cnn.pt --crops experiments/baseline/evaluation/example_crops/digit_0.png experiments/baseline/evaluation/example_crops/digit_1.png experiments/baseline/evaluation/example_crops/digit_2.png
-```
-
-The supplied demo really predicts **766** for an image labelled **966**. It is a
-retained failure example, useful for explaining limitations. The preview below
-also includes successful examples. No data download or retraining is needed for
-this demo because trained models and the three small crops are included.
-
-![Generated examples with known digit boundaries](experiments/baseline/evaluation/generated_strings.png)
-
-To inspect MNIST, run `python inspect_mnist.py`. To reproduce training and final
-evaluation in a new output directory:
-
-```sh
-python -m hnrs_ml.train --download --output-dir experiments/reproduction
-python -m hnrs_ml.evaluate --experiment-dir experiments/reproduction
-```
-
-Training and evaluation refuse to overwrite an existing experiment record.
-Use validation data for future improvements. Once test results have been examined,
-do not repeatedly tune against them and describe that as an untouched final test.
-
+Raw datasets and photos are shared separately. Classifying a supplied photo does not require retraining the saved models.

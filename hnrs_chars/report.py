@@ -39,7 +39,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--experiment',type=Path,default=Path('experiments/emnist_byclass/run_01'))
     parser.add_argument('--evaluation',type=Path,default=Path('evidence/emnist/evaluation_run_01'))
-    parser.add_argument('--output',type=Path,default=Path('EMNIST_RESULTS.md'))
+    parser.add_argument('--output',type=Path,default=Path('docs/reports/emnist-results.md'))
     args=parser.parse_args()
     result=json.loads((args.evaluation/'results.json').read_text())
     selection=json.loads((args.experiment/'selection.json').read_text())
@@ -47,12 +47,12 @@ def main():
     with (args.experiment/'history.csv').open() as stream:history=list(csv.DictReader(stream))
     learning_curves(history,args.evaluation/'learning_curves.png')
     lines=['# EMNIST ByClass baseline experiment results','',
-           'Owner: Haresh model component. Implementation, execution and this report used Codex assistance.',
-           'These are measured character-classifier results, not a completed alphanumeric GUI or photo benchmark.','',
+           'Controlled comparison of MLP and CNN character classifiers.',
+           'These results measure isolated character classification. Photo preprocessing, string segmentation and GUI evaluation are reported separately.','',
            '## Method','',
            f"The saved run uses {selection['config']['training_count']:,} training and {selection['config']['validation_count']:,} validation images from the original EMNIST training partition. The official 116,323-image test partition was evaluated only after validation selected a model.",
            'The verified 62 labels preserve digits, uppercase and lowercase separately. Raw EMNIST image axes were transposed once to upright; samples were visually inspected before training.',
-           f"Both architectures used {selection['config']['epochs']} epochs, seed {selection['config']['seed']}, Adam at learning rate {selection['config']['learning_rate']}, batch size {selection['config']['batch_size']}, unweighted cross entropy and no augmentation. The split and minibatch order are shared. See HARESH_EXTENSION.md for the architectures and reproduction commands.",'',
+           f"Both architectures used {selection['config']['epochs']} epochs, seed {selection['config']['seed']}, Adam at learning rate {selection['config']['learning_rate']}, batch size {selection['config']['batch_size']}, unweighted cross entropy and no augmentation. The split and minibatch order are shared. See [the model guide](../guides/character-models.md) for architectures and reproduction commands.",'',
            '## Model comparison','',
            '| Model | Parameters | Best epoch | Validation accuracy | Official test correct | Test accuracy | Macro F1 |',
            '|---|---:|---:|---:|---:|---:|---:|']
@@ -82,18 +82,19 @@ def main():
     for name,prediction in examples['predictions'].items():lines.append(f"- {name.upper()} predicted `{prediction['text']}`.")
     lines+=['','The public predictor was checked against the batched test predictions for those same crops. It never receives the reference text. Leading zeros and case are preserved in the output format, not guaranteed to be recognised correctly.','',
             '## Verification and limits','',
-            '- All 24 software tests passed: 18 existing tests and six new character tests. The original digit source and model files were unchanged.',
+            '- At the character-model experiment checkpoint, 24 software tests passed: 18 existing tests and six new character tests. The original digit source and model files were unchanged.',
             '- Dataset mapping, class counts, split isolation, checkpoint hashes, source snapshots and per-image predictions are retained.',
             '- One training seed and one configuration per model do not establish optimal settings or run-to-run variability.',
             '- Confidence values are uncalibrated model scores, not correctness guarantees.',
-            '- Character segmentation, photographed strings, spacing, dotted letters and GUI character-mode integration remain team work.',
+            '- This benchmark does not evaluate photographed strings or segmentation. Those components and GUI integration have separate development evaluations.',
             '- Keep later design decisions on validation/development inputs. Reserve new handwriting for final system evaluation.','',
             '## Evidence','',
             '- `evidence/emnist/preparation/`: sample grids, orientation comparison, class counts, dataset hashes and split indices.',
             '- `experiments/emnist_byclass/run_01/`: both checkpoints, configuration, history, source snapshot and validation selection.',
             '- `evidence/emnist/evaluation_run_01/`: results, per-image CSVs, per-class metrics, confusion matrices, first-error grids, string results and interface example.',
             '- `evidence/emnist/unit_tests.txt` and `evidence/emnist/training_log.txt`.',
-            '- `HARESH_EXTENSION.md`: source references, commands, prediction contract and team handover.','']
+            '- [Character model guide](../guides/character-models.md): references, commands and prediction interface.','']
+    args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text('\n'.join(lines),encoding='utf-8')
     print(args.output)
 

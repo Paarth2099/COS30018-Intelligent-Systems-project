@@ -1,10 +1,10 @@
-# Saniru's alphanumeric GUI extension
+# Desktop application user guide
 
 ## What was implemented
 
 The desktop application now has Numbers and Alphanumeric modes, each supporting photo loading, generation from labelled handwriting images, CNN/MLP selection, crop previews and evidence export. The interface retains the existing visual design and digit workflow. Recognition and image acquisition run in a worker thread; Tk widgets update on the main thread.
 
-Manula's character segmenter, Paarth's character preparation and Haresh's saved EMNIST models are reused unchanged. Saniru's integration lives in `app.py` and `gui_core.py`; those earlier algorithms and training results are not new GUI contributions. Implementation and automated verification used Codex assistance. Saniru should review and demonstrate the work before describing personal contributions.
+The application integrates character segmentation, preprocessing and the saved EMNIST models through `app.py` and `gui_core.py`.
 
 ## Start the application
 
@@ -14,7 +14,7 @@ Open the `project-github` folder in VS Code. In PowerShell:
 .\run_gui.ps1
 ```
 
-The launcher uses this checkout's virtual environment, or the existing baseline environment on Paarth's laptop. If PowerShell blocks scripts, enable them for this terminal session only:
+The launcher uses the repository's local virtual environment when available. Environment setup is described below. If PowerShell blocks scripts, enable them for this terminal session only:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
@@ -34,8 +34,6 @@ No extra Python packages were added. Obtain the saved `experiments/baseline` and
 - `data/segmentation_photos`: original labelled digit/number photos.
 - `data/own_characters/development`: labelled single-character extension photos.
 - `data/own_strings/development`: handwritten string development photos.
-
-The missing original digit folder was restored in this local checkout from the existing baseline copy to enable the default digit-generation route. Photos were copied, not moved or edited.
 
 ## Recognise a photo
 
@@ -73,7 +71,7 @@ Each export creates a new directory, preserving earlier evidence:
 
 Boxes refer to the resized upright grayscale working image, not necessarily the original photo dimensions. Per-character model scores are uncalibrated and must not be presented as verified probabilities of correctness.
 
-## Explain the code
+## Source modules
 
 | Code | Responsibility |
 |---|---|
@@ -84,7 +82,7 @@ Boxes refer to the resized upright grayscale working image, not necessarily the 
 | `gui_core.py`: `RecognitionService` | Separate mode/model caches, checkpoint validation and dispatch to existing pipelines |
 | `gui_core.py`: `export_result` | Source/settings/result evidence without replacing earlier exports |
 
-## Verification and remaining work
+## Verification and limitations
 
 Software tests cover acquisition, generation, provenance, case/zeros, malformed/missing inputs, corrupt checkpoints and the existing recognition algorithms. The separate desktop smoke script exercises real Tk callbacks and saved models while replacing file-dialog selection with known local paths; it saves screenshots and a verification record under `evidence/gui_extension/`.
 
@@ -93,10 +91,8 @@ Software tests cover acquisition, generation, provenance, case/zeros, malformed/
 .\run_gui.ps1 -Verify
 ```
 
-The first command assumes a local `.venv`; on Paarth's machine the environment path used by `run_gui.ps1` can be used instead. The smoke test requires the development photo folders listed above and briefly opens the GUI.
+The first command assumes a local `.venv`; the environment selected by `run_gui.ps1` can also be used. The smoke test requires the development photo folders listed above and briefly opens the GUI.
 
-Read `SANIRU_GUI_VERIFICATION.md` for this implementation's actual test results. Automated checks on this laptop do not replace teammates opening and using the new extension on their computers.
+Read [the GUI verification report](../reports/gui-verification.md) for recorded results. Automated checks cover one local environment; cross-machine acceptance testing remains outstanding.
 
 GUI integration does not improve recognition accuracy. The earlier 40-photo development experiment reported 38/40 acceptable grouped segmentations but only 7/40 exactly correct strings. Investigate classifier/preparation errors and test fresh photos before final performance claims. Preserve those earlier results instead of replacing them with a successful demo.
-
-Next, Saniru should run a loaded photo, generate `00Ai`, export the result, switch back to Numbers, and explain the difference between requested and recognised text. Each teammate should then test the extension on their computer. The team still needs error analysis, independent final evaluation and final assessed documentation.

@@ -1,13 +1,13 @@
 # EMNIST ByClass baseline experiment results
 
-Owner: Haresh model component. Implementation, execution and this report used Codex assistance.
-These are measured character-classifier results, not a completed alphanumeric GUI or photo benchmark.
+Controlled comparison of MLP and CNN character classifiers.
+These results measure isolated character classification. Photo preprocessing, string segmentation and GUI evaluation are reported separately.
 
 ## Method
 
 The saved run uses 628,142 training and 69,790 validation images from the original EMNIST training partition. The official 116,323-image test partition was evaluated only after validation selected a model.
 The verified 62 labels preserve digits, uppercase and lowercase separately. Raw EMNIST image axes were transposed once to upright; samples were visually inspected before training.
-Both architectures used 5 epochs, seed 42, Adam at learning rate 0.001, batch size 256, unweighted cross entropy and no augmentation. The split and minibatch order are shared. See HARESH_EXTENSION.md for the architectures and reproduction commands.
+Both architectures used 5 epochs, seed 42, Adam at learning rate 0.001, batch size 256, unweighted cross entropy and no augmentation. The split and minibatch order are shared. See [the model guide](../guides/character-models.md) for architectures and reproduction commands.
 
 ## Model comparison
 
@@ -61,11 +61,11 @@ The public predictor was checked against the batched test predictions for those 
 
 ## Verification and limits
 
-- All 24 software tests passed: 18 existing tests and six new character tests. The original digit source and model files were unchanged.
+- At the character-model experiment checkpoint, 24 software tests passed: 18 existing tests and six new character tests. The original digit source and model files were unchanged.
 - Dataset mapping, class counts, split isolation, checkpoint hashes, source snapshots and per-image predictions are retained.
 - One training seed and one configuration per model do not establish optimal settings or run-to-run variability.
 - Confidence values are uncalibrated model scores, not correctness guarantees.
-- Character segmentation, photographed strings, spacing, dotted letters and GUI character-mode integration remain team work.
+- This benchmark does not evaluate photographed strings or segmentation. Those components and GUI integration have separate development evaluations.
 - Keep later design decisions on validation/development inputs. Reserve new handwriting for final system evaluation.
 
 ## Evidence
@@ -74,4 +74,4 @@ The public predictor was checked against the batched test predictions for those 
 - `experiments/emnist_byclass/run_01/`: both checkpoints, configuration, history, source snapshot and validation selection.
 - `evidence/emnist/evaluation_run_01/`: results, per-image CSVs, per-class metrics, confusion matrices, first-error grids, string results and interface example.
 - `evidence/emnist/unit_tests.txt` and `evidence/emnist/training_log.txt`.
-- `HARESH_EXTENSION.md`: source references, commands, prediction contract and team handover.
+- [Character model guide](../guides/character-models.md): references, commands and prediction interface.

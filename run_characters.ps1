@@ -12,7 +12,7 @@ if (-not (Test-Path -LiteralPath $characterPython)) {
     $characterPython = Join-Path $originalProject '.venv\Scripts\python.exe'
 }
 if (-not (Test-Path -LiteralPath $characterPython)) {
-    throw 'Create .venv in this project and install requirements.txt first. See HARESH_EXTENSION.md.'
+    throw 'Create .venv in this project and install requirements.txt first. See docs/guides/character-models.md.'
 }
 switch ($Action) {
     'Test' { & $characterPython -m unittest discover -s tests -v }

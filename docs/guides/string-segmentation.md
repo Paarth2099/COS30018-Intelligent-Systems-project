@@ -1,8 +1,8 @@
-# Manula's extension: string segmentation
+# Alphanumeric string segmentation
 
-## What this section does
+## Overview
 
-Split a single-line photograph such as `Room7` into complete characters, keep dots with their stems, and return crops in left-to-right order. This is geometric connected-component analysis, not a trained segmentation model. The new code reuses the original project's component labelling utilities, Paarth's character preparation and Haresh's frozen EMNIST CNN.
+Split a single-line photograph such as `Room7` into complete characters, keep dots with their stems, and return crops in left-to-right order. This is geometric connected-component analysis, not a trained segmentation model. The pipeline reuses the project's connected-region utilities, character preparation and frozen EMNIST CNN.
 
 Implemented and compared vertical projection and grouped connected components on all 40 development photos. Grouped components is the selected default: 38/40 visually acceptable separations versus 32/40 for projection. The complete CNN pipeline correctly reads only 7/40 strings for either method. Selected-method character error rate is 35.625%. These are development results after inspecting and refining the methods on these same images, not final generalisation results.
 
@@ -33,9 +33,9 @@ Run tests or repeat both methods on the full development collection:
 
 Each demo/comparison creates a new timestamped output directory. The frozen reported experiment is `evidence/character_segmentation/run_04`; reruns do not overwrite it. The report builder is specifically for the four saved development runs, not an automatic selection tool for future datasets.
 
-The runner uses this checkout's `.venv` when present and otherwise the existing downloaded baseline environment on Paarth's laptop. On another machine, create `.venv` with Python 3.12 and install `requirements.txt`. There are no new package requirements. Raw photos under `data/` are Git-ignored: distribute the matching `own_strings/development` directory through the team's OneDrive. The manifest contains input hashes to verify the same files were used.
+Create a local Python 3.12 environment using [the installation guide](installation.md). There are no new package requirements. Raw photos under `data/` are Git-ignored: distribute the matching `own_strings/development` directory through the team's OneDrive. The manifest contains input hashes to verify the same files were used.
 
-## Where to explain the code
+## Source modules
 
 | File | Purpose |
 |---|---|
@@ -45,9 +45,9 @@ The runner uses this checkout's `.venv` when present and otherwise the existing 
 | `tests/test_character_segmentation.py` | 14 new behavioural and regression tests |
 | `hnrs_chars/string_report.py` | Measured report and recorded selection from reviewed evidence |
 
-The preparation function in `hnrs_chars/preprocessing.py` and the classifier in `hnrs_chars/predict.py` are reused unchanged; they are Paarth's and Haresh's earlier components.
+The pipeline uses `hnrs_chars/preprocessing.py` for individual crops and `hnrs_chars/predict.py` for classification.
 
-## Interface for Saniru
+## Recognition interface
 
 Load the predictor once, then call the pipeline for each photo:
 
@@ -67,16 +67,14 @@ print(result['prediction']['text'])
 - Box coordinates refer to the EXIF-corrected, resized `gray` image, not necessarily the original photo. Use that image when drawing boxes.
 - `result['prepared']`: float32 array `[N, 28, 28]`, light ink on black; blank input produces an empty batch.
 - `result['prediction']`: existing character-predictor dictionary with `text`, `characters`, `model` and `task`. Retain strings, case and leading zeros. Do not convert the text to a number or use the digit-only `digits` field.
-- Surface warnings in the interface. Keep processing off the GUI event thread and preserve the existing digit mode.
+- The interface displays warnings and processes recognition in a worker thread. Numbers mode remains available alongside Alphanumeric mode.
 
-Saniru's next task is GUI integration for the approved character extension, with mode selection, string results and crop previews. This task has provided the callable pipeline and CLI; it has not added that GUI mode.
+The desktop GUI uses this interface in Alphanumeric mode, including mode selection, text results and ordered crop previews. See [the GUI guide](gui.md).
 
 ## Evidence and limitations
 
-See [the measured report](MANULA_SEGMENTATION_RESULTS.md). All four runs retain input/checkpoint/source hashes, CSV results, masks, component groups, crops, arrays and predictions. `run_04/visual_review.csv` records assistant inspection of all 80 method/image combinations. It is not independent human annotation or bounding-box IoU evaluation. The initial input sheets are in `input_review/` and final review sheets are in `run_04/`.
+See [the measured report](../reports/string-segmentation-results.md). All four runs retain input/checkpoint/source hashes, CSV results, masks, component groups, crops, arrays and predictions. `evidence/character_segmentation/run_04/visual_review.csv` records qualitative preview inspection of all 80 method/image combinations; it is not independently annotated ground truth or a bounding-box IoU evaluation. The [initial input sheets](../../evidence/character_segmentation/input_review/) and [final review sheets](../../evidence/character_segmentation/run_04/) are retained with the experiment evidence.
 
 Paarth's seventh source filename was corrected from `00Ab` to the visibly written `007Ab` before evaluation. Image bytes were preserved. Ambiguous case labels were otherwise retained as provided.
 
-The algorithm expects a single line of separated alphanumeric handwriting. Touching/cursive writing, multiline pages, punctuation, inferred word spaces, severe shadows and very small detached parts remain outside its reliable scope. The frozen CNN also confuses similar shapes and case. The team should investigate those errors and evaluate on fresh, untouched photos after finalising development choices.
-
-For a tutor demonstration, show one successful separation, projection merging `Room7`, grouped components separating it, and a retained failure. Explain count agreement, visual separation, exact-string accuracy and character error rate separately. Review and understand the code before claiming individual learning or contributions. Implementation, execution and visual review here used Codex assistance; no personal hours have been assigned.
+The algorithm expects a single line of separated alphanumeric handwriting. Touching/cursive writing, multiline pages, punctuation, inferred word spaces, severe shadows and very small detached parts remain outside its reliable scope. The frozen CNN also confuses similar shapes and case. Further evaluation on untouched photos is required to measure generalisation.

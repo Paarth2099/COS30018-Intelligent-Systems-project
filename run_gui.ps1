@@ -7,7 +7,7 @@ if (-not (Test-Path -LiteralPath $guiPython)) {
     $guiPython = Join-Path $baselineFolder '.venv\Scripts\python.exe'
 }
 if (-not (Test-Path -LiteralPath $guiPython)) {
-    throw 'Create .venv using Python 3.12 and install requirements.txt. See SANIRU_EXTENSION.md.'
+    throw 'Create .venv using Python 3.12 and install requirements.txt. See docs/guides/gui.md.'
 }
 if ($Verify) { & $guiPython tests/gui_extension_smoke.py }
 else { & $guiPython app.py }

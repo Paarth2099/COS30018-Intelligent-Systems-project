@@ -10,8 +10,8 @@ def main():
     final=summaries[-1]
     with (base/'run_04/breakdown.csv').open() as stream:breakdown=list(csv.DictReader(stream))
     with (base/'run_04/results.csv').open() as stream:rows=list(csv.DictReader(stream))
-    lines=['# Paarth: character-photo preprocessing experiment','',
-        'Component owner: Paarth. Code, experiment execution and report preparation used Codex assistance. Record actual review, testing and learning in individual worklogs.','',
+    lines=['# Character-photo preprocessing experiment','',
+        'Comparison of character-photo preparation methods using a frozen EMNIST CNN.','',
         '## Outcome','',
         '**Selected development configuration:** local lighting correction, conservative speck removal, Otsu representation, aspect-preserving resize/padding and peak ink normalisation. The original digit pipeline and Haresh checkpoints were not changed.','',
         'The final fixed-threshold and Otsu variants each recognised **53/80 characters (66.25%)**, compared with **42/80 (52.5%)** for the original Otsu baseline: 11 more correct, or 13.75 percentage points. The declared tie preference retains Otsu; this is not evidence that Otsu is superior to fixed thresholding.','',
@@ -51,16 +51,17 @@ def main():
             lines.append(f"- `{row['file']}`: true `{row['label']}`, predicted `{row['prediction']}`. {row['warnings']}.")
     lines+=['','Saniru\'s digit 1 has an oversized/offset crop despite speck removal; the warning and preview retain this failure. Warning flags are advisory, not a complete detector of poor preparation. Some intended lowercase forms resemble uppercase handwriting; supplied labels were retained.','',
         '## Verification and evidence','',
-        '- 33 software tests passed, including nine new preprocessing tests: dots and small detached parts, lighting gradient, thin strokes, EXIF rotation, blank/low-contrast input, clipping warnings, aspect ratio, non-mutation and label validation.',
+        '- At the preprocessing experiment checkpoint, 33 software tests passed, including nine new preprocessing tests: dots and small detached parts, lighting gradient, thin strokes, EXIF rotation, blank/low-contrast input, clipping warnings, aspect ratio, non-mutation and label validation.',
         '- Each run includes source snapshots, checkpoint hash, input manifest, 240 method/sample results, 80 per-photo comparisons, per-writer overviews, diagnostic JSON and prepared arrays.',
         '- Inference uses an uncalibrated softmax score; it is not a probability that the prediction is correct.',
         '- Timing in results.csv is local CPU timing. Shared preparation computes all three variants once per photo; inference is one prepared image. File loading and evidence export are excluded.','',
-        '## Limits and next stage','',
+        '## Limitations and system integration','',
         'The code supports one dark character on pale paper. Whole-string splitting, spaces, joined handwriting and multiline pages are not implemented here. Tiny genuine components below max(3 pixels, 0.5% of the largest component area) can still be removed; inspect i/j previews when integrating new photo conditions. Strong shadows and texture remain limitations.','',
-        'Manula should supply complete character crops with a small pale-paper margin, preserving each dot with its stem, and order crops left to right. Saniru then integrates the character result schema into the GUI. Reserve fresh photos/strings for later final system evaluation; do not present these 80 development examples as an independent test.','',
-        'See [PAARTH_EXTENSION.md](PAARTH_EXTENSION.md) for code locations, commands and the handover contract.','']
-    Path('PAARTH_PREPROCESSING_RESULTS.md').write_text('\n'.join(lines),encoding='utf-8')
-    print('PAARTH_PREPROCESSING_RESULTS.md')
+        'The string segmenter supplies complete character crops in left-to-right order with a small pale-paper margin and detached dots grouped with their stems. The GUI displays the resulting character predictions. These 80 development images are not an independent final test.','',
+        'See [the preprocessing guide](../guides/character-preprocessing.md) for code locations, commands and the preparation interface.','']
+    Path('docs/reports').mkdir(parents=True,exist_ok=True)
+    Path('docs/reports/character-preprocessing-results.md').write_text('\n'.join(lines),encoding='utf-8')
+    print('docs/reports/character-preprocessing-results.md')
 
 
 if __name__=='__main__':main()

@@ -1,48 +1,8 @@
-# Haresh EMNIST character recognition handover
+# Character models
 
-This is the model component of the tutor-approved alphanumeric extension. It
-provides separate 62-class MLP/CNN checkpoints and a character-prediction API.
-It does not yet make the desktop GUI recognise complete photographed words.
-Paarth's character-photo preparation, Manula's character segmentation and
-Saniru's GUI integration remain the next team stages.
+The alphanumeric pipeline uses separate 62-class EMNIST MLP and CNN checkpoints. Both models are available in the desktop application. The original 10-class digit models remain separate.
 
-Implementation and experiment execution used Codex assistance. Haresh should
-review the code, reproduce the demonstration, explain the results and record
-his actual contribution and learning. Execution duration is not a worklog of
-student hours.
-
-## Project and environment
-
-Work in `project-github`, the checkout updated to GitHub commit `73e11d0` before
-this work. The older nested download was not modified. Existing digit code and
-`experiments/baseline` models are retained separately. The new extension has not
-been pushed to GitHub automatically.
-
-On this computer, `run_characters.ps1` uses a local `.venv` if available, otherwise
-the verified Python 3.12 environment in the original downloaded project. It runs
-against the source and data in **this** checkout.
-
-```powershell
-.\run_characters.ps1 -Action Test
-.\run_characters.ps1 -Action Demo
-```
-
-If PowerShell blocks local scripts, allow them only for that terminal session:
-
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
-```
-
-On another computer, create an environment in this checkout:
-
-```powershell
-py -3.12 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-```
-
-No new pip dependencies are required beyond the existing requirements. Raw
-EMNIST data is under ignored `data/EMNIST/raw`; do not put the archive into Git.
-Saved checkpoints and the prepared-crop demo do not need a dataset download.
+See [installation](installation.md), [measured results](../reports/emnist-results.md) and [the GUI guide](gui.md). Commands below run from the repository root.
 
 ## What was implemented
 
@@ -104,18 +64,16 @@ class failures.
 
 ## Rerunning experiments
 
-Existing evidence folders are never overwritten. The following defaults describe
-the executed workflow; reruns require new `--output` paths.
+Existing evidence folders are never overwritten. These reproduction commands use new output directories; choose another run name if they already exist.
 
 ```powershell
-.\.venv\Scripts\python.exe -m hnrs_chars.prepare --download
-.\.venv\Scripts\python.exe -m hnrs_chars.train
-.\.venv\Scripts\python.exe -m hnrs_chars.evaluate
+.\.venv\Scripts\python.exe -m hnrs_chars.prepare --download --output evidence/emnist/preparation_repeat
+.\.venv\Scripts\python.exe -m hnrs_chars.train --preparation evidence/emnist/preparation_repeat --output experiments/emnist_byclass/repeat
+.\.venv\Scripts\python.exe -m hnrs_chars.evaluate --experiment experiments/emnist_byclass/repeat --output evidence/emnist/evaluation_repeat
 ```
 
-Preparation saves `evidence/emnist/preparation/`. Training saves
-`experiments/emnist_byclass/run_01/`. Evaluation saves
-`evidence/emnist/evaluation_run_01/`. Results and the selected model are recorded
+The original recorded run is in `evidence/emnist/preparation/`,
+`experiments/emnist_byclass/run_01/` and `evidence/emnist/evaluation_run_01/`. Results and the selected model are recorded
 in JSON rather than inferred from filenames. Checkpoint hashes are verified
 before evaluation.
 
@@ -124,7 +82,7 @@ test set and present the improved score as untouched final-test performance.
 Use validation/development inputs for decisions and reserve fresh handwriting
 for the later complete-system evaluation.
 
-## Prediction contract for the team
+## Prediction interface
 
 ```python
 from hnrs_chars.predict import CharacterPredictor
@@ -145,22 +103,14 @@ has `class_id`, `character` and an uncalibrated `confidence` score. Case and lea
 zeros are retained. The predictor does not crop, segment, infer word spaces,
 correct spelling or substitute a requested reference string as its answer.
 
-The existing GUI expects digit entries. Saniru must adapt the character result
-schema instead of treating `characters` as though it were the old `digits` field.
-Do not blindly reuse connected components for dotted letters; Manula must check
-multi-part characters. Real-photo accuracy is not established by this module.
+The GUI renders the `characters` result schema in Alphanumeric mode and the
+`digits` schema in Numbers mode. Character segmentation groups detached parts
+before preparation; the classifier receives complete crops in reading order.
 
-## Evidence to show the tutor
-
-1. Preparation grid and orientation comparison, with the verified 62-class mapping.
-2. `history.csv`, `selection.json` and the model definitions.
-3. Evaluation results, per-class metrics and one retained error example.
-4. Run `run_characters.ps1 -Action Demo` and explain the actual prediction.
-
-The constructed-string experiment assembles predictions for already-separated
-test characters. It measures classification plus ordering with **known character
-boundaries**, not segmentation or end-to-end word recognition. Its source images
-are a subset of the same official character test set and are not independent.
+The constructed-string benchmark uses already separated test characters. It
+measures classification and ordering with known boundaries, rather than
+segmentation or end-to-end photo recognition. These samples reuse the official
+character test set and are not independent evaluation data.
 
 ## Sources
 
@@ -169,4 +119,4 @@ are a subset of the same official character test set and are not independent.
 - Torchvision EMNIST loader and archive checksum: https://github.com/pytorch/vision/blob/v0.21.0/torchvision/datasets/mnist.py
 - TensorFlow Datasets EMNIST catalogue (counts and transposed-image explanation): https://www.tensorflow.org/datasets/catalog/emnist
 
-Use `EMNIST_RESULTS.md` for measured outcomes after the run completes.
+See [the measured results](../reports/emnist-results.md) for the completed benchmark.

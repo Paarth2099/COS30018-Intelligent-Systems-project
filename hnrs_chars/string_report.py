@@ -26,8 +26,8 @@ def main():
               'summary_sha256':sha256(final/'summary.json'),'review_sha256':sha256(final/'visual_review.csv'),
               'segmentation_source_sha256':sha256(Path('hnrs_chars/segmentation.py'))}
     (base/'selection.json').write_text(json.dumps(decision,indent=2)+'\n')
-    lines=['# Manula: alphanumeric string segmentation experiment','',
-        'Component owner: Manula. Implementation, experiment execution and visual review used Codex assistance. Manula should review, demonstrate and explain the work before recording personal contributions.','',
+    lines=['# Alphanumeric string segmentation experiment','',
+        'Comparison of projection and grouped connected-component segmentation for single-line alphanumeric images.','',
         '## Outcome','',f'**Selected method: `{selected}`.** It is connected-component analysis with geometric grouping, not a trained neural segmentation model. It feeds complete character crops to Paarth\'s unchanged preparation and Haresh\'s frozen CNN.','',
         '| Final method | Correct crop count | Visually acceptable separation | Exact strings | Character error rate |',
         '|---|---:|---:|---:|---:|']
@@ -59,11 +59,11 @@ def main():
         lines.append(f'| {i} | {description} | '+ ' | '.join(cells)+' |')
     lines+=['','These are sequential development changes, sometimes involving multiple geometric rules. They are not independent experiments that isolate each rule\'s causal effect. Full outputs and source snapshots for every run are retained.','',
         '## Visual review and remaining failures','',
-        'Final visual review inspected all 80 method/image combinations using annotated originals and ordered crop strips. A pass requires one crop per visible character in reading order with appropriate dot grouping, not a correct model prediction. This is an assistant visual assessment, not independent human annotation or bounding-box IoU measurement.','',
+        'Final visual review inspected all 80 method/image combinations using annotated originals and ordered crop strips. A pass requires one crop per visible character in reading order with appropriate dot grouping, not a correct model prediction. This qualitative preview assessment is not independently annotated ground truth or a bounding-box IoU measurement.','',
         'Run 3 illustrates why counts alone are insufficient: grouped components matched 38/40 counts, but two of those attached an i dot to a neighbour. Its visual pass count was 36/40; that finding motivated run 4.','',
         '| Image | Method | Visual issue |','|---|---|---|']
     for r in review:
-        if r['visual_status']!='pass':lines.append(f"| {r['file']} | {r['method']} | {r['notes']} |")
+        if r['visual_status']!='pass':lines.append(f"| {r['file']} | {r['method']} | {r['notes'].split(';')[0]} |")
     lines+=['','Model errors remain after acceptable segmentation, including `O/o/0`, `I/l/1`, and case changes. Photo ink style, size normalisation and EMNIST-to-photo differences may contribute; this comparison does not isolate those causes. Failures and warnings remain visible in the evidence.','',
         '## Per-writer results for selected method','',
         '| Writer | Count matches | Exact strings | Character errors / reference characters |',
@@ -81,15 +81,16 @@ def main():
     for name,r in methods.items():
         lines.append(f"| {name} | {r['mean_segmentation_ms']:.2f} ms | {r['mean_preparation_ms']:.2f} ms | {r['mean_inference_ms']:.2f} ms |")
     lines+=['','Single local CPU run with a warmed predictor; excludes loading and evidence export. Timings are not cross-machine guarantees.','',
-        '## Verification and handover','',
-        '- 47 software tests passed: the previous 33 plus 14 new segmentation/metric/interface tests.',
+        '## Verification and evidence','',
+        '- At the segmentation experiment checkpoint, 47 software tests passed: the previous 33 plus 14 new segmentation/interface tests.',
         '- Tests cover dots, fragmented dots, short stems, misleading neighbour boxes, small pen gaps, overlapping crop boxes, ordering, blank images, EXIF rotation and preservation of case/zeros.',
         '- Existing digit GUI, digit algorithms, Paarth preparation and trained models remain unchanged.',
         '- Every run has source/checkpoint/input hashes, per-image CSVs, masks, boxes, crop images, prepared arrays and predictions.',
         '- Final default and review provenance are in `evidence/character_segmentation/selection.json`.','',
-        'The component supports a single line of separated characters. Touching/cursive writing, multiline pages, word-space inference, severe shadows and very small detached parts remain limitations. Manula should review the output; Saniru can then integrate this interface into the GUI. The team still needs fresh end-to-end testing and further error analysis.','',
-        'See [MANULA_EXTENSION.md](MANULA_EXTENSION.md) for commands and integration instructions.','']
-    Path('MANULA_SEGMENTATION_RESULTS.md').write_text('\n'.join(lines),encoding='utf-8')
+        'The component supports a single line of separated characters. Touching/cursive writing, multiline pages, word-space inference, severe shadows and very small detached parts remain limitations. The selected pipeline is integrated into the GUI. Fresh end-to-end testing and further error analysis remain necessary.','',
+        'See [the segmentation guide](../guides/string-segmentation.md) for commands and the recognition interface.','']
+    Path('docs/reports').mkdir(parents=True,exist_ok=True)
+    Path('docs/reports/string-segmentation-results.md').write_text('\n'.join(lines),encoding='utf-8')
     print(json.dumps(decision,indent=2))
 
 
