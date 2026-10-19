@@ -29,6 +29,7 @@ Commands and plain source paths are relative to the repository root unless state
 | [Week 10 controlled model experiment](reports/model-experiment-week10.md) | Class-weighted CNN training, validation and paired photo comparison; baseline retained |
 | [Week 10 preprocessing experiments](reports/preprocessing-experiment-week10.md) | Three controlled candidates, rejected character changes and adopted digit contrast normalisation |
 | [Week 10 segmentation experiments](reports/segmentation-experiment-week10.md) | Independent and combined broken-body/short-stem repairs, visual review and integration checks |
+| [Week 10 GUI improvements](reports/gui-improvements-week10.md) | Screen-fit repair, scrolling, updated recognition integration and local verification |
 
 ## Data notes
 

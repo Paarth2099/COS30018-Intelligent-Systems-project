@@ -14,6 +14,23 @@ from gui_core import open_photo, generate_number, generate_text, annotated_image
 ROOT=Path(__file__).resolve().parent
 
 
+def fit_window(root):
+    """Initial client size in Tk's DPI-virtualised coordinates, with frame margin."""
+    left,top,right,bottom=0,0,root.winfo_screenwidth(),root.winfo_screenheight()
+    try:
+        import ctypes
+        from ctypes import wintypes
+        area=wintypes.RECT()
+        if ctypes.windll.user32.SystemParametersInfoW(48,0,ctypes.byref(area),0):
+            left,top,right,bottom=area.left,area.top,area.right,area.bottom
+    except (AttributeError,OSError):
+        pass  # Non-Windows Tk uses the screen rectangle.
+    width=min(1240,max(320,right-left-32));height=min(860,max(240,bottom-top-80))
+    root.geometry(f'{width}x{height}+{left+16}+{top+16}')
+    root.minsize(min(640,width),min(400,height))
+    return (left,top,right,bottom)
+
+
 def tk_image(image,master):
     # Use Tk's PNG decoder: Pillow's optional _imagingtk DLL may fail in long
     # Windows checkout paths even when Pillow's regular image functions work.
@@ -26,7 +43,7 @@ class HNRSApp:
         self.root=root; self.image=None; self.origin=None; self.result=None
         self.settings=None; self.service=RecognitionService(ROOT); self.busy=False; self.closed=False
         self.messages=queue.Queue(); self.photos=[]; self.job_thread=None
-        root.title('HNRS | Handwriting Studio'); root.geometry('1240x860'); root.minsize(1020,860)
+        root.title('HNRS | Handwriting Studio'); self.work_area=fit_window(root)
         root.configure(bg='#f3f6fb')
         style=ttk.Style(root); style.theme_use('clam')
         style.configure('.',font=('Segoe UI',10))
@@ -63,7 +80,20 @@ class HNRSApp:
         self.prediction=tk.StringVar(value='No prediction yet')
         self.details=tk.StringVar(value='Your recognition result will appear here.')
 
-        frame=ttk.Frame(root,padding=24); frame.pack(fill='both',expand=True)
+        # Keep the layout's readable content size while allowing smaller windows.
+        # Scrollbars and keyboard focus make every control reachable at high DPI.
+        shell=ttk.Frame(root);shell.pack(fill='both',expand=True)
+        shell.rowconfigure(0,weight=1);shell.columnconfigure(0,weight=1)
+        self.viewport=tk.Canvas(shell,bg='#f3f6fb',highlightthickness=0,xscrollincrement=24,yscrollincrement=24)
+        self.viewport.grid(row=0,column=0,sticky='nsew')
+        self.page_vscroll=ttk.Scrollbar(shell,orient='vertical',command=self.viewport.yview)
+        self.page_vscroll.grid(row=0,column=1,sticky='ns')
+        self.page_hscroll=ttk.Scrollbar(shell,orient='horizontal',command=self.viewport.xview)
+        self.page_hscroll.grid(row=1,column=0,sticky='ew')
+        self.viewport.configure(yscrollcommand=self.page_vscroll.set,xscrollcommand=self.page_hscroll.set)
+        frame=ttk.Frame(self.viewport,padding=24);self.page=frame
+        self.page_item=self.viewport.create_window((0,0),window=frame,anchor='nw')
+        self.viewport.bind('<Configure>',self.resize_page)
         header=ttk.Frame(frame);header.pack(fill='x',pady=(0,22))
         brand=tk.Label(header,text=' HN ',bg='#2563eb',fg='white',font=('Segoe UI',20,'bold'),padx=8,pady=8)
         brand.pack(side='left',padx=(0,14))
@@ -127,11 +157,39 @@ class HNRSApp:
         ttk.Label(digit_card,text='Prepared crops and model scores · scores are not calibrated probabilities.',style='Caption.TLabel',wraplength=620).pack(anchor='w',pady=(3,8))
         self.digits_canvas=tk.Canvas(digit_card,bg='white',height=112,width=100,highlightthickness=0);self.digits_canvas.pack(fill='x')
         scroll=ttk.Scrollbar(digit_card,orient='horizontal',command=self.digits_canvas.xview);scroll.pack(fill='x');self.digits_canvas.configure(xscrollcommand=scroll.set)
-        self.status_label=ttk.Label(frame,textvariable=self.status,style='Muted.TLabel',wraplength=1120)
-        self.status_label.pack(anchor='w',pady=(14,0))
-        frame.bind('<Configure>',lambda e:self.status_label.configure(wraplength=max(200,e.width-48)))
+        self.status_label=ttk.Label(root,textvariable=self.status,style='Muted.TLabel',wraplength=1120,padding=(16,8))
+        self.status_label.pack(fill='x',side='bottom')
+        root.bind('<Configure>',lambda e:self.status_label.configure(wraplength=max(200,root.winfo_width()-32)) if e.widget is root else None)
+        root.bind('<MouseWheel>',self.scroll_page)
+        root.bind('<FocusIn>',lambda e:self.ensure_visible(e.widget))
+        for combo in self.combos:combo.bind('<MouseWheel>',self.scroll_page)
         self.controls=[self.load_button,self.folder_button,self.generate_button,self.folder_entry,self.number_entry]
         self.refresh_controls(); self.poll_id=root.after(80,self.poll); root.protocol('WM_DELETE_WINDOW',self.close)
+
+    def resize_page(self,event=None):
+        width=max(1020,self.viewport.winfo_width())
+        height=max(860,self.viewport.winfo_height(),self.page.winfo_reqheight())
+        self.viewport.itemconfigure(self.page_item,width=width,height=height)
+        self.viewport.configure(scrollregion=(0,0,width,height))
+
+    def scroll_page(self,event):
+        steps=-int(event.delta/120) if abs(event.delta)>=120 else (-1 if event.delta>0 else 1)
+        if event.state & 1:self.viewport.xview_scroll(steps,'units')
+        else:self.viewport.yview_scroll(steps,'units')
+        return 'break'
+
+    def ensure_visible(self,widget):
+        """Bring keyboard-focused controls into the scrollable viewport."""
+        if not str(widget).startswith(str(self.page)+'.'):return
+        self.root.update_idletasks()
+        bounds=self.viewport.bbox(self.page_item)
+        if not bounds:return
+        for axis,pos,size,extent,visible in (
+            ('x',widget.winfo_rootx()-self.page.winfo_rootx(),widget.winfo_width(),bounds[2],self.viewport.winfo_width()),
+            ('y',widget.winfo_rooty()-self.page.winfo_rooty(),widget.winfo_height(),bounds[3],self.viewport.winfo_height())):
+            current=self.viewport.canvasx(0) if axis=='x' else self.viewport.canvasy(0)
+            target=pos-12 if pos<current else pos+size-visible+12 if pos+size>current+visible else current
+            getattr(self.viewport,axis+'view_moveto')(max(0,target)/max(1,extent))
 
     def refresh_controls(self):
         for widget in self.controls: widget.configure(state='disabled' if self.busy else 'normal')

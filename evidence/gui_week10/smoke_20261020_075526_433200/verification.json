@@ -1,0 +1,139 @@
+{
+  "created_utc": "2026-10-19T20:55:26.596581+00:00",
+  "predictions": [
+    {
+      "mode": "Alphanumeric",
+      "model": "cnn",
+      "source": "Photo | Manula_02_text-Room7.jpg",
+      "text": "R00M7",
+      "count": 5
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "cnn",
+      "source": "Photo | Manula_02_text-Room7.jpg",
+      "text": "R00A",
+      "count": 4
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "mlp",
+      "source": "Photo | Manula_02_text-Room7.jpg",
+      "text": "e00n7",
+      "count": 5
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "cnn",
+      "source": "Generated image | Requested: 00Ai",
+      "text": "00Ai",
+      "count": 4
+    }
+  ],
+  "checks": [],
+  "captures": [
+    {
+      "file": "alphanumeric_photo.png",
+      "physical_client_bounds": [
+        36,
+        71,
+        1896,
+        1151
+      ],
+      "physical_window_bounds": [
+        24,
+        24,
+        1908,
+        1163
+      ],
+      "physical_work_area": [
+        0,
+        0,
+        1920,
+        1200
+      ],
+      "tk_size": [
+        1240,
+        720
+      ]
+    },
+    {
+      "file": "generated_characters.png",
+      "physical_client_bounds": [
+        36,
+        71,
+        1896,
+        1151
+      ],
+      "physical_window_bounds": [
+        24,
+        24,
+        1908,
+        1163
+      ],
+      "physical_work_area": [
+        0,
+        0,
+        1920,
+        1200
+      ],
+      "tk_size": [
+        1240,
+        720
+      ]
+    },
+    {
+      "file": "small_window_controls.png",
+      "physical_client_bounds": [
+        36,
+        71,
+        1236,
+        821
+      ],
+      "physical_window_bounds": [
+        24,
+        24,
+        1248,
+        833
+      ],
+      "physical_work_area": [
+        0,
+        0,
+        1920,
+        1200
+      ],
+      "tk_size": [
+        800,
+        500
+      ]
+    },
+    {
+      "file": "small_window_crops.png",
+      "physical_client_bounds": [
+        36,
+        71,
+        1236,
+        821
+      ],
+      "physical_window_bounds": [
+        24,
+        24,
+        1248,
+        833
+      ],
+      "physical_work_area": [
+        0,
+        0,
+        1920,
+        1200
+      ],
+      "tk_size": [
+        800,
+        500
+      ]
+    }
+  ],
+  "status": "FAIL",
+  "error": "AssertionError()",
+  "dialogs": []
+}

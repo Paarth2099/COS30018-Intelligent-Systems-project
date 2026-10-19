@@ -1,0 +1,63 @@
+{
+  "created_utc": "2026-10-19T20:56:22.482227+00:00",
+  "input": {
+    "route": "file",
+    "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\project-github\\data\\segmentation_photos\\Manula\\Manula_07_label-420.jpg",
+    "sha256": "a5d69f860bb4735a360e7be0c76562d24d166c4e902b8fa4ae0f2d9bfc542a7d"
+  },
+  "settings": {
+    "mode": "Numbers",
+    "model": "cnn",
+    "method": "components",
+    "representation": "otsu",
+    "checkpoint_sha256": "4d83b227350a637d008fd7fdc6005216ff74881f56f6dd1191e1a218e58a4049",
+    "checkpoint": "experiments/baseline/cnn.pt"
+  },
+  "prediction": {
+    "text": "420",
+    "digits": [
+      {
+        "digit": 4,
+        "confidence": 0.997054934501648
+      },
+      {
+        "digit": 2,
+        "confidence": 0.9106028079986572
+      },
+      {
+        "digit": 0,
+        "confidence": 0.9961453676223755
+      }
+    ],
+    "model": "cnn"
+  },
+  "boxes": [
+    [
+      116,
+      426,
+      235,
+      693
+    ],
+    [
+      272,
+      423,
+      476,
+      641
+    ],
+    [
+      466,
+      402,
+      631,
+      627
+    ]
+  ],
+  "coordinate_space": "resized grayscale image",
+  "resized_size": [
+    750,
+    1000
+  ],
+  "warnings": [],
+  "input_png_sha256": "f7cc8a8e4d2c8f04958e05429bc8b5014dcdb0142034e3dfbbd42658cb2976e1",
+  "component_groups": null,
+  "score_note": "Per-character confidence is an uncalibrated model score, not a verified probability."
+}

@@ -1,0 +1,93 @@
+{
+  "created_utc": "2026-10-19T20:56:26.631744+00:00",
+  "input": {
+    "route": "file",
+    "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\project-github\\data\\own_strings\\development\\Haresh\\Haresh_06_text-Bill.jpg",
+    "sha256": "a89d4e6751193c8cbe7bc8959ed9757654e82b79a96ffcecd4a231feb486b5ed"
+  },
+  "settings": {
+    "mode": "Alphanumeric",
+    "model": "cnn",
+    "method": "grouped_components",
+    "representation": "otsu",
+    "preparation": "Paarth character preparation: local illumination, Otsu, speck removal, ink normalisation",
+    "checkpoint_sha256": "af68f14712d203a5c63ec5716a174740c2b953e9893c083552d994b80e72a04d",
+    "checkpoint": "experiments/emnist_byclass/run_01/cnn.pt"
+  },
+  "prediction": {
+    "text": "Bill",
+    "characters": [
+      {
+        "class_id": 11,
+        "character": "B",
+        "confidence": 0.6805341243743896
+      },
+      {
+        "class_id": 44,
+        "character": "i",
+        "confidence": 0.755593478679657
+      },
+      {
+        "class_id": 47,
+        "character": "l",
+        "confidence": 0.456183522939682
+      },
+      {
+        "class_id": 47,
+        "character": "l",
+        "confidence": 0.40035223960876465
+      }
+    ],
+    "model": "cnn",
+    "task": "emnist_byclass_62"
+  },
+  "boxes": [
+    [
+      49,
+      119,
+      177,
+      298
+    ],
+    [
+      221,
+      131,
+      253,
+      256
+    ],
+    [
+      308,
+      73,
+      354,
+      258
+    ],
+    [
+      413,
+      64,
+      453,
+      264
+    ]
+  ],
+  "coordinate_space": "resized grayscale image",
+  "resized_size": [
+    520,
+    358
+  ],
+  "warnings": [],
+  "input_png_sha256": "bdd73449ff0fe779723573b04677b24c8ce9a5e245dc460ba2d97f990f25dece",
+  "component_groups": [
+    [
+      3
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      2
+    ],
+    [
+      1
+    ]
+  ],
+  "score_note": "Per-character confidence is an uncalibrated model score, not a verified probability."
+}

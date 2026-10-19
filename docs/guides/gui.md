@@ -37,6 +37,14 @@ No extra Python packages were added. Obtain the saved `experiments/baseline` and
 
 ## Recognise a photo
 
+### Window size and scrolling
+
+The window starts within the available screen area. At smaller sizes or higher display scaling, use the right-hand scrollbar or mouse wheel to reach recognition controls and the crop breakdown. Use the bottom scrollbar or **Shift + mouse wheel** to move sideways. The status line stays visible below the scrolling workspace.
+
+Keyboard focus automatically brings active controls into view as you tab between them. The crop breakdown also has its own horizontal scrollbar for long results. On this Windows computer, the layout was checked at normal startup size, 800 × 500 and 640 × 400 Tk units with 150% effective display scaling. Other display configurations still need acceptance testing.
+
+### Recognition steps
+
 1. Select **Alphanumeric** under Recognition mode.
 2. Leave **cnn**, **grouped_components** and **otsu** selected initially.
 3. Choose **Open photo → Choose image** and select a single-line handwritten string.
