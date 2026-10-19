@@ -25,6 +25,8 @@ Commands and plain source paths are relative to the repository root unless state
 | [Week 9 photo-model comparison](reports/photo-model-comparison-week09.md) | Paired MLP/CNN comparison on all 160 development photos |
 | [Week 9 preprocessing review](reports/preprocessing-review-week09.md) | Visual diagnosis of 100 individual inputs and controlled Week 10 experiment plan |
 | [Week 9 segmentation review](reports/segmentation-review-week09.md) | Visual diagnosis of 60 multi-character inputs, grouping failures and experiment plan |
+| [Week 9 local GUI review](reports/gui-review-week09.md) | Functional checks, display-scaling defect and pending acceptance tests |
+| [Week 10 controlled model experiment](reports/model-experiment-week10.md) | Class-weighted CNN training, validation and paired photo comparison; baseline retained |
 
 ## Data notes
 

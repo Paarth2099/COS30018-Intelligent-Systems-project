@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "photo_pairs": 120,
+  "model_predictions": 240,
+  "validation_images": 69790,
+  "baseline_photo_predictions_reproduced": 120,
+  "baseline_validation_accuracy_reproduced": true,
+  "candidate_validation_accuracy_reproduced": true,
+  "original_source_hashes_verified": true,
+  "checkpoint_hashes_verified": true,
+  "evaluator_sha256": "bbacf4b5c6fd66750d5d45209e4671718e60a8d1833cc88cedae42fcb5ba42bb",
+  "training_plan_sha256": "b8b8c16a905597ae98642b8ae34939068fd312cbafd92f6042e7af86139c4ab8",
+  "official_test_loaded": false,
+  "fresh_photos_used": false
+}
