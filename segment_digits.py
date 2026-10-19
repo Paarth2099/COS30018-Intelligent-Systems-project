@@ -140,10 +140,16 @@ def segment_image(image, method="components", max_side=1000,
 
 
 def prepare_crops(crops, representation="otsu"):
-    """Reuse Paarth's unchanged code, preserving crop order for Haresh."""
+    """Prepare ordered digit crops; restore Otsu ink contrast after resizing.
+
+    Week 10 peak normalisation changes intensity only, not stroke geometry.
+    Grayscale/fixed representations retain their original behaviour.
+    """
     if representation not in ("grayscale","fixed","otsu"):
         raise ValueError("Unknown preprocessing representation")
     prepared = [prepare_variants(crop)[0][representation] for crop in crops]
+    if representation == 'otsu':
+        prepared = [a / a.max() if a.max() > 0 else a for a in prepared]
     return np.stack(prepared) if prepared else np.empty((0,28,28),dtype=np.float32)
 
 

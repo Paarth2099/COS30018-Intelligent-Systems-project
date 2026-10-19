@@ -27,6 +27,7 @@ Commands and plain source paths are relative to the repository root unless state
 | [Week 9 segmentation review](reports/segmentation-review-week09.md) | Visual diagnosis of 60 multi-character inputs, grouping failures and experiment plan |
 | [Week 9 local GUI review](reports/gui-review-week09.md) | Functional checks, display-scaling defect and pending acceptance tests |
 | [Week 10 controlled model experiment](reports/model-experiment-week10.md) | Class-weighted CNN training, validation and paired photo comparison; baseline retained |
+| [Week 10 preprocessing experiments](reports/preprocessing-experiment-week10.md) | Three controlled candidates, rejected character changes and adopted digit contrast normalisation |
 
 ## Data notes
 

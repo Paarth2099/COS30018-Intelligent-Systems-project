@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "photos": 160,
+  "baseline_arrays_reproduced": 160,
+  "baseline_predictions_reproduced": 320,
+  "prediction_rows": 880,
+  "fresh_photos_used": false,
+  "source_hashes_verified": true,
+  "checkpoint_hashes_verified": true
+}

@@ -1,0 +1,22 @@
+{
+  "basis": "Qualitative inspection of 17 saved comparison previews, not blinded or independent annotation",
+  "observations": {
+    "101": "Both character candidates retain broad texture contamination; original digit 2 remains unresolved.",
+    "104": "B removes distant noise and restores a larger centred 1; CNN changes i to 1, but MLP remains wrong (l to I).",
+    "113": "Both character candidates retain broad texture instead of the i; unresolved.",
+    "74": "B deletes the genuine detached j dot. Both models change correct lowercase j to uppercase J. Reject B.",
+    "96": "A changes CNN uppercase Z to lowercase z despite a retained outline; recognition regression.",
+    "24": "C retains the 9 geometry and restores intensity; CNN changes 7 to 9.",
+    "37": "C retains all three digit crops; CNN changes 140 to the correct 240.",
+    "4": "C brightens the existing 9 but CNN remains 7; geometry is not repaired by intensity scaling.",
+    "14": "C brightens the existing 9 but CNN remains 4.",
+    "32": "C retains the 9 outline; CNN remains wrong (4), MLP remains correct (9).",
+    "20": "C brightens the 0 outline without changing CNN correctness.",
+    "53": "Detached i dot/stem remain visible in both character candidates.",
+    "54": "Detached j dot and hook remain visible in both character candidates.",
+    "73": "Detached i dot/stem remain visible in both character candidates.",
+    "77": "Thin t strokes remain visible; CNN remains correct.",
+    "81": "Thin i and dot remain visible; CNN remains correct.",
+    "83": "Narrow l outline is retained; CNN remains wrong (1)."
+  }
+}

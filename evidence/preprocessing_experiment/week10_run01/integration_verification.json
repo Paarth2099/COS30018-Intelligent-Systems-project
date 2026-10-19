@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "digit_images": 40,
+  "arrays_exactly_match_candidate": 40,
+  "predictions_reproduced": 80,
+  "original_sources_unchanged_except_segment_digits": true,
+  "production_sha256": "be6d4daf460736291d493019a7c9fadb97b67669c97c7d21959ab1bbb710a359",
+  "scope": "Real production preparation and saved model inference; no manual GUI acceptance claimed"
+}
