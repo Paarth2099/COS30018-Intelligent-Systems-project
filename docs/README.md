@@ -23,6 +23,7 @@ Commands and plain source paths are relative to the repository root unless state
 | [String-segmentation results](reports/string-segmentation-results.md) | 40 string photos and two methods |
 | [GUI verification](reports/gui-verification.md) | Software and desktop workflow checks |
 | [Week 9 photo-model comparison](reports/photo-model-comparison-week09.md) | Paired MLP/CNN comparison on all 160 development photos |
+| [Week 9 preprocessing review](reports/preprocessing-review-week09.md) | Visual diagnosis of 100 individual inputs and controlled Week 10 experiment plan |
 
 ## Data notes
 

@@ -1,0 +1,27 @@
+{
+  "reviewed": 100,
+  "categories": {
+    "successful_control": 50,
+    "no_clear_preparation_defect": 40,
+    "thin_stroke_review": 7,
+    "clear_preparation_defect": 3
+  },
+  "both_models_correct": 50,
+  "at_least_one_model_wrong": 50,
+  "clear_defect_ids": [
+    101,
+    104,
+    113
+  ],
+  "thin_stroke_review_ids": [
+    4,
+    14,
+    20,
+    24,
+    77,
+    81,
+    83
+  ],
+  "note": "Category counts describe visual review, not accuracy or measured causes. Thin-stroke candidates include successful predictions.",
+  "review_csv_sha256": "9c04a698172effc9d8b8a7c06f609b29ab177f149702f238c2ee0be292ad8822"
+}
