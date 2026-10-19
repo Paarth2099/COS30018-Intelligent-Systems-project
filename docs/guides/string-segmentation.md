@@ -4,9 +4,9 @@
 
 Split a single-line photograph such as `Room7` into complete characters, keep dots with their stems, and return crops in left-to-right order. This is geometric connected-component analysis, not a trained segmentation model. The pipeline reuses the project's connected-region utilities, character preparation and frozen EMNIST CNN.
 
-Implemented and compared vertical projection and grouped connected components on all 40 development photos. Grouped components is the selected default: 38/40 visually acceptable separations versus 32/40 for projection. The complete CNN pipeline correctly reads only 7/40 strings for either method. Selected-method character error rate is 35.625%. These are development results after inspecting and refining the methods on these same images, not final generalisation results.
+Implemented and compared vertical projection and grouped connected components on all 40 development photos. Grouped components is the selected default. The Week 10 version adds bounded broken-body merging and short-stem eligibility, reaching 40/40 visually acceptable separations and 8/40 exact CNN strings, with 33.125% character error rate. See the [Week 10 investigation](../reports/segmentation-experiment-week10.md). These are reused development results, not final generalisation results.
 
-The two remaining grouped-method segmentation failures are Haresh's `Hello` (broken H split) and `Bill` (i dot separated from stem). Other recognition errors occur even with acceptable crops. Do not report 95% recognition accuracy.
+The earlier baseline had 38/40 visually acceptable separations and 7/40 exact CNN strings. Week 10 repairs Haresh's broken H in `Hello` and detached i in `Bill`. `Hello` is still predicted as `Hell0`: acceptable segmentation is not perfect recognition. The projection comparator remains unchanged.
 
 ## Run and inspect
 
@@ -18,7 +18,7 @@ Open this `project-github` folder in VS Code. In its PowerShell terminal:
 
 This runs Manula's `Ab12` photo and prints a newly created evidence folder. Open its `preview.png`: the top shows character boxes; the bottom shows the 28x28 prepared characters in reading order. `demo.json` and `prediction.json` contain actual model output. The demo does not read the expected text from its filename.
 
-Run a different photo, including a known failure:
+Run a different photo, including the repaired H example:
 
 ```powershell
 .\run_segmentation.ps1 -Action Demo -Image 'data/own_strings/development/Haresh/Haresh_03_text-Hello.jpg'

@@ -1,0 +1,32 @@
+{
+  "text": "Hell0",
+  "characters": [
+    {
+      "class_id": 17,
+      "character": "H",
+      "confidence": 0.5462085008621216
+    },
+    {
+      "class_id": 40,
+      "character": "e",
+      "confidence": 0.9964717626571655
+    },
+    {
+      "class_id": 47,
+      "character": "l",
+      "confidence": 0.45657655596733093
+    },
+    {
+      "class_id": 47,
+      "character": "l",
+      "confidence": 0.43837517499923706
+    },
+    {
+      "class_id": 0,
+      "character": "0",
+      "confidence": 0.67551189661026
+    }
+  ],
+  "model": "cnn",
+  "task": "emnist_byclass_62"
+}

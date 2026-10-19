@@ -1,0 +1,51 @@
+{
+  "coordinate_space": "upright resized grayscale image",
+  "size": [
+    1200,
+    686
+  ],
+  "boxes": [
+    [
+      116,
+      110,
+      218,
+      547
+    ],
+    [
+      277,
+      244,
+      442,
+      589
+    ],
+    [
+      585,
+      170,
+      792,
+      547
+    ],
+    [
+      829,
+      163,
+      1058,
+      510
+    ]
+  ],
+  "component_groups": [
+    [
+      6,
+      2
+    ],
+    [
+      5
+    ],
+    [
+      4
+    ],
+    [
+      3
+    ]
+  ],
+  "removed_components": 2,
+  "warnings": [],
+  "method": "grouped_components"
+}

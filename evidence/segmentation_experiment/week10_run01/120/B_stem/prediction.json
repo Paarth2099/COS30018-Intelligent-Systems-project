@@ -1,0 +1,27 @@
+{
+  "text": "Abt2",
+  "characters": [
+    {
+      "class_id": 10,
+      "character": "A",
+      "confidence": 0.9632106423377991
+    },
+    {
+      "class_id": 37,
+      "character": "b",
+      "confidence": 0.9728049635887146
+    },
+    {
+      "class_id": 55,
+      "character": "t",
+      "confidence": 0.3116547465324402
+    },
+    {
+      "class_id": 2,
+      "character": "2",
+      "confidence": 0.9940008521080017
+    }
+  ],
+  "model": "cnn",
+  "task": "emnist_byclass_62"
+}

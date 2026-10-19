@@ -1,0 +1,22 @@
+{
+  "text": "ji9",
+  "characters": [
+    {
+      "class_id": 45,
+      "character": "j",
+      "confidence": 0.8161052465438843
+    },
+    {
+      "class_id": 44,
+      "character": "i",
+      "confidence": 0.48936861753463745
+    },
+    {
+      "class_id": 9,
+      "character": "9",
+      "confidence": 0.8199228644371033
+    }
+  ],
+  "model": "cnn",
+  "task": "emnist_byclass_62"
+}

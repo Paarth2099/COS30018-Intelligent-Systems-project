@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "string_arrays_boxes_groups_reproduced": 40,
+  "model_predictions_reproduced": 80,
+  "source_sha256": "5eff554aa8afb4347ec730b4c0cbf99888762cc8d8d77a6cc71fc350c6581a72",
+  "other_pipeline_sources_unchanged": true,
+  "scope": "Production pipeline; no new manual GUI acceptance claim",
+  "post_verification_formatting": "Removed trailing blank line only; executable source unchanged.",
+  "final_source_sha256": "fb8c39cb2c1420267c25d2d537c1972a51f04dc9aeb6f6d787f142cdaa087461"
+}

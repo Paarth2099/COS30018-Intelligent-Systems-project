@@ -66,7 +66,7 @@ def union_box(regions):
             max(r['box'][2] for r in regions),max(r['box'][3] for r in regions))
 
 
-def group_components(regions):
+def group_components(regions, stem_ratio=.55):
     """Attach small components above nearby bodies using geometry only.
 
     Bound the horizontal/vertical gaps relative to observed body height. Do not
@@ -77,7 +77,7 @@ def group_components(regions):
     height=float(np.percentile([r['box'][3]-r['box'][1] for r in regions],80))
     bodies=[r for r in regions if r['box'][3]-r['box'][1]>=.4*height or
             (r['box'][3]-r['box'][1]>=.25*height and
-             r['box'][2]-r['box'][0]<=.45*(r['box'][3]-r['box'][1]))]
+             r['box'][2]-r['box'][0]<=stem_ratio*(r['box'][3]-r['box'][1]))]
     small=[r for r in regions if r not in bodies]
     groups=[[r] for r in bodies];warnings=[]
     # A rough pen dot can itself be fragmented. Join only close small pieces
@@ -118,7 +118,30 @@ def group_components(regions):
     return groups,warnings
 
 
-def segment_characters(image, method=DEFAULT_METHOD, max_side=1200):
+def repair_broken_bodies(groups):
+    """Merge adjacent wide/narrow tall fragments only within bounded geometry.
+
+    Week 10 bounded geometry rule; no expected character/count or model output.
+    Narrow/narrow neighbours (such as ll) are deliberately excluded.
+    """
+    groups=sorted(groups,key=lambda g:union_box(g)[0])
+    if not groups:return groups,0
+    height=float(np.percentile([union_box(g)[3]-union_box(g)[1] for g in groups],80))
+    result=[];repairs=0;i=0
+    while i<len(groups):
+        if i+1<len(groups):
+            a,b,c,d=union_box(groups[i]);x,y,z,w=union_box(groups[i+1])
+            widths=sorted([c-a,z-x]);overlap=max(0,min(d,w)-max(b,y))
+            if (d-b>=.6*height and w-y>=.6*height and
+                0<=x-c<=.04*height and overlap>=.65*min(d-b,w-y) and
+                widths[0]<=.3*height and widths[1]>=.45*height and
+                z-a<=height):
+                result.append(groups[i]+groups[i+1]);repairs+=1;i+=2;continue
+        result.append(groups[i]);i+=1
+    return result,repairs
+
+
+def segment_characters(image, method=DEFAULT_METHOD, max_side=1200, repair_bodies=True, stem_ratio=.55):
     if method not in METHODS:raise ValueError('Unknown character segmentation method')
     if max_side<28:raise ValueError('max_side must be at least 28')
     gray,labels,regions,removed,warnings=foreground(image,max_side)
@@ -131,7 +154,10 @@ def segment_characters(image, method=DEFAULT_METHOD, max_side=1200):
             ids=set(np.unique(labels[:,left:right][clean[:,left:right]]).tolist())
             groups.append([r for r in regions if r['id'] in ids])
     else:
-        groups,extra=group_components(regions);warnings.extend(extra)
+        groups,extra=group_components(regions,stem_ratio);warnings.extend(extra)
+        if repair_bodies:
+            groups, repairs=repair_broken_bodies(groups)
+            warnings.extend(["Nearby complementary body fragments merged; inspect crop"] * repairs)
     groups.sort(key=lambda group:(union_box(group)[0],union_box(group)[1]))
     boxes=[union_box(group) for group in groups];crops=[]
     typical=float(np.median([b[3]-b[1] for b in boxes]))

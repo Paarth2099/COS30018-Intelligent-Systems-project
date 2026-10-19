@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "baseline_strings_reproduced": 40,
+  "baseline_predictions_reproduced": 80,
+  "number_arrays_reproduced": 20,
+  "number_boxes_unchanged": 20,
+  "all_component_ids_retained": true,
+  "left_to_right_verified": true,
+  "fresh_photos_used": false
+}

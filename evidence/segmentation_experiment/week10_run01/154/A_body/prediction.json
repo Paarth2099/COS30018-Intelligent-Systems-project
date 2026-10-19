@@ -1,0 +1,22 @@
+{
+  "text": "Jig",
+  "characters": [
+    {
+      "class_id": 19,
+      "character": "J",
+      "confidence": 0.79731684923172
+    },
+    {
+      "class_id": 44,
+      "character": "i",
+      "confidence": 0.6306130886077881
+    },
+    {
+      "class_id": 42,
+      "character": "g",
+      "confidence": 0.6557702422142029
+    }
+  ],
+  "model": "cnn",
+  "task": "emnist_byclass_62"
+}
