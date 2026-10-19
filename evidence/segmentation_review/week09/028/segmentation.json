@@ -1,0 +1,23 @@
+{
+  "boxes": [
+    [
+      31,
+      24,
+      99,
+      187
+    ],
+    [
+      170,
+      34,
+      259,
+      173
+    ]
+  ],
+  "warnings": [],
+  "groups": null,
+  "coordinate_space": "upright resized grayscale",
+  "size": [
+    302,
+    215
+  ]
+}

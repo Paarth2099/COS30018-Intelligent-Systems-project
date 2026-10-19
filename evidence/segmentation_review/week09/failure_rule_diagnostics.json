@@ -1,0 +1,207 @@
+[
+  {
+    "index": 122,
+    "file": "data/own_strings/development/Haresh/Haresh_03_text-Hello.jpg",
+    "typical_height": 179.0,
+    "body_height_threshold": 71.60000000000001,
+    "short_body_height_threshold": 44.75,
+    "narrow_width_to_height_limit": 0.45,
+    "regions": [
+      {
+        "id": 1,
+        "box": [
+          173,
+          34,
+          214,
+          222
+        ],
+        "width": 41,
+        "height": 188,
+        "area": 3116,
+        "classified_body": true
+      },
+      {
+        "id": 2,
+        "box": [
+          359,
+          54,
+          393,
+          224
+        ],
+        "width": 34,
+        "height": 170,
+        "area": 2845,
+        "classified_body": true
+      },
+      {
+        "id": 3,
+        "box": [
+          428,
+          59,
+          463,
+          226
+        ],
+        "width": 35,
+        "height": 167,
+        "area": 2733,
+        "classified_body": true
+      },
+      {
+        "id": 4,
+        "box": [
+          50,
+          74,
+          172,
+          253
+        ],
+        "width": 122,
+        "height": 179,
+        "area": 5077,
+        "classified_body": true
+      },
+      {
+        "id": 5,
+        "box": [
+          490,
+          89,
+          602,
+          228
+        ],
+        "width": 112,
+        "height": 139,
+        "area": 5277,
+        "classified_body": true
+      },
+      {
+        "id": 6,
+        "box": [
+          239,
+          99,
+          329,
+          213
+        ],
+        "width": 90,
+        "height": 114,
+        "area": 3940,
+        "classified_body": true
+      }
+    ],
+    "groups": [
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        6
+      ]
+    ],
+    "warnings": []
+  },
+  {
+    "index": 125,
+    "file": "data/own_strings/development/Haresh/Haresh_06_text-Bill.jpg",
+    "typical_height": 188.0,
+    "body_height_threshold": 75.2,
+    "short_body_height_threshold": 47.0,
+    "narrow_width_to_height_limit": 0.45,
+    "regions": [
+      {
+        "id": 1,
+        "box": [
+          413,
+          64,
+          453,
+          264
+        ],
+        "width": 40,
+        "height": 200,
+        "area": 3361,
+        "classified_body": true
+      },
+      {
+        "id": 2,
+        "box": [
+          308,
+          73,
+          354,
+          258
+        ],
+        "width": 46,
+        "height": 185,
+        "area": 2884,
+        "classified_body": true
+      },
+      {
+        "id": 3,
+        "box": [
+          49,
+          119,
+          177,
+          298
+        ],
+        "width": 128,
+        "height": 179,
+        "area": 7457,
+        "classified_body": true
+      },
+      {
+        "id": 4,
+        "box": [
+          221,
+          131,
+          252,
+          154
+        ],
+        "width": 31,
+        "height": 23,
+        "area": 444,
+        "classified_body": false
+      },
+      {
+        "id": 5,
+        "box": [
+          225,
+          197,
+          253,
+          256
+        ],
+        "width": 28,
+        "height": 59,
+        "area": 893,
+        "classified_body": false
+      }
+    ],
+    "groups": [
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ]
+    ],
+    "warnings": [
+      "Unassigned small component retained; inspect noise or broken character",
+      "Unassigned small component retained; inspect noise or broken character"
+    ]
+  }
+]

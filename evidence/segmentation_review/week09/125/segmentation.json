@@ -1,0 +1,60 @@
+{
+  "boxes": [
+    [
+      49,
+      119,
+      177,
+      298
+    ],
+    [
+      221,
+      131,
+      252,
+      154
+    ],
+    [
+      225,
+      197,
+      253,
+      256
+    ],
+    [
+      308,
+      73,
+      354,
+      258
+    ],
+    [
+      413,
+      64,
+      453,
+      264
+    ]
+  ],
+  "warnings": [
+    "Unassigned small component retained; inspect noise or broken character",
+    "Unassigned small component retained; inspect noise or broken character"
+  ],
+  "groups": [
+    [
+      3
+    ],
+    [
+      4
+    ],
+    [
+      5
+    ],
+    [
+      2
+    ],
+    [
+      1
+    ]
+  ],
+  "coordinate_space": "upright resized grayscale",
+  "size": [
+    520,
+    358
+  ]
+}

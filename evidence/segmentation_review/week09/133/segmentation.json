@@ -1,0 +1,52 @@
+{
+  "boxes": [
+    [
+      13,
+      46,
+      59,
+      361
+    ],
+    [
+      121,
+      58,
+      191,
+      371
+    ],
+    [
+      251,
+      95,
+      361,
+      361
+    ],
+    [
+      419,
+      90,
+      573,
+      324
+    ]
+  ],
+  "warnings": [
+    "Foreground touches image edge; inspect clipping or paper artifacts"
+  ],
+  "groups": [
+    [
+      5,
+      1
+    ],
+    [
+      6,
+      2
+    ],
+    [
+      4
+    ],
+    [
+      3
+    ]
+  ],
+  "coordinate_space": "upright resized grayscale",
+  "size": [
+    573,
+    388
+  ]
+}

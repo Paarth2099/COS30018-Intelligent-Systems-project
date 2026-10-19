@@ -1,0 +1,27 @@
+{
+  "reviewed": 60,
+  "categories": {
+    "recognition_error_no_visible_segmentation_defect": 49,
+    "successful_control": 9,
+    "segmentation_failure": 2
+  },
+  "collections": {
+    "numbers": {
+      "images": 20,
+      "visual_pass": 20,
+      "count_match": 20
+    },
+    "strings": {
+      "images": 40,
+      "visual_pass": 38,
+      "count_match": 38
+    }
+  },
+  "left_to_right": 60,
+  "failed_ids": [
+    122,
+    125
+  ],
+  "note": "Visual pass is a qualitative separation judgement, not recognition accuracy or bounding-box IoU.",
+  "review_sha256": "967ded9fffa663e109f095b4c974a591a963c58aaf082457ecf83bbe65e7104b"
+}
