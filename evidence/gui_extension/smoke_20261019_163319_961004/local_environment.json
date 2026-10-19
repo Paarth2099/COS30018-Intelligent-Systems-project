@@ -1,0 +1,87 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.6.0",
+    "torchvision": "0.21.0",
+    "numpy": "2.2.3",
+    "pillow": "11.1.0"
+  },
+  "primary_work_area": [
+    0,
+    0,
+    1920,
+    1200
+  ],
+  "virtual_screen_xywh": [
+    0,
+    0,
+    1920,
+    1200
+  ],
+  "uses_repo_venv": false,
+  "launch_environment": "Existing sibling baseline venv via run_gui.ps1 fallback; not a clean installation",
+  "regression_tests": {
+    "run": 52,
+    "result": "PASS",
+    "seconds": 2.112
+  },
+  "captures": [
+    {
+      "file": "alphanumeric_photo.png",
+      "physical_client_bounds": [
+        35,
+        69,
+        1895,
+        1359
+      ],
+      "tk_size": [
+        1240,
+        860
+      ],
+      "inside_primary_work_area": false
+    },
+    {
+      "file": "generated_characters.png",
+      "physical_client_bounds": [
+        35,
+        69,
+        1895,
+        1359
+      ],
+      "tk_size": [
+        1240,
+        860
+      ],
+      "inside_primary_work_area": false
+    },
+    {
+      "file": "minimum_window.png",
+      "physical_client_bounds": [
+        35,
+        69,
+        1565,
+        1359
+      ],
+      "tk_size": [
+        1020,
+        860
+      ],
+      "inside_primary_work_area": false
+    },
+    {
+      "file": "numbers_regression.png",
+      "physical_client_bounds": [
+        35,
+        69,
+        1895,
+        1359
+      ],
+      "tk_size": [
+        1240,
+        860
+      ],
+      "inside_primary_work_area": false
+    }
+  ]
+}

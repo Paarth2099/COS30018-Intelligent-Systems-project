@@ -32,8 +32,29 @@ def wait():
 
 def screenshot(name):
     root.lift();root.attributes('-topmost',True);root.update();time.sleep(.25)
-    x,y=root.winfo_rootx(),root.winfo_rooty()
-    ImageGrab.grab(bbox=(x,y,x+root.winfo_width(),y+root.winfo_height())).save(out/name)
+    # Tk coordinates may be DPI-virtualised on Windows. Query physical client
+    # coordinates for capture without changing the application's DPI context.
+    if sys.platform=='win32':
+        import ctypes
+        from ctypes import wintypes
+        user32=ctypes.windll.user32
+        user32.SetThreadDpiAwarenessContext.argtypes=[ctypes.c_void_p]
+        user32.SetThreadDpiAwarenessContext.restype=ctypes.c_void_p
+        previous=user32.SetThreadDpiAwarenessContext(ctypes.c_void_p(-4))
+        try:
+            rect=wintypes.RECT();point=wintypes.POINT(0,0)
+            hwnd=wintypes.HWND(root.winfo_id())
+            assert user32.GetClientRect(hwnd,ctypes.byref(rect))
+            assert user32.ClientToScreen(hwnd,ctypes.byref(point))
+            bounds=(point.x,point.y,point.x+rect.right,point.y+rect.bottom)
+            ImageGrab.grab(bbox=bounds,all_screens=True).save(out/name)
+            report.setdefault('captures',[]).append({'file':name,'physical_client_bounds':bounds,
+                'tk_size':[root.winfo_width(),root.winfo_height()]})
+        finally:
+            user32.SetThreadDpiAwarenessContext(previous)
+    else:
+        x,y=root.winfo_rootx(),root.winfo_rooty()
+        ImageGrab.grab(bbox=(x,y,x+root.winfo_width(),y+root.winfo_height())).save(out/name)
     root.attributes('-topmost',False)
 
 
