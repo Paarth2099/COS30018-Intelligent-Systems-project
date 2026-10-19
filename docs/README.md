@@ -22,6 +22,7 @@ Commands and plain source paths are relative to the repository root unless state
 | [Character-preprocessing results](reports/character-preprocessing-results.md) | 80 individual-character photos |
 | [String-segmentation results](reports/string-segmentation-results.md) | 40 string photos and two methods |
 | [GUI verification](reports/gui-verification.md) | Software and desktop workflow checks |
+| [Week 9 photo-model comparison](reports/photo-model-comparison-week09.md) | Paired MLP/CNN comparison on all 160 development photos |
 
 ## Data notes
 

@@ -44,4 +44,4 @@ Evidence: [summary](../../evidence/segmentation/team_run_02/summary.json), [per-
 
 ## Limitations
 
-Touching strokes, shadows, clipped handwriting and overlapping horizontal ranges can cause failures. The benchmark uses one training seed and fixed hyperparameters. Model scores are uncalibrated. Further real-photo model comparison and independent evaluation remain outstanding.
+Touching strokes, shadows, clipped handwriting and overlapping horizontal ranges can cause failures. The benchmark uses one training seed and fixed hyperparameters. Model scores are uncalibrated. The subsequent [Week 9 photo-model comparison](photo-model-comparison-week09.md) compares both saved models on the development photos. Independent final evaluation remains outstanding.
