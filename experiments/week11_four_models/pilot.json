@@ -1,0 +1,30 @@
+[
+  {
+    "model": "resnet18",
+    "batch_size": 256,
+    "parameters": 11175370,
+    "warm_training_batch_seconds": 1.6998264999710955,
+    "all_batch_seconds": [
+      1.7960480999900028,
+      1.7122273999848403,
+      1.6998264999710955,
+      1.6806725999922492
+    ],
+    "finite_loss": true,
+    "note": "Synthetic timing only; not accuracy evidence. Validation and IO add time."
+  },
+  {
+    "model": "mobilenet_v3_small",
+    "batch_size": 256,
+    "parameters": 1527818,
+    "warm_training_batch_seconds": 0.44532239995896816,
+    "all_batch_seconds": [
+      0.5276135000167415,
+      0.44532239995896816,
+      0.4314068999956362,
+      0.5987937999889255
+    ],
+    "finite_loss": true,
+    "note": "Synthetic timing only; not accuracy evidence. Validation and IO add time."
+  }
+]

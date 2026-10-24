@@ -15,4 +15,5 @@ def build_model(name: str) -> nn.Module:
             nn.Conv2d(16, 32, 3, padding=1), nn.ReLU(), nn.MaxPool2d(2),
             nn.Flatten(), nn.Linear(32 * 7 * 7, 64), nn.ReLU(), nn.Linear(64, 10),
         )
-    raise ValueError(f"Unknown model {name!r}; choose 'mlp' or 'cnn'")
+    from .architectures import build_extended
+    return build_extended(name, 10)

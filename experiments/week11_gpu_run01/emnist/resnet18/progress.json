@@ -1,0 +1,8 @@
+{
+  "status": "completed",
+  "task": "emnist",
+  "model": "resnet18",
+  "device": "cuda",
+  "epochs": 5,
+  "best_epoch": 5
+}

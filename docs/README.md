@@ -10,6 +10,7 @@ Commands and plain source paths are relative to the repository root unless state
 | [GUI user guide](guides/gui.md) | Modes, input routes, controls and export |
 | [System architecture](architecture.md) | Processing stages and module interfaces |
 | [Character models](guides/character-models.md) | EMNIST preparation, training and prediction API |
+| [Week 11 GPU training](guides/week11-gpu-training.md) | ResNet-18 and MobileNetV3-Small setup, GPU checks and experiment protocol |
 | [Character preprocessing](guides/character-preprocessing.md) | Methods, diagnostics and comparison commands |
 | [String segmentation](guides/string-segmentation.md) | Grouping, ordered crops and recognition API |
 
@@ -30,6 +31,7 @@ Commands and plain source paths are relative to the repository root unless state
 | [Week 10 preprocessing experiments](reports/preprocessing-experiment-week10.md) | Three controlled candidates, rejected character changes and adopted digit contrast normalisation |
 | [Week 10 segmentation experiments](reports/segmentation-experiment-week10.md) | Independent and combined broken-body/short-stem repairs, visual review and integration checks |
 | [Week 10 GUI improvements](reports/gui-improvements-week10.md) | Screen-fit repair, scrolling, updated recognition integration and local verification |
+| [Week 11 four-model comparison](reports/model-comparison-week11.md) | Imported GPU training, four-architecture benchmark/photo evaluation and model recommendations |
 
 ## Data notes
 

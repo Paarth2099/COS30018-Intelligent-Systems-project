@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "checkpoint_count": 8,
+  "official_test_predictions": 505292,
+  "development_photos": 160,
+  "development_predictions": 640,
+  "sources_and_checkpoints_unchanged": true,
+  "validation_candidates_recorded_before_tests": true,
+  "fresh_photos_used": false,
+  "gui_changed": false
+}

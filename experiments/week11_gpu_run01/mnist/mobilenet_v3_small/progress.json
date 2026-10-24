@@ -1,0 +1,8 @@
+{
+  "status": "completed",
+  "task": "mnist",
+  "model": "mobilenet_v3_small",
+  "device": "cuda",
+  "epochs": 5,
+  "best_epoch": 5
+}
