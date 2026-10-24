@@ -8,7 +8,7 @@ Loaded photo OR generated handwriting image
   -> foreground detection and segmentation
   -> individual crops in reading order
   -> 28x28 preparation
-  -> selected MLP/CNN
+  -> selected MLP / baseline CNN / ResNet-18 / MobileNetV3-Small
   -> prediction string, crop previews and evidence export
 ```
 
@@ -36,6 +36,8 @@ The character segmenter groups detached dots and fragmented strokes before sorti
 ## Interface and provenance
 
 Loading, generation and recognition run in a worker thread; a queue delivers results to the main Tk thread. Controls are disabled during a job. Recognition-setting changes clear stale results before export.
+
+Mode switches select the evaluated defaults: baseline CNN for Numbers and ResNet-18 for Alphanumeric. All four architectures remain selectable. `resolve_checkpoint()` chooses the task-specific experiment and validates its saved hash before loading. The eight mode/model combinations use separate caches; missing or corrupt checkpoints raise errors rather than substituting another model. GPU-trained checkpoints are portable to the GUI's CPU inference path.
 
 Generation labels select handwriting tiles but are not supplied to recognition. Exports keep requested text separate from predictions and record settings, source/checkpoint hashes, masks, crops, boxes and warnings.
 

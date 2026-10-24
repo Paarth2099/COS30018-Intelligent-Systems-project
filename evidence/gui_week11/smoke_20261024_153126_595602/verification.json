@@ -1,0 +1,554 @@
+{
+  "created_utc": "2026-10-24T04:31:27.340979+00:00",
+  "predictions": [
+    {
+      "mode": "Alphanumeric",
+      "model": "cnn",
+      "source": "Photo | Manula_02_text-Room7.jpg",
+      "text": "R00M7",
+      "count": 5
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "cnn",
+      "source": "Photo | Manula_02_text-Room7.jpg",
+      "text": "R00A",
+      "count": 4
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "mlp",
+      "source": "Photo | Manula_02_text-Room7.jpg",
+      "text": "e00n7",
+      "count": 5
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "cnn",
+      "source": "Generated image | Requested: 00Ai",
+      "text": "00Ai",
+      "count": 4
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "cnn",
+      "source": "Photo | blank",
+      "text": "No characters detected",
+      "count": 0
+    },
+    {
+      "mode": "Numbers",
+      "model": "cnn",
+      "source": "Photo | Manula_07_label-420.jpg",
+      "text": "420",
+      "count": 3
+    },
+    {
+      "mode": "Numbers",
+      "model": "cnn",
+      "source": "Photo | Saniru_08_label-240.jpeg",
+      "text": "240",
+      "count": 3
+    },
+    {
+      "mode": "Numbers",
+      "model": "cnn",
+      "source": "Generated image | Requested: 007",
+      "text": "007",
+      "count": 3
+    },
+    {
+      "mode": "Numbers",
+      "model": "mlp",
+      "source": "Generated image | Requested: 007",
+      "text": "002",
+      "count": 3
+    },
+    {
+      "mode": "Numbers",
+      "model": "cnn",
+      "source": "Generated image | Requested: 007007007007",
+      "text": "007007007002",
+      "count": 12
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "cnn",
+      "source": "Photo | Haresh_03_text-Hello.jpg",
+      "text": "Hell0",
+      "count": 5
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "cnn",
+      "source": "Photo | Haresh_06_text-Bill.jpg",
+      "text": "Bill",
+      "count": 4
+    },
+    {
+      "mode": "Numbers",
+      "model": "cnn",
+      "source": "Photo | Manula_07_label-420.jpg",
+      "text": "420",
+      "count": 3
+    },
+    {
+      "mode": "Numbers",
+      "model": "mlp",
+      "source": "Photo | Manula_07_label-420.jpg",
+      "text": "430",
+      "count": 3
+    },
+    {
+      "mode": "Numbers",
+      "model": "resnet18",
+      "source": "Photo | Manula_07_label-420.jpg",
+      "text": "420",
+      "count": 3
+    },
+    {
+      "mode": "Numbers",
+      "model": "mobilenet_v3_small",
+      "source": "Photo | Manula_07_label-420.jpg",
+      "text": "420",
+      "count": 3
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "cnn",
+      "source": "Photo | Manula_02_text-Room7.jpg",
+      "text": "R00M7",
+      "count": 5
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "mlp",
+      "source": "Photo | Manula_02_text-Room7.jpg",
+      "text": "e00n7",
+      "count": 5
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "resnet18",
+      "source": "Photo | Manula_02_text-Room7.jpg",
+      "text": "R00M7",
+      "count": 5
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "mobilenet_v3_small",
+      "source": "Photo | Manula_02_text-Room7.jpg",
+      "text": "R00M7",
+      "count": 5
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "resnet18",
+      "source": "Generated image | Requested: 00Ai",
+      "text": "00Ai",
+      "count": 4
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "resnet18",
+      "source": "Generated image | Requested: 00Ai",
+      "text": "00Ai",
+      "count": 4
+    }
+  ],
+  "checks": [
+    "Alphanumeric photo matches saved pipeline",
+    "Both character models",
+    "Both character segmentation methods",
+    "Character generation preserves case/zeros",
+    "Source request separate from actual prediction",
+    "Image/mode/model changes clear stale results",
+    "Invalid file and text, missing samples, cancelled dialog, blank image",
+    "Character/number/blank exports",
+    "Numbers photo and generated 007 regression",
+    "Eight mode/model caches isolated",
+    "GUI heartbeat during recognition, controls disabled",
+    "Physical outer window fits work area",
+    "800x500 and 640x400 scrolling; controls/crops reachable; fixed status",
+    "Mouse wheel and keyboard-focus visibility",
+    "Twelve-digit breakdown reaches final crop; missing checkpoint error recovers",
+    "Week 10 digit 240 and repaired Hello/Bill displayed and exported",
+    "All four architectures in both modes reproduce Week 11 saved photo predictions",
+    "Default models reset by mode; new-model exports include correct checkpoint hashes",
+    "ResNet generated characters; missing/corrupt new checkpoint errors and recovery"
+  ],
+  "captures": [
+    {
+      "file": "alphanumeric_photo.png",
+      "physical_client_bounds": [
+        24,
+        47,
+        1264,
+        907
+      ],
+      "physical_window_bounds": [
+        16,
+        16,
+        1272,
+        915
+      ],
+      "physical_work_area": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "tk_size": [
+        1240,
+        860
+      ]
+    },
+    {
+      "file": "generated_characters.png",
+      "physical_client_bounds": [
+        24,
+        47,
+        1264,
+        907
+      ],
+      "physical_window_bounds": [
+        16,
+        16,
+        1272,
+        915
+      ],
+      "physical_work_area": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "tk_size": [
+        1240,
+        860
+      ]
+    },
+    {
+      "file": "small_window_controls.png",
+      "physical_client_bounds": [
+        24,
+        47,
+        824,
+        547
+      ],
+      "physical_window_bounds": [
+        16,
+        16,
+        832,
+        555
+      ],
+      "physical_work_area": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "tk_size": [
+        800,
+        500
+      ]
+    },
+    {
+      "file": "small_window_crops.png",
+      "physical_client_bounds": [
+        24,
+        47,
+        824,
+        547
+      ],
+      "physical_window_bounds": [
+        16,
+        16,
+        832,
+        555
+      ],
+      "physical_work_area": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "tk_size": [
+        800,
+        500
+      ]
+    },
+    {
+      "file": "minimum_window.png",
+      "physical_client_bounds": [
+        24,
+        47,
+        664,
+        447
+      ],
+      "physical_window_bounds": [
+        16,
+        16,
+        672,
+        455
+      ],
+      "physical_work_area": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "tk_size": [
+        640,
+        400
+      ]
+    },
+    {
+      "file": "numbers_regression.png",
+      "physical_client_bounds": [
+        24,
+        47,
+        1264,
+        907
+      ],
+      "physical_window_bounds": [
+        16,
+        16,
+        1272,
+        915
+      ],
+      "physical_work_area": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "tk_size": [
+        1240,
+        860
+      ]
+    },
+    {
+      "file": "long_number_breakdown.png",
+      "physical_client_bounds": [
+        24,
+        47,
+        1264,
+        907
+      ],
+      "physical_window_bounds": [
+        16,
+        16,
+        1272,
+        915
+      ],
+      "physical_work_area": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "tk_size": [
+        1240,
+        860
+      ]
+    },
+    {
+      "file": "Haresh_03_text-Hello.png",
+      "physical_client_bounds": [
+        24,
+        47,
+        1264,
+        907
+      ],
+      "physical_window_bounds": [
+        16,
+        16,
+        1272,
+        915
+      ],
+      "physical_work_area": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "tk_size": [
+        1240,
+        860
+      ]
+    },
+    {
+      "file": "Haresh_06_text-Bill.png",
+      "physical_client_bounds": [
+        24,
+        47,
+        1264,
+        907
+      ],
+      "physical_window_bounds": [
+        16,
+        16,
+        1272,
+        915
+      ],
+      "physical_work_area": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "tk_size": [
+        1240,
+        860
+      ]
+    },
+    {
+      "file": "week11_numbers_default.png",
+      "physical_client_bounds": [
+        24,
+        47,
+        1264,
+        907
+      ],
+      "physical_window_bounds": [
+        16,
+        16,
+        1272,
+        915
+      ],
+      "physical_work_area": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "tk_size": [
+        1240,
+        860
+      ]
+    },
+    {
+      "file": "week11_numbers_model_selector.png",
+      "physical_client_bounds": [
+        24,
+        47,
+        1264,
+        907
+      ],
+      "physical_window_bounds": [
+        16,
+        16,
+        1272,
+        915
+      ],
+      "physical_work_area": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "tk_size": [
+        1240,
+        860
+      ]
+    },
+    {
+      "file": "week11_alphanumeric_default.png",
+      "physical_client_bounds": [
+        24,
+        47,
+        1264,
+        907
+      ],
+      "physical_window_bounds": [
+        16,
+        16,
+        1272,
+        915
+      ],
+      "physical_work_area": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "tk_size": [
+        1240,
+        860
+      ]
+    },
+    {
+      "file": "week11_alphanumeric_model_selector.png",
+      "physical_client_bounds": [
+        24,
+        47,
+        1264,
+        907
+      ],
+      "physical_window_bounds": [
+        16,
+        16,
+        1272,
+        915
+      ],
+      "physical_work_area": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "tk_size": [
+        1240,
+        860
+      ]
+    },
+    {
+      "file": "week11_resnet_generated.png",
+      "physical_client_bounds": [
+        24,
+        47,
+        1264,
+        907
+      ],
+      "physical_window_bounds": [
+        16,
+        16,
+        1272,
+        915
+      ],
+      "physical_work_area": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "tk_size": [
+        1240,
+        860
+      ]
+    }
+  ],
+  "status": "PASS",
+  "environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch": "2.6.0+cpu",
+    "numpy": "2.2.3",
+    "pillow": "11.1.0",
+    "tcl": "8.6.15",
+    "tk_screen": [
+      1920,
+      1080
+    ],
+    "executable": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\project-github\\.venv\\Scripts\\python.exe",
+    "native_dialogs": "mocked; not manually exercised",
+    "clean_install": false,
+    "other_computer": false
+  },
+  "source_sha256": {
+    "app.py": "7ec10759109e3f43bf189edb32cdeb495663b8642f382fff5770cf037e235d75",
+    "gui_core.py": "d052c3129dda69e9652ca27b731c35fdc998a0412759da854b19ec81402fdf1c",
+    "tests/gui_extension_smoke.py": "2627671cdafdab197c11d76903c17aa2b55d5abfb513ad8157d4de5cb0584308"
+  }
+}

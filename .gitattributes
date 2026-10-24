@@ -4,3 +4,4 @@ experiments/week11_gpu_run01/** -text
 experiments/week11_four_models/** -text
 evidence/model_comparison/week11_run01/** -text
 evidence/week11_gpu_setup/** -text
+evidence/gui_week11/** -text

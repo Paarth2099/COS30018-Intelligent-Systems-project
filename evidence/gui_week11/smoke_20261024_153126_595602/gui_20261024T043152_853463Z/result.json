@@ -1,0 +1,106 @@
+{
+  "created_utc": "2026-10-24T04:31:52.904267+00:00",
+  "input": {
+    "route": "file",
+    "file": "C:\\Users\\paart\\OneDrive\\Desktop\\University\\Intelligent system\\project-github\\data\\own_strings\\development\\Manula\\Manula_02_text-Room7.jpg",
+    "sha256": "a6ccc3a4534e1492ccf221f40f7f20ee26b268adcedefdd00bea4ab5f679da96"
+  },
+  "settings": {
+    "mode": "Alphanumeric",
+    "model": "mobilenet_v3_small",
+    "method": "grouped_components",
+    "representation": "otsu",
+    "preparation": "Paarth character preparation: local illumination, Otsu, speck removal, ink normalisation",
+    "checkpoint_sha256": "a7d5c4a1b8f692a7f1458d8cf5be2ef79ebc26bf1ca41c169def657dff06cef3",
+    "checkpoint": "experiments/week11_gpu_run01/emnist/mobilenet_v3_small/mobilenet_v3_small.pt"
+  },
+  "prediction": {
+    "text": "R00M7",
+    "characters": [
+      {
+        "class_id": 27,
+        "character": "R",
+        "confidence": 0.4103786051273346
+      },
+      {
+        "class_id": 0,
+        "character": "0",
+        "confidence": 0.7133093476295471
+      },
+      {
+        "class_id": 0,
+        "character": "0",
+        "confidence": 0.6807817816734314
+      },
+      {
+        "class_id": 22,
+        "character": "M",
+        "confidence": 0.8022301197052002
+      },
+      {
+        "class_id": 7,
+        "character": "7",
+        "confidence": 0.969537615776062
+      }
+    ],
+    "model": "mobilenet_v3_small",
+    "task": "emnist_byclass_62"
+  },
+  "boxes": [
+    [
+      29,
+      56,
+      101,
+      189
+    ],
+    [
+      118,
+      95,
+      165,
+      169
+    ],
+    [
+      173,
+      99,
+      221,
+      163
+    ],
+    [
+      233,
+      95,
+      307,
+      166
+    ],
+    [
+      301,
+      34,
+      379,
+      163
+    ]
+  ],
+  "coordinate_space": "resized grayscale image",
+  "resized_size": [
+    412,
+    216
+  ],
+  "warnings": [],
+  "input_png_sha256": "5f29cfd5fa28e3d52c1d50c77dcee2dc7c3048e9dda1ffd311e9835a9a9be0bb",
+  "component_groups": [
+    [
+      2
+    ],
+    [
+      3
+    ],
+    [
+      5
+    ],
+    [
+      4
+    ],
+    [
+      1
+    ]
+  ],
+  "score_note": "Per-character confidence is an uncalibrated model score, not a verified probability."
+}

@@ -1,0 +1,89 @@
+test_aspect_ratio_preserved_for_wide_character (test_character_preprocessing.CharacterPreprocessingTests.test_aspect_ratio_preserved_for_wide_character) ... ok
+test_blank_faint_and_unknown_method_rejected (test_character_preprocessing.CharacterPreprocessingTests.test_blank_faint_and_unknown_method_rejected) ... ok
+test_case_explicit_labels_and_writer_validation (test_character_preprocessing.CharacterPreprocessingTests.test_case_explicit_labels_and_writer_validation) ... ok
+test_clipped_foreground_warned_and_input_not_mutated (test_character_preprocessing.CharacterPreprocessingTests.test_clipped_foreground_warned_and_input_not_mutated) ... ok
+test_detached_dot_and_stem_survive_every_variant (test_character_preprocessing.CharacterPreprocessingTests.test_detached_dot_and_stem_survive_every_variant) ... ok
+test_downsampled_thin_ink_is_normalised_without_shape_change (test_character_preprocessing.CharacterPreprocessingTests.test_downsampled_thin_ink_is_normalised_without_shape_change) ... ok
+test_exif_orientation_matches_physically_rotated_image (test_character_preprocessing.CharacterPreprocessingTests.test_exif_orientation_matches_physically_rotated_image) ... ok
+test_smooth_lighting_gradient_does_not_expand_ink_crop (test_character_preprocessing.CharacterPreprocessingTests.test_smooth_lighting_gradient_does_not_expand_ink_crop) ... ok
+test_tiny_speck_removed_but_small_detached_dot_retained (test_character_preprocessing.CharacterPreprocessingTests.test_tiny_speck_removed_but_small_detached_dot_retained) ... ok
+test_blank_returns_empty_batch_and_prediction (test_character_segmentation.CharacterSegmentationTests.test_blank_returns_empty_batch_and_prediction) ... ok
+test_dot_and_stem_grouped_without_merging_neighbour (test_character_segmentation.CharacterSegmentationTests.test_dot_and_stem_grouped_without_merging_neighbour) ... ok
+test_dot_prefers_aligned_stem_over_neighbour_box (test_character_segmentation.CharacterSegmentationTests.test_dot_prefers_aligned_stem_over_neighbour_box) ... ok
+test_exif_orientation_matches_physical_rotation (test_character_segmentation.CharacterSegmentationTests.test_exif_orientation_matches_physical_rotation) ... ok
+test_fragmented_dot_attaches_to_short_thin_stem (test_character_segmentation.CharacterSegmentationTests.test_fragmented_dot_attaches_to_short_thin_stem) ... ok
+test_invalid_method_and_small_resolution_rejected (test_character_segmentation.CharacterSegmentationTests.test_invalid_method_and_small_resolution_rejected) ... ok
+test_labels_preserve_case_zeros_and_metrics_count_insertions (test_character_segmentation.CharacterSegmentationTests.test_labels_preserve_case_zeros_and_metrics_count_insertions) ... ok
+test_noise_removed_but_small_dot_retained (test_character_segmentation.CharacterSegmentationTests.test_noise_removed_but_small_dot_retained) ... ok
+test_offset_dot_is_grouped_where_projection_splits_it (test_character_segmentation.CharacterSegmentationTests.test_offset_dot_is_grouped_where_projection_splits_it) ... ok
+test_overlap_boxes_do_not_contaminate_other_character (test_character_segmentation.CharacterSegmentationTests.test_overlap_boxes_do_not_contaminate_other_character) ... ok
+test_public_pipeline_orders_and_passes_float_arrays (test_character_segmentation.CharacterSegmentationTests.test_public_pipeline_orders_and_passes_float_arrays) ... ok
+test_short_i_beside_tall_character_retains_dot (test_character_segmentation.CharacterSegmentationTests.test_short_i_beside_tall_character_retains_dot) ... ok
+test_tiny_pen_gap_closed_without_filling_grayscale_crop (test_character_segmentation.CharacterSegmentationTests.test_tiny_pen_gap_closed_without_filling_grayscale_crop) ... ok
+test_touching_characters_are_not_split_using_expected_count (test_character_segmentation.CharacterSegmentationTests.test_touching_characters_are_not_split_using_expected_count) ... ok
+test_bad_checkpoint_and_bad_crops_rejected (test_characters.CharacterTests.test_bad_checkpoint_and_bad_crops_rejected) ... ok
+test_batch_conversion_preserves_upright_pixels_and_source (test_characters.CharacterTests.test_batch_conversion_preserves_upright_pixels_and_source) ... ok
+test_mapping_case_leading_zeros_and_order_across_batches (test_characters.CharacterTests.test_mapping_case_leading_zeros_and_order_across_batches) ... ok
+test_metrics_keep_uppercase_lowercase_distinct (test_characters.CharacterTests.test_metrics_keep_uppercase_lowercase_distinct) ... ok
+test_model_save_load_roundtrip_both_architectures (test_characters.CharacterTests.test_model_save_load_roundtrip_both_architectures) ... ok
+test_stratified_split_disjoint_repeatable_and_all_classes (test_characters.CharacterTests.test_stratified_split_disjoint_repeatable_and_all_classes) ... ok
+test_checkpoints_roundtrip (test_contract.ContractTests.test_checkpoints_roundtrip) ... ok
+test_confusion_metrics_known_example (test_contract.ContractTests.test_confusion_metrics_known_example) ... ok
+test_input_validation (test_contract.ContractTests.test_input_validation) ... ok
+test_number_order_leading_zeros_empty_and_batch_boundaries (test_contract.ContractTests.test_number_order_leading_zeros_empty_and_batch_boundaries) ... ok
+test_split_disjoint_complete_repeatable (test_contract.ContractTests.test_split_disjoint_complete_repeatable) ... ok
+test_training_and_checkpoint_contract (test_extended_models.ExtendedModels.test_training_and_checkpoint_contract) ... ok
+test_unknown_architecture (test_extended_models.ExtendedModels.test_unknown_architecture) ... ok
+test_catalog_case_and_string_exclusion (test_gui_characters.CharacterGuiTests.test_catalog_case_and_string_exclusion) ... ok
+test_export_retains_actual_prediction_separate_from_request (test_gui_characters.CharacterGuiTests.test_export_retains_actual_prediction_separate_from_request) ... ok
+test_generation_preserves_case_zeros_provenance_and_sources (test_gui_characters.CharacterGuiTests.test_generation_preserves_case_zeros_provenance_and_sources) ... ok
+test_invalid_missing_case_and_blank_sources (test_gui_characters.CharacterGuiTests.test_invalid_missing_case_and_blank_sources) ... ok
+test_service_rejects_corrupt_character_checkpoint (test_gui_characters.CharacterGuiTests.test_service_rejects_corrupt_character_checkpoint) ... ok
+test_bad_source_is_reported (test_gui_core.GuiCoreTests.test_bad_source_is_reported) ... ok
+test_catalog_excludes_multi_digit_and_supports_nested_folders (test_gui_core.GuiCoreTests.test_catalog_excludes_multi_digit_and_supports_nested_folders) ... ok
+test_export_records_provenance_and_keeps_previous_exports (test_gui_core.GuiCoreTests.test_export_records_provenance_and_keeps_previous_exports) ... ok
+test_generation_leading_zeros_and_no_source_changes (test_gui_core.GuiCoreTests.test_generation_leading_zeros_and_no_source_changes) ... ok
+test_invalid_or_missing_requested_digits (test_gui_core.GuiCoreTests.test_invalid_or_missing_requested_digits) ... ok
+test_corruption_and_wrong_task_rejected (test_gui_week11.CheckpointRoutingTests.test_corruption_and_wrong_task_rejected) ... ok
+test_missing_candidate_does_not_fall_back (test_gui_week11.CheckpointRoutingTests.test_missing_candidate_does_not_fall_back) ... ok
+test_task_routes_are_separate (test_gui_week11.CheckpointRoutingTests.test_task_routes_are_separate) ... ok
+test_blank_rejected (test_preprocessing_candidates.CandidateChecks.test_blank_rejected) ... ok
+test_default_copy_and_detached_dot (test_preprocessing_candidates.CandidateChecks.test_default_copy_and_detached_dot) ... ok
+test_peak_preserves_geometry_and_handles_empty (test_preprocessing_candidates.CandidateChecks.test_peak_preserves_geometry_and_handles_empty) ... ok
+test_production_digit_integration_and_other_representations (test_preprocessing_candidates.CandidateChecks.test_production_digit_integration_and_other_representations) ... ok
+test_production_preserves_far_detached_dot (test_preprocessing_candidates.CandidateChecks.test_production_preserves_far_detached_dot) ... ok
+test_diagonal_connectivity_and_separation (test_segmentation.SegmentationTests.test_diagonal_connectivity_and_separation) ... ok
+test_edit_distance_including_leading_zero (test_segmentation.SegmentationTests.test_edit_distance_including_leading_zero) ... ok
+test_empty_input (test_segmentation.SegmentationTests.test_empty_input) ... ok
+test_left_to_right_order_and_model_format (test_segmentation.SegmentationTests.test_left_to_right_order_and_model_format) ... ok
+test_methods_differ_for_disconnected_vertical_parts (test_segmentation.SegmentationTests.test_methods_differ_for_disconnected_vertical_parts) ... ok
+test_noise_removed (test_segmentation.SegmentationTests.test_noise_removed) ... ok
+test_overlapping_component_boxes_do_not_leak_neighbour_ink (test_segmentation.SegmentationTests.test_overlapping_component_boxes_do_not_leak_neighbour_ink) ... ok
+test_touching_digits_are_not_magically_split (test_segmentation.SegmentationTests.test_touching_digits_are_not_magically_split) ... ok
+test_close_narrow_letters_stay_separate (test_segmentation_candidates.SegmentationCandidateTests.test_close_narrow_letters_stay_separate) ... ok
+test_complementary_broken_body_keeps_component_ids (test_segmentation_candidates.SegmentationCandidateTests.test_complementary_broken_body_keeps_component_ids) ... ok
+test_short_stem_eligibility_retains_dot (test_segmentation_candidates.SegmentationCandidateTests.test_short_stem_eligibility_retains_dot) ... ok
+test_wide_pair_or_distant_pair_not_joined (test_segmentation_candidates.SegmentationCandidateTests.test_wide_pair_or_distant_pair_not_joined) ... ok
+test_missing_training_class_rejected (test_week10_weights.WeightTests.test_missing_training_class_rejected) ... ok
+test_training_counts_only (test_week10_weights.WeightTests.test_training_counts_only) ... ok
+test_cpu_batch_scaling (test_week11_training.TrainingDeviceTests.test_cpu_batch_scaling) ... ok
+test_cuda_request_cannot_silently_fall_back (test_week11_training.TrainingDeviceTests.test_cuda_request_cannot_silently_fall_back) ... ok
+{"task": "mnist", "model": "resnet18", "device": "cpu", "epoch": 1, "processed": 5, "total": 5, "elapsed_seconds": 0.2882898999960162}
+{"task": "mnist", "model": "resnet18", "epoch": 1, "train_loss": 2.217660427093506, "train_accuracy": 0.0, "validation_loss": 2.279116630554199, "validation_accuracy": 0.5, "seconds": 0.3130667000077665}
+Verified completed run: C:\Users\paart\OneDrive\Desktop\University\Intelligent system\project-github\tmpfnd8s87n\mnist\resnet18
+{"task": "mnist", "model": "mobilenet_v3_small", "device": "cpu", "epoch": 1, "processed": 5, "total": 5, "elapsed_seconds": 0.14984959998400882}
+{"task": "mnist", "model": "mobilenet_v3_small", "epoch": 1, "train_loss": 2.3127381801605225, "train_accuracy": 0.2, "validation_loss": 2.3004555702209473, "validation_accuracy": 0.0, "seconds": 0.20709390001138672}
+Verified completed run: C:\Users\paart\OneDrive\Desktop\University\Intelligent system\project-github\tmpvbdbf0z2\mnist\mobilenet_v3_small
+{"task": "emnist", "model": "resnet18", "device": "cpu", "epoch": 1, "processed": 5, "total": 5, "elapsed_seconds": 0.1830999999656342}
+{"task": "emnist", "model": "resnet18", "epoch": 1, "train_loss": 4.39240837097168, "train_accuracy": 0.0, "validation_loss": 4.1353840827941895, "validation_accuracy": 0.0, "seconds": 0.21274489996721968}
+Verified completed run: C:\Users\paart\OneDrive\Desktop\University\Intelligent system\project-github\tmpl68ch3a8\emnist\resnet18
+{"task": "emnist", "model": "mobilenet_v3_small", "device": "cpu", "epoch": 1, "processed": 5, "total": 5, "elapsed_seconds": 0.10400500003015622}
+{"task": "emnist", "model": "mobilenet_v3_small", "epoch": 1, "train_loss": 4.143787384033203, "train_accuracy": 0.0, "validation_loss": 4.123831748962402, "validation_accuracy": 0.0, "seconds": 0.12735770002473146}
+Verified completed run: C:\Users\paart\OneDrive\Desktop\University\Intelligent system\project-github\tmpn3uqq7fl\emnist\mobilenet_v3_small
+test_synthetic_cpu_training (test_week11_training.TrainingDeviceTests.test_synthetic_cpu_training) ... ok
+test_synthetic_cuda_training (test_week11_training.TrainingDeviceTests.test_synthetic_cuda_training) ... skipped 'CUDA unavailable on this computer'
+
+----------------------------------------------------------------------
+Ran 72 tests in 8.718s
+
+OK (skipped=1)

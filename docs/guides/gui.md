@@ -2,7 +2,7 @@
 
 ## What was implemented
 
-The desktop application now has Numbers and Alphanumeric modes, each supporting photo loading, generation from labelled handwriting images, CNN/MLP selection, crop previews and evidence export. The interface retains the existing visual design and digit workflow. Recognition and image acquisition run in a worker thread; Tk widgets update on the main thread.
+The desktop application has Numbers and Alphanumeric modes, each supporting photo loading, generation from labelled handwriting images, four-model selection, crop previews and evidence export. Available models are `cnn` (baseline CNN), `mlp`, `resnet18` and `mobilenet_v3_small`. The interface retains the existing visual design and digit workflow. Recognition and image acquisition run in a worker thread; Tk widgets update on the main thread.
 
 The application integrates character segmentation, preprocessing and the saved EMNIST models through `app.py` and `gui_core.py`.
 
@@ -29,7 +29,7 @@ py -3.12 -m venv .venv
 .\run_gui.ps1
 ```
 
-No extra Python packages were added. Obtain the saved `experiments/baseline` and `experiments/emnist_byclass/run_01` model folders with the project. Raw photos are excluded from Git; copy the following shared OneDrive folders into the corresponding local directories:
+No extra Python packages were added. Obtain the saved `experiments/baseline`, `experiments/emnist_byclass/run_01` and `experiments/week11_gpu_run01` model folders with the project, including their `selection.json` files. The GUI performs inference on CPU, including models trained on a GPU; a GPU is not required to run it. Raw photos are excluded from Git; copy the following shared OneDrive folders into the corresponding local directories:
 
 - `data/segmentation_photos`: original labelled digit/number photos.
 - `data/own_characters/development`: labelled single-character extension photos.
@@ -46,14 +46,14 @@ Keyboard focus automatically brings active controls into view as you tab between
 ### Recognition steps
 
 1. Select **Alphanumeric** under Recognition mode.
-2. Leave **cnn**, **grouped_components** and **otsu** selected initially.
+2. Leave **resnet18**, **grouped_components** and **otsu** selected initially.
 3. Choose **Open photo → Choose image** and select a single-line handwritten string.
 4. Select **Recognise text**. Inspect the text, character boxes and ordered 28x28 crops.
 5. Select **Export result** to save a new evidence directory.
 
-Otsu preparation is fixed in Alphanumeric mode because that is the selected character preparation pipeline. Projection and MLP remain available for comparisons. Changing the mode, model or separation setting clears the previous prediction and disables export until recognition runs again. Switching mode retains the displayed input photo but resets generation defaults and separation settings for that mode.
+Otsu preparation is fixed in Alphanumeric mode because that is the selected character preparation pipeline. Projection and all four models remain available for comparisons. Changing the mode, model or separation setting clears the previous prediction and disables export until recognition runs again. Switching mode retains the displayed input photo but resets model, generation and separation defaults: **Numbers uses baseline CNN; Alphanumeric uses ResNet-18**. These defaults follow the Week 11 model comparison; a benchmark improvement alone did not justify replacing the number model.
 
-Use dark, separately written characters on pale paper. Joined cursive, multiline documents, punctuation and inferred word spaces are not supported. Blank input gives an empty result and a warning. Invalid files and missing/corrupt model files produce a visible error. The trained character checkpoint hash is checked before recognition.
+Use dark, separately written characters on pale paper. Joined cursive, multiline documents, punctuation and inferred word spaces are not supported. Blank input gives an empty result and a warning. Invalid files and missing/corrupt model files produce a visible error. Every selected checkpoint hash is checked before recognition; a missing new model does not silently fall back to CNN.
 
 ## Generate a mixed string
 
@@ -92,7 +92,7 @@ Boxes refer to the resized upright grayscale working image, not necessarily the 
 
 ## Verification and limitations
 
-Software tests cover acquisition, generation, provenance, case/zeros, malformed/missing inputs, corrupt checkpoints and the existing recognition algorithms. The separate desktop smoke script exercises real Tk callbacks and saved models while replacing file-dialog selection with known local paths; it saves screenshots and a verification record under `evidence/gui_extension/`.
+Software tests cover acquisition, generation, provenance, case/zeros, malformed/missing inputs, corrupt checkpoints and the existing recognition algorithms. The separate desktop smoke script exercises real Tk callbacks and saved models while replacing file-dialog selection with known local paths; current runs save screenshots and a verification record under `evidence/gui_week11/`.
 
 ```powershell
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
@@ -101,6 +101,6 @@ Software tests cover acquisition, generation, provenance, case/zeros, malformed/
 
 The first command assumes a local `.venv`; the environment selected by `run_gui.ps1` can also be used. The smoke test requires the development photo folders listed above and briefly opens the GUI.
 
-Read [the GUI verification report](../reports/gui-verification.md) for recorded results. Automated checks cover one local environment; cross-machine acceptance testing remains outstanding.
+Read [the Week 11 integration report](../reports/gui-integration-week11.md) for current verification, and [the earlier GUI verification report](../reports/gui-verification.md) for historical results. Automated checks cover one local environment; updated cross-machine acceptance testing remains outstanding.
 
-GUI integration does not improve recognition accuracy. The earlier 40-photo development experiment reported 38/40 acceptable grouped segmentations but only 7/40 exactly correct strings. Investigate classifier/preparation errors and test fresh photos before final performance claims. Preserve those earlier results instead of replacing them with a successful demo.
+GUI integration reproduces the selected pipeline; it is not new accuracy evidence. The Week 11 development comparison recorded 12/40 exactly correct strings for ResNet-18 versus 8/40 for the baseline CNN. Most strings remain imperfect. Test fresh photos before final performance claims and preserve the earlier experiments.

@@ -3,6 +3,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 import hashlib
 import json
+import csv
 import sys
 import time
 from unittest.mock import patch
@@ -11,7 +12,7 @@ import tkinter as tk
 from PIL import Image, ImageGrab
 from app import HNRSApp, ROOT
 
-out=ROOT/'evidence/gui_week10'/('smoke_'+datetime.now().strftime('%Y%m%d_%H%M%S_%f'))
+out=ROOT/'evidence/gui_week11'/('smoke_'+datetime.now().strftime('%Y%m%d_%H%M%S_%f'))
 out.mkdir(parents=True)
 root=tk.Tk();app=HNRSApp(root)
 errors=[];report={'created_utc':datetime.now(timezone.utc).isoformat(),'predictions':[],'checks':[]}
@@ -112,6 +113,8 @@ try:
     root.after(20,heartbeat)
     with patch('app.messagebox.showerror',side_effect=lambda title,text,**kw:errors.append(text)):
         root.update();app.mode.set('Alphanumeric');app.mode_changed()
+        assert app.model.get()=='resnet18'
+        app.model.set('cnn');app.settings_changed()  # Preserve the historical regression checks below.
         assert app.method.get()=='grouped_components'
         assert str(app.combos[3]['state'])=='disabled'
         photo=ROOT/'data/own_strings/development/Manula/Manula_02_text-Room7.jpg'
@@ -198,18 +201,65 @@ try:
             _,record=export();assert record['prediction']['text']==text
             app.viewport.yview_moveto(0);screenshot(filename.replace('.jpg','.png'))
         assert len(app.service.predictors)==4
+        # Exercise every real checkpoint through Tk callbacks and exported settings.
+        from gui_core import MODEL_NAMES,DEFAULT_MODELS
+        assert tuple(app.combos[1]['values'])==MODEL_NAMES
+        with (ROOT/'evidence/model_comparison/week11_run01/paired_photos.csv').open(newline='',encoding='utf-8') as stream:
+            comparisons=list(csv.DictReader(stream))
+        for mode,filename in [('Numbers','data/segmentation_photos/Manula/Manula_07_label-420.jpg'),
+                              ('Alphanumeric','data/own_strings/development/Manula/Manula_02_text-Room7.jpg')]:
+            app.mode.set(mode);app.mode_changed();assert app.model.get()==DEFAULT_MODELS[mode]
+            assert app.result is None and str(app.export_button['state'])=='disabled'
+            app.routes.select(0);load(ROOT/filename)
+            expected=next(r for r in comparisons if r['file']==filename)
+            for name in MODEL_NAMES:
+                app.model.set(name);app.settings_changed()
+                assert app.result is None and str(app.export_button['state'])=='disabled'
+                recognise();assert app.result['prediction']['text']==expected[name]
+                _,record=export()
+                assert record['settings']['model']==name
+                checkpoint=ROOT/record['settings']['checkpoint']
+                assert hashlib.sha256(checkpoint.read_bytes()).hexdigest()==record['settings']['checkpoint_sha256']
+                if name==DEFAULT_MODELS[mode]:
+                    app.viewport.yview_moveto(0);screenshot('week11_'+mode.lower()+'_default.png')
+            app.model.set('mobilenet_v3_small');app.settings_changed()
+            app.viewport.yview_moveto(0);screenshot('week11_'+mode.lower()+'_model_selector.png')
+        assert len(app.service.predictors)==8
+        app.mode.set('Alphanumeric');app.mode_changed()
+        app.routes.select(1);app.number.set('00Ai');app.generate_button.invoke();wait();recognise()
+        assert app.model.get()=='resnet18' and len(app.digit_photos)==4
+        _,record=export();assert record['input']['requested_text']=='00Ai'
+        assert record['prediction']['text']==app.result['prediction']['text']
+        app.viewport.yview_moveto(0);screenshot('week11_resnet_generated.png')
+        # Missing and corrupt new models must surface errors, not substitute CNN.
+        real_service=app.service
+        app.service=RecognitionService(out/'missing_new_models')
+        app.settings_changed();app.recognise_button.invoke();wait()
+        assert errors.pop() and app.result is None and str(app.export_button['state'])=='disabled'
+        corrupt_root=out/'corrupt_fixture';folder=corrupt_root/'experiments/week11_gpu_run01/emnist/resnet18'
+        folder.mkdir(parents=True);(folder/'resnet18.pt').write_bytes(b'invalid checkpoint')
+        (folder/'selection.json').write_text(json.dumps({'model':'resnet18','config':{'task':'emnist'},'checkpoint_sha256':'incorrect'}))
+        app.service=RecognitionService(corrupt_root)
+        app.settings_changed();app.recognise_button.invoke();wait()
+        assert 'hash mismatch' in errors.pop() and app.result is None
+        app.service=real_service;recognise()
+        app.mode.set('Numbers');app.mode_changed();assert app.model.get()=='cnn'
+        app.mode.set('Alphanumeric');app.mode_changed();assert app.model.get()=='resnet18'
         assert not errors,errors
         report['checks']=['Alphanumeric photo matches saved pipeline','Both character models',
                           'Both character segmentation methods','Character generation preserves case/zeros',
                           'Source request separate from actual prediction','Image/mode/model changes clear stale results',
                           'Invalid file and text, missing samples, cancelled dialog, blank image',
                           'Character/number/blank exports','Numbers photo and generated 007 regression',
-                          'Four mode/model caches isolated','GUI heartbeat during recognition, controls disabled',
+                          'Eight mode/model caches isolated','GUI heartbeat during recognition, controls disabled',
                           'Physical outer window fits work area',
                           '800x500 and 640x400 scrolling; controls/crops reachable; fixed status',
                           'Mouse wheel and keyboard-focus visibility',
                           'Twelve-digit breakdown reaches final crop; missing checkpoint error recovers',
-                          'Week 10 digit 240 and repaired Hello/Bill displayed and exported']
+                          'Week 10 digit 240 and repaired Hello/Bill displayed and exported',
+                          'All four architectures in both modes reproduce Week 11 saved photo predictions',
+                          'Default models reset by mode; new-model exports include correct checkpoint hashes',
+                          'ResNet generated characters; missing/corrupt new checkpoint errors and recovery']
         report['status']='PASS'
         import platform,torch,numpy,PIL
         report['environment']={'python':platform.python_version(),'platform':platform.platform(),
@@ -218,6 +268,9 @@ try:
             'executable':sys.executable,'native_dialogs':'mocked; not manually exercised',
             'clean_install':False,'other_computer':False}
         report['source_sha256']={name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in ['app.py','gui_core.py','tests/gui_extension_smoke.py']}
+        for name in report['source_sha256']:
+            destination=out/'source'/name;destination.parent.mkdir(parents=True,exist_ok=True)
+            destination.write_bytes((ROOT/name).read_bytes())
         (out/'verification.json').write_text(json.dumps(report,indent=2))
         print(json.dumps(report,indent=2),flush=True);print('Evidence:',out,flush=True)
 except Exception as error:

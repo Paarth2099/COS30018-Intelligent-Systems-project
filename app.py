@@ -9,7 +9,7 @@ import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 import numpy as np
 from PIL import Image
-from gui_core import open_photo, generate_number, generate_text, annotated_image, export_result, RecognitionService
+from gui_core import open_photo, generate_number, generate_text, annotated_image, export_result, RecognitionService, MODEL_NAMES, DEFAULT_MODELS
 
 ROOT=Path(__file__).resolve().parent
 
@@ -127,7 +127,7 @@ class HNRSApp:
         ttk.Label(sidebar,text='02  /  RECOGNITION',style='Section.TLabel').grid(row=3,column=0,sticky='w',pady=(0,6))
         options=ttk.Frame(sidebar,style='Panel.TFrame');options.grid(row=4,column=0,sticky='ew')
         self.combos=[]
-        for label,variable,values in [('Recognition mode',self.mode,['Numbers','Alphanumeric']),('Recognition model',self.model,['cnn','mlp']),('Character separation',self.method,['components','projection']),('Image preparation',self.representation,['otsu','fixed','grayscale'])]:
+        for label,variable,values in [('Recognition mode',self.mode,['Numbers','Alphanumeric']),('Recognition model',self.model,MODEL_NAMES),('Character separation',self.method,['components','projection']),('Image preparation',self.representation,['otsu','fixed','grayscale'])]:
             ttk.Label(options,text=label,style='Caption.TLabel').pack(anchor='w',pady=(0,4))
             combo=ttk.Combobox(options,textvariable=variable,values=values,state='readonly',width=20)
             combo.pack(fill='x',pady=(0,4));combo.bind('<<ComboboxSelected>>',self.mode_changed if variable is self.mode else self.settings_changed);self.combos.append(combo)
@@ -208,6 +208,7 @@ class HNRSApp:
 
     def mode_changed(self,event=None):
         characters=self.mode.get()=='Alphanumeric'
+        self.model.set(DEFAULT_MODELS[self.mode.get()])
         self.method.set('grouped_components' if characters else 'components')
         self.combos[2].configure(values=['grouped_components','projection'] if characters else ['components','projection'])
         self.representation.set('otsu')
@@ -221,7 +222,7 @@ class HNRSApp:
         self.crops_heading.set('Character breakdown' if characters else 'Digit breakdown')
         self.recognise_button.configure(text='Recognise text' if characters else 'Recognise number')
         self.clear_result()
-        self.status.set('Alphanumeric mode: case matters. Similar letters and digits may be confused; inspect the crops.' if characters else 'Number mode ready. Run recognition for this mode.')
+        self.status.set('Alphanumeric mode: ResNet-18 selected. Case matters; inspect similar letters and digits.' if characters else 'Number mode: baseline CNN selected. Run recognition for this mode.')
 
     def set_image(self,image,origin):
         self.image=image; self.origin=origin

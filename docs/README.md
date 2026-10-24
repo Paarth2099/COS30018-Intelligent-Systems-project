@@ -32,6 +32,7 @@ Commands and plain source paths are relative to the repository root unless state
 | [Week 10 segmentation experiments](reports/segmentation-experiment-week10.md) | Independent and combined broken-body/short-stem repairs, visual review and integration checks |
 | [Week 10 GUI improvements](reports/gui-improvements-week10.md) | Screen-fit repair, scrolling, updated recognition integration and local verification |
 | [Week 11 four-model comparison](reports/model-comparison-week11.md) | Imported GPU training, four-architecture benchmark/photo evaluation and model recommendations |
+| [Week 11 GUI integration](reports/gui-integration-week11.md) | Four-model selector, evaluated defaults, checkpoint integrity and desktop verification |
 
 ## Data notes
 

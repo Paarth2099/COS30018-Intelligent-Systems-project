@@ -10,6 +10,30 @@ from PIL import Image, ImageOps, ImageDraw
 from preprocess_digits import prepare_variants
 
 IMAGE_TYPES = {'.png','.jpg','.jpeg','.bmp','.tif','.tiff'}
+MODEL_NAMES = ('cnn','mlp','resnet18','mobilenet_v3_small')
+DEFAULT_MODELS = {'Numbers':'cnn','Alphanumeric':'resnet18'}
+
+
+def resolve_checkpoint(root,mode,model):
+    """Resolve the evaluated architecture for its task and verify before loading."""
+    if mode not in DEFAULT_MODELS or model not in MODEL_NAMES:
+        raise ValueError('Unsupported recognition mode or model')
+    root=Path(root)
+    if model in ('resnet18','mobilenet_v3_small'):
+        task='mnist' if mode=='Numbers' else 'emnist'
+        folder=root/'experiments/week11_gpu_run01'/task/model
+        selection=json.loads((folder/'selection.json').read_text())
+        if selection.get('model')!=model or selection.get('config',{}).get('task')!=task:
+            raise ValueError('Model selection does not match recognition mode or architecture.')
+        expected=selection['checkpoint_sha256']
+    else:
+        folder=root/('experiments/baseline' if mode=='Numbers' else 'experiments/emnist_byclass/run_01')
+        selection=json.loads((folder/'selection.json').read_text())
+        expected=next(r['checkpoint_sha256'] for r in selection['models'] if r['model']==model)
+    checkpoint=folder/f'{model}.pt'
+    digest=hashlib.sha256(checkpoint.read_bytes()).hexdigest()
+    if digest!=expected:raise ValueError('Model checkpoint hash mismatch; restore the saved experiment.')
+    return checkpoint,digest
 
 
 def character_catalog(folder):
@@ -63,23 +87,16 @@ class RecognitionService:
         torch.set_num_threads(4)
         settings=dict(settings)
         mode=settings.get('mode','Numbers');model=settings['model']
-        if mode not in ('Numbers','Alphanumeric') or model not in ('cnn','mlp'):
-            raise ValueError('Unsupported recognition mode or model')
+        checkpoint,digest=resolve_checkpoint(self.root,mode,model)
         if mode=='Alphanumeric':
             from hnrs_chars.predict import CharacterPredictor
             from hnrs_chars.segmentation import recognise_text
-            checkpoint=self.root/'experiments/emnist_byclass/run_01'/f'{model}.pt'
-            selection=json.loads((checkpoint.parent/'selection.json').read_text())
-            expected=next(r['checkpoint_sha256'] for r in selection['models'] if r['model']==model)
-            digest=hashlib.sha256(checkpoint.read_bytes()).hexdigest()
-            if digest!=expected: raise ValueError('Character model checkpoint hash mismatch; restore the saved experiment.')
             settings['representation']='otsu'
             settings['preparation']='Paarth character preparation: local illumination, Otsu, speck removal, ink normalisation'
             factory=CharacterPredictor
         else:
             from hnrs_ml.predict import DigitPredictor
-            checkpoint=self.root/'experiments/baseline'/f'{model}.pt'
-            digest=hashlib.sha256(checkpoint.read_bytes()).hexdigest();factory=DigitPredictor
+            factory=DigitPredictor
         key=(mode,model,digest)
         if key not in self.predictors:self.predictors[key]=factory(checkpoint)
         settings['mode']=mode;settings['checkpoint_sha256']=digest

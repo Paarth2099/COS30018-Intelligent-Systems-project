@@ -1,0 +1,1 @@
+{"model": "resnet18", "config": {"task": "emnist"}, "checkpoint_sha256": "incorrect"}
