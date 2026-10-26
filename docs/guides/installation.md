@@ -34,7 +34,7 @@ The GUI uses the saved weights. Raw MNIST/EMNIST data is required for training a
 
 ## Local photo folders
 
-`data/` is excluded from Git. Copy the shared original photos to these locations before running development comparisons or the desktop smoke test:
+The collected handwriting photos are included in Git and in the downloaded ZIP at these locations. Only the large MNIST/EMNIST downloads and scratch data are excluded:
 
 | Folder | Example filename |
 |---|---|
@@ -44,7 +44,7 @@ The GUI uses the saved weights. Raw MNIST/EMNIST data is required for training a
 
 Photo loading also accepts other folders. Generation needs labelled individual samples and reports missing requested characters. Case matters in Alphanumeric mode.
 
-Manifests under `evidence/` record source labels and hashes. Existing development photos are not an untouched final test. A distributed working package needs suitable input examples or explicit access instructions. Obtain these inputs from the [research archive](research-archive.md).
+Manifests under `evidence/` record source labels and hashes. Existing development photos are not an untouched final test. The included [photo collection](../../data/README.md) supplies input examples. Detailed experiment outputs remain in the [research archive](research-archive.md).
 
 ## Commands
 

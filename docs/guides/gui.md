@@ -29,7 +29,7 @@ py -3.12 -m venv .venv
 .\run_gui.ps1
 ```
 
-No extra Python packages were added. Obtain the saved `experiments/baseline`, `experiments/emnist_byclass/run_01` and `experiments/week11_gpu_run01` model folders with the project, including their `selection.json` files. The GUI performs inference on CPU, including models trained on a GPU; a GPU is not required to run it. Raw photos are excluded from Git; copy the following shared OneDrive folders into the corresponding local directories:
+No extra Python packages were added. Obtain the saved `experiments/baseline`, `experiments/emnist_byclass/run_01` and `experiments/week11_gpu_run01` model folders with the project, including their `selection.json` files. The GUI performs inference on CPU, including models trained on a GPU; a GPU is not required to run it. The collected photographs are included in the downloaded ZIP at the following locations:
 
 - `data/segmentation_photos`: original labelled digit/number photos.
 - `data/own_characters/development`: labelled single-character extension photos.
@@ -41,13 +41,13 @@ No extra Python packages were added. Obtain the saved `experiments/baseline`, `e
 
 The window starts within the available screen area. At smaller sizes or higher display scaling, use the right-hand scrollbar or mouse wheel to reach recognition controls and the crop breakdown. Use the bottom scrollbar or **Shift + mouse wheel** to move sideways. The status line stays visible below the scrolling workspace.
 
-Keyboard focus automatically brings active controls into view as you tab between them. The crop breakdown also has its own horizontal scrollbar for long results. On this Windows computer, the layout was checked at normal startup size, 800 × 500 and 640 × 400 Tk units with 150% effective display scaling. Other display configurations still need acceptance testing.
+Keyboard focus automatically brings active controls into view as you tab between them. The crop breakdown also has its own horizontal scrollbar for long results. On this Windows computer, the layout was checked at normal startup size, 800 Ã— 500 and 640 Ã— 400 Tk units with 150% effective display scaling. Other display configurations still need acceptance testing.
 
 ### Recognition steps
 
 1. Select **Alphanumeric** under Recognition mode.
 2. Leave **resnet18**, **grouped_components** and **otsu** selected initially.
-3. Choose **Open photo → Choose image** and select a single-line handwritten string.
+3. Choose **Open photo â†’ Choose image** and select a single-line handwritten string.
 4. Select **Recognise text**. Inspect the text, character boxes and ordered 28x28 crops.
 5. Select **Export result** to save a new evidence directory.
 
@@ -59,7 +59,7 @@ Use dark, separately written characters on pale paper. Joined cursive, multiline
 
 1. Select **Alphanumeric**, then **Generate**.
 2. Choose a folder containing individually labelled character photos; nested writer folders are supported.
-3. Enter 1–12 ASCII letters/digits, for example `Ab12` or `00Ai`.
+3. Enter 1â€“12 ASCII letters/digits, for example `Ab12` or `00Ai`.
 4. Select **Generate image**, then **Recognise text**.
 
 Accepted labels include `Name_01_upper-A.jpg`, `Name_02_lower-a.jpg`, `Name_03_digit-0.jpg`, or a single-character filename such as `A.png`. Upper/lowercase labels must match their stated case. Whole-string photos are excluded from the character catalogue. The generator reports missing characters instead of replacing them; the current photo collection does not cover every possible letter/digit. Choose a larger source folder or collect a missing character if necessary.

@@ -3,8 +3,14 @@
 __pycache__/
 *.pyc
 .DS_Store
-# Datasets and detailed research outputs are preserved separately.
-/data/
+# Only collected handwriting is shipped; downloadable datasets and scratch data stay local.
+/data/*
+!/data/README.md
+!/data/photo_manifest.json
+!/data/segmentation_photos/
+!/data/own_characters/
+!/data/own_strings/
+!/data/final_evaluation/
 /evidence/
 /experiments/
 # Application checkpoints are explicitly tracked; supplementary runs are ignored.

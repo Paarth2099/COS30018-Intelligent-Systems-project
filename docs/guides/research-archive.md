@@ -12,7 +12,7 @@ The full pre-organisation project evidence is preserved in [the shared OneDrive 
 
 The archive includes original source files, documents, experiment checkpoints, training histories, prediction rows, crops, manifests, source snapshots, verification records and collected photos. Downloadable MNIST/EMNIST datasets, virtual environments and Git internals are excluded.
 
-GitHub keeps the application, eight deployable checkpoints, research scripts, reports and selected results. The larger `evidence/`, supplementary experiment outputs and `data/` remain locally available but are excluded from future commits.
+GitHub keeps the application, eight deployable checkpoints, research scripts, reports and selected results. The larger `evidence/`, supplementary experiment outputs and downloadable MNIST/EMNIST datasets remain locally available but are excluded from future commits. Collected handwriting photos are now also included under `data/` in GitHub; their archived originals remain preserved.
 
 ## Restore and reproduce
 

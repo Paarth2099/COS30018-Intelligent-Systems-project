@@ -14,6 +14,8 @@ py -3.12 -m venv .venv
 
 Alternatively, use ` .\run_gui.ps1 ` after installation. The eight saved checkpoints are included; training datasets are not needed to recognise a supplied photograph. See [installation](docs/guides/installation.md) and the [GUI guide](docs/guides/gui.md).
 
+The ZIP includes [280 handwriting photos](data/README.md). For generation, select `data/segmentation_photos` in Numbers mode or `data/own_characters/development` in Alphanumeric mode.
+
 ## Features and model selection
 
 - Load photographs or generate images from labelled handwriting samples.
@@ -50,7 +52,8 @@ See [machine-readable results](results/README.md) and [full research reports](do
 | `experiments/` | Eight application checkpoints and their configurations |
 | `results/` | Selected metrics, verification and dataset split records |
 | `docs/` | Guides, reports and selected illustrations |
-| `data/`, `evidence/` | Local datasets and detailed outputs, excluded from Git |
+| `data/` | 280 collected handwriting photos and their checksum manifest; MNIST/EMNIST excluded |
+| `evidence/` | Detailed research outputs, excluded from Git |
 
 The complete original experiment tree, crops, source snapshots and photos are preserved in the [research archive](docs/guides/research-archive.md). They are not deleted from the working computer. Historical Git commits are retained.
 
@@ -61,7 +64,7 @@ The complete original experiment tree, crops, source snapshots and photos are pr
 .\.venv\Scripts\python.exe -m research.train_models_week11 --help
 ```
 
-The project check runs the unit suite and verifies all eight checkpoint paths. The real GUI smoke test (`.\run_gui.ps1 -Verify`) additionally needs the archived development photos and an interactive Windows desktop. See [research commands](research/README.md) before reproducing experiments.
+The project check runs the unit suite and verifies all eight checkpoint paths. The real GUI smoke test (`.\run_gui.ps1 -Verify`) uses the included development photos and additionally needs an interactive Windows desktop. See [research commands](research/README.md) before reproducing experiments.
 
 ## Submission status
 
