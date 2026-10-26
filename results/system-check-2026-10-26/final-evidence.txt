@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "prediction_rows_recalculated": 680,
+  "photos_hash_checked": 120,
+  "checkpoints_hash_checked": 8,
+  "summary_groups": 22,
+  "case_and_leading_zeros_preserved": true,
+  "source_snapshots_match": true,
+  "timing_repeats_checked": true,
+  "note": "Independent arithmetic and integrity verification, not a second independent handwriting collection or manual segmentation assessment."
+}

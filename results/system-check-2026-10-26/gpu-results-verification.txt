@@ -1,0 +1,98 @@
+Verified mnist 42 control
+Verified mnist 42 augmented
+Verified mnist 43 control
+Verified mnist 43 augmented
+Verified emnist 42 control
+Verified emnist 42 augmented
+Verified emnist 43 control
+Verified emnist 43 augmented
+{
+  "status": "PASS",
+  "checkpoints_verified": 8,
+  "source_snapshots_verified": true,
+  "validation_selection_verified": true,
+  "benchmark_metrics_recalculated": 8,
+  "development_predictions_reproduced_on_cpu": 640,
+  "same_prepared_development_manifest": true,
+  "fresh_photos_used": false,
+  "decisions": [
+    {
+      "task": "mnist",
+      "mean_validation_accuracy": {
+        "control": 0.9826666666666666,
+        "augmented": 0.9793333333333334
+      },
+      "development": [
+        {
+          "collection": "single_digits",
+          "control": {
+            "mean_correct": 15.0,
+            "mean_cer": 0.25,
+            "images_per_seed": 20
+          },
+          "augmented": {
+            "mean_correct": 19.0,
+            "mean_cer": 0.05,
+            "images_per_seed": 20
+          }
+        },
+        {
+          "collection": "numbers",
+          "control": {
+            "mean_correct": 18.5,
+            "mean_cer": 0.034482758620689655,
+            "images_per_seed": 20
+          },
+          "augmented": {
+            "mean_correct": 19.5,
+            "mean_cer": 0.008620689655172414,
+            "images_per_seed": 20
+          }
+        }
+      ],
+      "no_development_regression": true,
+      "strict_development_gain": true,
+      "passes_prespecified_arm_rule": false,
+      "action": "RETAIN_PRODUCTION"
+    },
+    {
+      "task": "emnist",
+      "mean_validation_accuracy": {
+        "control": 0.871586187132827,
+        "augmented": 0.860710703539189
+      },
+      "development": [
+        {
+          "collection": "characters",
+          "control": {
+            "mean_correct": 51.0,
+            "mean_cer": 0.3875,
+            "images_per_seed": 80
+          },
+          "augmented": {
+            "mean_correct": 56.5,
+            "mean_cer": 0.31875,
+            "images_per_seed": 80
+          }
+        },
+        {
+          "collection": "strings",
+          "control": {
+            "mean_correct": 11.5,
+            "mean_cer": 0.284375,
+            "images_per_seed": 40
+          },
+          "augmented": {
+            "mean_correct": 10.0,
+            "mean_cer": 0.3125,
+            "images_per_seed": 40
+          }
+        }
+      ],
+      "no_development_regression": false,
+      "strict_development_gain": true,
+      "passes_prespecified_arm_rule": false,
+      "action": "RETAIN_PRODUCTION"
+    }
+  ]
+}

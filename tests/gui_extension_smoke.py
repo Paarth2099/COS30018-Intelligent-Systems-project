@@ -3,7 +3,6 @@ from pathlib import Path
 from datetime import datetime, timezone
 import hashlib
 import json
-import csv
 import sys
 import time
 from unittest.mock import patch
@@ -53,7 +52,7 @@ def screenshot(name):
             outer=wintypes.RECT();work=wintypes.RECT()
             assert user32.GetWindowRect(user32.GetAncestor(hwnd,2),ctypes.byref(outer))
             assert user32.SystemParametersInfoW(48,0,ctypes.byref(work),0)
-            assert outer.left>=work.left and outer.top>=work.top and outer.right<=work.right and outer.bottom<=work.bottom, 'Outer window exceeds physical work area'
+            assert outer.left>=work.left and outer.top>=work.top and outer.right<=work.right and outer.bottom<=work.bottom, f'Outer window {[outer.left,outer.top,outer.right,outer.bottom]} exceeds physical work area {[work.left,work.top,work.right,work.bottom]}; Tk {root.geometry()}'
             ImageGrab.grab(bbox=bounds,all_screens=True).save(out/name)
             report.setdefault('captures',[]).append({'file':name,'physical_client_bounds':bounds,
                 'physical_window_bounds':[outer.left,outer.top,outer.right,outer.bottom],
@@ -119,8 +118,8 @@ try:
         assert str(app.combos[3]['state'])=='disabled'
         photo=ROOT/'data/own_strings/development/Manula/Manula_02_text-Room7.jpg'
         load(photo);recognise()
-        expected=json.loads((ROOT/'evidence/character_segmentation/run_04/Manula/Manula_02_text-Room7/grouped_components/prediction.json').read_text())
-        assert app.result['prediction']['text']==expected['text']
+        regression=json.loads((ROOT/'tests/fixtures/gui_regression.json').read_text())
+        assert app.result['prediction']['text']==regression['character_cnn_prediction']
         assert len(app.digit_photos)==5
         screenshot('alphanumeric_photo.png');destination,record=export()
         assert (destination/'detected_characters.png').is_file()
@@ -204,8 +203,7 @@ try:
         # Exercise every real checkpoint through Tk callbacks and exported settings.
         from gui_core import MODEL_NAMES,DEFAULT_MODELS
         assert tuple(app.combos[1]['values'])==MODEL_NAMES
-        with (ROOT/'evidence/model_comparison/week11_run01/paired_photos.csv').open(newline='',encoding='utf-8') as stream:
-            comparisons=list(csv.DictReader(stream))
+        comparisons=regression['paired_photos']
         for mode,filename in [('Numbers','data/segmentation_photos/Manula/Manula_07_label-420.jpg'),
                               ('Alphanumeric','data/own_strings/development/Manula/Manula_02_text-Room7.jpg')]:
             app.mode.set(mode);app.mode_changed();assert app.model.get()==DEFAULT_MODELS[mode]

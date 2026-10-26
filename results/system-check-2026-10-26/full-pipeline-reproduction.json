@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "photos": 120,
+  "preparation_configurations": 200,
+  "predictions_reproduced": 680,
+  "checkpoints_loaded": 8,
+  "note": "Regression reproduction using already evaluated photos; not a new independent test."
+}

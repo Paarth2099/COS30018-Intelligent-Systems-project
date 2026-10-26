@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\paart\OneDrive\Desktop\University\Intelligent system\system-check-clean-20261026\tests\gui_extension_smoke.py", line 124, in <module>
+    screenshot('alphanumeric_photo.png');destination,record=export()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paart\OneDrive\Desktop\University\Intelligent system\system-check-clean-20261026\tests\gui_extension_smoke.py", line 55, in screenshot
+    assert outer.left>=work.left and outer.top>=work.top and outer.right<=work.right and outer.bottom<=work.bottom, 'Outer window exceeds physical work area'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Outer window exceeds physical work area

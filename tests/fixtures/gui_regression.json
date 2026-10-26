@@ -1,0 +1,36 @@
+{
+  "description": "Historical predictions for GUI regression only, not expected ground-truth accuracy.",
+  "source_sha256": {
+    "evidence/character_segmentation/run_04/Manula/Manula_02_text-Room7/grouped_components/prediction.json": "3cdd58762c1b05bc1cdcd911808409431d288c03a8b4b85ebfdff063df75b191",
+    "evidence/model_comparison/week11_run01/paired_photos.csv": "697298d1e74400a6e893d2d20de3bda06d565763c849a9ca4a409a7e4aa70733"
+  },
+  "character_cnn_prediction": "R00M7",
+  "paired_photos": [
+    {
+      "index": "16",
+      "file": "data/segmentation_photos/Manula/Manula_07_label-420.jpg",
+      "writer": "Manula",
+      "reference": "420",
+      "collection": "numbers",
+      "sha256": "a5d69f860bb4735a360e7be0c76562d24d166c4e902b8fa4ae0f2d9bfc542a7d",
+      "crop_count": "3",
+      "mlp": "430",
+      "cnn": "420",
+      "resnet18": "420",
+      "mobilenet_v3_small": "420"
+    },
+    {
+      "index": "131",
+      "file": "data/own_strings/development/Manula/Manula_02_text-Room7.jpg",
+      "writer": "Manula",
+      "reference": "Room7",
+      "collection": "strings",
+      "sha256": "a6ccc3a4534e1492ccf221f40f7f20ee26b268adcedefdd00bea4ab5f679da96",
+      "crop_count": "5",
+      "mlp": "e00n7",
+      "cnn": "R00M7",
+      "resnet18": "R00M7",
+      "mobilenet_v3_small": "R00M7"
+    }
+  ]
+}
