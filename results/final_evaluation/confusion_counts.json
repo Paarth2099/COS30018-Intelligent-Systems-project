@@ -1,0 +1,1391 @@
+{
+  "single_digits/mlp": [
+    {
+      "reference": "0",
+      "prediction": "0",
+      "count": 4
+    },
+    {
+      "reference": "1",
+      "prediction": "1",
+      "count": 3
+    },
+    {
+      "reference": "2",
+      "prediction": "2",
+      "count": 4
+    },
+    {
+      "reference": "3",
+      "prediction": "3",
+      "count": 4
+    },
+    {
+      "reference": "4",
+      "prediction": "4",
+      "count": 3
+    },
+    {
+      "reference": "5",
+      "prediction": "3",
+      "count": 1
+    },
+    {
+      "reference": "6",
+      "prediction": "6",
+      "count": 4
+    },
+    {
+      "reference": "7",
+      "prediction": "2",
+      "count": 3
+    },
+    {
+      "reference": "8",
+      "prediction": "8",
+      "count": 4
+    },
+    {
+      "reference": "9",
+      "prediction": "4",
+      "count": 1
+    },
+    {
+      "reference": "1",
+      "prediction": "5",
+      "count": 1
+    },
+    {
+      "reference": "4",
+      "prediction": "7",
+      "count": 1
+    },
+    {
+      "reference": "5",
+      "prediction": "5",
+      "count": 3
+    },
+    {
+      "reference": "7",
+      "prediction": "3",
+      "count": 1
+    },
+    {
+      "reference": "9",
+      "prediction": "3",
+      "count": 1
+    },
+    {
+      "reference": "9",
+      "prediction": "9",
+      "count": 2
+    }
+  ],
+  "single_digits/cnn": [
+    {
+      "reference": "0",
+      "prediction": "0",
+      "count": 4
+    },
+    {
+      "reference": "1",
+      "prediction": "1",
+      "count": 4
+    },
+    {
+      "reference": "2",
+      "prediction": "2",
+      "count": 4
+    },
+    {
+      "reference": "3",
+      "prediction": "3",
+      "count": 4
+    },
+    {
+      "reference": "4",
+      "prediction": "4",
+      "count": 3
+    },
+    {
+      "reference": "5",
+      "prediction": "5",
+      "count": 4
+    },
+    {
+      "reference": "6",
+      "prediction": "6",
+      "count": 4
+    },
+    {
+      "reference": "7",
+      "prediction": "7",
+      "count": 4
+    },
+    {
+      "reference": "8",
+      "prediction": "8",
+      "count": 4
+    },
+    {
+      "reference": "9",
+      "prediction": "4",
+      "count": 1
+    },
+    {
+      "reference": "4",
+      "prediction": "7",
+      "count": 1
+    },
+    {
+      "reference": "9",
+      "prediction": "7",
+      "count": 1
+    },
+    {
+      "reference": "9",
+      "prediction": "9",
+      "count": 2
+    }
+  ],
+  "single_digits/resnet18": [
+    {
+      "reference": "0",
+      "prediction": "0",
+      "count": 4
+    },
+    {
+      "reference": "1",
+      "prediction": "1",
+      "count": 4
+    },
+    {
+      "reference": "2",
+      "prediction": "2",
+      "count": 4
+    },
+    {
+      "reference": "3",
+      "prediction": "3",
+      "count": 4
+    },
+    {
+      "reference": "4",
+      "prediction": "4",
+      "count": 3
+    },
+    {
+      "reference": "5",
+      "prediction": "5",
+      "count": 4
+    },
+    {
+      "reference": "6",
+      "prediction": "6",
+      "count": 4
+    },
+    {
+      "reference": "7",
+      "prediction": "7",
+      "count": 4
+    },
+    {
+      "reference": "8",
+      "prediction": "8",
+      "count": 4
+    },
+    {
+      "reference": "9",
+      "prediction": "4",
+      "count": 1
+    },
+    {
+      "reference": "4",
+      "prediction": "1",
+      "count": 1
+    },
+    {
+      "reference": "9",
+      "prediction": "7",
+      "count": 1
+    },
+    {
+      "reference": "9",
+      "prediction": "9",
+      "count": 2
+    }
+  ],
+  "single_digits/mobilenet_v3_small": [
+    {
+      "reference": "0",
+      "prediction": "0",
+      "count": 4
+    },
+    {
+      "reference": "1",
+      "prediction": "1",
+      "count": 4
+    },
+    {
+      "reference": "2",
+      "prediction": "2",
+      "count": 3
+    },
+    {
+      "reference": "3",
+      "prediction": "3",
+      "count": 3
+    },
+    {
+      "reference": "4",
+      "prediction": "4",
+      "count": 3
+    },
+    {
+      "reference": "5",
+      "prediction": "5",
+      "count": 4
+    },
+    {
+      "reference": "6",
+      "prediction": "6",
+      "count": 3
+    },
+    {
+      "reference": "7",
+      "prediction": "7",
+      "count": 2
+    },
+    {
+      "reference": "8",
+      "prediction": "8",
+      "count": 4
+    },
+    {
+      "reference": "9",
+      "prediction": "9",
+      "count": 1
+    },
+    {
+      "reference": "2",
+      "prediction": "1",
+      "count": 1
+    },
+    {
+      "reference": "3",
+      "prediction": "5",
+      "count": 1
+    },
+    {
+      "reference": "4",
+      "prediction": "7",
+      "count": 1
+    },
+    {
+      "reference": "7",
+      "prediction": "2",
+      "count": 2
+    },
+    {
+      "reference": "9",
+      "prediction": "7",
+      "count": 2
+    },
+    {
+      "reference": "6",
+      "prediction": "0",
+      "count": 1
+    },
+    {
+      "reference": "9",
+      "prediction": "3",
+      "count": 1
+    }
+  ],
+  "single_letters/mlp": [
+    {
+      "reference": "A",
+      "prediction": "r",
+      "count": 1
+    },
+    {
+      "reference": "B",
+      "prediction": "a",
+      "count": 1
+    },
+    {
+      "reference": "C",
+      "prediction": "C",
+      "count": 1
+    },
+    {
+      "reference": "D",
+      "prediction": "D",
+      "count": 1
+    },
+    {
+      "reference": "E",
+      "prediction": "E",
+      "count": 1
+    },
+    {
+      "reference": "a",
+      "prediction": "a",
+      "count": 1
+    },
+    {
+      "reference": "b",
+      "prediction": "b",
+      "count": 1
+    },
+    {
+      "reference": "c",
+      "prediction": "C",
+      "count": 1
+    },
+    {
+      "reference": "d",
+      "prediction": "d",
+      "count": 1
+    },
+    {
+      "reference": "e",
+      "prediction": "e",
+      "count": 1
+    },
+    {
+      "reference": "F",
+      "prediction": "F",
+      "count": 1
+    },
+    {
+      "reference": "G",
+      "prediction": "6",
+      "count": 1
+    },
+    {
+      "reference": "H",
+      "prediction": "H",
+      "count": 1
+    },
+    {
+      "reference": "I",
+      "prediction": "I",
+      "count": 1
+    },
+    {
+      "reference": "J",
+      "prediction": "J",
+      "count": 1
+    },
+    {
+      "reference": "f",
+      "prediction": "F",
+      "count": 1
+    },
+    {
+      "reference": "g",
+      "prediction": "3",
+      "count": 1
+    },
+    {
+      "reference": "h",
+      "prediction": "h",
+      "count": 1
+    },
+    {
+      "reference": "i",
+      "prediction": "l",
+      "count": 1
+    },
+    {
+      "reference": "j",
+      "prediction": "j",
+      "count": 1
+    },
+    {
+      "reference": "K",
+      "prediction": "K",
+      "count": 1
+    },
+    {
+      "reference": "L",
+      "prediction": "L",
+      "count": 1
+    },
+    {
+      "reference": "M",
+      "prediction": "M",
+      "count": 1
+    },
+    {
+      "reference": "N",
+      "prediction": "N",
+      "count": 1
+    },
+    {
+      "reference": "O",
+      "prediction": "0",
+      "count": 1
+    },
+    {
+      "reference": "k",
+      "prediction": "K",
+      "count": 1
+    },
+    {
+      "reference": "l",
+      "prediction": "l",
+      "count": 1
+    },
+    {
+      "reference": "m",
+      "prediction": "n",
+      "count": 1
+    },
+    {
+      "reference": "n",
+      "prediction": "n",
+      "count": 1
+    },
+    {
+      "reference": "o",
+      "prediction": "0",
+      "count": 1
+    },
+    {
+      "reference": "P",
+      "prediction": "P",
+      "count": 1
+    },
+    {
+      "reference": "Q",
+      "prediction": "Q",
+      "count": 1
+    },
+    {
+      "reference": "R",
+      "prediction": "R",
+      "count": 1
+    },
+    {
+      "reference": "S",
+      "prediction": "S",
+      "count": 1
+    },
+    {
+      "reference": "T",
+      "prediction": "T",
+      "count": 1
+    },
+    {
+      "reference": "p",
+      "prediction": "P",
+      "count": 1
+    },
+    {
+      "reference": "q",
+      "prediction": "q",
+      "count": 1
+    },
+    {
+      "reference": "r",
+      "prediction": "r",
+      "count": 1
+    },
+    {
+      "reference": "s",
+      "prediction": "S",
+      "count": 1
+    },
+    {
+      "reference": "t",
+      "prediction": "t",
+      "count": 1
+    }
+  ],
+  "single_letters/cnn": [
+    {
+      "reference": "A",
+      "prediction": "h",
+      "count": 1
+    },
+    {
+      "reference": "B",
+      "prediction": "B",
+      "count": 1
+    },
+    {
+      "reference": "C",
+      "prediction": "C",
+      "count": 1
+    },
+    {
+      "reference": "D",
+      "prediction": "D",
+      "count": 1
+    },
+    {
+      "reference": "E",
+      "prediction": "E",
+      "count": 1
+    },
+    {
+      "reference": "a",
+      "prediction": "a",
+      "count": 1
+    },
+    {
+      "reference": "b",
+      "prediction": "b",
+      "count": 1
+    },
+    {
+      "reference": "c",
+      "prediction": "C",
+      "count": 1
+    },
+    {
+      "reference": "d",
+      "prediction": "d",
+      "count": 1
+    },
+    {
+      "reference": "e",
+      "prediction": "e",
+      "count": 1
+    },
+    {
+      "reference": "F",
+      "prediction": "F",
+      "count": 1
+    },
+    {
+      "reference": "G",
+      "prediction": "6",
+      "count": 1
+    },
+    {
+      "reference": "H",
+      "prediction": "H",
+      "count": 1
+    },
+    {
+      "reference": "I",
+      "prediction": "I",
+      "count": 1
+    },
+    {
+      "reference": "J",
+      "prediction": "J",
+      "count": 1
+    },
+    {
+      "reference": "f",
+      "prediction": "F",
+      "count": 1
+    },
+    {
+      "reference": "g",
+      "prediction": "S",
+      "count": 1
+    },
+    {
+      "reference": "h",
+      "prediction": "h",
+      "count": 1
+    },
+    {
+      "reference": "i",
+      "prediction": "i",
+      "count": 1
+    },
+    {
+      "reference": "j",
+      "prediction": "j",
+      "count": 1
+    },
+    {
+      "reference": "K",
+      "prediction": "r",
+      "count": 1
+    },
+    {
+      "reference": "L",
+      "prediction": "L",
+      "count": 1
+    },
+    {
+      "reference": "M",
+      "prediction": "M",
+      "count": 1
+    },
+    {
+      "reference": "N",
+      "prediction": "N",
+      "count": 1
+    },
+    {
+      "reference": "O",
+      "prediction": "0",
+      "count": 1
+    },
+    {
+      "reference": "k",
+      "prediction": "K",
+      "count": 1
+    },
+    {
+      "reference": "l",
+      "prediction": "1",
+      "count": 1
+    },
+    {
+      "reference": "m",
+      "prediction": "M",
+      "count": 1
+    },
+    {
+      "reference": "n",
+      "prediction": "n",
+      "count": 1
+    },
+    {
+      "reference": "o",
+      "prediction": "0",
+      "count": 1
+    },
+    {
+      "reference": "P",
+      "prediction": "P",
+      "count": 1
+    },
+    {
+      "reference": "Q",
+      "prediction": "Q",
+      "count": 1
+    },
+    {
+      "reference": "R",
+      "prediction": "R",
+      "count": 1
+    },
+    {
+      "reference": "S",
+      "prediction": "S",
+      "count": 1
+    },
+    {
+      "reference": "T",
+      "prediction": "T",
+      "count": 1
+    },
+    {
+      "reference": "p",
+      "prediction": "P",
+      "count": 1
+    },
+    {
+      "reference": "q",
+      "prediction": "q",
+      "count": 1
+    },
+    {
+      "reference": "r",
+      "prediction": "r",
+      "count": 1
+    },
+    {
+      "reference": "s",
+      "prediction": "S",
+      "count": 1
+    },
+    {
+      "reference": "t",
+      "prediction": "t",
+      "count": 1
+    }
+  ],
+  "single_letters/resnet18": [
+    {
+      "reference": "A",
+      "prediction": "A",
+      "count": 1
+    },
+    {
+      "reference": "B",
+      "prediction": "B",
+      "count": 1
+    },
+    {
+      "reference": "C",
+      "prediction": "C",
+      "count": 1
+    },
+    {
+      "reference": "D",
+      "prediction": "D",
+      "count": 1
+    },
+    {
+      "reference": "E",
+      "prediction": "E",
+      "count": 1
+    },
+    {
+      "reference": "a",
+      "prediction": "a",
+      "count": 1
+    },
+    {
+      "reference": "b",
+      "prediction": "b",
+      "count": 1
+    },
+    {
+      "reference": "c",
+      "prediction": "C",
+      "count": 1
+    },
+    {
+      "reference": "d",
+      "prediction": "d",
+      "count": 1
+    },
+    {
+      "reference": "e",
+      "prediction": "e",
+      "count": 1
+    },
+    {
+      "reference": "F",
+      "prediction": "F",
+      "count": 1
+    },
+    {
+      "reference": "G",
+      "prediction": "G",
+      "count": 1
+    },
+    {
+      "reference": "H",
+      "prediction": "H",
+      "count": 1
+    },
+    {
+      "reference": "I",
+      "prediction": "I",
+      "count": 1
+    },
+    {
+      "reference": "J",
+      "prediction": "J",
+      "count": 1
+    },
+    {
+      "reference": "f",
+      "prediction": "F",
+      "count": 1
+    },
+    {
+      "reference": "g",
+      "prediction": "9",
+      "count": 1
+    },
+    {
+      "reference": "h",
+      "prediction": "h",
+      "count": 1
+    },
+    {
+      "reference": "i",
+      "prediction": "6",
+      "count": 1
+    },
+    {
+      "reference": "j",
+      "prediction": "j",
+      "count": 1
+    },
+    {
+      "reference": "K",
+      "prediction": "K",
+      "count": 1
+    },
+    {
+      "reference": "L",
+      "prediction": "L",
+      "count": 1
+    },
+    {
+      "reference": "M",
+      "prediction": "M",
+      "count": 1
+    },
+    {
+      "reference": "N",
+      "prediction": "N",
+      "count": 1
+    },
+    {
+      "reference": "O",
+      "prediction": "0",
+      "count": 1
+    },
+    {
+      "reference": "k",
+      "prediction": "k",
+      "count": 1
+    },
+    {
+      "reference": "l",
+      "prediction": "1",
+      "count": 1
+    },
+    {
+      "reference": "m",
+      "prediction": "M",
+      "count": 1
+    },
+    {
+      "reference": "n",
+      "prediction": "n",
+      "count": 1
+    },
+    {
+      "reference": "o",
+      "prediction": "0",
+      "count": 1
+    },
+    {
+      "reference": "P",
+      "prediction": "P",
+      "count": 1
+    },
+    {
+      "reference": "Q",
+      "prediction": "Q",
+      "count": 1
+    },
+    {
+      "reference": "R",
+      "prediction": "R",
+      "count": 1
+    },
+    {
+      "reference": "S",
+      "prediction": "S",
+      "count": 1
+    },
+    {
+      "reference": "T",
+      "prediction": "T",
+      "count": 1
+    },
+    {
+      "reference": "p",
+      "prediction": "P",
+      "count": 1
+    },
+    {
+      "reference": "q",
+      "prediction": "q",
+      "count": 1
+    },
+    {
+      "reference": "r",
+      "prediction": "T",
+      "count": 1
+    },
+    {
+      "reference": "s",
+      "prediction": "S",
+      "count": 1
+    },
+    {
+      "reference": "t",
+      "prediction": "t",
+      "count": 1
+    }
+  ],
+  "single_letters/mobilenet_v3_small": [
+    {
+      "reference": "A",
+      "prediction": "h",
+      "count": 1
+    },
+    {
+      "reference": "B",
+      "prediction": "B",
+      "count": 1
+    },
+    {
+      "reference": "C",
+      "prediction": "C",
+      "count": 1
+    },
+    {
+      "reference": "D",
+      "prediction": "D",
+      "count": 1
+    },
+    {
+      "reference": "E",
+      "prediction": "E",
+      "count": 1
+    },
+    {
+      "reference": "a",
+      "prediction": "a",
+      "count": 1
+    },
+    {
+      "reference": "b",
+      "prediction": "b",
+      "count": 1
+    },
+    {
+      "reference": "c",
+      "prediction": "C",
+      "count": 1
+    },
+    {
+      "reference": "d",
+      "prediction": "d",
+      "count": 1
+    },
+    {
+      "reference": "e",
+      "prediction": "e",
+      "count": 1
+    },
+    {
+      "reference": "F",
+      "prediction": "F",
+      "count": 1
+    },
+    {
+      "reference": "G",
+      "prediction": "S",
+      "count": 1
+    },
+    {
+      "reference": "H",
+      "prediction": "4",
+      "count": 1
+    },
+    {
+      "reference": "I",
+      "prediction": "I",
+      "count": 1
+    },
+    {
+      "reference": "J",
+      "prediction": "J",
+      "count": 1
+    },
+    {
+      "reference": "f",
+      "prediction": "F",
+      "count": 1
+    },
+    {
+      "reference": "g",
+      "prediction": "3",
+      "count": 1
+    },
+    {
+      "reference": "h",
+      "prediction": "i",
+      "count": 1
+    },
+    {
+      "reference": "i",
+      "prediction": "i",
+      "count": 1
+    },
+    {
+      "reference": "j",
+      "prediction": "j",
+      "count": 1
+    },
+    {
+      "reference": "K",
+      "prediction": "K",
+      "count": 1
+    },
+    {
+      "reference": "L",
+      "prediction": "L",
+      "count": 1
+    },
+    {
+      "reference": "M",
+      "prediction": "M",
+      "count": 1
+    },
+    {
+      "reference": "N",
+      "prediction": "N",
+      "count": 1
+    },
+    {
+      "reference": "O",
+      "prediction": "0",
+      "count": 1
+    },
+    {
+      "reference": "k",
+      "prediction": "K",
+      "count": 1
+    },
+    {
+      "reference": "l",
+      "prediction": "l",
+      "count": 1
+    },
+    {
+      "reference": "m",
+      "prediction": "M",
+      "count": 1
+    },
+    {
+      "reference": "n",
+      "prediction": "n",
+      "count": 1
+    },
+    {
+      "reference": "o",
+      "prediction": "0",
+      "count": 1
+    },
+    {
+      "reference": "P",
+      "prediction": "P",
+      "count": 1
+    },
+    {
+      "reference": "Q",
+      "prediction": "Q",
+      "count": 1
+    },
+    {
+      "reference": "R",
+      "prediction": "R",
+      "count": 1
+    },
+    {
+      "reference": "S",
+      "prediction": "S",
+      "count": 1
+    },
+    {
+      "reference": "T",
+      "prediction": "T",
+      "count": 1
+    },
+    {
+      "reference": "p",
+      "prediction": "P",
+      "count": 1
+    },
+    {
+      "reference": "q",
+      "prediction": "q",
+      "count": 1
+    },
+    {
+      "reference": "r",
+      "prediction": "r",
+      "count": 1
+    },
+    {
+      "reference": "s",
+      "prediction": "S",
+      "count": 1
+    },
+    {
+      "reference": "t",
+      "prediction": "t",
+      "count": 1
+    }
+  ],
+  "auxiliary_emnist_digits/mlp": [
+    {
+      "reference": "0",
+      "prediction": "0",
+      "count": 4
+    },
+    {
+      "reference": "1",
+      "prediction": "I",
+      "count": 3
+    },
+    {
+      "reference": "2",
+      "prediction": "2",
+      "count": 4
+    },
+    {
+      "reference": "3",
+      "prediction": "3",
+      "count": 4
+    },
+    {
+      "reference": "4",
+      "prediction": "4",
+      "count": 3
+    },
+    {
+      "reference": "5",
+      "prediction": "5",
+      "count": 3
+    },
+    {
+      "reference": "6",
+      "prediction": "6",
+      "count": 4
+    },
+    {
+      "reference": "7",
+      "prediction": "7",
+      "count": 4
+    },
+    {
+      "reference": "8",
+      "prediction": "8",
+      "count": 4
+    },
+    {
+      "reference": "9",
+      "prediction": "4",
+      "count": 1
+    },
+    {
+      "reference": "1",
+      "prediction": "1",
+      "count": 1
+    },
+    {
+      "reference": "4",
+      "prediction": "Y",
+      "count": 1
+    },
+    {
+      "reference": "9",
+      "prediction": "9",
+      "count": 3
+    },
+    {
+      "reference": "5",
+      "prediction": "S",
+      "count": 1
+    }
+  ],
+  "auxiliary_emnist_digits/cnn": [
+    {
+      "reference": "0",
+      "prediction": "0",
+      "count": 4
+    },
+    {
+      "reference": "1",
+      "prediction": "l",
+      "count": 3
+    },
+    {
+      "reference": "2",
+      "prediction": "2",
+      "count": 4
+    },
+    {
+      "reference": "3",
+      "prediction": "3",
+      "count": 4
+    },
+    {
+      "reference": "4",
+      "prediction": "4",
+      "count": 3
+    },
+    {
+      "reference": "5",
+      "prediction": "5",
+      "count": 4
+    },
+    {
+      "reference": "6",
+      "prediction": "6",
+      "count": 4
+    },
+    {
+      "reference": "7",
+      "prediction": "7",
+      "count": 4
+    },
+    {
+      "reference": "8",
+      "prediction": "8",
+      "count": 4
+    },
+    {
+      "reference": "9",
+      "prediction": "9",
+      "count": 4
+    },
+    {
+      "reference": "4",
+      "prediction": "t",
+      "count": 1
+    },
+    {
+      "reference": "1",
+      "prediction": "1",
+      "count": 1
+    }
+  ],
+  "auxiliary_emnist_digits/resnet18": [
+    {
+      "reference": "0",
+      "prediction": "0",
+      "count": 4
+    },
+    {
+      "reference": "1",
+      "prediction": "1",
+      "count": 3
+    },
+    {
+      "reference": "2",
+      "prediction": "2",
+      "count": 4
+    },
+    {
+      "reference": "3",
+      "prediction": "3",
+      "count": 4
+    },
+    {
+      "reference": "4",
+      "prediction": "4",
+      "count": 4
+    },
+    {
+      "reference": "5",
+      "prediction": "5",
+      "count": 4
+    },
+    {
+      "reference": "6",
+      "prediction": "6",
+      "count": 4
+    },
+    {
+      "reference": "7",
+      "prediction": "7",
+      "count": 4
+    },
+    {
+      "reference": "8",
+      "prediction": "8",
+      "count": 4
+    },
+    {
+      "reference": "9",
+      "prediction": "9",
+      "count": 4
+    },
+    {
+      "reference": "1",
+      "prediction": "l",
+      "count": 1
+    }
+  ],
+  "auxiliary_emnist_digits/mobilenet_v3_small": [
+    {
+      "reference": "0",
+      "prediction": "0",
+      "count": 3
+    },
+    {
+      "reference": "1",
+      "prediction": "1",
+      "count": 2
+    },
+    {
+      "reference": "2",
+      "prediction": "2",
+      "count": 4
+    },
+    {
+      "reference": "3",
+      "prediction": "3",
+      "count": 4
+    },
+    {
+      "reference": "4",
+      "prediction": "4",
+      "count": 3
+    },
+    {
+      "reference": "5",
+      "prediction": "5",
+      "count": 4
+    },
+    {
+      "reference": "6",
+      "prediction": "6",
+      "count": 3
+    },
+    {
+      "reference": "7",
+      "prediction": "T",
+      "count": 2
+    },
+    {
+      "reference": "8",
+      "prediction": "8",
+      "count": 3
+    },
+    {
+      "reference": "9",
+      "prediction": "9",
+      "count": 4
+    },
+    {
+      "reference": "1",
+      "prediction": "I",
+      "count": 2
+    },
+    {
+      "reference": "4",
+      "prediction": "1",
+      "count": 1
+    },
+    {
+      "reference": "6",
+      "prediction": "5",
+      "count": 1
+    },
+    {
+      "reference": "7",
+      "prediction": "l",
+      "count": 1
+    },
+    {
+      "reference": "7",
+      "prediction": "7",
+      "count": 1
+    },
+    {
+      "reference": "8",
+      "prediction": "3",
+      "count": 1
+    },
+    {
+      "reference": "0",
+      "prediction": "O",
+      "count": 1
+    }
+  ]
+}

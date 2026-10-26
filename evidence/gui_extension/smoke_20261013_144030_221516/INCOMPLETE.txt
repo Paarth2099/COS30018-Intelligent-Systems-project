@@ -1,1 +1,0 @@
-Initial smoke run stopped: missing original digit dataset. Screenshots also exposed clipped Export button. Both corrected before the next run; this directory is not passing evidence.

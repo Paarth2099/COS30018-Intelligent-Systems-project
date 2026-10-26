@@ -12,7 +12,7 @@ import torch
 from .data import CLASSES,load_partition,batch_images,sha256,indices_hash
 from .evaluate import metrics,csv_rows,confusion_chart
 from .predict import CharacterPredictor
-from compare_segmentation import edit_distance
+from research.compare_segmentation import edit_distance
 
 
 def read_csv(path):

@@ -1,3 +1,5 @@
+> Recorded study: results and original source hashes are retained. Detailed outputs are in the [research archive](../guides/research-archive.md); current commands use the `research` package.
+
 # Week 9 segmentation review
 
 Visual review of all 20 multi-digit number photos and all 40 alphanumeric string photos from the existing paired-model experiment. No algorithm, model, label or GUI change was made.
@@ -17,7 +19,7 @@ There are two visible segmentation failures, nine examples where both models rec
 
 ## Failure 1: broken H in Haresh Hello
 
-[Annotated original, raw crops and prepared crops](../../evidence/segmentation_review/week09/122/review.png)
+[Annotated original, raw crops and prepared crops (archive: evidence/segmentation_review/week09/122/review.png)](../guides/research-archive.md)
 
 The H becomes two crops, so Hello produces six regions. Inspection of the actual grouping inputs shows both H parts are classified as bodies: component 4 is 122x179 pixels and component 1 is 41x188 pixels, in the resized working image. Both exceed the body-height threshold of 71.6 pixels. The grouping routine attaches small fragments to bodies; it does not merge these two full-height bodies. The existing foreground closing has not connected them.
 
@@ -27,7 +29,7 @@ The saved warning list is empty for this failure. Therefore absence of a warning
 
 ## Failure 2: detached i in Haresh Bill
 
-[Annotated original, raw crops and prepared crops](../../evidence/segmentation_review/week09/125/review.png)
+[Annotated original, raw crops and prepared crops (archive: evidence/segmentation_review/week09/125/review.png)](../guides/research-archive.md)
 
 The i dot and stem remain separate, producing five crops. The working typical height is 188 pixels. The stem is 28 pixels wide and 59 high: it is below the primary body threshold of 75.2 pixels. It exceeds the short-body height threshold of 47 pixels, but fails the width condition because 28 is greater than 0.45 x 59 = 26.55. Thus both dot and stem are classified as small fragments rather than a dot with an eligible stem body. They remain unassigned in the saved grouping output.
 
@@ -69,29 +71,29 @@ Prefer changes supported across the development set. If a candidate fixes one ph
 
 ## Evidence and reproduction
 
-- [Complete 60-photo review](../../evidence/segmentation_review/week09/error_review.csv)
-- [Diagnostic counts, warnings and hashes](../../evidence/segmentation_review/week09/diagnostics.csv)
-- [Grouping-rule measurements](../../evidence/segmentation_review/week09/failure_rule_diagnostics.json)
-- [Review summary](../../evidence/segmentation_review/week09/review_summary.json)
-- [Source/input provenance](../../evidence/segmentation_review/week09/provenance.json)
+- [Complete 60-photo review (archive: evidence/segmentation_review/week09/error_review.csv)](../guides/research-archive.md)
+- [Diagnostic counts, warnings and hashes (archive: evidence/segmentation_review/week09/diagnostics.csv)](../guides/research-archive.md)
+- [Grouping-rule measurements (archive: evidence/segmentation_review/week09/failure_rule_diagnostics.json)](../guides/research-archive.md)
+- [Review summary (archive: evidence/segmentation_review/week09/review_summary.json)](../guides/research-archive.md)
+- [Source/input provenance (archive: evidence/segmentation_review/week09/provenance.json)](../guides/research-archive.md)
 - [Existing paired model comparison](photo-model-comparison-week09.md)
 
 Each image has its own folder containing an annotated original, foreground mask, raw crops, grouping details and combined review preview. Ten contact sheets cover the full collection.
 
 ```powershell
-python review_segmentation_week09.py --output evidence/segmentation_review/week09_repeat
+python -m research.review_segmentation_week09 --output evidence/segmentation_review/week09_repeat
 python evidence/segmentation_review/week09/diagnose_rules.py
 ```
 
 The script verifies the frozen source and input hashes and exact agreement of bounding boxes with the existing run before writing diagnostic evidence. Visual judgments are qualitative annotations in error_review.csv; the script does not automatically judge crop quality. Changed sources require a separate experiment rather than rewriting this baseline review. The review is not blinded or independent, and no new training or recognition accuracy experiment was performed.
 
-- [Contact sheet 1](../../evidence/segmentation_review/week09/sheet_01.png)
-- [Contact sheet 2](../../evidence/segmentation_review/week09/sheet_02.png)
-- [Contact sheet 3](../../evidence/segmentation_review/week09/sheet_03.png)
-- [Contact sheet 4](../../evidence/segmentation_review/week09/sheet_04.png)
-- [Contact sheet 5](../../evidence/segmentation_review/week09/sheet_05.png)
-- [Contact sheet 6](../../evidence/segmentation_review/week09/sheet_06.png)
-- [Contact sheet 7](../../evidence/segmentation_review/week09/sheet_07.png)
-- [Contact sheet 8](../../evidence/segmentation_review/week09/sheet_08.png)
-- [Contact sheet 9](../../evidence/segmentation_review/week09/sheet_09.png)
-- [Contact sheet 10](../../evidence/segmentation_review/week09/sheet_10.png)
+- [Contact sheet 1 (archive: evidence/segmentation_review/week09/sheet_01.png)](../guides/research-archive.md)
+- [Contact sheet 2 (archive: evidence/segmentation_review/week09/sheet_02.png)](../guides/research-archive.md)
+- [Contact sheet 3 (archive: evidence/segmentation_review/week09/sheet_03.png)](../guides/research-archive.md)
+- [Contact sheet 4 (archive: evidence/segmentation_review/week09/sheet_04.png)](../guides/research-archive.md)
+- [Contact sheet 5 (archive: evidence/segmentation_review/week09/sheet_05.png)](../guides/research-archive.md)
+- [Contact sheet 6 (archive: evidence/segmentation_review/week09/sheet_06.png)](../guides/research-archive.md)
+- [Contact sheet 7 (archive: evidence/segmentation_review/week09/sheet_07.png)](../guides/research-archive.md)
+- [Contact sheet 8 (archive: evidence/segmentation_review/week09/sheet_08.png)](../guides/research-archive.md)
+- [Contact sheet 9 (archive: evidence/segmentation_review/week09/sheet_09.png)](../guides/research-archive.md)
+- [Contact sheet 10 (archive: evidence/segmentation_review/week09/sheet_10.png)](../guides/research-archive.md)

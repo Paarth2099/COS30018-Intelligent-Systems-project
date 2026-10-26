@@ -1,0 +1,4322 @@
+[
+  {
+    "sample_id": "Haresh_single_digits_01",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_01",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_01",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_01",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_02",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_02",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_02",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_02",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_03",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_03",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_03",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_03",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_04",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_04",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_04",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_04",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_05",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_05",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_05",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_05",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_06",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Haresh_single_digits_06",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_06",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_06",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_07",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_07",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_07",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_07",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_08",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Haresh_single_digits_08",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_08",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_08",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_09",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_09",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_09",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_09",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_10",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_10",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_10",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_digits_10",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 1,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Haresh_numbers_01",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Haresh_numbers_01",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_numbers_01",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_numbers_01",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Haresh_numbers_02",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_numbers_02",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_numbers_02",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_numbers_02",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_numbers_03",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Haresh_numbers_03",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_numbers_03",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_numbers_03",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_numbers_04",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Haresh_numbers_04",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_numbers_04",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_numbers_04",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Haresh_numbers_05",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 2
+  },
+  {
+    "sample_id": "Haresh_numbers_05",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_numbers_05",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_numbers_05",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_01",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Haresh_single_letters_01",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Haresh_single_letters_01",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_01",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Haresh_single_letters_02",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Haresh_single_letters_02",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_02",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_02",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_03",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_03",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_03",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_03",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_04",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_04",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_04",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_04",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_05",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_05",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_05",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_05",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_06",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_06",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_06",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_06",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_07",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_07",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_07",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_07",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_08",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_08",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_08",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_08",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_09",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_09",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_09",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_09",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_10",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_10",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_10",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_single_letters_10",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_strings_01",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 2
+  },
+  {
+    "sample_id": "Haresh_strings_01",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_strings_01",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_strings_01",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_strings_02",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Haresh_strings_02",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Haresh_strings_02",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_strings_02",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 1,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Haresh_strings_03",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Haresh_strings_03",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Haresh_strings_03",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_strings_03",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_strings_04",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_strings_04",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_strings_04",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_strings_04",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_strings_05",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 2
+  },
+  {
+    "sample_id": "Haresh_strings_05",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_strings_05",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Haresh_strings_05",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_01",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_01",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_01",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_01",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_02",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Paarth_single_digits_02",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_02",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_02",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_03",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_03",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_03",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_03",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Paarth_single_digits_04",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_04",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_04",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_04",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Paarth_single_digits_05",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_05",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_05",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_05",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_06",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_06",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_06",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_06",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_07",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_07",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_07",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_07",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_08",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Paarth_single_digits_08",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_08",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_08",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Paarth_single_digits_09",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_09",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_09",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_09",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_10",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_10",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_10",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_digits_10",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_numbers_01",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_numbers_01",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_numbers_01",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_numbers_01",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_numbers_02",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_numbers_02",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_numbers_02",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Paarth_numbers_02",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Paarth_numbers_03",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_numbers_03",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_numbers_03",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_numbers_03",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 2
+  },
+  {
+    "sample_id": "Paarth_numbers_04",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 2
+  },
+  {
+    "sample_id": "Paarth_numbers_04",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_numbers_04",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 1,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Paarth_numbers_04",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Paarth_numbers_05",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Paarth_numbers_05",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_numbers_05",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 1,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Paarth_numbers_05",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_01",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_01",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_01",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_01",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_02",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Paarth_single_letters_02",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Paarth_single_letters_02",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_02",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Paarth_single_letters_03",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_03",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_03",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_03",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Paarth_single_letters_04",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_04",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_04",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_04",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_05",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_05",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_05",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_05",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_06",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_06",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_06",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_06",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_07",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_07",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_07",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_07",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_08",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_08",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_08",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_08",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Paarth_single_letters_09",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_09",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 1,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Paarth_single_letters_09",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_09",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 1,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Paarth_single_letters_10",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_10",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_10",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_single_letters_10",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_strings_01",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Paarth_strings_01",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_strings_01",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_strings_01",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Paarth_strings_02",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_strings_02",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_strings_02",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_strings_02",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 3
+  },
+  {
+    "sample_id": "Paarth_strings_03",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_strings_03",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_strings_03",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_strings_03",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_strings_04",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_strings_04",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 1,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Paarth_strings_04",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_strings_04",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 2
+  },
+  {
+    "sample_id": "Paarth_strings_05",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_strings_05",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_strings_05",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Paarth_strings_05",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_01",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_01",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_01",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_01",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_02",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_02",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_02",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_02",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_03",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_03",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_03",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_03",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_04",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_04",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_04",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_04",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_05",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_05",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_05",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_05",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_06",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_06",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_06",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_06",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_07",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_07",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_07",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_07",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Manula_single_digits_08",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Manula_single_digits_08",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_08",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_08",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Manula_single_digits_09",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_09",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_09",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_09",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_10",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_10",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_10",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_digits_10",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Manula_numbers_01",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Manula_numbers_01",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_numbers_01",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_numbers_01",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 2
+  },
+  {
+    "sample_id": "Manula_numbers_02",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Manula_numbers_02",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_numbers_02",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_numbers_02",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Manula_numbers_03",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_numbers_03",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_numbers_03",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_numbers_03",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_numbers_04",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_numbers_04",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_numbers_04",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_numbers_04",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_numbers_05",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_numbers_05",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_numbers_05",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_numbers_05",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_01",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_01",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Manula_single_letters_01",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_01",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_02",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_02",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_02",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_02",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_03",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_03",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_03",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_03",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_04",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_04",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_04",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_04",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_05",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_05",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_05",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_05",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_06",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Manula_single_letters_06",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Manula_single_letters_06",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_06",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Manula_single_letters_07",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 1,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Manula_single_letters_07",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_07",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_07",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 1,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Manula_single_letters_08",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_08",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_08",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_08",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_09",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_09",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_09",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_09",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_10",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_10",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_10",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_single_letters_10",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_strings_01",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Manula_strings_01",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_strings_01",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_strings_01",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Manula_strings_02",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Manula_strings_02",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Manula_strings_02",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_strings_02",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_strings_03",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 2
+  },
+  {
+    "sample_id": "Manula_strings_03",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 1,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Manula_strings_03",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_strings_03",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_strings_04",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Manula_strings_04",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Manula_strings_04",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_strings_04",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Manula_strings_05",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_strings_05",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Manula_strings_05",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Manula_strings_05",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_01",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_01",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_01",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_01",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_02",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_02",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_02",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_02",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_03",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_03",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_03",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_03",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_04",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_04",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_04",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_04",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_05",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_05",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_05",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_05",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_06",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_06",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_06",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_06",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_07",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_07",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_07",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_07",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_08",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Saniru_single_digits_08",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_08",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_08",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_09",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_09",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_09",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_09",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_10",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_10",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_10",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_digits_10",
+    "collection": "single_digits",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Saniru_numbers_01",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_numbers_01",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_numbers_01",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_numbers_01",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_numbers_02",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_numbers_02",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_numbers_02",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_numbers_02",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Saniru_numbers_03",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Saniru_numbers_03",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_numbers_03",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_numbers_03",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_numbers_04",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Saniru_numbers_04",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_numbers_04",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_numbers_04",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_numbers_05",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 2
+  },
+  {
+    "sample_id": "Saniru_numbers_05",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_numbers_05",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_numbers_05",
+    "collection": "numbers",
+    "primary_model": "cnn",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Saniru_single_letters_01",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_01",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_01",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_01",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_02",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_02",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_02",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_02",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_03",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_03",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_03",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_03",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_04",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_04",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_04",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_04",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_05",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_05",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_05",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_05",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_06",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_06",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_06",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_06",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_07",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_07",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_07",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_07",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_08",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 1,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Saniru_single_letters_08",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 1,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Saniru_single_letters_08",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_08",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 1,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Saniru_single_letters_09",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_09",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_09",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_09",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_10",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_10",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_10",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_single_letters_10",
+    "collection": "single_letters",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_strings_01",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_strings_01",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_strings_01",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_strings_01",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_strings_02",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 1,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Saniru_strings_02",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 1,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Saniru_strings_02",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_strings_02",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 1,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Saniru_strings_03",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_strings_03",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_strings_03",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_strings_03",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_strings_04",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_strings_04",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_strings_04",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 0,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_strings_04",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 0,
+    "model_correct": 1,
+    "edit_difference_vs_primary": -1
+  },
+  {
+    "sample_id": "Saniru_strings_05",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mlp",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 1
+  },
+  {
+    "sample_id": "Saniru_strings_05",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "cnn",
+    "primary_correct": 1,
+    "model_correct": 0,
+    "edit_difference_vs_primary": 2
+  },
+  {
+    "sample_id": "Saniru_strings_05",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "resnet18",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  },
+  {
+    "sample_id": "Saniru_strings_05",
+    "collection": "strings",
+    "primary_model": "resnet18",
+    "model": "mobilenet_v3_small",
+    "primary_correct": 1,
+    "model_correct": 1,
+    "edit_difference_vs_primary": 0
+  }
+]

@@ -1,3 +1,0 @@
-{"model": "mlp", "accuracy": 0.8336528459547983, "macro_f1": 0.690128759314118, "warmed_batch_prediction_seconds": 0.9058937000809237}
-{"model": "cnn", "accuracy": 0.855918434015629, "macro_f1": 0.7215322065272083, "warmed_batch_prediction_seconds": 9.816460100002587}
-Evaluation complete; validation-selected model remains cnn

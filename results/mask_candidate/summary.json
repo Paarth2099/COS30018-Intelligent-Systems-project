@@ -1,0 +1,66 @@
+[
+  {
+    "collection": "single_digits",
+    "variant": "baseline",
+    "count": 20,
+    "correct": 16,
+    "cer": 0.2,
+    "count_matches": 20
+  },
+  {
+    "collection": "single_digits",
+    "variant": "merged",
+    "count": 20,
+    "correct": 16,
+    "cer": 0.2,
+    "count_matches": 20
+  },
+  {
+    "collection": "numbers",
+    "variant": "baseline",
+    "count": 20,
+    "correct": 19,
+    "cer": 0.034482758620689655,
+    "count_matches": 20
+  },
+  {
+    "collection": "numbers",
+    "variant": "merged",
+    "count": 20,
+    "correct": 19,
+    "cer": 0.034482758620689655,
+    "count_matches": 20
+  },
+  {
+    "collection": "characters",
+    "variant": "baseline",
+    "count": 80,
+    "correct": 52,
+    "cer": 0.375,
+    "count_matches": 77
+  },
+  {
+    "collection": "characters",
+    "variant": "mask",
+    "count": 80,
+    "correct": 50,
+    "cer": 0.4,
+    "count_matches": 77
+  },
+  {
+    "collection": "strings",
+    "variant": "baseline",
+    "count": 40,
+    "correct": 12,
+    "cer": 0.26875,
+    "count_matches": 40
+  },
+  {
+    "collection": "strings",
+    "variant": "mask",
+    "count": 40,
+    "correct": 12,
+    "cer": 0.275,
+    "count_matches": 40
+  }
+]

@@ -12,7 +12,7 @@ py -3.12 -m venv .venv
 .\run_gui.ps1
 ```
 
-Activation is optional. The launcher prefers the repository's `.venv` and supports the original local baseline environment as a fallback. A fresh checkout should use its own environment.
+Activation is optional. The launcher prefers the repository's `.venv` and requires a fresh checkout to use its own environment.
 
 If PowerShell blocks scripts:
 
@@ -24,6 +24,8 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
 The direct command is `.\.venv\Scripts\python.exe app.py`. On macOS/Linux, create a Python 3.12 environment, install the same requirements and run `python app.py`; Tkinter must be available. The recorded extension desktop verification covers Windows only.
 
 ## Saved models
+
+Both modes also include ResNet-18 and MobileNetV3-Small under `experiments/week11_gpu_run01/`. The selected defaults are CNN (Numbers) and ResNet-18 (Alphanumeric).
 
 - [Digit checkpoints](../../experiments/baseline/): CNN, MLP and selection records.
 - [Character checkpoints](../../experiments/emnist_byclass/run_01/): CNN, MLP and selection records.
@@ -42,16 +44,16 @@ The GUI uses the saved weights. Raw MNIST/EMNIST data is required for training a
 
 Photo loading also accepts other folders. Generation needs labelled individual samples and reports missing requested characters. Case matters in Alphanumeric mode.
 
-Manifests under `evidence/` record source labels and hashes. Existing development photos are not an untouched final test. A distributed working package needs suitable input examples or explicit access instructions.
+Manifests under `evidence/` record source labels and hashes. Existing development photos are not an untouched final test. A distributed working package needs suitable input examples or explicit access instructions. Obtain these inputs from the [research archive](research-archive.md).
 
 ## Commands
 
 ```powershell
 .\run_gui.ps1
 .\run_gui.ps1 -Verify
-.\run_characters.ps1 -Action Demo
-.\run_preprocessing.ps1 -Action Demo
-.\run_segmentation.ps1 -Action Demo
+.\scripts\run_characters.ps1 -Action Demo
+.\scripts\run_preprocessing.ps1 -Action Demo
+.\scripts\run_segmentation.ps1 -Action Demo
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 

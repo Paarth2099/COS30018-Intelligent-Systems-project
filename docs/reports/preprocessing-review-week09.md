@@ -1,3 +1,5 @@
+> Recorded study: results and original source hashes are retained. Detailed outputs are in the [research archive](../guides/research-archive.md); current commands use the `research` package.
+
 # Week 9 preprocessing review
 
 Review of the 20 single-digit and 80 isolated-character photographs from the paired MLP/CNN development experiment. This is diagnosis and experiment planning; no preprocessing, segmentation, model weights or GUI settings were changed.
@@ -21,9 +23,9 @@ Both models are correct on 50/100 inputs; at least one is wrong on 50/100. These
 
 | ID | Observation | Interpretation |
 |---|---|---|
-| [ID 101](../../evidence/photo_model_comparison/week09_run01/previews/101.png), Saniru `2` | Prepared tile is dominated by background/texture instead of the isolated 2 visible in the original. | Foreground localisation includes unwanted paper/background; confirm with threshold mask and bounding box. |
-| [ID 104](../../evidence/photo_model_comparison/week09_run01/previews/104.png), Saniru `1` | Digit 1 is small and offset; stray foreground above the character expands its occupied region. | Foreground localisation includes unwanted paper/background; confirm with threshold mask and bounding box. |
-| [ID 113](../../evidence/photo_model_comparison/week09_run01/previews/113.png), Saniru `i` | Prepared tile contains broad paper-texture foreground instead of the isolated i and dot visible in the original. | Foreground localisation includes unwanted paper/background; confirm with threshold mask and bounding box. |
+| [ID 101 (archive: evidence/photo_model_comparison/week09_run01/previews/101.png)](../guides/research-archive.md), Saniru `2` | Prepared tile is dominated by background/texture instead of the isolated 2 visible in the original. | Foreground localisation includes unwanted paper/background; confirm with threshold mask and bounding box. |
+| [ID 104 (archive: evidence/photo_model_comparison/week09_run01/previews/104.png)](../guides/research-archive.md), Saniru `1` | Digit 1 is small and offset; stray foreground above the character expands its occupied region. | Foreground localisation includes unwanted paper/background; confirm with threshold mask and bounding box. |
+| [ID 113 (archive: evidence/photo_model_comparison/week09_run01/previews/113.png)](../guides/research-archive.md), Saniru `i` | Prepared tile contains broad paper-texture foreground instead of the isolated i and dot visible in the original. | Foreground localisation includes unwanted paper/background; confirm with threshold mask and bounding box. |
 
 Digit 9 examples 004, 014 and 024 have weak descending strokes. Example 032 retains a visible narrow stem but CNN still fails while MLP succeeds. This comparison prevents treating every 9 error as the same preprocessing defect.
 
@@ -51,27 +53,27 @@ The baseline remains digit CNN 15/20 singles and 18/20 numbers; character CNN 53
 
 ## Evidence and reproduction
 
-- [Complete visual review table](../../evidence/preprocessing_review/week09/error_review.csv)
-- [Descriptive geometry and input hashes](../../evidence/preprocessing_review/week09/diagnostics.csv)
-- [Review counts](../../evidence/preprocessing_review/week09/review_summary.json)
-- [Provenance](../../evidence/preprocessing_review/week09/provenance.json)
+- [Complete visual review table (archive: evidence/preprocessing_review/week09/error_review.csv)](../guides/research-archive.md)
+- [Descriptive geometry and input hashes (archive: evidence/preprocessing_review/week09/diagnostics.csv)](../guides/research-archive.md)
+- [Review counts (archive: evidence/preprocessing_review/week09/review_summary.json)](../guides/research-archive.md)
+- [Provenance (archive: evidence/preprocessing_review/week09/provenance.json)](../guides/research-archive.md)
 - [Previous paired model comparison](photo-model-comparison-week09.md)
 
-- [Contact sheet 1](../../evidence/preprocessing_review/week09/sheet_01.png)
-- [Contact sheet 2](../../evidence/preprocessing_review/week09/sheet_02.png)
-- [Contact sheet 3](../../evidence/preprocessing_review/week09/sheet_03.png)
-- [Contact sheet 4](../../evidence/preprocessing_review/week09/sheet_04.png)
-- [Contact sheet 5](../../evidence/preprocessing_review/week09/sheet_05.png)
-- [Contact sheet 6](../../evidence/preprocessing_review/week09/sheet_06.png)
-- [Contact sheet 7](../../evidence/preprocessing_review/week09/sheet_07.png)
-- [Contact sheet 8](../../evidence/preprocessing_review/week09/sheet_08.png)
-- [Contact sheet 9](../../evidence/preprocessing_review/week09/sheet_09.png)
-- [Contact sheet 10](../../evidence/preprocessing_review/week09/sheet_10.png)
+- [Contact sheet 1 (archive: evidence/preprocessing_review/week09/sheet_01.png)](../guides/research-archive.md)
+- [Contact sheet 2 (archive: evidence/preprocessing_review/week09/sheet_02.png)](../guides/research-archive.md)
+- [Contact sheet 3 (archive: evidence/preprocessing_review/week09/sheet_03.png)](../guides/research-archive.md)
+- [Contact sheet 4 (archive: evidence/preprocessing_review/week09/sheet_04.png)](../guides/research-archive.md)
+- [Contact sheet 5 (archive: evidence/preprocessing_review/week09/sheet_05.png)](../guides/research-archive.md)
+- [Contact sheet 6 (archive: evidence/preprocessing_review/week09/sheet_06.png)](../guides/research-archive.md)
+- [Contact sheet 7 (archive: evidence/preprocessing_review/week09/sheet_07.png)](../guides/research-archive.md)
+- [Contact sheet 8 (archive: evidence/preprocessing_review/week09/sheet_08.png)](../guides/research-archive.md)
+- [Contact sheet 9 (archive: evidence/preprocessing_review/week09/sheet_09.png)](../guides/research-archive.md)
+- [Contact sheet 10 (archive: evidence/preprocessing_review/week09/sheet_10.png)](../guides/research-archive.md)
 
 To regenerate the diagnostic sheets and geometry using unchanged existing arrays:
 
 ```powershell
-python review_preprocessing_week09.py --output evidence/preprocessing_review/week09_repeat
+python -m research.review_preprocessing_week09 --output evidence/preprocessing_review/week09_repeat
 ```
 
 Visual observations in error_review.csv are qualitative annotations, not automatically generated diagnoses. The script recreates contact sheets and numeric diagnostics only; changing the inputs requires a new visual review. This review is not independently annotated or blinded and does not establish causal effects. No new training or accuracy experiment was performed.

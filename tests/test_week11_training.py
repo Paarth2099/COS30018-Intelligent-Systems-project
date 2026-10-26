@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 import torch
-import train_models_week11 as training
+from research import train_models_week11 as training
 from hnrs_ml.predict import DigitPredictor
 from hnrs_chars.predict import CharacterPredictor
 

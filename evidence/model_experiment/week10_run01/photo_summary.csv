@@ -1,5 +1,0 @@
-collection,model,count,correct,accuracy,character_error_rate,mean_inference_ms
-characters,baseline,80,53,0.6625,0.3375,0.897932502994081
-characters,weighted,80,58,0.725,0.275,0.8959887461969629
-strings,baseline,40,7,0.175,0.35625,2.008364998619072
-strings,weighted,40,5,0.125,0.425,2.0147074945271015

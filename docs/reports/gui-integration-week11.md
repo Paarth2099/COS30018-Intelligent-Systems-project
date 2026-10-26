@@ -1,3 +1,5 @@
+> Recorded study: results and original source hashes are retained. Detailed outputs are in the [research archive](../guides/research-archive.md); current commands use the `research` package.
+
 # Week 11: integration of four recognition architectures
 
 Saniru's integration connects Haresh's evaluated ResNet-18 and MobileNetV3-Small
@@ -65,12 +67,12 @@ model's actual prediction. Most development strings remain imperfect.
 
 ## Evidence
 
-- [Unit test output](../../evidence/gui_week11/unit_tests.txt)
-- [Desktop verification and source hashes](../../evidence/gui_week11/smoke_20261024_153126_595602/verification.json)
-- [Alphanumeric default](../../evidence/gui_week11/smoke_20261024_153126_595602/week11_alphanumeric_default.png)
-- [Numbers default](../../evidence/gui_week11/smoke_20261024_153126_595602/week11_numbers_default.png)
-- [MobileNet selection and cleared result](../../evidence/gui_week11/smoke_20261024_153126_595602/week11_alphanumeric_model_selector.png)
-- [ResNet generated-text result](../../evidence/gui_week11/smoke_20261024_153126_595602/week11_resnet_generated.png)
+- [Unit test output (archive: evidence/gui_week11/unit_tests.txt)](../guides/research-archive.md)
+- [Desktop verification and source hashes](../../results/gui/verification.json)
+- [Alphanumeric default](../assets/week11_alphanumeric_default.png)
+- [Numbers default](../assets/week11_numbers_default.png)
+- [MobileNet selection and cleared result (archive: evidence/gui_week11/smoke_20261024_153126_595602/week11_alphanumeric_model_selector.png)](../guides/research-archive.md)
+- [ResNet generated-text result](../assets/week11_resnet_generated.png)
 
 The run folder also retains individual exports and the tested GUI source snapshots.
 The corrupt fixture is intentionally invalid test data, not a deployable model.

@@ -44,3 +44,7 @@ Generation labels select handwriting tiles but are not supplied to recognition. 
 ## Evaluation boundaries
 
 Validation data selects checkpoints before official test evaluation. Inspected real-photo collections measure development performance. Constructed strings with known boundaries test classification and ordering, not segmentation. Fresh end-to-end evaluation remains separate.
+
+## Recorded evaluation and repository organisation
+
+The frozen 120-photo evaluation is complete; see [selected results](../results/README.md). The final report and presentation remain separate deliverables. Research commands live in `research/`, wrappers in `scripts/`, and detailed immutable evidence is in the [archive](guides/research-archive.md).

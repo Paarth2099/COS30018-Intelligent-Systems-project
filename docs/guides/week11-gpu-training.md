@@ -26,7 +26,7 @@ In PowerShell from the repository root:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
-.\run_week11_training.ps1 -Action Check
+.\scripts\run_week11_training.ps1 -Action Check
 ```
 
 Check verifies CUDA, tests gradients and checkpoint loading, runs tiny synthetic
@@ -37,7 +37,7 @@ fresh final handwriting. A failed check must be resolved before full training.
 Then run:
 
 ```powershell
-.\run_week11_training.ps1 -Action Train
+.\scripts\run_week11_training.ps1 -Action Train
 ```
 
 This trains ResNet-18 and MobileNetV3-Small on MNIST, then both on EMNIST ByClass.
@@ -78,7 +78,7 @@ Incomplete runs are deliberately not overwritten, and batch/epoch resume is not
 implemented. Preserve any partial run. Use a new output root and the relevant task:
 
 ```powershell
-.\run_week11_training.ps1 -Action Train -Task emnist -Output experiments/week11_gpu_retry01
+.\scripts\run_week11_training.ps1 -Action Train -Task emnist -Output experiments/week11_gpu_retry01
 ```
 
 CUDA is explicit in the launcher: missing GPU support fails instead of silently

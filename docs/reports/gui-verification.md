@@ -1,3 +1,5 @@
+> Recorded study: results and original source hashes are retained. Detailed outputs are in the [research archive](../guides/research-archive.md); current commands use the `research` package.
+
 # GUI extension verification — 13 October 2026
 
 ## Scope and result
@@ -8,7 +10,7 @@ Implemented Numbers/Alphanumeric mode switching, case-sensitive generation from 
 
 **Desktop integration checks passed** with real Tk widgets, real worker threads and saved CNN/MLP checkpoints. Dialog selections were supplied by the test to make local inputs repeatable; this is automated desktop testing, not a teammate's manual acceptance test.
 
-Passing evidence: [verification JSON](../../evidence/gui_extension/smoke_20261013_144252_167841/verification.json).
+Passing evidence: [verification JSON (archive: evidence/gui_extension/smoke_20261013_144252_167841/verification.json)](../guides/research-archive.md).
 
 | Input / configuration | Actual displayed result | Interpretation |
 |---|---|---|
@@ -35,10 +37,10 @@ The eight displayed examples are workflow checks, not an accuracy benchmark. The
 
 Inspected screenshots:
 
-- [Alphanumeric photo](../../evidence/gui_extension/smoke_20261013_144252_167841/alphanumeric_photo.png)
-- [Generated characters](../../evidence/gui_extension/smoke_20261013_144252_167841/generated_characters.png)
-- [Minimum window](../../evidence/gui_extension/smoke_20261013_144252_167841/minimum_window.png)
-- [Number regression](../../evidence/gui_extension/smoke_20261013_144252_167841/numbers_regression.png)
+- [Alphanumeric photo (archive: evidence/gui_extension/smoke_20261013_144252_167841/alphanumeric_photo.png)](../guides/research-archive.md)
+- [Generated characters (archive: evidence/gui_extension/smoke_20261013_144252_167841/generated_characters.png)](../guides/research-archive.md)
+- [Minimum window (archive: evidence/gui_extension/smoke_20261013_144252_167841/minimum_window.png)](../guides/research-archive.md)
+- [Number regression (archive: evidence/gui_extension/smoke_20261013_144252_167841/numbers_regression.png)](../guides/research-archive.md)
 
 The earlier `smoke_20261013_144030_221516` directory is explicitly incomplete: the test encountered a missing original digit dataset, and its screenshot exposed sidebar clipping. The 40 original digit photos were copied from the existing baseline into this checkout's ignored `data/segmentation_photos` directory, the sidebar spacing was corrected, and the desktop suite was repeated successfully. No training or development photos were relabelled during GUI work.
 

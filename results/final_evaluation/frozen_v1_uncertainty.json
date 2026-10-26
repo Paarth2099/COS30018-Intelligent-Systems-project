@@ -1,0 +1,105 @@
+{
+  "source": "evidence\\final_evaluation\\run_01\\predictions.json",
+  "source_sha256": "406939f3cb5d6b75e23677a6fab51479cb4923130730ac0c623eed3be61886bf",
+  "results": [
+    {
+      "collection": "single_digits",
+      "model": "cnn",
+      "n": 40,
+      "correct": 37,
+      "case_sensitive_accuracy": 0.925,
+      "wilson95_image_iid": [
+        0.8013576647568946,
+        0.9741639742254119
+      ],
+      "descriptive_writer_bootstrap95": [
+        0.85,
+        1.0
+      ],
+      "writer_accuracy": {
+        "Haresh": 0.9,
+        "Manula": 1.0,
+        "Paarth": 0.8,
+        "Saniru": 1.0
+      },
+      "case_insensitive_correct": 37,
+      "case_only_errors": 0
+    },
+    {
+      "collection": "numbers",
+      "model": "cnn",
+      "n": 20,
+      "correct": 16,
+      "case_sensitive_accuracy": 0.8,
+      "wilson95_image_iid": [
+        0.5839825677481064,
+        0.919342337420202
+      ],
+      "descriptive_writer_bootstrap95": [
+        0.39999999999999997,
+        1.0
+      ],
+      "writer_accuracy": {
+        "Haresh": 1.0,
+        "Manula": 1.0,
+        "Paarth": 0.2,
+        "Saniru": 1.0
+      },
+      "case_insensitive_correct": 16,
+      "case_only_errors": 0
+    },
+    {
+      "collection": "single_letters",
+      "model": "resnet18",
+      "n": 40,
+      "correct": 29,
+      "case_sensitive_accuracy": 0.725,
+      "wilson95_image_iid": [
+        0.5716504419378943,
+        0.8389198375233267
+      ],
+      "descriptive_writer_bootstrap95": [
+        0.625,
+        0.85
+      ],
+      "writer_accuracy": {
+        "Haresh": 0.9,
+        "Manula": 0.6,
+        "Paarth": 0.7,
+        "Saniru": 0.7
+      },
+      "case_insensitive_correct": 34,
+      "case_only_errors": 5
+    },
+    {
+      "collection": "strings",
+      "model": "resnet18",
+      "n": 20,
+      "correct": 4,
+      "case_sensitive_accuracy": 0.2,
+      "wilson95_image_iid": [
+        0.08065766257979806,
+        0.41601743225189364
+      ],
+      "descriptive_writer_bootstrap95": [
+        0.05,
+        0.35
+      ],
+      "writer_accuracy": {
+        "Haresh": 0.2,
+        "Manula": 0.0,
+        "Paarth": 0.4,
+        "Saniru": 0.2
+      },
+      "case_insensitive_correct": 11,
+      "case_only_errors": 7
+    }
+  ],
+  "interpretation": "Case-sensitive accuracy remains primary. Case-insensitive counts are diagnostic only. Wilson intervals assume independent photos, violated by repeated writers. Writer bootstrap is exploratory with only four known writers and does not establish unseen-writer generalisation. No training or inference performed.",
+  "bootstrap": {
+    "seed": 42,
+    "repeats": 10000,
+    "unit": "writer",
+    "equal_samples_per_writer": true
+  }
+}

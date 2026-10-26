@@ -1,3 +1,5 @@
+> Recorded study: results and original source hashes are retained. Detailed outputs are in the [research archive](../guides/research-archive.md); current commands use the `research` package.
+
 # Week 10 GUI improvements and local verification
 
 **Outcome: the Week 9 off-screen-window defect is resolved on the tested computer. Updated recognition results display and export correctly.** Verified on 20 October 2026, Australia/Sydney.
@@ -62,16 +64,16 @@ The first Week 10 run passed the initial checks. An intermediate strengthened te
 
 Authoritative final run: `evidence/gui_week10/smoke_20261020_075611_735600`.
 
-- [Final verification, environment, predictions and physical bounds](../../evidence/gui_week10/smoke_20261020_075611_735600/verification.json)
-- [Normal window](../../evidence/gui_week10/smoke_20261020_075611_735600/alphanumeric_photo.png)
-- [Small-window controls](../../evidence/gui_week10/smoke_20261020_075611_735600/small_window_controls.png)
-- [Small-window crop breakdown](../../evidence/gui_week10/smoke_20261020_075611_735600/small_window_crops.png)
-- [Minimum window](../../evidence/gui_week10/smoke_20261020_075611_735600/minimum_window.png)
-- [Long number and final crops](../../evidence/gui_week10/smoke_20261020_075611_735600/long_number_breakdown.png)
-- [Repaired Hello through the GUI](../../evidence/gui_week10/smoke_20261020_075611_735600/Haresh_03_text-Hello.png)
-- [Repaired Bill through the GUI](../../evidence/gui_week10/smoke_20261020_075611_735600/Haresh_06_text-Bill.png)
-- [Full regression log](../../evidence/gui_week10/regression_tests_week10.txt)
-- [Source snapshots and audit manifest](../../evidence/gui_week10/smoke_20261020_075611_735600/audit_manifest.json)
+- [Final verification, environment, predictions and physical bounds (archive: evidence/gui_week10/smoke_20261020_075611_735600/verification.json)](../guides/research-archive.md)
+- [Normal window (archive: evidence/gui_week10/smoke_20261020_075611_735600/alphanumeric_photo.png)](../guides/research-archive.md)
+- [Small-window controls (archive: evidence/gui_week10/smoke_20261020_075611_735600/small_window_controls.png)](../guides/research-archive.md)
+- [Small-window crop breakdown (archive: evidence/gui_week10/smoke_20261020_075611_735600/small_window_crops.png)](../guides/research-archive.md)
+- [Minimum window (archive: evidence/gui_week10/smoke_20261020_075611_735600/minimum_window.png)](../guides/research-archive.md)
+- [Long number and final crops (archive: evidence/gui_week10/smoke_20261020_075611_735600/long_number_breakdown.png)](../guides/research-archive.md)
+- [Repaired Hello through the GUI (archive: evidence/gui_week10/smoke_20261020_075611_735600/Haresh_03_text-Hello.png)](../guides/research-archive.md)
+- [Repaired Bill through the GUI (archive: evidence/gui_week10/smoke_20261020_075611_735600/Haresh_06_text-Bill.png)](../guides/research-archive.md)
+- [Full regression log (archive: evidence/gui_week10/regression_tests_week10.txt)](../guides/research-archive.md)
+- [Source snapshots and audit manifest (archive: evidence/gui_week10/smoke_20261020_075611_735600/audit_manifest.json)](../guides/research-archive.md)
 
 The final run folder also contains exported inputs, detected regions, prepared arrays, predictions and settings in its `gui_*` subfolders.
 

@@ -1,3 +1,5 @@
+> Recorded study: results and original source hashes are retained. Detailed outputs are in the [research archive](../guides/research-archive.md); current commands use the `research` package.
+
 # Week 10: controlled class-weighted CNN experiment
 
 **Decision: retain baseline.** The application still uses its original saved CNN; no default or baseline file was replaced.
@@ -65,22 +67,22 @@ Examples are the first matching entries in dataset order for each group, not a f
 
 | Collection | Reference | Baseline CNN | Weighted CNN | Outcome | Source/crops |
 |---|---|---|---|---|---|
-| characters | `g` | `9` | `g` | gain | [Preview](../../evidence/photo_model_comparison/week09_run01/previews/072.png) |
-| characters | `q` | `8` | `q` | gain | [Preview](../../evidence/photo_model_comparison/week09_run01/previews/079.png) |
-| characters | `g` | `9` | `g` | gain | [Preview](../../evidence/photo_model_comparison/week09_run01/previews/080.png) |
-| characters | `1` | `1` | `l` | regression | [Preview](../../evidence/photo_model_comparison/week09_run01/previews/061.png) |
-| characters | `B` | `B` | `8` | regression | [Preview](../../evidence/photo_model_comparison/week09_run01/previews/066.png) |
-| characters | `O` | `0` | `0` | unresolved | [Preview](../../evidence/photo_model_comparison/week09_run01/previews/048.png) |
-| characters | `o` | `0` | `0` | unresolved | [Preview](../../evidence/photo_model_comparison/week09_run01/previews/056.png) |
-| characters | `q` | `Y` | `4` | unresolved | [Preview](../../evidence/photo_model_comparison/week09_run01/previews/057.png) |
-| strings | `jig` | `ji9` | `jig` | gain | [Preview](../../evidence/photo_model_comparison/week09_run01/previews/134.png) |
-| strings | `jig` | `ji9` | `jig` | gain | [Preview](../../evidence/photo_model_comparison/week09_run01/previews/144.png) |
-| strings | `ij12` | `ij12` | `iji2` | regression | [Preview](../../evidence/photo_model_comparison/week09_run01/previews/123.png) |
-| strings | `Zz25` | `Zz25` | `zz25` | regression | [Preview](../../evidence/photo_model_comparison/week09_run01/previews/129.png) |
-| strings | `007Ab` | `007Ab` | `007A8` | regression | [Preview](../../evidence/photo_model_comparison/week09_run01/previews/136.png) |
-| strings | `Ab12` | `Abt2` | `Abg2` | unresolved | [Preview](../../evidence/photo_model_comparison/week09_run01/previews/120.png) |
-| strings | `Room7` | `R00M7` | `R00m7` | unresolved | [Preview](../../evidence/photo_model_comparison/week09_run01/previews/121.png) |
-| strings | `Hello` | `rlell0` | `rIeIl0` | unresolved | [Preview](../../evidence/photo_model_comparison/week09_run01/previews/122.png) |
+| characters | `g` | `9` | `g` | gain | [Preview (archive: evidence/photo_model_comparison/week09_run01/previews/072.png)](../guides/research-archive.md) |
+| characters | `q` | `8` | `q` | gain | [Preview (archive: evidence/photo_model_comparison/week09_run01/previews/079.png)](../guides/research-archive.md) |
+| characters | `g` | `9` | `g` | gain | [Preview (archive: evidence/photo_model_comparison/week09_run01/previews/080.png)](../guides/research-archive.md) |
+| characters | `1` | `1` | `l` | regression | [Preview (archive: evidence/photo_model_comparison/week09_run01/previews/061.png)](../guides/research-archive.md) |
+| characters | `B` | `B` | `8` | regression | [Preview (archive: evidence/photo_model_comparison/week09_run01/previews/066.png)](../guides/research-archive.md) |
+| characters | `O` | `0` | `0` | unresolved | [Preview (archive: evidence/photo_model_comparison/week09_run01/previews/048.png)](../guides/research-archive.md) |
+| characters | `o` | `0` | `0` | unresolved | [Preview (archive: evidence/photo_model_comparison/week09_run01/previews/056.png)](../guides/research-archive.md) |
+| characters | `q` | `Y` | `4` | unresolved | [Preview (archive: evidence/photo_model_comparison/week09_run01/previews/057.png)](../guides/research-archive.md) |
+| strings | `jig` | `ji9` | `jig` | gain | [Preview (archive: evidence/photo_model_comparison/week09_run01/previews/134.png)](../guides/research-archive.md) |
+| strings | `jig` | `ji9` | `jig` | gain | [Preview (archive: evidence/photo_model_comparison/week09_run01/previews/144.png)](../guides/research-archive.md) |
+| strings | `ij12` | `ij12` | `iji2` | regression | [Preview (archive: evidence/photo_model_comparison/week09_run01/previews/123.png)](../guides/research-archive.md) |
+| strings | `Zz25` | `Zz25` | `zz25` | regression | [Preview (archive: evidence/photo_model_comparison/week09_run01/previews/129.png)](../guides/research-archive.md) |
+| strings | `007Ab` | `007Ab` | `007A8` | regression | [Preview (archive: evidence/photo_model_comparison/week09_run01/previews/136.png)](../guides/research-archive.md) |
+| strings | `Ab12` | `Abt2` | `Abg2` | unresolved | [Preview (archive: evidence/photo_model_comparison/week09_run01/previews/120.png)](../guides/research-archive.md) |
+| strings | `Room7` | `R00M7` | `R00m7` | unresolved | [Preview (archive: evidence/photo_model_comparison/week09_run01/previews/121.png)](../guides/research-archive.md) |
+| strings | `Hello` | `rlell0` | `rIeIl0` | unresolved | [Preview (archive: evidence/photo_model_comparison/week09_run01/previews/122.png)](../guides/research-archive.md) |
 
 ## Selected class diagnostics
 
@@ -116,17 +118,17 @@ A model change does not repair the two known string segmentation failures or the
 
 ## Evidence and reproduction
 
-- [Prospective experiment plan](../../experiments/emnist_byclass/week10_weighted_run01/plan.json)
-- [Training history](../../experiments/emnist_byclass/week10_weighted_run01/history.csv)
-- [Training log](../../experiments/emnist_byclass/week10_weighted_run01/training_log.txt)
-- [Training-only class weights](../../experiments/emnist_byclass/week10_weighted_run01/class_weights.csv)
-- [Validation-selected checkpoint record](../../experiments/emnist_byclass/week10_weighted_run01/selection.json)
-- [Complete metrics and adoption decision](../../evidence/model_experiment/week10_run01/results.json)
-- [Verification checks](../../evidence/model_experiment/week10_run01/verification.json)
-- [All paired photo predictions](../../evidence/model_experiment/week10_run01/photo_predictions.csv)
-- [Per-writer results](../../evidence/model_experiment/week10_run01/by_writer.csv)
-- [Baseline validation confusion matrix](../../evidence/model_experiment/week10_run01/baseline_validation_confusion.png)
-- [Weighted validation confusion matrix](../../evidence/model_experiment/week10_run01/weighted_validation_confusion.png)
+- [Prospective experiment plan (archive: experiments/emnist_byclass/week10_weighted_run01/plan.json)](../guides/research-archive.md)
+- [Training history (archive: experiments/emnist_byclass/week10_weighted_run01/history.csv)](../guides/research-archive.md)
+- [Training log (archive: experiments/emnist_byclass/week10_weighted_run01/training_log.txt)](../guides/research-archive.md)
+- [Training-only class weights (archive: experiments/emnist_byclass/week10_weighted_run01/class_weights.csv)](../guides/research-archive.md)
+- [Validation-selected checkpoint record (archive: experiments/emnist_byclass/week10_weighted_run01/selection.json)](../guides/research-archive.md)
+- [Complete metrics and adoption decision (archive: evidence/model_experiment/week10_run01/results.json)](../guides/research-archive.md)
+- [Verification checks (archive: evidence/model_experiment/week10_run01/verification.json)](../guides/research-archive.md)
+- [All paired photo predictions (archive: evidence/model_experiment/week10_run01/photo_predictions.csv)](../guides/research-archive.md)
+- [Per-writer results (archive: evidence/model_experiment/week10_run01/by_writer.csv)](../guides/research-archive.md)
+- [Baseline validation confusion matrix (archive: evidence/model_experiment/week10_run01/baseline_validation_confusion.png)](../guides/research-archive.md)
+- [Weighted validation confusion matrix (archive: evidence/model_experiment/week10_run01/weighted_validation_confusion.png)](../guides/research-archive.md)
 
 Source snapshots and validation prediction arrays are retained alongside the metrics. All 120 baseline photo predictions and the original baseline validation accuracy were reproduced before comparison.
 

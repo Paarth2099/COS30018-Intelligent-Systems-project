@@ -10,7 +10,7 @@ import subprocess
 import numpy as np
 from PIL import Image, ImageDraw, ImageOps
 import torch
-from compare_segmentation import edit_distance
+from research.compare_segmentation import edit_distance
 from .data import sha256
 from .predict import CharacterPredictor
 from .segmentation import METHODS, segment_characters, prepare_character_crops

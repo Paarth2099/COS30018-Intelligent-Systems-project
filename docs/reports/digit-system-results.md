@@ -1,3 +1,5 @@
+> Recorded study: results and original source hashes are retained. Detailed outputs are in the [research archive](../guides/research-archive.md); current commands use the `research` package.
+
 # Digit-system experiment results
 
 The selected number pipeline uses CNN classification, connected-component segmentation and Otsu digit preparation.
@@ -13,7 +15,7 @@ Both models used a seeded split of 54,000 training and 6,000 validation images, 
 
 The selected CNN reconstructed 957/1,000 constructed strings exactly. Digit boundaries were known and source images came from the same MNIST test set, so this does not measure independent photo or segmentation performance.
 
-Evidence: [model selection](../../experiments/baseline/selection.json), [benchmark results](../../experiments/baseline/evaluation/results.json), [constructed-string preview](../../experiments/baseline/evaluation/generated_strings.png).
+Evidence: [model selection](../../experiments/baseline/selection.json), [benchmark results (archive: experiments/baseline/evaluation/results.json)](../guides/research-archive.md), [constructed-string preview (archive: experiments/baseline/evaluation/generated_strings.png)](../guides/research-archive.md).
 
 ## Preprocessing
 
@@ -27,7 +29,7 @@ Twenty single-digit development photos were compared using the same CNN, common 
 
 Fixed and Otsu tied. These are pixel-representation comparisons after a shared crop, not three independent localisation algorithms.
 
-Evidence: [preprocessing summary](../../evidence/preprocessing/team_single_digits_run_01/summary.json).
+Evidence: [preprocessing summary (archive: evidence/preprocessing/team_single_digits_run_01/summary.json)](../guides/research-archive.md).
 
 ## Complete photo pipeline
 
@@ -40,7 +42,7 @@ The collection contains 20 single-digit and 20 multi-digit photos. Both segmenta
 
 Connected components recognised 33/40 photos exactly. Count agreement does not prove pixel-level segmentation quality. These images were used for development and do not establish unseen-handwriting performance.
 
-Evidence: [summary](../../evidence/segmentation/team_run_02/summary.json), [per-image results](../../evidence/segmentation/team_run_02/results.csv), [selected method](../../evidence/segmentation/selection.json).
+Evidence: [summary (archive: evidence/segmentation/team_run_02/summary.json)](../guides/research-archive.md), [per-image results (archive: evidence/segmentation/team_run_02/results.csv)](../guides/research-archive.md), [selected method (archive: evidence/segmentation/selection.json)](../guides/research-archive.md).
 
 ## Limitations
 

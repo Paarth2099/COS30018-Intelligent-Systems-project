@@ -1,3 +1,5 @@
+> Recorded study: results and original source hashes are retained. Detailed outputs are in the [research archive](../guides/research-archive.md); current commands use the `research` package.
+
 # Week 10 segmentation investigation
 
 **Decision: adopt bounded broken-body grouping and wider short-stem eligibility in the grouped-components method.** Both previously diagnosed failures are repaired on this development collection.
@@ -61,33 +63,33 @@ Exact CNN recognition is still only 8/40 (20%) and CER is 33.125%, despite accep
 
 ## Evidence
 
-- [Independent prospective plan](../../evidence/segmentation_experiment/week10_run01/plan.json)
-- [Independent and projection metrics](../../evidence/segmentation_experiment/week10_run01/summary.csv)
-- [Combined plan](../../evidence/segmentation_experiment/week10_combined01/plan.json)
-- [Combined metrics](../../evidence/segmentation_experiment/week10_combined01/summary.csv)
-- [All combined-run predictions](../../evidence/segmentation_experiment/week10_combined01/predictions.csv)
-- [Paired gains and regressions](../../evidence/segmentation_experiment/week10_combined01/paired.csv)
-- [40-photo qualitative review](../../evidence/segmentation_experiment/week10_combined01/visual_review.csv)
-- [Boxes and component groups](../../evidence/segmentation_experiment/week10_combined01/geometry.json)
-- [Adoption decision](../../evidence/segmentation_experiment/week10_combined01/decision.json)
-- [20-number regression results](../../evidence/segmentation_experiment/week10_combined01/number_regression.csv)
-- [Experiment checks](../../evidence/segmentation_experiment/week10_combined01/verification.json)
-- [Production checks](../../evidence/segmentation_experiment/week10_combined01/integration_verification.json)
-- [Full regression test log](../../evidence/segmentation_experiment/week10_combined01/software_tests.txt)
-- [Combined review sheet 1](../../evidence/segmentation_experiment/week10_combined01/combined_sheet_01.png)
-- [Combined review sheet 2](../../evidence/segmentation_experiment/week10_combined01/combined_sheet_02.png)
-- [Combined review sheet 3](../../evidence/segmentation_experiment/week10_combined01/combined_sheet_03.png)
-- [Combined review sheet 4](../../evidence/segmentation_experiment/week10_combined01/combined_sheet_04.png)
-- [Combined review sheet 5](../../evidence/segmentation_experiment/week10_combined01/combined_sheet_05.png)
-- [Combined review sheet 6](../../evidence/segmentation_experiment/week10_combined01/combined_sheet_06.png)
-- [Combined review sheet 7](../../evidence/segmentation_experiment/week10_combined01/combined_sheet_07.png)
-- [Combined review sheet 8](../../evidence/segmentation_experiment/week10_combined01/combined_sheet_08.png)
+- [Independent prospective plan (archive: evidence/segmentation_experiment/week10_run01/plan.json)](../guides/research-archive.md)
+- [Independent and projection metrics (archive: evidence/segmentation_experiment/week10_run01/summary.csv)](../guides/research-archive.md)
+- [Combined plan (archive: evidence/segmentation_experiment/week10_combined01/plan.json)](../guides/research-archive.md)
+- [Combined metrics (archive: evidence/segmentation_experiment/week10_combined01/summary.csv)](../guides/research-archive.md)
+- [All combined-run predictions (archive: evidence/segmentation_experiment/week10_combined01/predictions.csv)](../guides/research-archive.md)
+- [Paired gains and regressions (archive: evidence/segmentation_experiment/week10_combined01/paired.csv)](../guides/research-archive.md)
+- [40-photo qualitative review (archive: evidence/segmentation_experiment/week10_combined01/visual_review.csv)](../guides/research-archive.md)
+- [Boxes and component groups (archive: evidence/segmentation_experiment/week10_combined01/geometry.json)](../guides/research-archive.md)
+- [Adoption decision (archive: evidence/segmentation_experiment/week10_combined01/decision.json)](../guides/research-archive.md)
+- [20-number regression results (archive: evidence/segmentation_experiment/week10_combined01/number_regression.csv)](../guides/research-archive.md)
+- [Experiment checks (archive: evidence/segmentation_experiment/week10_combined01/verification.json)](../guides/research-archive.md)
+- [Production checks (archive: evidence/segmentation_experiment/week10_combined01/integration_verification.json)](../guides/research-archive.md)
+- [Full regression test log (archive: evidence/segmentation_experiment/week10_combined01/software_tests.txt)](../guides/research-archive.md)
+- [Combined review sheet 1 (archive: evidence/segmentation_experiment/week10_combined01/combined_sheet_01.png)](../guides/research-archive.md)
+- [Combined review sheet 2 (archive: evidence/segmentation_experiment/week10_combined01/combined_sheet_02.png)](../guides/research-archive.md)
+- [Combined review sheet 3 (archive: evidence/segmentation_experiment/week10_combined01/combined_sheet_03.png)](../guides/research-archive.md)
+- [Combined review sheet 4 (archive: evidence/segmentation_experiment/week10_combined01/combined_sheet_04.png)](../guides/research-archive.md)
+- [Combined review sheet 5 (archive: evidence/segmentation_experiment/week10_combined01/combined_sheet_05.png)](../guides/research-archive.md)
+- [Combined review sheet 6 (archive: evidence/segmentation_experiment/week10_combined01/combined_sheet_06.png)](../guides/research-archive.md)
+- [Combined review sheet 7 (archive: evidence/segmentation_experiment/week10_combined01/combined_sheet_07.png)](../guides/research-archive.md)
+- [Combined review sheet 8 (archive: evidence/segmentation_experiment/week10_combined01/combined_sheet_08.png)](../guides/research-archive.md)
 
 Per-image folders contain masks, raw crops, prepared arrays, segmentation metadata and previews. Baseline source snapshots and hashes are preserved. To repeat the controlled comparison after production defaults change, run the archived source from the repository root:
 
 ```powershell
 python evidence/segmentation_experiment/week10_run01/source/experiment_segmentation_week10.py --output evidence/segmentation_experiment/week10_repeat
 python evidence/segmentation_experiment/week10_combined01/source/experiment_segmentation_week10.py --combined --output evidence/segmentation_experiment/week10_combined_repeat
-python verify_segmentation_week10.py
+python -m research.verify_segmentation_week10
 python -m unittest discover -s tests -v
 ```

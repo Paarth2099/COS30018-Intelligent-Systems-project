@@ -1,3 +1,5 @@
+> Recorded study: results and original source hashes are retained. Detailed outputs are in the [research archive](../guides/research-archive.md); current commands use the `research` package.
+
 # Week 9 local GUI verification — 19 October 2026
 
 **Outcome: functional checks passed; display-fit issue remains open.** This is automated local verification on one Windows computer, not cross-computer or manual acceptance testing.
@@ -45,12 +47,12 @@ Week 10 should investigate screen-aware window sizing and a scrollable or adapti
 
 Authoritative repeat run:
 
-- [Functional verification and source hashes](../../evidence/gui_extension/smoke_20261019_163319_961004/verification.json)
-- [Environment and physical screen measurements](../../evidence/gui_extension/smoke_20261019_163319_961004/local_environment.json)
-- [Minimum-window capture](../../evidence/gui_extension/smoke_20261019_163319_961004/minimum_window.png)
-- [Alphanumeric photo capture](../../evidence/gui_extension/smoke_20261019_163319_961004/alphanumeric_photo.png)
-- [Generated characters](../../evidence/gui_extension/smoke_20261019_163319_961004/generated_characters.png)
-- [Number photo capture](../../evidence/gui_extension/smoke_20261019_163319_961004/numbers_regression.png)
+- [Functional verification and source hashes (archive: evidence/gui_extension/smoke_20261019_163319_961004/verification.json)](../guides/research-archive.md)
+- [Environment and physical screen measurements (archive: evidence/gui_extension/smoke_20261019_163319_961004/local_environment.json)](../guides/research-archive.md)
+- [Minimum-window capture (archive: evidence/gui_extension/smoke_20261019_163319_961004/minimum_window.png)](../guides/research-archive.md)
+- [Alphanumeric photo capture (archive: evidence/gui_extension/smoke_20261019_163319_961004/alphanumeric_photo.png)](../guides/research-archive.md)
+- [Generated characters (archive: evidence/gui_extension/smoke_20261019_163319_961004/generated_characters.png)](../guides/research-archive.md)
+- [Number photo capture (archive: evidence/gui_extension/smoke_20261019_163319_961004/numbers_regression.png)](../guides/research-archive.md)
 
 The earlier `smoke_20261019_163202_921842` run is retained with passing functional results, but its screenshots are cropped by the old DPI-coordinate calculation. Do not use those captures to claim full layout visibility. The functional PASS value in verification.json covers its assertions; this report adds the physical-display failure found during visual inspection.
 

@@ -1,0 +1,11 @@
+{
+  "archive_name": "improvements_gpu_results.zip",
+  "sha256": "cea361e609a1c96712e1205001cfee60fd2b7aa10714ae99b3c4ef16278f4872",
+  "bytes": 179345417,
+  "archive_crc": "PASS",
+  "entries": 115,
+  "imported_without_overwrite": true,
+  "training_source_ast_matches_transfer_package": true,
+  "device": "NVIDIA GeForce RTX 3070",
+  "production_changed": false
+}

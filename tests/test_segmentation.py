@@ -3,7 +3,7 @@ import unittest
 import numpy as np
 from PIL import Image, ImageDraw
 from segment_digits import connected_regions, segment_image, prepare_crops
-from compare_segmentation import edit_distance
+from research.compare_segmentation import edit_distance
 
 
 class SegmentationTests(unittest.TestCase):

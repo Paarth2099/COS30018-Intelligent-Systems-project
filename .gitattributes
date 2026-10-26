@@ -5,3 +5,16 @@ experiments/week11_four_models/** -text
 evidence/model_comparison/week11_run01/** -text
 evidence/week11_gpu_setup/** -text
 evidence/gui_week11/** -text
+
+# Preserve final-evaluation manifests, snapshots and hash-checked evidence.
+evidence/final_evaluation/** -text
+
+evidence/improvements/** -text
+experiments/improvements_gpu_run01/** -text
+
+# Preserve copied result records and model binaries.
+results/** -text
+*.pt -text
+*.npz -text
+experiments/baseline/** -text
+experiments/emnist_byclass/run_01/** -text

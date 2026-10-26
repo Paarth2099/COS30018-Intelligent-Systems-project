@@ -1,3 +1,5 @@
+> Recorded study: results and original source hashes are retained. Detailed outputs are in the [research archive](../guides/research-archive.md); current commands use the `research` package.
+
 # Week 11: four-architecture comparison
 
 **Scope:** Haresh's model investigation following tutor feedback. Four architectures are now implemented and evaluated for both digit and alphanumeric recognition. This report does not claim completion of the whole project, fresh final evaluation or GUI integration of the new models.
@@ -103,14 +105,14 @@ Examples below are the first two gains and first two losses in dataset order for
 
 | Task | Change | Reference | Baseline CNN | ResNet-18 | Evidence |
 | --- | --- | --- | --- | --- | --- |
-| mnist | gain | 7 | 2 | 7 | [Image 11](../../evidence/model_comparison/week11_run01/previews/011.png) |
-| mnist | gain | 9 | 4 | 9 | [Image 14](../../evidence/model_comparison/week11_run01/previews/014.png) |
-| mnist | loss | 485 | 485 | 455 | [Image 19](../../evidence/model_comparison/week11_run01/previews/019.png) |
-| mnist | loss | 69 | 69 | 64 | [Image 27](../../evidence/model_comparison/week11_run01/previews/027.png) |
-| emnist | gain | q | 8 | q | [Image 79](../../evidence/model_comparison/week11_run01/previews/079.png) |
-| emnist | gain | q | 9 | q | [Image 117](../../evidence/model_comparison/week11_run01/previews/117.png) |
-| emnist | loss | z | z | 2 | [Image 59](../../evidence/model_comparison/week11_run01/previews/059.png) |
-| emnist | loss | 007Ab | 007Ab | 007AB | [Image 136](../../evidence/model_comparison/week11_run01/previews/136.png) |
+| mnist | gain | 7 | 2 | 7 | [Image 11 (archive: evidence/model_comparison/week11_run01/previews/011.png)](../guides/research-archive.md) |
+| mnist | gain | 9 | 4 | 9 | [Image 14 (archive: evidence/model_comparison/week11_run01/previews/014.png)](../guides/research-archive.md) |
+| mnist | loss | 485 | 485 | 455 | [Image 19 (archive: evidence/model_comparison/week11_run01/previews/019.png)](../guides/research-archive.md) |
+| mnist | loss | 69 | 69 | 64 | [Image 27 (archive: evidence/model_comparison/week11_run01/previews/027.png)](../guides/research-archive.md) |
+| emnist | gain | q | 8 | q | [Image 79 (archive: evidence/model_comparison/week11_run01/previews/079.png)](../guides/research-archive.md) |
+| emnist | gain | q | 9 | q | [Image 117 (archive: evidence/model_comparison/week11_run01/previews/117.png)](../guides/research-archive.md) |
+| emnist | loss | z | z | 2 | [Image 59 (archive: evidence/model_comparison/week11_run01/previews/059.png)](../guides/research-archive.md) |
+| emnist | loss | 007Ab | 007Ab | 007AB | [Image 136 (archive: evidence/model_comparison/week11_run01/previews/136.png)](../guides/research-archive.md) |
 
 ## Selection gates
 
@@ -138,23 +140,23 @@ For each task the candidate is the highest-validation model. Promotion additiona
 
 ## Evidence and reproduction
 
-- [Import verification](../../evidence/week11_gpu_setup/import_verification.json)
-- [Plan and validation candidates](../../evidence/model_comparison/week11_run01/plan.json)
-- [Model metadata](../../evidence/model_comparison/week11_run01/models.csv)
-- [Benchmark summary](../../evidence/model_comparison/week11_run01/benchmark_summary.csv)
-- [Photo summary](../../evidence/model_comparison/week11_run01/photo_summary.csv)
-- [Every photo prediction](../../evidence/model_comparison/week11_run01/photo_predictions.csv)
-- [Paired predictions](../../evidence/model_comparison/week11_run01/paired_photos.csv)
-- [Per-writer results](../../evidence/model_comparison/week11_run01/by_writer.csv)
-- [Recommendation](../../evidence/model_comparison/week11_run01/recommendation.json)
-- [Verification](../../evidence/model_comparison/week11_run01/verification.json)
-- [Independent recalculation and historical reproduction](../../evidence/model_comparison/week11_run01/independent_verification.json)
+- [Import verification (archive: evidence/week11_gpu_setup/import_verification.json)](../guides/research-archive.md)
+- [Plan and validation candidates (archive: evidence/model_comparison/week11_run01/plan.json)](../guides/research-archive.md)
+- [Model metadata](../../results/four_models/models.csv)
+- [Benchmark summary](../../results/four_models/benchmark_summary.csv)
+- [Photo summary](../../results/four_models/photo_summary.csv)
+- [Every photo prediction (archive: evidence/model_comparison/week11_run01/photo_predictions.csv)](../guides/research-archive.md)
+- [Paired predictions (archive: evidence/model_comparison/week11_run01/paired_photos.csv)](../guides/research-archive.md)
+- [Per-writer results](../../results/four_models/by_writer.csv)
+- [Recommendation](../../results/four_models/recommendation.json)
+- [Verification (archive: evidence/model_comparison/week11_run01/verification.json)](../guides/research-archive.md)
+- [Independent recalculation and historical reproduction](../../results/four_models/independent_verification.json)
 - Training records: `experiments/week11_gpu_run01/{mnist,emnist}/{resnet18,mobilenet_v3_small}/`.
 - Each benchmark model directory contains predictions, per-class metrics, confusion matrix and first errors. Prepared photo arrays and 160 previews are retained with source snapshots.
 
 ```powershell
-python evaluate_models_week11.py --output evidence/model_comparison/week11_repeat01
-python report_models_week11.py --evaluation evidence/model_comparison/week11_repeat01 --report docs/reports/model-comparison-week11-repeat.md
+python -m research.evaluate_models_week11 --output evidence/model_comparison/week11_repeat01
+python -m research.report_models_week11 --evaluation evidence/model_comparison/week11_repeat01 --report docs/reports/model-comparison-week11-repeat.md
 ```
 
 ## References

@@ -1,75 +1,68 @@
-# Handwritten Number Recognition System
+# Handwritten Number and Character Recognition
 
-COS30018 Intelligent Systems — Option B. A Python desktop application for handwritten numbers, with an approved extension for single-line alphanumeric handwriting.
+COS30018 Intelligent Systems, Option B. A desktop application for recognising handwritten numbers, with the approved extension for single-line alphanumeric handwriting.
 
-The system combines image preparation, segmentation and MLP/CNN classification. Both modes support loading photographs and generating images from labelled handwriting samples, with ordered crop previews and exportable results.
+## Run the application
 
-## Quick start
-
-Use Python 3.12. Run from the repository root in PowerShell:
+Use Python 3.12. From this folder in PowerShell:
 
 ```powershell
 py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\run_gui.ps1
+.\.venv\Scripts\python.exe app.py
 ```
 
-With an existing environment, only the last command is needed. See [installation and datasets](docs/guides/installation.md).
+Alternatively, use ` .\run_gui.ps1 ` after installation. The eight saved checkpoints are included; training datasets are not needed to recognise a supplied photograph. See [installation](docs/guides/installation.md) and the [GUI guide](docs/guides/gui.md).
 
-## Modes
+## Features and model selection
 
-| Mode | Classes | Models | Segmentation |
-|---|---|---|---|
-| Numbers | 0–9 | MNIST MLP and CNN | Connected components or projection |
-| Alphanumeric | 0–9, A–Z, a–z | EMNIST ByClass MLP and CNN | Grouped components or projection |
+- Load photographs or generate images from labelled handwriting samples.
+- Segment characters in reading order, inspect prepared crops and export results.
+- Both modes offer MLP, CNN, ResNet-18 and MobileNetV3-Small.
+- Selected defaults: CNN for numbers; ResNet-18 for alphanumeric text.
+- Preserve letter case and leading zeros.
 
-Outputs retain case and leading zeros. Supported photographs contain one line of separate dark characters on pale paper. Joined cursive and multiline documents are outside the supported scope.
+Inputs should contain one line of separately written dark characters on pale paper. Joined cursive, punctuation and multiline documents are outside the approved scope. Ambiguous letters and mixed strings remain difficult.
 
-## Documentation
+## Recorded final evaluation
 
-- [Documentation index](docs/README.md)
-- [Installation](docs/guides/installation.md) and [GUI user guide](docs/guides/gui.md)
-- [System architecture](docs/architecture.md)
-- [Digit-system results](docs/reports/digit-system-results.md)
-- [Character-model results](docs/reports/emnist-results.md)
-- [Character-preprocessing results](docs/reports/character-preprocessing-results.md)
-- [String-segmentation results](docs/reports/string-segmentation-results.md)
-- [GUI verification](docs/reports/gui-verification.md)
+The frozen system was evaluated on 120 newly written photographs from four group writers. These results are separate from the development collection used to refine the system.
 
-## Results and scope
+| Collection | Selected system correct | Metric |
+|---|---:|---|
+| Individual digits | 37/40 | Classification accuracy |
+| Multi-digit numbers | 16/20 | Exact number accuracy |
+| Individual letters/digits | 29/40 | Classification accuracy |
+| Mixed strings | 4/20 | Exact case-sensitive string accuracy |
 
-| Evaluation | Result | Scope |
-|---|---|---|
-| MNIST test set | MLP 96.60%; CNN 98.53% | 10,000 isolated test digits |
-| Original number photos, selected pipeline | 15/20 single digits; 18/20 exact multi-digit numbers | Development photos |
-| EMNIST ByClass test set | MLP 83.37%; CNN 85.59% | 116,323 isolated test characters |
-| Character photos, selected preparation + CNN | 53/80 correct | Development photos |
-| String photos, grouped components | 38/40 acceptable separations; 7/40 exact strings | Development photos; qualitative crop review |
+See [machine-readable results](results/README.md) and [full research reports](docs/README.md). Later augmentation candidates did not pass their adoption criteria; the selected application checkpoints were retained. The final set has since been analysed and must not be treated as untouched evidence for further changes.
 
-Classification, segmentation quality and complete-string recognition measure different outcomes. Development photos were inspected during refinement and are not an independent final test. Recognition error analysis and fresh-photo evaluation remain outstanding.
+## Project structure
 
-## Repository layout
+| Path | Purpose |
+|---|---|
+| `app.py`, `gui_core.py` | Desktop interface and application services |
+| `preprocess_digits.py`, `segment_digits.py` | Digit preparation and segmentation |
+| `hnrs_ml/`, `hnrs_chars/` | Models and recognition pipelines |
+| `research/` | Experiment, evaluation and reporting commands |
+| `scripts/` | PowerShell launchers and project checks |
+| `tests/` | Automated tests and desktop workflow checks |
+| `experiments/` | Eight application checkpoints and their configurations |
+| `results/` | Selected metrics, verification and dataset split records |
+| `docs/` | Guides, reports and selected illustrations |
+| `data/`, `evidence/` | Local datasets and detailed outputs, excluded from Git |
 
-```text
-docs/          Guides, architecture, experiment reports and data notes
-hnrs_ml/       Digit model training, evaluation and prediction
-hnrs_chars/    Character models, preprocessing, segmentation and experiments
-tests/         Automated tests and desktop workflow checks
-experiments/   Checkpoints, training configurations and source snapshots
-evidence/      Metrics, crops, previews and verification records
-data/          Local datasets and original photos (excluded from Git)
-app.py         Desktop interface
-gui_core.py    Acquisition, recognition dispatch and export
-run_*.ps1      Windows launchers and experiment commands
-```
+The complete original experiment tree, crops, source snapshots and photos are preserved in the [research archive](docs/guides/research-archive.md). They are not deleted from the working computer. Historical Git commits are retained.
 
-## Verification
+## Verification and research
 
 ```powershell
-.\.venv\Scripts\python.exe -m unittest discover -s tests -v
-.\run_gui.ps1 -Verify
+.\.venv\Scripts\python.exe scripts/check_project.py
+.\.venv\Scripts\python.exe -m research.train_models_week11 --help
 ```
 
-The software suite contains 52 tests. Desktop checks require the models and photo folders described in the installation guide and briefly open the application. Each run creates a new evidence folder. Historical reports identify the test count at their own development stage.
+The project check runs the unit suite and verifies all eight checkpoint paths. The real GUI smoke test (`.\run_gui.ps1 -Verify`) additionally needs the archived development photos and an interactive Windows desktop. See [research commands](research/README.md) before reproducing experiments.
 
-Raw datasets and photos are shared separately. Classifying a supplied photo does not require retraining the saved models.
+## Submission status
+
+The software and experiment evidence do not replace the final team report, presentation video or individual records. Cross-computer acceptance evidence must be supplied by the member who performed those checks. Recognition limitations are documented rather than presented as resolved.

@@ -1,3 +1,5 @@
+> Recorded study: results and original source hashes are retained. Detailed outputs are in the [research archive](../guides/research-archive.md); current commands use the `research` package.
+
 # Alphanumeric string segmentation experiment
 
 Comparison of projection and grouped connected-component segmentation for single-line alphanumeric images.

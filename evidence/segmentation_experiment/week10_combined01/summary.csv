@@ -1,5 +1,0 @@
-variant,model,count,count_correct,correct,cer,warning_images,mean_segmentation_ms
-baseline,cnn,40,38,7,0.35625,3,284.1941400023643
-baseline,mlp,40,38,3,0.49375,3,284.1941400023643
-combined,cnn,40,40,8,0.33125,3,281.7529849940911
-combined,mlp,40,40,3,0.46875,3,281.7529849940911

@@ -3,7 +3,7 @@ import numpy as np
 from PIL import Image, ImageDraw
 from hnrs_chars.preprocessing import prepare_character_variants as baseline
 from hnrs_chars.preprocessing_candidates import prepare_character_variants as candidate
-from experiment_preprocessing_week10 import normalise_digit_batch
+from research.experiment_preprocessing_week10 import normalise_digit_batch
 from segment_digits import prepare_crops
 from preprocess_digits import prepare_variants
 

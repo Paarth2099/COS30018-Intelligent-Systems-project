@@ -1,3 +1,5 @@
+> Recorded study: results and original source hashes are retained. Detailed outputs are in the [research archive](../guides/research-archive.md); current commands use the `research` package.
+
 # Character-photo preprocessing experiment
 
 Comparison of character-photo preparation methods using a frozen EMNIST CNN.

@@ -1,3 +1,5 @@
+> Recorded study: results and original source hashes are retained. Detailed outputs are in the [research archive](../guides/research-archive.md); current commands use the `research` package.
+
 # Week 10 preprocessing experiments
 
 **Decision: adopt post-resize peak normalisation for Otsu digit crops. Retain existing character preprocessing.**
@@ -66,23 +68,23 @@ The following 17 comparisons were inspected, covering all priority defects, the 
 
 | ID / comparison | Observation |
 |---|---|
-| [101](../../evidence/preprocessing_experiment/week10_run01/previews/101.png) | Both character candidates retain broad texture contamination; original digit 2 remains unresolved. |
-| [104](../../evidence/preprocessing_experiment/week10_run01/previews/104.png) | B removes distant noise and restores a larger centred 1; CNN changes i to 1, but MLP remains wrong (l to I). |
-| [113](../../evidence/preprocessing_experiment/week10_run01/previews/113.png) | Both character candidates retain broad texture instead of the i; unresolved. |
-| [074](../../evidence/preprocessing_experiment/week10_run01/previews/074.png) | B deletes the genuine detached j dot. Both models change correct lowercase j to uppercase J. Reject B. |
-| [096](../../evidence/preprocessing_experiment/week10_run01/previews/096.png) | A changes CNN uppercase Z to lowercase z despite a retained outline; recognition regression. |
-| [024](../../evidence/preprocessing_experiment/week10_run01/previews/024.png) | C retains the 9 geometry and restores intensity; CNN changes 7 to 9. |
-| [037](../../evidence/preprocessing_experiment/week10_run01/previews/037.png) | C retains all three digit crops; CNN changes 140 to the correct 240. |
-| [004](../../evidence/preprocessing_experiment/week10_run01/previews/004.png) | C brightens the existing 9 but CNN remains 7; geometry is not repaired by intensity scaling. |
-| [014](../../evidence/preprocessing_experiment/week10_run01/previews/014.png) | C brightens the existing 9 but CNN remains 4. |
-| [032](../../evidence/preprocessing_experiment/week10_run01/previews/032.png) | C retains the 9 outline; CNN remains wrong (4), MLP remains correct (9). |
-| [020](../../evidence/preprocessing_experiment/week10_run01/previews/020.png) | C brightens the 0 outline without changing CNN correctness. |
-| [053](../../evidence/preprocessing_experiment/week10_run01/previews/053.png) | Detached i dot/stem remain visible in both character candidates. |
-| [054](../../evidence/preprocessing_experiment/week10_run01/previews/054.png) | Detached j dot and hook remain visible in both character candidates. |
-| [073](../../evidence/preprocessing_experiment/week10_run01/previews/073.png) | Detached i dot/stem remain visible in both character candidates. |
-| [077](../../evidence/preprocessing_experiment/week10_run01/previews/077.png) | Thin t strokes remain visible; CNN remains correct. |
-| [081](../../evidence/preprocessing_experiment/week10_run01/previews/081.png) | Thin i and dot remain visible; CNN remains correct. |
-| [083](../../evidence/preprocessing_experiment/week10_run01/previews/083.png) | Narrow l outline is retained; CNN remains wrong (1). |
+| [101 (archive: evidence/preprocessing_experiment/week10_run01/previews/101.png)](../guides/research-archive.md) | Both character candidates retain broad texture contamination; original digit 2 remains unresolved. |
+| [104 (archive: evidence/preprocessing_experiment/week10_run01/previews/104.png)](../guides/research-archive.md) | B removes distant noise and restores a larger centred 1; CNN changes i to 1, but MLP remains wrong (l to I). |
+| [113 (archive: evidence/preprocessing_experiment/week10_run01/previews/113.png)](../guides/research-archive.md) | Both character candidates retain broad texture instead of the i; unresolved. |
+| [074 (archive: evidence/preprocessing_experiment/week10_run01/previews/074.png)](../guides/research-archive.md) | B deletes the genuine detached j dot. Both models change correct lowercase j to uppercase J. Reject B. |
+| [096 (archive: evidence/preprocessing_experiment/week10_run01/previews/096.png)](../guides/research-archive.md) | A changes CNN uppercase Z to lowercase z despite a retained outline; recognition regression. |
+| [024 (archive: evidence/preprocessing_experiment/week10_run01/previews/024.png)](../guides/research-archive.md) | C retains the 9 geometry and restores intensity; CNN changes 7 to 9. |
+| [037 (archive: evidence/preprocessing_experiment/week10_run01/previews/037.png)](../guides/research-archive.md) | C retains all three digit crops; CNN changes 140 to the correct 240. |
+| [004 (archive: evidence/preprocessing_experiment/week10_run01/previews/004.png)](../guides/research-archive.md) | C brightens the existing 9 but CNN remains 7; geometry is not repaired by intensity scaling. |
+| [014 (archive: evidence/preprocessing_experiment/week10_run01/previews/014.png)](../guides/research-archive.md) | C brightens the existing 9 but CNN remains 4. |
+| [032 (archive: evidence/preprocessing_experiment/week10_run01/previews/032.png)](../guides/research-archive.md) | C retains the 9 outline; CNN remains wrong (4), MLP remains correct (9). |
+| [020 (archive: evidence/preprocessing_experiment/week10_run01/previews/020.png)](../guides/research-archive.md) | C brightens the 0 outline without changing CNN correctness. |
+| [053 (archive: evidence/preprocessing_experiment/week10_run01/previews/053.png)](../guides/research-archive.md) | Detached i dot/stem remain visible in both character candidates. |
+| [054 (archive: evidence/preprocessing_experiment/week10_run01/previews/054.png)](../guides/research-archive.md) | Detached j dot and hook remain visible in both character candidates. |
+| [073 (archive: evidence/preprocessing_experiment/week10_run01/previews/073.png)](../guides/research-archive.md) | Detached i dot/stem remain visible in both character candidates. |
+| [077 (archive: evidence/preprocessing_experiment/week10_run01/previews/077.png)](../guides/research-archive.md) | Thin t strokes remain visible; CNN remains correct. |
+| [081 (archive: evidence/preprocessing_experiment/week10_run01/previews/081.png)](../guides/research-archive.md) | Thin i and dot remain visible; CNN remains correct. |
+| [083 (archive: evidence/preprocessing_experiment/week10_run01/previews/083.png)](../guides/research-archive.md) | Narrow l outline is retained; CNN remains wrong (1). |
 
 ## Interpretation and integration
 
@@ -102,21 +104,21 @@ These are reused development photos from four writers, not independent final-tes
 
 ## Evidence and reproduction
 
-- [Prospective plan](../../evidence/preprocessing_experiment/week10_run01/plan.json)
-- [Full metric comparison](../../evidence/preprocessing_experiment/week10_run01/summary.csv)
-- [Every prediction and input hash](../../evidence/preprocessing_experiment/week10_run01/predictions.csv)
-- [Paired gains and regressions](../../evidence/preprocessing_experiment/week10_run01/paired.csv)
-- [Component boxes and warnings](../../evidence/preprocessing_experiment/week10_run01/diagnostics.json)
-- [Visual observations](../../evidence/preprocessing_experiment/week10_run01/visual_review.json)
-- [Adoption decision](../../evidence/preprocessing_experiment/week10_run01/decision.json)
-- [Baseline verification](../../evidence/preprocessing_experiment/week10_run01/verification.json)
-- [Production integration verification](../../evidence/preprocessing_experiment/week10_run01/integration_verification.json)
-- [59-test regression log](../../evidence/preprocessing_experiment/week10_run01/software_tests_after_integration.txt)
+- [Prospective plan (archive: evidence/preprocessing_experiment/week10_run01/plan.json)](../guides/research-archive.md)
+- [Full metric comparison (archive: evidence/preprocessing_experiment/week10_run01/summary.csv)](../guides/research-archive.md)
+- [Every prediction and input hash (archive: evidence/preprocessing_experiment/week10_run01/predictions.csv)](../guides/research-archive.md)
+- [Paired gains and regressions (archive: evidence/preprocessing_experiment/week10_run01/paired.csv)](../guides/research-archive.md)
+- [Component boxes and warnings (archive: evidence/preprocessing_experiment/week10_run01/diagnostics.json)](../guides/research-archive.md)
+- [Visual observations (archive: evidence/preprocessing_experiment/week10_run01/visual_review.json)](../guides/research-archive.md)
+- [Adoption decision (archive: evidence/preprocessing_experiment/week10_run01/decision.json)](../guides/research-archive.md)
+- [Baseline verification (archive: evidence/preprocessing_experiment/week10_run01/verification.json)](../guides/research-archive.md)
+- [Production integration verification (archive: evidence/preprocessing_experiment/week10_run01/integration_verification.json)](../guides/research-archive.md)
+- [59-test regression log (archive: evidence/preprocessing_experiment/week10_run01/software_tests_after_integration.txt)](../guides/research-archive.md)
 
 The root experiment refuses a changed baseline. To reproduce after adoption, run the archived baseline source snapshot from the repository root. The archived runner differs from the initially executed runner only in source-root/snapshot handling; the executed runner is also retained at the evidence root with its original hash in plan.json. Reproduction source hashes are listed separately.
 
 ```powershell
 python evidence/preprocessing_experiment/week10_run01/source/experiment_preprocessing_week10.py --output evidence/preprocessing_experiment/week10_repeat
-python verify_preprocessing_week10.py
+python -m research.verify_preprocessing_week10
 python -m unittest discover -s tests -v
 ```

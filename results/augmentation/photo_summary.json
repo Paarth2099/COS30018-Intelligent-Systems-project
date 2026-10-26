@@ -1,0 +1,146 @@
+[
+  {
+    "task": "mnist",
+    "seed": 42,
+    "arm": "control",
+    "collection": "single_digits",
+    "count": 20,
+    "correct": 16,
+    "cer": 0.2
+  },
+  {
+    "task": "mnist",
+    "seed": 42,
+    "arm": "control",
+    "collection": "numbers",
+    "count": 20,
+    "correct": 19,
+    "cer": 0.034482758620689655
+  },
+  {
+    "task": "mnist",
+    "seed": 42,
+    "arm": "augmented",
+    "collection": "single_digits",
+    "count": 20,
+    "correct": 19,
+    "cer": 0.05
+  },
+  {
+    "task": "mnist",
+    "seed": 42,
+    "arm": "augmented",
+    "collection": "numbers",
+    "count": 20,
+    "correct": 19,
+    "cer": 0.017241379310344827
+  },
+  {
+    "task": "mnist",
+    "seed": 43,
+    "arm": "control",
+    "collection": "single_digits",
+    "count": 20,
+    "correct": 14,
+    "cer": 0.3
+  },
+  {
+    "task": "mnist",
+    "seed": 43,
+    "arm": "control",
+    "collection": "numbers",
+    "count": 20,
+    "correct": 18,
+    "cer": 0.034482758620689655
+  },
+  {
+    "task": "mnist",
+    "seed": 43,
+    "arm": "augmented",
+    "collection": "single_digits",
+    "count": 20,
+    "correct": 19,
+    "cer": 0.05
+  },
+  {
+    "task": "mnist",
+    "seed": 43,
+    "arm": "augmented",
+    "collection": "numbers",
+    "count": 20,
+    "correct": 20,
+    "cer": 0.0
+  },
+  {
+    "task": "emnist",
+    "seed": 42,
+    "arm": "control",
+    "collection": "characters",
+    "count": 80,
+    "correct": 52,
+    "cer": 0.375
+  },
+  {
+    "task": "emnist",
+    "seed": 42,
+    "arm": "control",
+    "collection": "strings",
+    "count": 40,
+    "correct": 12,
+    "cer": 0.26875
+  },
+  {
+    "task": "emnist",
+    "seed": 42,
+    "arm": "augmented",
+    "collection": "characters",
+    "count": 80,
+    "correct": 56,
+    "cer": 0.325
+  },
+  {
+    "task": "emnist",
+    "seed": 42,
+    "arm": "augmented",
+    "collection": "strings",
+    "count": 40,
+    "correct": 11,
+    "cer": 0.30625
+  },
+  {
+    "task": "emnist",
+    "seed": 43,
+    "arm": "control",
+    "collection": "characters",
+    "count": 80,
+    "correct": 50,
+    "cer": 0.4
+  },
+  {
+    "task": "emnist",
+    "seed": 43,
+    "arm": "control",
+    "collection": "strings",
+    "count": 40,
+    "correct": 11,
+    "cer": 0.3
+  },
+  {
+    "task": "emnist",
+    "seed": 43,
+    "arm": "augmented",
+    "collection": "characters",
+    "count": 80,
+    "correct": 57,
+    "cer": 0.3125
+  },
+  {
+    "task": "emnist",
+    "seed": 43,
+    "arm": "augmented",
+    "collection": "strings",
+    "count": 40,
+    "correct": 9,
+    "cer": 0.31875
+  }
+]

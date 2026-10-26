@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "scope": "Clean checkout; synthetic image runtime check, not accuracy evaluation",
+  "models": [
+    {
+      "mode": "Numbers",
+      "model": "cnn",
+      "loaded_and_predicted": true,
+      "checkpoint_sha256": "4d83b227350a637d008fd7fdc6005216ff74881f56f6dd1191e1a218e58a4049"
+    },
+    {
+      "mode": "Numbers",
+      "model": "mlp",
+      "loaded_and_predicted": true,
+      "checkpoint_sha256": "fac2a94b412c7cc25c26caae4a45dd39ba0e965191217728e6710c848a622949"
+    },
+    {
+      "mode": "Numbers",
+      "model": "resnet18",
+      "loaded_and_predicted": true,
+      "checkpoint_sha256": "2c5dbf2984e9654529de6716ba8acce0ecba623687c006129eed4b716d19a373"
+    },
+    {
+      "mode": "Numbers",
+      "model": "mobilenet_v3_small",
+      "loaded_and_predicted": true,
+      "checkpoint_sha256": "5caa43bd44d0635234ab027dbe676cb9d5f69a2cd0753ad2f44f40dc9b82db5d"
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "cnn",
+      "loaded_and_predicted": true,
+      "checkpoint_sha256": "af68f14712d203a5c63ec5716a174740c2b953e9893c083552d994b80e72a04d"
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "mlp",
+      "loaded_and_predicted": true,
+      "checkpoint_sha256": "b594c3031737f4b5e3e86c483229e829232565f529a133d73c410d57f23c6f1b"
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "resnet18",
+      "loaded_and_predicted": true,
+      "checkpoint_sha256": "c7cca733c8950e45e9ae9c38b06bf81e911c50fc74067e6f77bec4a9c6becc4b"
+    },
+    {
+      "mode": "Alphanumeric",
+      "model": "mobilenet_v3_small",
+      "loaded_and_predicted": true,
+      "checkpoint_sha256": "a7d5c4a1b8f692a7f1458d8cf5be2ef79ebc26bf1ca41c169def657dff06cef3"
+    }
+  ],
+  "all_research_modules_imported": true
+}

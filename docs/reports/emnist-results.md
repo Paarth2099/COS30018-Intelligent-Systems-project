@@ -1,3 +1,5 @@
+> Recorded study: results and original source hashes are retained. Detailed outputs are in the [research archive](../guides/research-archive.md); current commands use the `research` package.
+
 # EMNIST ByClass baseline experiment results
 
 Controlled comparison of MLP and CNN character classifiers.

@@ -1,5 +1,11 @@
+# Local environment and caches
 .venv/
 __pycache__/
 *.pyc
-data/
 .DS_Store
+# Datasets and detailed research outputs are preserved separately.
+/data/
+/evidence/
+/experiments/
+# Application checkpoints are explicitly tracked; supplementary runs are ignored.
+hnrs_checks_*/

@@ -1,3 +1,5 @@
+> Recorded study: results and original source hashes are retained. Detailed outputs are in the [research archive](../guides/research-archive.md); current commands use the `research` package.
+
 # Week 9: real-photo MLP/CNN comparison
 
 Paired evaluation of the existing saved classifiers on all 160 development photographs. No models, preprocessing or segmentation algorithms were changed.
@@ -38,29 +40,29 @@ Examples below are selected deterministically by file order, not as an accuracy 
 
 | Collection | Reference | MLP | CNN | Review priority | Preview |
 |---|---|---|---|---|---|
-| single_digits | `9` | `9` | `4` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/032.png) |
-| single_digits | `7` | `2` | `7` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/003.png) |
-| single_digits | `1` | `5` | `1` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/012.png) |
-| single_digits | `9` | `3` | `7` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/004.png) |
-| single_digits | `7` | `2` | `2` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/011.png) |
-| numbers | `240` | `240` | `140` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/037.png) |
-| numbers | `14` | `17` | `14` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/005.png) |
-| numbers | `109` | `807` | `109` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/006.png) |
-| numbers | `999` | `494` | `494` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/025.png) |
-| characters | `O` | `O` | `0` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/048.png) |
-| characters | `l` | `l` | `1` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/083.png) |
-| characters | `1` | `I` | `1` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/041.png) |
-| characters | `Z` | `I` | `Z` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/049.png) |
-| characters | `o` | `O` | `0` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/056.png) |
-| characters | `q` | `1` | `Y` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/057.png) |
-| strings | `Ab12` | `Ab12` | `Abt2` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/130.png) |
-| strings | `007Ab` | `007Ab` | `D07Ab` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/156.png) |
-| strings | `ij12` | `ijS2` | `ij12` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/123.png) |
-| strings | `jig` | `ji5` | `jig` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/124.png) |
-| strings | `Ab12` | `AbI2` | `Abt2` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/120.png) |
-| strings | `Room7` | `ROOn7` | `R00M7` | recognition_error_review_crops | [Image](../../evidence/photo_model_comparison/week09_run01/previews/121.png) |
-| strings | `Hello` | `rIeIIO` | `rlell0` | count_mismatch | [Image](../../evidence/photo_model_comparison/week09_run01/previews/122.png) |
-| strings | `Bill` | `8pIII` | `BeIll` | count_mismatch | [Image](../../evidence/photo_model_comparison/week09_run01/previews/125.png) |
+| single_digits | `9` | `9` | `4` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/032.png)](../guides/research-archive.md) |
+| single_digits | `7` | `2` | `7` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/003.png)](../guides/research-archive.md) |
+| single_digits | `1` | `5` | `1` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/012.png)](../guides/research-archive.md) |
+| single_digits | `9` | `3` | `7` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/004.png)](../guides/research-archive.md) |
+| single_digits | `7` | `2` | `2` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/011.png)](../guides/research-archive.md) |
+| numbers | `240` | `240` | `140` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/037.png)](../guides/research-archive.md) |
+| numbers | `14` | `17` | `14` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/005.png)](../guides/research-archive.md) |
+| numbers | `109` | `807` | `109` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/006.png)](../guides/research-archive.md) |
+| numbers | `999` | `494` | `494` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/025.png)](../guides/research-archive.md) |
+| characters | `O` | `O` | `0` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/048.png)](../guides/research-archive.md) |
+| characters | `l` | `l` | `1` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/083.png)](../guides/research-archive.md) |
+| characters | `1` | `I` | `1` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/041.png)](../guides/research-archive.md) |
+| characters | `Z` | `I` | `Z` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/049.png)](../guides/research-archive.md) |
+| characters | `o` | `O` | `0` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/056.png)](../guides/research-archive.md) |
+| characters | `q` | `1` | `Y` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/057.png)](../guides/research-archive.md) |
+| strings | `Ab12` | `Ab12` | `Abt2` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/130.png)](../guides/research-archive.md) |
+| strings | `007Ab` | `007Ab` | `D07Ab` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/156.png)](../guides/research-archive.md) |
+| strings | `ij12` | `ijS2` | `ij12` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/123.png)](../guides/research-archive.md) |
+| strings | `jig` | `ji5` | `jig` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/124.png)](../guides/research-archive.md) |
+| strings | `Ab12` | `AbI2` | `Abt2` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/120.png)](../guides/research-archive.md) |
+| strings | `Room7` | `ROOn7` | `R00M7` | recognition_error_review_crops | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/121.png)](../guides/research-archive.md) |
+| strings | `Hello` | `rIeIIO` | `rlell0` | count_mismatch | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/122.png)](../guides/research-archive.md) |
+| strings | `Bill` | `8pIII` | `BeIll` | count_mismatch | [Image (archive: evidence/photo_model_comparison/week09_run01/previews/125.png)](../guides/research-archive.md) |
 
 ## Frequent isolated-character confusions
 
@@ -113,13 +115,13 @@ These are reused development photos from four writers, not an independent final 
 From the repository root with dependencies installed:
 
 ```powershell
-python compare_photo_models.py --output evidence/photo_model_comparison/week09_run02
-python report_photo_models.py --run evidence/photo_model_comparison/week09_run02 --output docs/reports/photo-model-comparison-week09.md
+python -m research.compare_photo_models --output evidence/photo_model_comparison/week09_run02
+python -m research.report_photo_models --run evidence/photo_model_comparison/week09_run02 --output docs/reports/photo-model-comparison-week09.md
 ```
 
-- [Summary JSON](../../evidence/photo_model_comparison/week09_run01/summary.json)
-- [All 320 model predictions](../../evidence/photo_model_comparison/week09_run01/results.csv)
-- [160 paired photo results](../../evidence/photo_model_comparison/week09_run01/paired_results.csv)
-- [Input manifest](../../evidence/photo_model_comparison/week09_run01/manifest.csv)
+- [Summary JSON (archive: evidence/photo_model_comparison/week09_run01/summary.json)](../guides/research-archive.md)
+- [All 320 model predictions (archive: evidence/photo_model_comparison/week09_run01/results.csv)](../guides/research-archive.md)
+- [160 paired photo results (archive: evidence/photo_model_comparison/week09_run01/paired_results.csv)](../guides/research-archive.md)
+- [Input manifest (archive: evidence/photo_model_comparison/week09_run01/manifest.csv)](../guides/research-archive.md)
 
 The run also retains all prepared arrays, original/crop previews and source snapshots. The report generator validates checkpoint/input hashes, array contracts, pair coverage, summary counts and exact agreement with historical CNN predictions before writing this report.

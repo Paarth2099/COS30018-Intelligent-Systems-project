@@ -13,7 +13,7 @@ The earlier baseline had 38/40 visually acceptable separations and 7/40 exact CN
 Open this `project-github` folder in VS Code. In its PowerShell terminal:
 
 ```powershell
-.\run_segmentation.ps1 -Action Demo
+.\scripts\run_segmentation.ps1 -Action Demo
 ```
 
 This runs Manula's `Ab12` photo and prints a newly created evidence folder. Open its `preview.png`: the top shows character boxes; the bottom shows the 28x28 prepared characters in reading order. `demo.json` and `prediction.json` contain actual model output. The demo does not read the expected text from its filename.
@@ -21,14 +21,14 @@ This runs Manula's `Ab12` photo and prints a newly created evidence folder. Open
 Run a different photo, including the repaired H example:
 
 ```powershell
-.\run_segmentation.ps1 -Action Demo -Image 'data/own_strings/development/Haresh/Haresh_03_text-Hello.jpg'
+.\scripts\run_segmentation.ps1 -Action Demo -Image 'data/own_strings/development/Haresh/Haresh_03_text-Hello.jpg'
 ```
 
 Run tests or repeat both methods on the full development collection:
 
 ```powershell
-.\run_segmentation.ps1 -Action Test
-.\run_segmentation.ps1 -Action Compare
+.\scripts\run_segmentation.ps1 -Action Test
+.\scripts\run_segmentation.ps1 -Action Compare
 ```
 
 Each demo/comparison creates a new timestamped output directory. The frozen reported experiment is `evidence/character_segmentation/run_04`; reruns do not overwrite it. The report builder is specifically for the four saved development runs, not an automatic selection tool for future datasets.
@@ -73,7 +73,7 @@ The desktop GUI uses this interface in Alphanumeric mode, including mode selecti
 
 ## Evidence and limitations
 
-See [the measured report](../reports/string-segmentation-results.md). All four runs retain input/checkpoint/source hashes, CSV results, masks, component groups, crops, arrays and predictions. `evidence/character_segmentation/run_04/visual_review.csv` records qualitative preview inspection of all 80 method/image combinations; it is not independently annotated ground truth or a bounding-box IoU evaluation. The [initial input sheets](../../evidence/character_segmentation/input_review/) and [final review sheets](../../evidence/character_segmentation/run_04/) are retained with the experiment evidence.
+See [the measured report](../reports/string-segmentation-results.md). All four runs retain input/checkpoint/source hashes, CSV results, masks, component groups, crops, arrays and predictions. `evidence/character_segmentation/run_04/visual_review.csv` records qualitative preview inspection of all 80 method/image combinations; it is not independently annotated ground truth or a bounding-box IoU evaluation. The [initial input sheets (archive: evidence/character_segmentation/input_review)](research-archive.md) and [final review sheets (archive: evidence/character_segmentation/run_04)](research-archive.md) are retained with the experiment evidence.
 
 Paarth's seventh source filename was corrected from `00Ab` to the visibly written `007Ab` before evaluation. Image bytes were preserved. Ambiguous case labels were otherwise retained as provided.
 

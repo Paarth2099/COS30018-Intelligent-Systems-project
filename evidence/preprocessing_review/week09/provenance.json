@@ -1,8 +1,0 @@
-{
-  "purpose": "Descriptive visual preprocessing review, not a new accuracy experiment",
-  "reviewed_images": 100,
-  "source_run": "evidence/photo_model_comparison/week09_run01",
-  "paired_csv_sha256": "e3911fcc4fe21cbc8225af4cd146339048e3d57daf9dcb76c41326fc491c48db",
-  "script_sha256": "e99c3691450f842a16b18c7c76d4b3f58dfa7d91afa01b7b7bafb48b5448be90",
-  "diagnostic_note": "Ink geometry uses intensity >0.2 for description only; not a quality threshold or an algorithm change. Centroid uses intensity weights. Predictions are copied unchanged from the source run."
-}

@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 import torch
-from compare_segmentation import edit_distance
+from research.compare_segmentation import edit_distance
 from .data import sha256
 from .segmentation import DEFAULT_METHOD, recognise_text
 from .string_experiment import load_predictor

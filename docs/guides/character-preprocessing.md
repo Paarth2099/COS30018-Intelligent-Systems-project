@@ -24,7 +24,7 @@ The extension reuses the existing Otsu threshold and connected-region utilities.
 Open the **project-github** folder in VS Code. In its terminal:
 
 ```powershell
-.\run_preprocessing.ps1 -Action Demo
+.\scripts\run_preprocessing.ps1 -Action Demo
 ```
 
 This uses `data/own_characters/development/Paarth/Paarth_02_lower-i.jpg`, an existing development example, and saves the prediction and comparison preview in a new timestamped folder under `evidence/character_preprocessing/`. It should not be presented as an unseen test.
@@ -32,14 +32,14 @@ This uses `data/own_characters/development/Paarth/Paarth_02_lower-i.jpg`, an exi
 For any other single-character photo:
 
 ```powershell
-.\run_preprocessing.ps1 -Action Demo -Image "data/own_characters/development/Saniru/Saniru_14_lower-i.jpeg"
+.\scripts\run_preprocessing.ps1 -Action Demo -Image "data/own_characters/development/Saniru/Saniru_14_lower-i.jpeg"
 ```
 
 That example intentionally demonstrates a retained failure. Read the actual predicted character and warnings. Labels do not control the answer.
 
 ```powershell
-.\run_preprocessing.ps1 -Action Test
-.\run_preprocessing.ps1 -Action Compare
+.\scripts\run_preprocessing.ps1 -Action Test
+.\scripts\run_preprocessing.ps1 -Action Compare
 ```
 
 Compare creates a new timestamped run using all development photos and current defaults. It never overwrites an earlier run. It does not retrain the CNN.
