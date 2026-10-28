@@ -1,0 +1,3 @@
+# Research-only extras (classical baselines). The GUI needs only requirements.txt.
+-r requirements.txt
+scikit-learn==1.6.1

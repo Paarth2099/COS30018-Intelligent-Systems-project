@@ -19,7 +19,7 @@ Paarth organises and verifies the fresh-photo evaluation collection, preserves l
 - The existing intended labels preserve leading zeros and letter case. Four string labels require writer confirmation; no labels were silently changed.
 - Original files were not cropped, enhanced, renamed or replaced by this review. Final readback confirmed every original still matches its recorded SHA-256.
 
-## Initial label questions (resolved by user confirmation)
+## Initial label questions (resolved by writer confirmation)
 
 | File stem | Planned label | Confirmation needed |
 |---|---|---|
@@ -65,12 +65,12 @@ Paarth's later preprocessing error analysis depends on those final results; it i
 
 Paarth confirmed: “we wrote it exactly how it was asked” and “all new photos photographed this way”. All assigned labels are therefore retained, including `AbC2`, `jKl8`, `StU5` and `hIj6`. The visual ambiguity notes above are preserved as review history, not unresolved label changes. The reported capture method is tight camera framing, not post-capture cropping; replacements are not needed on that basis.
 
-All 120 original hashes were checked again and remain unchanged. The manifest now records confirmed labels and the source of confirmation. This is a collective user attestation, not a claim that a named second teammate independently inspected every image. Writing dates were not supplied and remain blank.
+All 120 original hashes were checked again and remain unchanged. The manifest now records confirmed labels and the source of confirmation. This is a collective team attestation, not a claim that a named second teammate independently inspected every image. Writing dates were not supplied and remain blank.
 
-Evidence added: [user confirmation (archive: evidence/final_evaluation/collection_review/user_confirmation.json)](../guides/research-archive.md), [verified collection snapshot (archive: evidence/final_evaluation/protocol/verified_collection_snapshot.json)](../guides/research-archive.md) and its [SHA-256 (archive: evidence/final_evaluation/protocol/verified_collection_snapshot.sha256)](../guides/research-archive.md). The pre-confirmation manifest is preserved in the review folder.
+Evidence added: [team confirmation (archive: evidence/final_evaluation/collection_review/user_confirmation.json)](../guides/research-archive.md), [verified collection snapshot (archive: evidence/final_evaluation/protocol/verified_collection_snapshot.json)](../guides/research-archive.md) and its [SHA-256 (archive: evidence/final_evaluation/protocol/verified_collection_snapshot.sha256)](../guides/research-archive.md). The pre-confirmation manifest is preserved in the review folder.
 
 The reply did not explicitly answer whether any images had already been tested in the GUI. Untouched-test status remains unconfirmed, so the final evaluation gate and dataset lock remain pending. No recognition was run in this review. Second-computer GUI acceptance and the code/configuration freeze remain separate tasks.
 
 ## Evaluation completion update
 
-The user subsequently explicitly confirmed that none of the photos had been tested. Run 01 locked and evaluated all 120 images following user authorization to proceed with acceptance evidence upload pending. The old unresolved-status statements above are historical review stages. See [final evaluation](final-evaluation-week11.md) for verified results. The frozen manifest retains the exact pre-inference state; current collection status is recorded separately.
+Paarth subsequently confirmed, on behalf of the team, that none of the photos had been tested. Run 01 locked and evaluated all 120 images after Paarth authorised proceeding with acceptance evidence upload pending. The old unresolved-status statements above are historical review stages. See [final evaluation](final-evaluation-week11.md) for verified results. The frozen manifest retains the exact pre-inference state; current collection status is recorded separately.

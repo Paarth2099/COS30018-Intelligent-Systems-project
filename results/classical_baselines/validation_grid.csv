@@ -1,0 +1,12 @@
+family,params,validation_accuracy,fit_seconds
+knn_pixels,"{""n_neighbors"": 1}",0.9691666666666666,0.39
+knn_pixels,"{""n_neighbors"": 3}",0.9701666666666666,0.1
+knn_pixels,"{""n_neighbors"": 5}",0.9685,0.1
+knn_hog,"{""n_neighbors"": 1}",0.9745,0.16
+knn_hog,"{""n_neighbors"": 3}",0.9766666666666667,0.18
+knn_hog,"{""n_neighbors"": 5}",0.9746666666666667,0.15
+linear_svm_hog,"{""C"": 0.1}",0.9821666666666666,17.89
+linear_svm_hog,"{""C"": 1.0}",0.9826666666666667,21.62
+rbf_svm_hog,"{""C"": 1.0}",0.99,171.16
+rbf_svm_hog,"{""C"": 10.0}",0.9913333333333333,157.76
+random_forest_pixels,"{""n_estimators"": 200}",0.9688333333333333,12.13

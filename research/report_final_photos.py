@@ -13,9 +13,9 @@ def main():
     primary=[s for s in summary if s['collection']!='auxiliary_emnist_digits' and s['method']!='projection' and s['model']==('cnn' if s['collection'] in ['single_digits','numbers'] else 'resnet18')]
     text='''# Week 11: final fresh-photo evaluation
 
-Haresh's final model evaluation uses 120 new photographs from the four team writers. The user confirmed the assigned labels, tight camera framing (not post-capture cropping), and that none had previously been tested. No training, tuning or default-model changes were performed on these final results.
+Haresh's final model evaluation uses 120 new photographs from the four team writers. Paarth confirmed, on behalf of the four writers, the assigned labels, tight camera framing (not post-capture cropping), and that none had previously been tested. No training, tuning or default-model changes were performed on these final results.
 
-The selected defaults were fixed before inference: CNN for numbers and ResNet18 for alphanumeric inputs. Saniru's second-computer acceptance was reported complete by the user, who explicitly authorised proceeding while screenshots/environment records await upload. This report does not claim independent verification of that acceptance.
+The selected defaults were fixed before inference: CNN for numbers and ResNet18 for alphanumeric inputs. Saniru's second-computer acceptance was reported complete, and Paarth authorised proceeding while screenshots/environment records await upload. This report does not claim independent verification of that acceptance.
 
 ## Selected-system results
 
@@ -57,7 +57,7 @@ Projection is compared with components (numbers) or grouped components (strings)
     text+='''## Limitations and evidence boundaries
 
 - Four known team writers, only 120 photographs and deliberately selected content. This is new-input evaluation from known writers, not unseen-writer generalisation or a representative population study. Class coverage is sparse; per-class confusion counts are descriptive.
-- Tight framing is user-reported camera framing. Newness/untested status and exact intended case are user attestations, not independently observed capture events. Individual writing dates remain unspecified.
+- Tight framing is team-reported camera framing. Newness/untested status and exact intended case are team attestations, not independently observed capture events. Individual writing dates remain unspecified.
 - Human-assigned case can be visually ambiguous. Preserve the confirmed ground truth and disclose this limitation rather than relabel from model output.
 - The planned light-stroke and close-spacing conditions were not verified as controlled interventions; no causal robustness claim follows from their labels.
 - No hyperparameter search, repeated-seed retraining or new official benchmark evaluation was performed here. The existing Week 11 report retains the benchmark/training evidence.

@@ -81,13 +81,32 @@ class RecognitionService:
     """GUI worker service; mode-specific checkpoints and no reference-label input."""
     def __init__(self,root):
         self.root=Path(root);self.predictors={}
+        # Models trained in the Model lab this session: mode -> name -> (path, sha256).
+        self.custom={mode:{} for mode in DEFAULT_MODELS}
+
+    def register_custom(self,mode,name,checkpoint,digest):
+        """Make a Model-lab checkpoint selectable; its hash is rechecked on use."""
+        if mode not in DEFAULT_MODELS:raise ValueError('Unsupported recognition mode')
+        if name in MODEL_NAMES:raise ValueError('Custom model names must differ from the shipped models')
+        self.custom[mode][name]=(Path(checkpoint),digest)
+
+    def models_for(self,mode):
+        return list(MODEL_NAMES)+list(self.custom[mode])
+
+    def resolve(self,mode,model):
+        if model in self.custom.get(mode,{}):
+            checkpoint,expected=self.custom[mode][model]
+            if hashlib.sha256(checkpoint.read_bytes()).hexdigest()!=expected:
+                raise ValueError('Trained checkpoint changed since training; train it again.')
+            return checkpoint,expected
+        return resolve_checkpoint(self.root,mode,model)
 
     def recognise(self,image,settings):
         import torch
         torch.set_num_threads(4)
         settings=dict(settings)
         mode=settings.get('mode','Numbers');model=settings['model']
-        checkpoint,digest=resolve_checkpoint(self.root,mode,model)
+        checkpoint,digest=self.resolve(mode,model)
         if mode=='Alphanumeric':
             from hnrs_chars.predict import CharacterPredictor
             from hnrs_chars.segmentation import recognise_text
@@ -100,9 +119,11 @@ class RecognitionService:
         key=(mode,model,digest)
         if key not in self.predictors:self.predictors[key]=factory(checkpoint)
         settings['mode']=mode;settings['checkpoint_sha256']=digest
-        settings['checkpoint']=checkpoint.relative_to(self.root).as_posix()
+        settings['checkpoint']=(checkpoint.relative_to(self.root).as_posix()
+                                if checkpoint.is_relative_to(self.root) else str(checkpoint))
         if mode=='Alphanumeric':
-            result=recognise_text(image,self.predictors[key],settings['method'])
+            settings['line_case']=bool(settings.get('line_case',False))
+            result=recognise_text(image,self.predictors[key],settings['method'],settings['line_case'])
         else:
             from segment_digits import recognise_number
             result=recognise_number(image,self.predictors[key],settings['method'],settings['representation'])

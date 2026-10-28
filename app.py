@@ -41,7 +41,7 @@ def tk_image(image,master):
 class HNRSApp:
     def __init__(self,root):
         self.root=root; self.image=None; self.origin=None; self.result=None
-        self.settings=None; self.service=RecognitionService(ROOT); self.busy=False; self.closed=False
+        self.settings=None; self.service=RecognitionService(ROOT); self.busy=False; self.closed=False; self.lab=None
         self.messages=queue.Queue(); self.photos=[]; self.job_thread=None
         root.title('HNRS | Handwriting Studio'); self.work_area=fit_window(root)
         root.configure(bg='#f3f6fb')
@@ -66,6 +66,10 @@ class HNRSApp:
         style.configure('TNotebook.Tab',padding=(12,8),background='#f1f5f9',foreground='#64748b')
         style.map('TNotebook.Tab',background=[('selected','#eaf1ff')],foreground=[('selected','#1d4ed8')])
         style.configure('Horizontal.TScrollbar',background='#dbe3ee',troughcolor='white',borderwidth=0,arrowsize=12)
+        style.configure('TCheckbutton',background='white',foreground='#192b46')
+        style.configure('TRadiobutton',background='white',foreground='#192b46')
+        style.map('TCheckbutton',background=[('active','white')]);style.map('TRadiobutton',background=[('active','white')])
+        style.configure('Horizontal.TProgressbar',background='#2563eb',troughcolor='#e2e8f0',borderwidth=0)
         self.mode=tk.StringVar(value='Numbers')
         self.model=tk.StringVar(value='cnn'); self.method=tk.StringVar(value='components'); self.representation=tk.StringVar(value='otsu')
         self.source_hint=tk.StringVar(value='Use one line of dark digits on pale paper.')
@@ -131,9 +135,14 @@ class HNRSApp:
             ttk.Label(options,text=label,style='Caption.TLabel').pack(anchor='w',pady=(0,4))
             combo=ttk.Combobox(options,textvariable=variable,values=values,state='readonly',width=20)
             combo.pack(fill='x',pady=(0,4));combo.bind('<<ComboboxSelected>>',self.mode_changed if variable is self.mode else self.settings_changed);self.combos.append(combo)
+        # Line-context letter case (hnrs_chars/case_rule.py): photos in Alphanumeric mode only.
+        self.line_case=tk.BooleanVar(value=True)
+        self.case_check=ttk.Checkbutton(options,text='Letter case from line context',variable=self.line_case,command=self.settings_changed)
+        self.case_check.pack(anchor='w',pady=(2,2))
         self.recognise_button=ttk.Button(sidebar,text='Recognise number',style='Accent.TButton',command=self.recognise)
         self.recognise_button.grid(row=5,column=0,sticky='ew',pady=(4,4))
         self.export_button=ttk.Button(sidebar,text='Export result...',command=self.export_dialog);self.export_button.grid(row=6,column=0,sticky='ew')
+        self.lab_button=ttk.Button(sidebar,text='Model lab: train & compare...',command=self.open_lab);self.lab_button.grid(row=7,column=0,sticky='ew',pady=(4,0))
 
         workspace=ttk.Frame(body);workspace.grid(row=0,column=1,sticky='nsew')
         workspace.columnconfigure(0,weight=1);workspace.rowconfigure(1,weight=1)
@@ -195,6 +204,8 @@ class HNRSApp:
         for widget in self.controls: widget.configure(state='disabled' if self.busy else 'normal')
         for combo in self.combos: combo.configure(state='disabled' if self.busy else 'readonly')
         if self.mode.get()=='Alphanumeric': self.combos[3].configure(state='disabled')
+        # Generated images resize every tile to one height, so line geometry carries no case information.
+        self.case_check.configure(state='normal' if self.case_rule_usable() and not self.busy else 'disabled')
         self.recognise_button.configure(state='normal' if self.image is not None and not self.busy else 'disabled')
         self.export_button.configure(state='normal' if self.result is not None and not self.busy else 'disabled')
 
@@ -206,8 +217,27 @@ class HNRSApp:
     def settings_changed(self,event=None):
         self.clear_result(); self.status.set('Settings changed. Run recognition again.')
 
+    def case_rule_usable(self):
+        return self.mode.get()=='Alphanumeric' and not (self.origin and self.origin.get('route')=='generated')
+
+    def open_lab(self):
+        if self.lab is not None:
+            self.lab.window.deiconify();self.lab.window.lift();return
+        from gui_lab import ModelLab
+        self.lab=ModelLab(self)
+
+    def use_custom_model(self,mode,name):
+        """Select a Model-lab checkpoint, switching mode if needed."""
+        if self.busy:return
+        if self.mode.get()!=mode:
+            self.mode.set(mode);self.mode_changed()
+        self.combos[1].configure(values=self.service.models_for(mode))
+        self.model.set(name);self.settings_changed()
+        self.status.set(f'Using Model-lab checkpoint {name}. Shipped models remain selectable.')
+
     def mode_changed(self,event=None):
         characters=self.mode.get()=='Alphanumeric'
+        self.combos[1].configure(values=self.service.models_for(self.mode.get()))
         self.model.set(DEFAULT_MODELS[self.mode.get()])
         self.method.set('grouped_components' if characters else 'components')
         self.combos[2].configure(values=['grouped_components','projection'] if characters else ['components','projection'])
@@ -256,7 +286,8 @@ class HNRSApp:
 
     def recognise(self):
         if self.image is None or self.busy:return
-        image=self.image.copy(); settings={'mode':self.mode.get(),'model':self.model.get(),'method':self.method.get(),'representation':self.representation.get()}
+        image=self.image.copy(); settings={'mode':self.mode.get(),'model':self.model.get(),'method':self.method.get(),'representation':self.representation.get(),
+                                           'line_case':self.line_case.get() and self.case_rule_usable()}
         self.clear_result()
         def work():
             return self.service.recognise(image,settings)
@@ -279,7 +310,12 @@ class HNRSApp:
                 self.result,self.settings=value; prediction=self.result['prediction'];seg=self.result['segmentation']
                 noun='character' if self.settings['mode']=='Alphanumeric' else 'digit'
                 self.prediction.set(prediction['text'] if prediction['text'] else f'No {noun}s detected')
-                self.details.set(f"{len(seg.boxes)} {noun}(s) | {self.settings['model'].upper()} | {self.settings['method']} | {self.settings['representation']}")
+                details=f"{len(seg.boxes)} {noun}(s) | {self.settings['model'].upper()} | {self.settings['method']} | {self.settings['representation']}"
+                case=prediction.get('case_rule')
+                if case:
+                    details+=(f" | line case: {len(case['changes'])} changed (classifier read {prediction['model_text']})" if case['applied']
+                              else ' | line case: no reference character, classifier case kept')
+                self.details.set(details)
                 self.status.set('; '.join(seg.warnings) if seg.warnings else 'Recognition finished. Inspect the crops and compare the result with the handwriting.')
                 self.redraw();self.draw_digits()
             self.refresh_controls()
@@ -309,6 +345,7 @@ class HNRSApp:
             self.digits_canvas.create_rectangle(x,0,x+118,106,fill='#f3f6fb',outline='')
             self.digits_canvas.create_image(x+27,8,image=photo,anchor='nw')
             symbol=item.get('character',item.get('digit'))
+            if 'model_character' in item:symbol=f"{symbol}←{item['model_character']}"  # final←classifier
             self.digits_canvas.create_text(x+59,87,anchor='center',text=f"{symbol}   ·   {item['confidence']:.1%}",fill='#334155',font=('Segoe UI',10,'bold'))
         self.digits_canvas.configure(scrollregion=(0,0,max(1,len(self.digit_photos))*128,110))
 

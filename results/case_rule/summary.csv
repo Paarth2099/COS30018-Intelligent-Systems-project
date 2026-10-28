@@ -1,0 +1,17 @@
+split,collection,model,count,correct_before,correct_after,cer_before,cer_after,gained,lost
+development,characters,mlp,80,41,41,0.525,0.525,0,0
+development,strings,mlp,40,3,3,0.46875,0.39375,0,0
+final,characters,mlp,40,27,27,0.325,0.325,0,0
+final,strings,mlp,20,2,3,0.425,0.3875,1,0
+development,characters,cnn,80,50,50,0.4,0.4,0,0
+development,strings,cnn,40,8,16,0.33125,0.2,8,0
+final,characters,cnn,40,27,27,0.325,0.325,0,0
+final,strings,cnn,20,6,7,0.25,0.2125,3,2
+development,characters,resnet18,80,52,52,0.375,0.375,0,0
+development,strings,resnet18,40,12,21,0.26875,0.15625,9,0
+final,characters,resnet18,40,29,29,0.275,0.275,0,0
+final,strings,resnet18,20,4,6,0.275,0.25,3,1
+development,characters,mobilenet_v3_small,80,42,42,0.5,0.5,0,0
+development,strings,mobilenet_v3_small,40,4,6,0.4875,0.36875,2,0
+final,characters,mobilenet_v3_small,40,27,27,0.325,0.325,0,0
+final,strings,mobilenet_v3_small,20,6,9,0.3125,0.3125,3,0

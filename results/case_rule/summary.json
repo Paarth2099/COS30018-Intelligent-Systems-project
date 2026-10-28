@@ -1,0 +1,281 @@
+{
+  "created_utc": "2026-10-28T04:11:40.538958+00:00",
+  "protocol": "Fit and evaluate the line-geometry letter-case rule (hnrs_chars/case_rule.py).\n\nProtocol:\n1. Segment and classify the 40 development string photos once per model.\n2. Fit the threshold on development strings only: the midpoint of the\n   separating gap between capital/zero scores and lowercase scores (or the\n   lowest-error midpoint if the classes overlap).\n3. Leave-one-writer-out: fit on three development writers, apply to the\n   fourth, so every reported development change comes from a threshold that\n   did not see that writer.\n4. Adoption gate (the project's existing rule): no fall in exact matches and\n   no rise in CER on either development collection, and at least one strict\n   improvement.\n5. Apply the all-writer threshold to the 120-photo final collection. That set\n   was analysed before this study, so its numbers are post-hoc diagnostics,\n   not untouched test evidence.",
+  "selected_model": "resnet18",
+  "fitted_threshold": 0.3162352493338409,
+  "module_threshold": 0.32,
+  "training_points": 35,
+  "training_errors": 0,
+  "lowercase_scores": {
+    "count": 21,
+    "minimum": 0.3648648648648648,
+    "maximum": 1.0309523809523808
+  },
+  "uppercase_or_zero_scores": {
+    "count": 14,
+    "minimum": -0.45270270270270263,
+    "maximum": 0.267605633802817
+  },
+  "leave_one_writer_out": {
+    "folds": [
+      {
+        "writer": "Haresh",
+        "threshold": 0.24099099099099097,
+        "count": 10,
+        "correct_before": 6,
+        "correct_after": 7,
+        "cer_before": 0.175,
+        "cer_after": 0.1,
+        "gained": 2,
+        "lost": 1
+      },
+      {
+        "writer": "Manula",
+        "threshold": 0.3162352493338409,
+        "count": 10,
+        "correct_before": 2,
+        "correct_after": 4,
+        "cer_before": 0.3,
+        "cer_after": 0.2,
+        "gained": 2,
+        "lost": 0
+      },
+      {
+        "writer": "Paarth",
+        "threshold": 0.3314772355060597,
+        "count": 10,
+        "correct_before": 2,
+        "correct_after": 5,
+        "cer_before": 0.3,
+        "cer_after": 0.175,
+        "gained": 3,
+        "lost": 0
+      },
+      {
+        "writer": "Saniru",
+        "threshold": 0.3162352493338409,
+        "count": 10,
+        "correct_before": 2,
+        "correct_after": 4,
+        "cer_before": 0.3,
+        "cer_after": 0.175,
+        "gained": 2,
+        "lost": 0
+      }
+    ],
+    "combined": {
+      "count": 40,
+      "correct_before": 12,
+      "correct_after": 20,
+      "cer_before": 0.26875,
+      "cer_after": 0.1625,
+      "gained": 9,
+      "lost": 1
+    }
+  },
+  "adoption_gate": {
+    "checks": {
+      "characters_exact_no_regression": true,
+      "characters_cer_no_regression": true,
+      "strings_exact_no_regression": true,
+      "strings_cer_no_regression": true,
+      "strict_improvement": true
+    },
+    "passed": true
+  },
+  "summary": [
+    {
+      "split": "development",
+      "collection": "characters",
+      "model": "mlp",
+      "count": 80,
+      "correct_before": 41,
+      "correct_after": 41,
+      "cer_before": 0.525,
+      "cer_after": 0.525,
+      "gained": 0,
+      "lost": 0
+    },
+    {
+      "split": "development",
+      "collection": "strings",
+      "model": "mlp",
+      "count": 40,
+      "correct_before": 3,
+      "correct_after": 3,
+      "cer_before": 0.46875,
+      "cer_after": 0.39375,
+      "gained": 0,
+      "lost": 0
+    },
+    {
+      "split": "final",
+      "collection": "characters",
+      "model": "mlp",
+      "count": 40,
+      "correct_before": 27,
+      "correct_after": 27,
+      "cer_before": 0.325,
+      "cer_after": 0.325,
+      "gained": 0,
+      "lost": 0
+    },
+    {
+      "split": "final",
+      "collection": "strings",
+      "model": "mlp",
+      "count": 20,
+      "correct_before": 2,
+      "correct_after": 3,
+      "cer_before": 0.425,
+      "cer_after": 0.3875,
+      "gained": 1,
+      "lost": 0
+    },
+    {
+      "split": "development",
+      "collection": "characters",
+      "model": "cnn",
+      "count": 80,
+      "correct_before": 50,
+      "correct_after": 50,
+      "cer_before": 0.4,
+      "cer_after": 0.4,
+      "gained": 0,
+      "lost": 0
+    },
+    {
+      "split": "development",
+      "collection": "strings",
+      "model": "cnn",
+      "count": 40,
+      "correct_before": 8,
+      "correct_after": 16,
+      "cer_before": 0.33125,
+      "cer_after": 0.2,
+      "gained": 8,
+      "lost": 0
+    },
+    {
+      "split": "final",
+      "collection": "characters",
+      "model": "cnn",
+      "count": 40,
+      "correct_before": 27,
+      "correct_after": 27,
+      "cer_before": 0.325,
+      "cer_after": 0.325,
+      "gained": 0,
+      "lost": 0
+    },
+    {
+      "split": "final",
+      "collection": "strings",
+      "model": "cnn",
+      "count": 20,
+      "correct_before": 6,
+      "correct_after": 7,
+      "cer_before": 0.25,
+      "cer_after": 0.2125,
+      "gained": 3,
+      "lost": 2
+    },
+    {
+      "split": "development",
+      "collection": "characters",
+      "model": "resnet18",
+      "count": 80,
+      "correct_before": 52,
+      "correct_after": 52,
+      "cer_before": 0.375,
+      "cer_after": 0.375,
+      "gained": 0,
+      "lost": 0
+    },
+    {
+      "split": "development",
+      "collection": "strings",
+      "model": "resnet18",
+      "count": 40,
+      "correct_before": 12,
+      "correct_after": 21,
+      "cer_before": 0.26875,
+      "cer_after": 0.15625,
+      "gained": 9,
+      "lost": 0
+    },
+    {
+      "split": "final",
+      "collection": "characters",
+      "model": "resnet18",
+      "count": 40,
+      "correct_before": 29,
+      "correct_after": 29,
+      "cer_before": 0.275,
+      "cer_after": 0.275,
+      "gained": 0,
+      "lost": 0
+    },
+    {
+      "split": "final",
+      "collection": "strings",
+      "model": "resnet18",
+      "count": 20,
+      "correct_before": 4,
+      "correct_after": 6,
+      "cer_before": 0.275,
+      "cer_after": 0.25,
+      "gained": 3,
+      "lost": 1
+    },
+    {
+      "split": "development",
+      "collection": "characters",
+      "model": "mobilenet_v3_small",
+      "count": 80,
+      "correct_before": 42,
+      "correct_after": 42,
+      "cer_before": 0.5,
+      "cer_after": 0.5,
+      "gained": 0,
+      "lost": 0
+    },
+    {
+      "split": "development",
+      "collection": "strings",
+      "model": "mobilenet_v3_small",
+      "count": 40,
+      "correct_before": 4,
+      "correct_after": 6,
+      "cer_before": 0.4875,
+      "cer_after": 0.36875,
+      "gained": 2,
+      "lost": 0
+    },
+    {
+      "split": "final",
+      "collection": "characters",
+      "model": "mobilenet_v3_small",
+      "count": 40,
+      "correct_before": 27,
+      "correct_after": 27,
+      "cer_before": 0.325,
+      "cer_after": 0.325,
+      "gained": 0,
+      "lost": 0
+    },
+    {
+      "split": "final",
+      "collection": "strings",
+      "model": "mobilenet_v3_small",
+      "count": 20,
+      "correct_before": 6,
+      "correct_after": 9,
+      "cer_before": 0.3125,
+      "cer_after": 0.3125,
+      "gained": 3,
+      "lost": 0
+    }
+  ],
+  "final_note": "Final-collection rows are post-hoc: that collection was analysed before this rule existed."
+}

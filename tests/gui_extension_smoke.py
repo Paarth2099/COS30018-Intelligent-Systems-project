@@ -98,6 +98,12 @@ def recognise():
                                  'count':len(app.result['segmentation'].boxes)})
 
 
+def classifier_text():
+    """Classifier output before the optional line-case rule (historical regression reference)."""
+    prediction=app.result['prediction']
+    return prediction.get('model_text',prediction['text'])
+
+
 def export():
     before=set(out.glob('gui_*'))
     with patch('app.filedialog.askdirectory',return_value=str(out)):app.export_button.invoke()
@@ -119,7 +125,13 @@ try:
         photo=ROOT/'data/own_strings/development/Manula/Manula_02_text-Room7.jpg'
         load(photo);recognise()
         regression=json.loads((ROOT/'tests/fixtures/gui_regression.json').read_text())
-        assert app.result['prediction']['text']==regression['character_cnn_prediction']
+        assert classifier_text()==regression['character_cnn_prediction']
+        # Line context: R and 7 give the cap height, so the short 0, 0 and M become o, o and m.
+        assert app.line_case.get() and app.prediction.get()=='Room7'
+        assert len(app.result['prediction']['case_rule']['changes'])==3
+        app.line_case.set(False);app.settings_changed();recognise()
+        assert app.prediction.get()=='R00M7' and 'case_rule' not in app.result['prediction']
+        app.line_case.set(True);app.settings_changed();recognise()
         assert len(app.digit_photos)==5
         screenshot('alphanumeric_photo.png');destination,record=export()
         assert (destination/'detected_characters.png').is_file()
@@ -194,9 +206,11 @@ try:
         assert errors.pop() and app.result is None and str(app.export_button['state'])=='disabled'
         app.service=real_service
         app.mode.set('Alphanumeric');app.mode_changed();app.model.set('cnn');app.settings_changed()
-        for filename,text,count in [('Haresh_03_text-Hello.jpg','Hell0',5),('Haresh_06_text-Bill.jpg','Bill',4)]:
+        # The CNN reads Hell0; line context turns the short final 0 into o.
+        for filename,text,count in [('Haresh_03_text-Hello.jpg','Hello',5),('Haresh_06_text-Bill.jpg','Bill',4)]:
             load(ROOT/'data/own_strings/development/Haresh'/filename);recognise()
             assert app.prediction.get()==text and len(app.result['segmentation'].boxes)==count
+            assert classifier_text()==('Hell0' if text=='Hello' else text)
             _,record=export();assert record['prediction']['text']==text
             app.viewport.yview_moveto(0);screenshot(filename.replace('.jpg','.png'))
         assert len(app.service.predictors)==4
@@ -213,7 +227,7 @@ try:
             for name in MODEL_NAMES:
                 app.model.set(name);app.settings_changed()
                 assert app.result is None and str(app.export_button['state'])=='disabled'
-                recognise();assert app.result['prediction']['text']==expected[name]
+                recognise();assert classifier_text()==expected[name]
                 _,record=export()
                 assert record['settings']['model']==name
                 checkpoint=ROOT/record['settings']['checkpoint']
@@ -226,6 +240,8 @@ try:
         app.mode.set('Alphanumeric');app.mode_changed()
         app.routes.select(1);app.number.set('00Ai');app.generate_button.invoke();wait();recognise()
         assert app.model.get()=='resnet18' and len(app.digit_photos)==4
+        # Generated tiles share one height, so the line-case rule is disabled for them.
+        assert str(app.case_check['state'])=='disabled' and 'case_rule' not in app.result['prediction']
         _,record=export();assert record['input']['requested_text']=='00Ai'
         assert record['prediction']['text']==app.result['prediction']['text']
         app.viewport.yview_moveto(0);screenshot('week11_resnet_generated.png')
@@ -257,7 +273,8 @@ try:
                           'Week 10 digit 240 and repaired Hello/Bill displayed and exported',
                           'All four architectures in both modes reproduce Week 11 saved photo predictions',
                           'Default models reset by mode; new-model exports include correct checkpoint hashes',
-                          'ResNet generated characters; missing/corrupt new checkpoint errors and recovery']
+                          'ResNet generated characters; missing/corrupt new checkpoint errors and recovery',
+                          'Line-case rule on/off for photos (Room7, Hello); disabled for generated images']
         report['status']='PASS'
         import platform,torch,numpy,PIL
         report['environment']={'python':platform.python_version(),'platform':platform.platform(),

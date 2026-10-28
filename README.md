@@ -22,7 +22,8 @@ The ZIP includes [280 handwriting photos](data/README.md). For generation, selec
 - Segment characters in reading order, inspect prepared crops and export results.
 - Both modes offer MLP, CNN, ResNet-18 and MobileNetV3-Small.
 - Selected defaults: CNN for numbers; ResNet-18 for alphanumeric text.
-- Preserve letter case and leading zeros.
+- Preserve letter case and leading zeros; optionally choose letter case from line context (on by default for photos).
+- **Model lab:** train any architecture on MNIST/EMNIST with chosen epochs, learning rate, batch size, optimizer, sample counts and seed; watch live accuracy/loss curves and the validation confusion matrix; then use the trained model in the recogniser. Compare all recorded models and inspect each shipped model's training curves and test confusion matrix.
 
 Inputs should contain one line of separately written dark characters on pale paper. Joined cursive, punctuation and multiline documents are outside the approved scope. Ambiguous letters and mixed strings remain difficult.
 
@@ -37,13 +38,19 @@ The frozen system was evaluated on 120 newly written photographs from four group
 | Individual letters/digits | 29/40 | Classification accuracy |
 | Mixed strings | 4/20 | Exact case-sensitive string accuracy |
 
-See [machine-readable results](results/README.md) and [full research reports](docs/README.md). Later augmentation candidates did not pass their adoption criteria; the selected application checkpoints were retained. The final set has since been analysed and must not be treated as untouched evidence for further changes.
+See [machine-readable results](results/README.md) and [full research reports](docs/README.md).
+
+### Post-evaluation studies
+
+- [Classical baselines](docs/reports/classical-baselines.md): kNN, linear and RBF SVMs on HOG features, and a random forest, against the networks. HOG + RBF-SVM reaches 99.11% on the MNIST test set, the highest of all models. It fails the development no-regression gate on numbers, so the CNN remains the default. Raw-pixel classical models collapse on photographs; HOG features do not.
+- [Letter case from line context](docs/reports/case-rule-study.md): a geometry rule fitted on development strings only. Leave-one-writer-out, development strings improve from 12/40 to 20/40 exact (CER 26.9% to 16.3%). On the already-analysed final strings (post-hoc), they improve from 4/20 to 6/20. Later augmentation candidates did not pass their adoption criteria; the selected application checkpoints were retained. The final set has since been analysed and must not be treated as untouched evidence for further changes.
 
 ## Project structure
 
 | Path | Purpose |
 |---|---|
 | `app.py`, `gui_core.py` | Desktop interface and application services |
+| `gui_lab.py`, `gui_training.py`, `gui_charts.py` | Model lab: training, live charts, model comparison |
 | `preprocess_digits.py`, `segment_digits.py` | Digit preparation and segmentation |
 | `hnrs_ml/`, `hnrs_chars/` | Models and recognition pipelines |
 | `research/` | Experiment, evaluation and reporting commands |
@@ -64,7 +71,7 @@ The complete original experiment tree, crops, source snapshots and photos are pr
 .\.venv\Scripts\python.exe -m research.train_models_week11 --help
 ```
 
-The project check runs the unit suite and verifies all eight checkpoint paths. The real GUI smoke test (`.\run_gui.ps1 -Verify`) uses the included development photos and additionally needs an interactive Windows desktop. See [research commands](research/README.md) before reproducing experiments.
+The project check runs the unit suite and verifies all eight checkpoint paths. Classical-baseline tests need the research extras (`pip install -r requirements-research.txt`) and are otherwise skipped. `tests/gui_lab_smoke.py` exercises the Model lab in a real window. The real GUI smoke test (`.\run_gui.ps1 -Verify`) uses the included development photos and additionally needs an interactive Windows desktop. See [research commands](research/README.md) before reproducing experiments.
 
 ## Submission status
 

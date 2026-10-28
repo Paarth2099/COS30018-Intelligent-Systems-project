@@ -1,0 +1,6 @@
+family,description,features,params,validation_accuracy,test_correct,test_count,test_accuracy,macro_f1,fit_seconds,ms_per_digit,model_bytes
+knn_pixels,"k-nearest neighbours, raw pixels, distance-weighted votes",pixels,"{""n_neighbors"": 3}",0.9701666666666666,9705,10000,0.9705,0.9703332633467865,0.1,0.5936528000049293,169776715
+knn_hog,"k-nearest neighbours, HOG features, distance-weighted votes",hog,"{""n_neighbors"": 3}",0.9766666666666667,9784,10000,0.9784,0.9782360089876206,0.18,1.0981398699921556,280368715
+linear_svm_hog,"Linear support vector machine (one-vs-rest), HOG features",hog,"{""C"": 1.0}",0.9826666666666667,9836,10000,0.9836,0.9835205241098655,21.62,0.10082361000822856,104397
+rbf_svm_hog,"RBF-kernel support vector machine (one-vs-one), HOG features",hog,"{""C"": 10.0}",0.9913333333333333,9911,10000,0.9911,0.9911142648683656,157.76,7.348582550010178,88786681
+random_forest_pixels,"Random forest of 200 trees, raw pixels",pixels,"{""n_estimators"": 200}",0.9688333333333333,9692,10000,0.9692,0.9689608735531493,12.13,0.01962439001072198,265180399

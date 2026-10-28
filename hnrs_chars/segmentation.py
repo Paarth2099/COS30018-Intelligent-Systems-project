@@ -183,8 +183,16 @@ def prepare_character_crops(crops):
     return np.stack([prepare_character(crop) for crop in crops]) if crops else np.empty((0,28,28),np.float32)
 
 
-def recognise_text(image,predictor,method=DEFAULT_METHOD):
-    """Integration API: caller loads a character predictor once; no true label."""
+def recognise_text(image,predictor,method=DEFAULT_METHOD,line_case=False):
+    """Integration API: caller loads a character predictor once; no true label.
+
+    line_case=True applies the line-geometry letter-case rule (case_rule.py)
+    and keeps the classifier's own text as prediction['model_text'].
+    """
     segmented=segment_characters(image,method)
     prepared=prepare_character_crops(segmented.crops)
-    return {'segmentation':segmented,'prepared':prepared,'prediction':predictor.predict_text(prepared)}
+    prediction=predictor.predict_text(prepared)
+    if line_case:
+        from .case_rule import adjust_prediction
+        adjust_prediction(prediction,segmented.boxes)
+    return {'segmentation':segmented,'prepared':prepared,'prediction':prediction}

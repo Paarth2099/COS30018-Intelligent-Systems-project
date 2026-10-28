@@ -56,7 +56,7 @@ No changes were made to the GUI model resolver, production checkpoint paths, pre
 
 **No extra collection is needed solely to evaluate a replacement that we are not adopting.** The original 120-photo evaluation remains usable for the original frozen system, with its known-writer and framing limitations. A new outside-writer sample could strengthen generalisation evidence, but is optional additional research, not something already completed or a guaranteed marking requirement.
 
-The earlier 180-photo draft has been superseded. The latest discussed alternative was 15 new photos from Paarth plus 15 from one outside writer, but the user agreed to wait for GPU results. That collection remains ON HOLD, uncollected. Do not collect 180 images from the old guide. If a later change is adopted, agree and lock a new evaluation plan before predictions.
+The earlier 180-photo draft has been superseded. The latest discussed alternative was 15 new photos from Paarth plus 15 from one outside writer, but the team agreed to wait for GPU results. That collection remains ON HOLD, uncollected. Do not collect 180 images from the old guide. If a later change is adopted, agree and lock a new evaluation plan before predictions.
 
 ## Evidence and next work
 
