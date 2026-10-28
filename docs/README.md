@@ -4,7 +4,7 @@ Start with the [current project overview](../README.md), [selected results](../r
 
 The reports below document successive studies; earlier defaults and pending tasks describe the state at the time of each study. The current README and final-evaluation summaries describe the selected system.
 
-# Project documentation
+## Guides and recorded studies
 
 Commands and plain source paths are relative to the repository root unless stated otherwise.
 
@@ -20,8 +20,8 @@ Commands and plain source paths are relative to the repository root unless state
 | [Character preprocessing](guides/character-preprocessing.md) | Methods, diagnostics and comparison commands |
 | [String segmentation](guides/string-segmentation.md) | Grouping, ordered crops and recognition API |
 
-- [Final evaluation protocol](guides/final-evaluation-week11.md) — planned procedure, candidate configuration and scoring gates.
-- [Final photo assignments](guides/final-photo-assignments.md) — exact 30-photo collection for each member.
+- [Final evaluation protocol](guides/final-evaluation-week11.md) â€” planned procedure, candidate configuration and scoring gates.
+- [Final photo assignments](guides/final-photo-assignments.md) â€” exact 30-photo collection for each member.
 
 ## Experiment reports
 
@@ -43,13 +43,13 @@ Commands and plain source paths are relative to the repository root unless state
 | [Week 11 four-model comparison](reports/model-comparison-week11.md) | Imported GPU training, four-architecture benchmark/photo evaluation and model recommendations |
 | [Week 11 GUI integration](reports/gui-integration-week11.md) | Four-model selector, evaluated defaults, checkpoint integrity and desktop verification |
 
-- [Week 11 final collection review](reports/final-collection-review-week11.md) — 120-photo integrity and visual review, with pending label/provenance confirmations.
+- [Week 11 final collection review](reports/final-collection-review-week11.md) â€” 120-photo integrity and visual review, with pending label/provenance confirmations.
 
-- [Week 11 final fresh-photo evaluation](reports/final-evaluation-week11.md) — frozen 120-photo run, four-model comparison, timing and independently verified metrics.
+- [Week 11 final fresh-photo evaluation](reports/final-evaluation-week11.md) â€” frozen 120-photo run, four-model comparison, timing and independently verified metrics.
 
-- [Week 11 final preprocessing review](reports/preprocessing-final-review-week11.md) — all 120 selected-route inputs, visible damage cases and limits of attribution.
+- [Week 11 final preprocessing review](reports/preprocessing-final-review-week11.md) â€” all 120 selected-route inputs, visible damage cases and limits of attribution.
 
-- [Week 11 final segmentation review](reports/segmentation-final-review-week11.md) — all 40 multi-character inputs, 80 method outputs and visual split/merge/dot review.
+- [Week 11 final segmentation review](reports/segmentation-final-review-week11.md) â€” all 40 multi-character inputs, 80 method outputs and visual split/merge/dot review.
 
 ## Data notes
 
@@ -68,3 +68,5 @@ Metrics, snapshots, previews and checkpoints remain under `evidence/` and `exper
 - [Letter case from line context](reports/case-rule-study.md) - geometry rule, development fit, leave-one-writer-out evaluation and post-hoc final effect.
 - [GUI Model lab](guides/gui.md#model-lab-train-compare-and-inspect-models) - training with chosen hyperparameters, live curves, comparison and confusion views.
 - [Full GPU augmentation results and selection decision](reports/gpu-augmentation-results-week11.md) - all eight runs verified; production retained; follow-up photography on hold.
+
+- [28 October verification and requirements review](../results/system-check-2026-10-28/README.md) — current cleanup checks, rubric coverage and remaining submission tasks.

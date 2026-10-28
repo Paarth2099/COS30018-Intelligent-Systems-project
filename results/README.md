@@ -13,6 +13,6 @@ These files are compact copies of recorded outputs, not new experiment runs.
 | `gui/` | Recorded local desktop verification |
 | `datasets/` | Exact EMNIST split used by the experiments |
 
-[The archive guide](../docs/guides/research-archive.md) explains how to obtain every prediction, crop, source snapshot and checkpoint behind these summaries. Paths inside copied JSON records refer to their original experiment layout; they are provenance, not links into this compact repository.
+[The archive guide](../docs/guides/research-archive.md) describes the 26 October snapshot and its scope; the later classical/case-rule results are published here separately. Paths inside copied JSON records refer to their original experiment layout; they are provenance, not links into this compact repository.
 
-`verification-checks.txt` records the current project test run. A skipped CUDA check is not a GPU verification. Local GUI verification does not establish another computer's acceptance result.
+`verification-checks.txt` and `system-check-2026-10-26/` are historical checks before the Model lab and case-rule additions. The latest cleanup verification is in `system-check-2026-10-28/`. A skipped CUDA check is not a GPU verification. Local GUI verification does not establish another computer's acceptance result.

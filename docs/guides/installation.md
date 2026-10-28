@@ -57,7 +57,7 @@ Manifests under `evidence/` record source labels and hashes. Existing developmen
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
-GUI verification opens a real window and creates a new folder under `evidence/gui_extension/`. Preprocessing and segmentation demos also preserve earlier outputs by using new folders.
+GUI verification opens a real window and creates a new folder under `evidence/gui_week11/`. Preprocessing and segmentation demos also preserve earlier outputs by using new folders.
 
 ## Rebuilding reports
 
@@ -68,3 +68,24 @@ GUI verification opens a real window and creates a new folder under `evidence/gu
 ```
 
 These commands use saved results without retraining and write to `docs/reports/`. The photo and string builders summarise the four recorded development runs. New experiments require new output folders and their own analysis.
+
+## Model lab, optional research dependencies and checks
+
+Recognition and viewing saved comparisons need only `requirements.txt`. New Model-lab training additionally needs MNIST or EMNIST locally; use the lab's **Download dataset if missing** option when online. Training runs are saved under `experiments/gui_runs/` and are excluded from Git. The model-lab smoke test requires MNIST already downloaded.
+
+```powershell
+.\.venv\Scripts\python.exe scripts/check_project.py
+.\.venv\Scripts\python.exe tests/gui_lab_smoke.py
+```
+
+To reproduce the classical comparison or enable its tests:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements-research.txt
+```
+
+Research reproduction also requires its documented input data/evidence; a fresh GitHub ZIP includes photographs and application models but not all archived research outputs. To format application code, install `requirements-dev.txt`, then run:
+
+```powershell
+.\.venv\Scripts\python.exe -m black app.py gui_core.py gui_lab.py gui_training.py gui_charts.py preprocess_digits.py segment_digits.py hnrs_ml hnrs_chars research/week10_weighted.py research/week10_evaluate.py research/week10_report.py
+```

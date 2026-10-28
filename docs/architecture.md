@@ -9,6 +9,7 @@ Loaded photo OR generated handwriting image
   -> individual crops in reading order
   -> 28x28 preparation
   -> selected MLP / baseline CNN / ResNet-18 / MobileNetV3-Small
+  -> optional line-context letter-case adjustment (alphanumeric photos)
   -> prediction string, crop previews and evidence export
 ```
 
@@ -48,3 +49,13 @@ Validation data selects checkpoints before official test evaluation. Inspected r
 ## Recorded evaluation and repository organisation
 
 The frozen 120-photo evaluation is complete; see [selected results](../results/README.md). The final report and presentation remain separate deliverables. Research commands live in `research/`, wrappers in `scripts/`, and detailed immutable evidence is in the [archive](guides/research-archive.md).
+
+## Model lab and additional studies
+
+`gui_lab.py` owns the training, comparison and curves windows; `gui_charts.py` draws their charts using Tk. `gui_training.py` validates settings, loads the fixed training/validation split, runs training outside the UI thread and saves the best completed epoch. Training does not use the official test partition. Local runs go under `experiments/gui_runs/`. The recognition service registers these checkpoints separately and verifies their hashes before use; shipped checkpoints are preserved.
+
+`hnrs_chars/case_rule.py` uses the original segmentation-box geometry to adjust case after classification. It retains the classifier output as `model_text` and records changes in the exported prediction. The GUI enables this by default for loaded alphanumeric photos and disables it for generated tiles. The lower-level API defaults to `line_case=False`, preserving the frozen evaluation route.
+
+The five classical baselines are research comparisons, not extra GUI recognition choices. Their implementation is `hnrs_ml/classical.py`, their driver is `research/compare_classical_models.py`, and saved summaries are in `results/classical_baselines/`. Scikit-learn is optional and needed only for that study and its tests.
+
+The original final evaluation remains 4/20 exact mixed strings. The later line-case rule reached 20/40 in writer-held-out development evaluation and 6/20 on the already-inspected final strings. The latter is post-hoc evidence, not a new independent test. See the [case-rule report](reports/case-rule-study.md).

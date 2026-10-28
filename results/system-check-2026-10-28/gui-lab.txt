@@ -1,0 +1,7 @@
+PASS: Compare tab lists 4 networks and 5 classical baselines on MNIST
+PASS: Curves tab draws history and 62-class confusion for EMNIST ResNet-18
+PASS: Invalid hyperparameters show an error and do not start training
+PASS: MLP trained on 3,000 MNIST images for 2 epochs: validation 85.9%
+PASS: Lab model selected in main window and recognised Manula_07_label-420.jpg as 430
+PASS: ResNet-18 reads R00M7; line-case rule outputs Room7
+Evidence: C:\Users\paart\OneDrive\Desktop\University\Intelligent system\project-github\evidence\gui\lab_smoke_20261028_163741_641173

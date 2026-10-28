@@ -1,0 +1,2 @@
+# Optional formatting tools, not required to run the application.
+black==25.1.0

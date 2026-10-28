@@ -1,4 +1,5 @@
 """Prediction for prepared digit crops; no image segmentation is performed here."""
+
 import argparse
 import json
 from pathlib import Path
@@ -24,7 +25,9 @@ class DigitPredictor:
     def prepare_batch(crops):
         batch = torch.as_tensor(crops)
         if not batch.is_floating_point():
-            raise ValueError("Pass float crops in [0,1]; divide raw 0..255 pixels by 255 first")
+            raise ValueError(
+                "Pass float crops in [0,1]; divide raw 0..255 pixels by 255 first"
+            )
         if batch.ndim == 3:
             batch = batch.unsqueeze(1)
         if batch.ndim != 4 or tuple(batch.shape[1:]) != (1, 28, 28):
@@ -55,12 +58,17 @@ class DigitPredictor:
     def predict_number(self, ordered_crops):
         """Return text so a leading zero in '007' is preserved."""
         predictions = self.predict_digits(ordered_crops)
-        return {"text": "".join(str(item["digit"]) for item in predictions),
-                "digits": predictions, "model": self.model_name}
+        return {
+            "text": "".join(str(item["digit"]) for item in predictions),
+            "digits": predictions,
+            "model": self.model_name,
+        }
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Recognise already prepared 28x28 digit files in supplied order")
+    parser = argparse.ArgumentParser(
+        description="Recognise already prepared 28x28 digit files in supplied order"
+    )
     parser.add_argument("--checkpoint", type=Path, required=True)
     parser.add_argument("--crops", type=Path, nargs="+", required=True)
     args = parser.parse_args()
@@ -70,7 +78,11 @@ def main():
             if image.size != (28, 28):
                 parser.error(f"{path}: expected an already prepared 28x28 crop")
             crops.append(np.asarray(image.convert("L"), dtype=np.float32) / 255)
-    print(json.dumps(DigitPredictor(args.checkpoint).predict_number(np.stack(crops)), indent=2))
+    print(
+        json.dumps(
+            DigitPredictor(args.checkpoint).predict_number(np.stack(crops)), indent=2
+        )
+    )
 
 
 if __name__ == "__main__":

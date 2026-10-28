@@ -31,5 +31,8 @@
   "verify_improvement_study.py": "python -m research.verify_improvement_study",
   "verify_models_week11.py": "python -m research.verify_models_week11",
   "verify_preprocessing_week10.py": "python -m research.verify_preprocessing_week10",
-  "verify_segmentation_week10.py": "python -m research.verify_segmentation_week10"
+  "verify_segmentation_week10.py": "python -m research.verify_segmentation_week10",
+  "hnrs_chars/week10_weighted.py": "python -m research.week10_weighted",
+  "hnrs_chars/week10_evaluate.py": "python -m research.week10_evaluate",
+  "hnrs_chars/week10_report.py": "python -m research.week10_report"
 }

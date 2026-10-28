@@ -5,6 +5,7 @@ All variants share Otsu-based localisation and contrast stretching, so this
 compares pixel representations after a common crop, not three independent
 localisation algorithms. Shadows can be mistaken for ink: inspect previews.
 """
+
 import argparse
 import csv
 import hashlib
@@ -27,7 +28,9 @@ def otsu_threshold(pixels):
     denominator = weight * (pixels.size - weight)
     score = np.full(256, -1.0)
     valid = denominator > 0
-    score[valid] = (moment[-1] * weight[valid] - moment[valid] * pixels.size) ** 2 / denominator[valid]
+    score[valid] = (
+        moment[-1] * weight[valid] - moment[valid] * pixels.size
+    ) ** 2 / denominator[valid]
     if not valid.any():
         raise ValueError("Uniform image: no foreground/background contrast")
     return int(np.argmax(score))
@@ -100,9 +103,21 @@ def sha256(path):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--input", type=Path, required=True, help="Image or folder; filename must end label-0 through label-9")
-    parser.add_argument("--output", type=Path, required=True, help="New directory: existing runs are never overwritten")
-    parser.add_argument("--checkpoint", type=Path, help="Optional Haresh .pt checkpoint for predictions")
+    parser.add_argument(
+        "--input",
+        type=Path,
+        required=True,
+        help="Image or folder; filename must end label-0 through label-9",
+    )
+    parser.add_argument(
+        "--output",
+        type=Path,
+        required=True,
+        help="New directory: existing runs are never overwritten",
+    )
+    parser.add_argument(
+        "--checkpoint", type=Path, help="Optional Haresh .pt checkpoint for predictions"
+    )
     args = parser.parse_args()
     source = args.input.resolve()
     if not source.exists():
@@ -110,7 +125,14 @@ def main():
     candidates = [source] if source.is_file() else sorted(source.rglob("*"))
     accepted, skipped = [], []
     for path in candidates:
-        if not path.is_file() or path.suffix.lower() not in (".png", ".jpg", ".jpeg", ".bmp", ".tif", ".tiff"):
+        if not path.is_file() or path.suffix.lower() not in (
+            ".png",
+            ".jpg",
+            ".jpeg",
+            ".bmp",
+            ".tif",
+            ".tiff",
+        ):
             continue
         match = re.search(r"label-([0-9]+)$", path.stem)
         if match and len(match.group(1)) == 1:
@@ -118,14 +140,19 @@ def main():
         else:
             skipped.append(str(path))
     if not accepted:
-        parser.error("No labelled single-digit images found; example: Paarth_01_label-0.png")
+        parser.error(
+            "No labelled single-digit images found; example: Paarth_01_label-0.png"
+        )
     predictor = None
     if args.checkpoint:
         from hnrs_ml.predict import DigitPredictor
+
         predictor = DigitPredictor(args.checkpoint)
     output = args.output.resolve()
     if output.exists():
-        parser.error("Output already exists. Choose a new run name to preserve earlier evidence.")
+        parser.error(
+            "Output already exists. Choose a new run name to preserve earlier evidence."
+        )
     output.mkdir(parents=True)
     rows, manifest = [], []
     for index, (path, label) in enumerate(accepted, 1):
@@ -138,18 +165,42 @@ def main():
             variants, crop, warning = prepare_variants(original)
             save_preview(original, crop, variants, sample_dir / "comparison.png")
             for method, array in variants.items():
-                Image.fromarray(np.rint(array * 255).astype(np.uint8)).save(sample_dir / f"{method}.png")
+                Image.fromarray(np.rint(array * 255).astype(np.uint8)).save(
+                    sample_dir / f"{method}.png"
+                )
                 np.save(sample_dir / f"{method}.npy", array)
-                prediction = predictor.predict_number(array[None, :, :])["text"] if predictor else ""
-                rows.append({"file": str(path), "label": label, "method": method,
-                             "prediction": prediction, "correct": int(prediction == label) if predictor else "",
-                             "error": "", "warning": warning})
-            print(f"Prepared {path.name}" + (f" | WARNING: {warning}" if warning else ""))
+                prediction = (
+                    predictor.predict_number(array[None, :, :])["text"]
+                    if predictor
+                    else ""
+                )
+                rows.append(
+                    {
+                        "file": str(path),
+                        "label": label,
+                        "method": method,
+                        "prediction": prediction,
+                        "correct": int(prediction == label) if predictor else "",
+                        "error": "",
+                        "warning": warning,
+                    }
+                )
+            print(
+                f"Prepared {path.name}" + (f" | WARNING: {warning}" if warning else "")
+            )
         except (ValueError, OSError) as error:
             for method in METHODS:
-                rows.append({"file": str(path), "label": label, "method": method,
-                             "prediction": "", "correct": 0 if predictor else "",
-                             "error": str(error), "warning": ""})
+                rows.append(
+                    {
+                        "file": str(path),
+                        "label": label,
+                        "method": method,
+                        "prediction": "",
+                        "correct": 0 if predictor else "",
+                        "error": str(error),
+                        "warning": "",
+                    }
+                )
             print(f"FAILED {path.name}: {error}")
     with (output / "results.csv").open("w", newline="", encoding="utf-8") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
@@ -159,17 +210,28 @@ def main():
     for method in METHODS:
         group = [row for row in rows if row["method"] == method]
         correct = sum(row["correct"] for row in group) if predictor else None
-        summary[method] = {"total": len(group), "preprocessing_errors": sum(bool(r["error"]) for r in group),
-                           "correct": correct, "accuracy": correct / len(group) if predictor else None}
-    record = {"purpose": "Development comparison; not untouched final-test accuracy",
-              "design": "Common autocontrast and Otsu bounding box; grayscale vs fixed-128 vs Otsu representation; same resizing/padding",
-              "summary": summary, "inputs": manifest, "skipped_images": skipped,
-              "checkpoint": str(args.checkpoint.resolve()) if args.checkpoint else None,
-              "checkpoint_sha256": sha256(args.checkpoint) if args.checkpoint else None,
-              "script_sha256": sha256(Path(__file__)), "numpy_version": np.__version__}
+        summary[method] = {
+            "total": len(group),
+            "preprocessing_errors": sum(bool(r["error"]) for r in group),
+            "correct": correct,
+            "accuracy": correct / len(group) if predictor else None,
+        }
+    record = {
+        "purpose": "Development comparison; not untouched final-test accuracy",
+        "design": "Common autocontrast and Otsu bounding box; grayscale vs fixed-128 vs Otsu representation; same resizing/padding",
+        "summary": summary,
+        "inputs": manifest,
+        "skipped_images": skipped,
+        "checkpoint": str(args.checkpoint.resolve()) if args.checkpoint else None,
+        "checkpoint_sha256": sha256(args.checkpoint) if args.checkpoint else None,
+        "script_sha256": sha256(Path(__file__)),
+        "numpy_version": np.__version__,
+    }
     (output / "summary.json").write_text(json.dumps(record, indent=2), encoding="utf-8")
     print(json.dumps(summary, indent=2))
-    print(f"Skipped {len(skipped)} multi-digit/unlabelled images; paths recorded in summary.json")
+    print(
+        f"Skipped {len(skipped)} multi-digit/unlabelled images; paths recorded in summary.json"
+    )
     print(f"Evidence saved in {output}")
     if any(row["error"] for row in rows):
         print("Some inputs failed: inspect results.csv before drawing conclusions.")

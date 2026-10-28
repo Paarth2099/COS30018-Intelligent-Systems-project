@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-10-28T05:37:41.900176+00:00",
+  "checks": [
+    "Compare tab lists 4 networks and 5 classical baselines on MNIST",
+    "Curves tab draws history and 62-class confusion for EMNIST ResNet-18",
+    "Invalid hyperparameters show an error and do not start training",
+    "MLP trained on 3,000 MNIST images for 2 epochs: validation 85.9%",
+    "Lab model selected in main window and recognised Manula_07_label-420.jpg as 430",
+    "ResNet-18 reads R00M7; line-case rule outputs Room7"
+  ],
+  "status": "PASS"
+}

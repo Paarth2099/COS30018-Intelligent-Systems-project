@@ -1,7 +1,7 @@
 """Guard the experiment against validation-label leakage and missing classes."""
 import unittest
 import torch
-from hnrs_chars.week10_weighted import class_weights
+from research.week10_weighted import class_weights
 
 
 class WeightTests(unittest.TestCase):

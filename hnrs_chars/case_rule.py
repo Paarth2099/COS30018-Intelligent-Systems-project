@@ -23,6 +23,7 @@ resized to the same height. Descender letters (p, y) are excluded because the
 development photos contain none to fit a rule on, and a writer who forms
 small capitals will be read as lowercase.
 """
+
 import statistics
 
 CASE_PAIRS = frozenset("cmosuvwxz")
@@ -40,7 +41,12 @@ def line_reference(boxes, text):
     bottom = statistics.median(box[3] for box in references)
     if bottom <= top:
         return None
-    return {"top": top, "bottom": bottom, "height": bottom - top, "count": len(references)}
+    return {
+        "top": top,
+        "bottom": bottom,
+        "height": bottom - top,
+        "count": len(references),
+    }
 
 
 def lowercase_score(box, reference):
@@ -63,8 +69,12 @@ def apply_line_case(text, boxes, threshold=THRESHOLD):
     if len(text) != len(boxes):
         raise ValueError("Need exactly one box per predicted character")
     reference = line_reference(boxes, text)
-    details = {"applied": reference is not None, "threshold": threshold,
-               "reference_characters": reference["count"] if reference else 0, "changes": []}
+    details = {
+        "applied": reference is not None,
+        "threshold": threshold,
+        "reference_characters": reference["count"] if reference else 0,
+        "changes": [],
+    }
     if reference is None:
         return text, details
     adjusted = list(text)
@@ -81,8 +91,14 @@ def apply_line_case(text, boxes, threshold=THRESHOLD):
             new = character.lower() if lowercase else character.upper()
         if new != character:
             adjusted[index] = new
-            details["changes"].append({"index": index, "model": character, "final": new,
-                                       "score": round(score, 3)})
+            details["changes"].append(
+                {
+                    "index": index,
+                    "model": character,
+                    "final": new,
+                    "score": round(score, 3),
+                }
+            )
     return "".join(adjusted), details
 
 

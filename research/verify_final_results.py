@@ -35,9 +35,12 @@ def main():
                'hnrs_ml/models.py', 'hnrs_ml/architectures.py', 'hnrs_ml/predict.py',
                'hnrs_chars/models.py', 'hnrs_chars/predict.py',
                'hnrs_chars/preprocessing.py', 'hnrs_chars/segmentation.py']
-    for name in runtime:
-        assert ast.dump(ast.parse((ROOT/name).read_text(encoding='utf-8'))) == ast.dump(
-            ast.parse((OUT/'source'/name).read_text(encoding='utf-8'))), name
+    # Later optional case correction and GUI training intentionally change current
+    # source. Frozen snapshots above remain hash-checked; report current drift
+    # separately instead of treating historical files as the current program.
+    changed_runtime = [name for name in runtime if
+        ast.dump(ast.parse((ROOT/name).read_text(encoding='utf-8'))) !=
+        ast.dump(ast.parse((OUT/'source'/name).read_text(encoding='utf-8')))]
     for r in rows:
         assert r['reference']==labels[r['sample_id']]
         assert r['correct']==int(r['prediction']==r['reference'])
@@ -67,7 +70,7 @@ def main():
             assert sha(p)==prep['prepared_sha256']
             arr=np.load(p);assert arr.shape==(prep['crop_count'],28,28)
             assert np.isfinite(arr).all() and (arr.size==0 or (arr.min()>=0 and arr.max()<=1))
-    result={'status':'PASS','prediction_rows_recalculated':680,'photos_hash_checked':120,'checkpoints_hash_checked':8,'summary_groups':len(summary),'case_and_leading_zeros_preserved':True,'source_snapshots_match':True,'timing_repeats_checked':True,'note':'Independent arithmetic and integrity verification, not a second independent handwriting collection or manual segmentation assessment.'}
+    result={'status':'PASS','prediction_rows_recalculated':680,'photos_hash_checked':120,'checkpoints_hash_checked':8,'summary_groups':len(summary),'case_and_leading_zeros_preserved':True,'source_snapshots_match':True,'current_runtime_matches_frozen':not changed_runtime,'changed_runtime':changed_runtime,'timing_repeats_checked':True,'note':'Independent arithmetic and integrity verification, not a second independent handwriting collection or manual segmentation assessment.'}
     (OUT/'independent_verification.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(result,indent=2))
 if __name__=='__main__':main()

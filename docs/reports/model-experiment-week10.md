@@ -133,7 +133,7 @@ A model change does not repair the two known string segmentation failures or the
 Source snapshots and validation prediction arrays are retained alongside the metrics. All 120 baseline photo predictions and the original baseline validation accuracy were reproduced before comparison.
 
 ```powershell
-python -m hnrs_chars.week10_weighted --output experiments/emnist_byclass/week10_weighted_run02
-python -m hnrs_chars.week10_evaluate --candidate experiments/emnist_byclass/week10_weighted_run02 --output evidence/model_experiment/week10_run02
-python -m hnrs_chars.week10_report --experiment experiments/emnist_byclass/week10_weighted_run02 --evaluation evidence/model_experiment/week10_run02
+python -m research.week10_weighted --output experiments/emnist_byclass/week10_weighted_run02
+python -m research.week10_evaluate --candidate experiments/emnist_byclass/week10_weighted_run02 --output evidence/model_experiment/week10_run02
+python -m research.week10_report --experiment experiments/emnist_byclass/week10_weighted_run02 --evaluation evidence/model_experiment/week10_run02
 ```

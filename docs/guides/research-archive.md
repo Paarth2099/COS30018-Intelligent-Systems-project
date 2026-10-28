@@ -8,6 +8,10 @@ The full pre-organisation project evidence is preserved in [the shared OneDrive 
 - Files: 17,768; every archived entry was reopened and checked against its recorded SHA-256.
 - Cloud upload: confirmed by Paarth on 26 October 2026. The local checksum verification is independent of that upload confirmation.
 
+## Snapshot date and later additions
+
+This ZIP is the immutable 26 October snapshot. It does not contain the Model lab, classical-baseline study, case-rule study or subsequent cleanup added on 28 October. Use current GitHub source and `results/classical_baselines/` and `results/case_rule/` for those additions. The original OneDrive ZIP does not update automatically.
+
 ## Contents
 
 The archive includes original source files, documents, experiment checkpoints, training histories, prediction rows, crops, manifests, source snapshots, verification records and collected photos. Downloadable MNIST/EMNIST datasets, virtual environments and Git internals are excluded.
